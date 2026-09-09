@@ -1,0 +1,976 @@
+{
+  "schemaVersion": 1,
+  "createdAtUnix": 1788581122.753983,
+  "study": "aegis-shots-v1",
+  "status": "rejected",
+  "reason": "Nineteen false positive video decisions fail the prospectively fixed all-negative gate.",
+  "selected": 45,
+  "completed": 45,
+  "correctNegative": 26,
+  "falsePositive": 19,
+  "abstained": 0,
+  "processingErrors": 0,
+  "completeCoverage": 45,
+  "windowsProcessed": 102,
+  "windowsPositive": 30,
+  "nativeFramesDecoded": 4500,
+  "stageElapsedSeconds": 147.59172010421753,
+  "perVideoMedianMs": 2925,
+  "perVideoMaxMs": 4435,
+  "peakRssBytes": 2136178688,
+  "recipeFingerprint": "898d95740e2942cdf022a34fb8663b5b1f0a7fb0e73e3ba527e366848de7a336",
+  "outputPath": "eval/runs/aegis-shots-negative-v1.jsonl",
+  "outputSha256": "ad52ff95b3a0517849d1b4f9481652b58dcdad54f7182f71c655c926c01ff524",
+  "receiptPath": "eval/runs/aegis-shots-negative-v1.receipt.json",
+  "receiptSha256": "126bdf3d6c53805771599dd3c09e7fbb2e74708809a8cb6a6b980e572db73c01",
+  "freezePath": "eval/runs/aegis-shots-v1-freeze/receipt.json",
+  "freezeSha256": "e17fd0377cbe341ccc48c47f6a076ab1071fac2114cd3d7327cb282f361f82a0",
+  "byQuality": {
+    "master": {
+      "selected": 15,
+      "decisions": {
+        "not_ai": 7,
+        "ai": 8
+      }
+    },
+    "mild": {
+      "selected": 15,
+      "decisions": {
+        "not_ai": 7,
+        "ai": 8
+      }
+    },
+    "severe": {
+      "selected": 15,
+      "decisions": {
+        "not_ai": 12,
+        "ai": 3
+      }
+    }
+  },
+  "byComposition": {
+    "base": {
+      "selected": 15,
+      "decisions": {
+        "not_ai": 8,
+        "ai": 7
+      }
+    },
+    "blend": {
+      "selected": 15,
+      "decisions": {
+        "not_ai": 13,
+        "ai": 2
+      }
+    },
+    "hardcut": {
+      "selected": 15,
+      "decisions": {
+        "not_ai": 5,
+        "ai": 10
+      }
+    }
+  },
+  "byHost": {
+    "NASA": {
+      "selected": 9,
+      "decisions": {
+        "not_ai": 9
+      }
+    },
+    "NOAA": {
+      "selected": 9,
+      "decisions": {
+        "not_ai": 6,
+        "ai": 3
+      }
+    },
+    "USGS": {
+      "selected": 9,
+      "decisions": {
+        "ai": 7,
+        "not_ai": 2
+      }
+    },
+    "pendulum": {
+      "selected": 9,
+      "decisions": {
+        "ai": 5,
+        "not_ai": 4
+      }
+    },
+    "rolling": {
+      "selected": 9,
+      "decisions": {
+        "ai": 4,
+        "not_ai": 5
+      }
+    }
+  },
+  "cases": [
+    {
+      "caseId": "NASA/base/master",
+      "id": "95dcd6add1664f7d96d45c99",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.11209029704332352,
+      "cutIndices": [],
+      "ancestors": [
+        "NASA"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/95dcd6add1664f7d96d45c99.mp4",
+      "mediaSha256": "3cb6e915a065cbc19f7311a8ab8e39cd4d7697c981d7b94999f14a88c6a29339",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/95dcd6add1664f7d96d45c99/inspection.json",
+      "inspectionSha256": "600923a7a7d5f611f057e4d7dcd005a8329c8641ec9eee786d12a55c17eacc63"
+    },
+    {
+      "caseId": "NASA/base/mild",
+      "id": "0033de5e7d73bec371032afc",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.020279724150896072,
+      "cutIndices": [],
+      "ancestors": [
+        "NASA"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/0033de5e7d73bec371032afc.mp4",
+      "mediaSha256": "5deb587712b1e5f95ef567c1c9750c07c503a592906878ce61da70b079476bb4",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/0033de5e7d73bec371032afc/inspection.json",
+      "inspectionSha256": "40baefa725ba7264b52cbb2cbbd2f60894c34a66f0001c9efbd0601ee63233b9"
+    },
+    {
+      "caseId": "NASA/base/severe",
+      "id": "33a114be349b478b6c15e7ac",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.003006519051268697,
+      "cutIndices": [],
+      "ancestors": [
+        "NASA"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/33a114be349b478b6c15e7ac.mp4",
+      "mediaSha256": "7055348323cefa9388f5e61e78a01cc705449c27fb25665f15043a9a0a5a4ca3",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/33a114be349b478b6c15e7ac/inspection.json",
+      "inspectionSha256": "56bf2230fe4afffa7f4450ae221bb14732cb249a3e7193dd0a6f85a3fc1f38b7"
+    },
+    {
+      "caseId": "NASA/hardcut/master",
+      "id": "53565cce92018e9b1baa340f",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.0010079329367727041,
+      "cutIndices": [],
+      "ancestors": [
+        "NASA",
+        "NOAA"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/53565cce92018e9b1baa340f.mp4",
+      "mediaSha256": "23ef917612767af8321c01a69e0c677e518095736ce4c4ea2c2c6a4db52c0d8a",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/53565cce92018e9b1baa340f/inspection.json",
+      "inspectionSha256": "60c63c86df7f7aa24d2d967d396076ece39586fc2a3a4ba62360e2c904732e70"
+    },
+    {
+      "caseId": "NASA/hardcut/mild",
+      "id": "9999412656284b3e104a24d9",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.0006344842258840799,
+      "cutIndices": [],
+      "ancestors": [
+        "NASA",
+        "NOAA"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/9999412656284b3e104a24d9.mp4",
+      "mediaSha256": "718809db9b6134bbc24882ba8680b708eb7cc39f2cc4d5b5f2278cd79f815007",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/9999412656284b3e104a24d9/inspection.json",
+      "inspectionSha256": "3413d5ed72c6cc0054de164589a14a8714143c2c78116adfc0b5e30475203145"
+    },
+    {
+      "caseId": "NASA/hardcut/severe",
+      "id": "3b7e2bbd16470740089e47fe",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.06451292335987091,
+      "cutIndices": [
+        42
+      ],
+      "ancestors": [
+        "NASA",
+        "NOAA"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/3b7e2bbd16470740089e47fe.mp4",
+      "mediaSha256": "5ff987378db74a02644624810fa732aa9af8f0700d7a2c25bb4004d70c7d885c",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/3b7e2bbd16470740089e47fe/inspection.json",
+      "inspectionSha256": "dc19d4d2e6eb8ff411019b4bb851b7510045328287755bbb86073b4656ed026e"
+    },
+    {
+      "caseId": "NASA/blend/master",
+      "id": "05383d8bd0a29607e220b727",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.0013556998455896974,
+      "cutIndices": [],
+      "ancestors": [
+        "NASA",
+        "NOAA"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/05383d8bd0a29607e220b727.mp4",
+      "mediaSha256": "b197b8bec1a83f8646853e02d84650031ad414818ca93ebbde685348ad6488bc",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/05383d8bd0a29607e220b727/inspection.json",
+      "inspectionSha256": "27a5e1ff266cf5f0ef346049e5729755d764867fb8df91f75c6638a659d5bc17"
+    },
+    {
+      "caseId": "NASA/blend/mild",
+      "id": "00ebfc7acc8102da328deedb",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.0007175242062658072,
+      "cutIndices": [],
+      "ancestors": [
+        "NASA",
+        "NOAA"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/00ebfc7acc8102da328deedb.mp4",
+      "mediaSha256": "bbd618bf66741bf70d5b8e11b17fc6f21cd93768717573bc5aecaf84dae464fc",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/00ebfc7acc8102da328deedb/inspection.json",
+      "inspectionSha256": "5520783d047ee885247b5d890a2cb11008d7ae91788fc637b11f9e008d2f8c00"
+    },
+    {
+      "caseId": "NASA/blend/severe",
+      "id": "1c7e7a30a50b296063b01dfe",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.0011948620667681098,
+      "cutIndices": [],
+      "ancestors": [
+        "NASA",
+        "NOAA"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/1c7e7a30a50b296063b01dfe.mp4",
+      "mediaSha256": "02771c5c77438105c3d7fd4006a49c58caadf0c8670038e3b377cf38de7d7b20",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/1c7e7a30a50b296063b01dfe/inspection.json",
+      "inspectionSha256": "8ef941918d1ee2f831412d8bfe0e2182fdd5f507b3c386365e080139f672939c"
+    },
+    {
+      "caseId": "NOAA/base/master",
+      "id": "69f4467b368b62d21149195b",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.0006232329760678113,
+      "cutIndices": [],
+      "ancestors": [
+        "NOAA"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/69f4467b368b62d21149195b.mp4",
+      "mediaSha256": "33cd1073d4f6ef5cd8eb427d4953182d8329981ed64cce5cc0282bfdc2b14927",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/69f4467b368b62d21149195b/inspection.json",
+      "inspectionSha256": "9fed369443a8d580af4fc3c5fcb281ec334e20b280fc1da5bf99f5aaa31757d8"
+    },
+    {
+      "caseId": "NOAA/base/mild",
+      "id": "a7339df6ca5417d96043e7f2",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.00035438669146969914,
+      "cutIndices": [],
+      "ancestors": [
+        "NOAA"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/a7339df6ca5417d96043e7f2.mp4",
+      "mediaSha256": "116a3a02be63ff248be6efa80420d4f6e53aaff72f41c1a8bcd63ef8207c5506",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/a7339df6ca5417d96043e7f2/inspection.json",
+      "inspectionSha256": "094487ea79e3204dd94d27b2ae9de99a7065c7ca6385f9bdc95a5275cf6c2d0e"
+    },
+    {
+      "caseId": "NOAA/base/severe",
+      "id": "ec9ad2584be77999cc3f0693",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.0003803491126745939,
+      "cutIndices": [],
+      "ancestors": [
+        "NOAA"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/ec9ad2584be77999cc3f0693.mp4",
+      "mediaSha256": "c797aa2afa8484947093e7b40e3211f0bd4282c0b6b4989fc6721e3492569325",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/ec9ad2584be77999cc3f0693/inspection.json",
+      "inspectionSha256": "e4b8d37bcf22a6293f27625c6ee88ec3a8b4ff6d593ec07c60dc71d3bb595b91"
+    },
+    {
+      "caseId": "NOAA/hardcut/master",
+      "id": "e845ed4888296dc22be5b605",
+      "decision": "ai",
+      "correct": false,
+      "windowCount": 3,
+      "positiveWindows": 1,
+      "maximumRawScore": 0.9399487376213074,
+      "cutIndices": [
+        36,
+        84
+      ],
+      "ancestors": [
+        "NOAA",
+        "USGS"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/e845ed4888296dc22be5b605.mp4",
+      "mediaSha256": "36d3e9b83ceb4342d3598094b141d65ebbdcf27a99246ca955a373a35a01d4f8",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/e845ed4888296dc22be5b605/inspection.json",
+      "inspectionSha256": "fffa90be3600d63b88b29df9f6ba7ac4bfe2d5e66f2617ca61d34622740a5db3"
+    },
+    {
+      "caseId": "NOAA/hardcut/mild",
+      "id": "2ee6683f9969aa4582a5e6d8",
+      "decision": "ai",
+      "correct": false,
+      "windowCount": 3,
+      "positiveWindows": 1,
+      "maximumRawScore": 0.9786903858184814,
+      "cutIndices": [
+        36,
+        84
+      ],
+      "ancestors": [
+        "NOAA",
+        "USGS"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/2ee6683f9969aa4582a5e6d8.mp4",
+      "mediaSha256": "284ade856e27274fdf236955a7353226f0a46c76bf0087f1cd29b7e1b944ae49",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/2ee6683f9969aa4582a5e6d8/inspection.json",
+      "inspectionSha256": "8b8353929aee765b07daacbe85c161b9ddb35dde0ed5522e17dde7eefb9e7204"
+    },
+    {
+      "caseId": "NOAA/hardcut/severe",
+      "id": "b6d1b3e5d55caa4bdcfef0e3",
+      "decision": "ai",
+      "correct": false,
+      "windowCount": 3,
+      "positiveWindows": 1,
+      "maximumRawScore": 0.9975497126579285,
+      "cutIndices": [
+        18,
+        42
+      ],
+      "ancestors": [
+        "NOAA",
+        "USGS"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/b6d1b3e5d55caa4bdcfef0e3.mp4",
+      "mediaSha256": "88d9c5ff10fb375d2f8a0338ab176b65791ab97b234d9d18a65178f2d5c761cb",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/b6d1b3e5d55caa4bdcfef0e3/inspection.json",
+      "inspectionSha256": "30f65cb02734ecf4e53febde1424527e4fd15680aa852d940833b8a5ce43fa36"
+    },
+    {
+      "caseId": "NOAA/blend/master",
+      "id": "6385fa2581b6731f93819b0a",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.0001233735092682764,
+      "cutIndices": [],
+      "ancestors": [
+        "NOAA",
+        "USGS"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/6385fa2581b6731f93819b0a.mp4",
+      "mediaSha256": "c0b44c13f865bcc777999e9dd6356b14721ef7209e7d934a30578f3ff00d6152",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/6385fa2581b6731f93819b0a/inspection.json",
+      "inspectionSha256": "8b7aeae6c3a0f6154be4984b1e88c219ae0f73fe028e20cdac1267c7c494f052"
+    },
+    {
+      "caseId": "NOAA/blend/mild",
+      "id": "456f883c6f92c47b384e24c9",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 9.705717820907012e-05,
+      "cutIndices": [],
+      "ancestors": [
+        "NOAA",
+        "USGS"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/456f883c6f92c47b384e24c9.mp4",
+      "mediaSha256": "143f8a930918904c66cf5919e17b97a00d41da0d5a363f6cc1b200a78323af92",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/456f883c6f92c47b384e24c9/inspection.json",
+      "inspectionSha256": "c028a56c690b4736e367a21141a1a1e8c7ec286f794dbc9c13dbd8db87887644"
+    },
+    {
+      "caseId": "NOAA/blend/severe",
+      "id": "48240b1a0ca515aa75c7461f",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.0004016596358269453,
+      "cutIndices": [
+        40
+      ],
+      "ancestors": [
+        "NOAA",
+        "USGS"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/48240b1a0ca515aa75c7461f.mp4",
+      "mediaSha256": "ecaf8cab58314ea1040ff1b555d84a793da6aed511fd5c0ecf47e590b9ebc355",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/48240b1a0ca515aa75c7461f/inspection.json",
+      "inspectionSha256": "9951d0683555d8f33ae393b3d24c06c6f16539996ec7399ae14007634e3dfae3"
+    },
+    {
+      "caseId": "USGS/base/master",
+      "id": "97f5f1626faf3501fa4e2489",
+      "decision": "ai",
+      "correct": false,
+      "windowCount": 2,
+      "positiveWindows": 2,
+      "maximumRawScore": 0.9757046699523926,
+      "cutIndices": [],
+      "ancestors": [
+        "USGS"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/97f5f1626faf3501fa4e2489.mp4",
+      "mediaSha256": "baa786de8b92641321d4417c711399100e456e75a364a9637a6102cd1a2c24e3",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/97f5f1626faf3501fa4e2489/inspection.json",
+      "inspectionSha256": "0f9b42e9d59623d851457a5886237b006d96f15876b91e21d85ab0346bcad7e9"
+    },
+    {
+      "caseId": "USGS/base/mild",
+      "id": "200913d3155b465c6e8af6e3",
+      "decision": "ai",
+      "correct": false,
+      "windowCount": 2,
+      "positiveWindows": 2,
+      "maximumRawScore": 0.8295302391052246,
+      "cutIndices": [],
+      "ancestors": [
+        "USGS"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/200913d3155b465c6e8af6e3.mp4",
+      "mediaSha256": "8d7f87015c30b8840d2090c1b36d1705317cb8708c747af8cce7259772ba20e2",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/200913d3155b465c6e8af6e3/inspection.json",
+      "inspectionSha256": "239fe399640cd73c1232483c01d7aa856fe684e032f10afe0fb27b3354ec746a"
+    },
+    {
+      "caseId": "USGS/base/severe",
+      "id": "0d18be0b4b426e248b052a63",
+      "decision": "ai",
+      "correct": false,
+      "windowCount": 2,
+      "positiveWindows": 1,
+      "maximumRawScore": 0.9547598361968994,
+      "cutIndices": [],
+      "ancestors": [
+        "USGS"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/0d18be0b4b426e248b052a63.mp4",
+      "mediaSha256": "bd500bae3258312ac29322a1e0a10c987d8d73cbd0ca8c6783833763663d5cf4",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/0d18be0b4b426e248b052a63/inspection.json",
+      "inspectionSha256": "40ee0dada003233aa8271fdccd73c45b2ef766c7e23b63990f0bf1dbe10aa7f5"
+    },
+    {
+      "caseId": "USGS/hardcut/master",
+      "id": "574bd6ad6e60a33be48024cb",
+      "decision": "ai",
+      "correct": false,
+      "windowCount": 3,
+      "positiveWindows": 3,
+      "maximumRawScore": 0.9999233484268188,
+      "cutIndices": [
+        36,
+        84
+      ],
+      "ancestors": [
+        "USGS",
+        "pendulum"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/574bd6ad6e60a33be48024cb.mp4",
+      "mediaSha256": "6cc7e207adb401369ae43dbd90052420facc648d241a35c2812da361f679e197",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/574bd6ad6e60a33be48024cb/inspection.json",
+      "inspectionSha256": "506b39f6eaa3ad3534b3718358de3954aa78db5eaaf40322c0b94b9bd0fbef92"
+    },
+    {
+      "caseId": "USGS/hardcut/mild",
+      "id": "d103e5603e351142f04846c1",
+      "decision": "ai",
+      "correct": false,
+      "windowCount": 3,
+      "positiveWindows": 1,
+      "maximumRawScore": 0.9995065927505493,
+      "cutIndices": [
+        36,
+        84
+      ],
+      "ancestors": [
+        "USGS",
+        "pendulum"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/d103e5603e351142f04846c1.mp4",
+      "mediaSha256": "04c22ed4e820cf1e37a3adcc137c59e32c52c8c72f01849b293c9652742da5ca",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/d103e5603e351142f04846c1/inspection.json",
+      "inspectionSha256": "0e3ca42b486766388ae21b66cd6f8bdde0b670bed919614fb605ea6db8dd109f"
+    },
+    {
+      "caseId": "USGS/hardcut/severe",
+      "id": "9948684151c9e52c11c4008e",
+      "decision": "ai",
+      "correct": false,
+      "windowCount": 3,
+      "positiveWindows": 1,
+      "maximumRawScore": 0.9550448656082153,
+      "cutIndices": [
+        18,
+        42
+      ],
+      "ancestors": [
+        "USGS",
+        "pendulum"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/9948684151c9e52c11c4008e.mp4",
+      "mediaSha256": "78fa82d3d8af7240f717f7684e013835ae54550126dde98bc4d2186d3578f0af",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/9948684151c9e52c11c4008e/inspection.json",
+      "inspectionSha256": "7b739040ebc3c254d6dc2db01762e45fa67df54f361765561668c14d52877b79"
+    },
+    {
+      "caseId": "USGS/blend/master",
+      "id": "416a49e79dc20c5fa817f116",
+      "decision": "ai",
+      "correct": false,
+      "windowCount": 2,
+      "positiveWindows": 1,
+      "maximumRawScore": 0.7839109897613525,
+      "cutIndices": [],
+      "ancestors": [
+        "USGS",
+        "pendulum"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/416a49e79dc20c5fa817f116.mp4",
+      "mediaSha256": "b2e64a20535f277c3ef9cecd6361de02b059b0c4f74a64ebf43d528fbeaa7819",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/416a49e79dc20c5fa817f116/inspection.json",
+      "inspectionSha256": "2ed59ccbdfa78d5446b2f7a2c7427a1c905d3bfb1e34cbfffaf9a5b9038de852"
+    },
+    {
+      "caseId": "USGS/blend/mild",
+      "id": "e053315877682db81a14ca83",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.04340357705950737,
+      "cutIndices": [],
+      "ancestors": [
+        "USGS",
+        "pendulum"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/e053315877682db81a14ca83.mp4",
+      "mediaSha256": "1eec2ebece27e140c3a67fe8ac55d4f84d9f51320b9b00cea5d888ee9823828d",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/e053315877682db81a14ca83/inspection.json",
+      "inspectionSha256": "698ed091a82dcda123103c81888464f09f7e34eca5a11fb36480147f6eb11a50"
+    },
+    {
+      "caseId": "USGS/blend/severe",
+      "id": "695b4717f7baa46730ae3712",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.0128056351095438,
+      "cutIndices": [],
+      "ancestors": [
+        "USGS",
+        "pendulum"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/695b4717f7baa46730ae3712.mp4",
+      "mediaSha256": "6fa2ec94e6c2e19a770bfa630da1f92f957ed4cc9e8b108be412f2c9da8b8bd1",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/695b4717f7baa46730ae3712/inspection.json",
+      "inspectionSha256": "8b18ef4d2704c0b9c4af3c9c97bcd3db3545a22b7c8ab2d13c895f4995bc35cc"
+    },
+    {
+      "caseId": "pendulum/base/master",
+      "id": "181084c8f843d0e8e5ff71d7",
+      "decision": "ai",
+      "correct": false,
+      "windowCount": 2,
+      "positiveWindows": 2,
+      "maximumRawScore": 0.9999210834503174,
+      "cutIndices": [],
+      "ancestors": [
+        "pendulum"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/181084c8f843d0e8e5ff71d7.mp4",
+      "mediaSha256": "06351199a9cfa16bd96a8e19bc24961ca86c9b61f2145db135bdf03db1fdfd57",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/181084c8f843d0e8e5ff71d7/inspection.json",
+      "inspectionSha256": "66641ac177d92640d5328e699793476c0b907870e9c112a8ab4da66ba9a17f8d"
+    },
+    {
+      "caseId": "pendulum/base/mild",
+      "id": "3e6229f18a645955e3ee30ad",
+      "decision": "ai",
+      "correct": false,
+      "windowCount": 2,
+      "positiveWindows": 2,
+      "maximumRawScore": 0.9991402626037598,
+      "cutIndices": [],
+      "ancestors": [
+        "pendulum"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/3e6229f18a645955e3ee30ad.mp4",
+      "mediaSha256": "536b662bd58c5e136a560d361f888b67a72759defa5deb80521a33d26a080b65",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/3e6229f18a645955e3ee30ad/inspection.json",
+      "inspectionSha256": "66b1cd164126158e6d0e5af395ec49956e2b65390125938c08adeada8c496756"
+    },
+    {
+      "caseId": "pendulum/base/severe",
+      "id": "199e171c8640ad2f1ae132d1",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.24471411108970642,
+      "cutIndices": [],
+      "ancestors": [
+        "pendulum"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/199e171c8640ad2f1ae132d1.mp4",
+      "mediaSha256": "c8189c6fca479c08e08810a9175069428c71d8fdc5d844b8beed573b578fa192",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/199e171c8640ad2f1ae132d1/inspection.json",
+      "inspectionSha256": "6ccb4cf4c2f2f5fd8ba90b09e374d2664f7ef55ad8c464b85d57ed953c033f58"
+    },
+    {
+      "caseId": "pendulum/hardcut/master",
+      "id": "be4fc34faf1c1396797bdea5",
+      "decision": "ai",
+      "correct": false,
+      "windowCount": 3,
+      "positiveWindows": 3,
+      "maximumRawScore": 0.99994957447052,
+      "cutIndices": [
+        36,
+        84
+      ],
+      "ancestors": [
+        "pendulum",
+        "rolling"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/be4fc34faf1c1396797bdea5.mp4",
+      "mediaSha256": "dd14b7f634e9b1fca4985f50e85b2ce5fd6627faa4ab1796def41fb2da18bc1a",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/be4fc34faf1c1396797bdea5/inspection.json",
+      "inspectionSha256": "f4ad443e7df85ae24086083da185551341756876a99c0692c45e2b37a916a472"
+    },
+    {
+      "caseId": "pendulum/hardcut/mild",
+      "id": "781f353d920d1e5c2e7929a8",
+      "decision": "ai",
+      "correct": false,
+      "windowCount": 3,
+      "positiveWindows": 3,
+      "maximumRawScore": 0.9993982315063477,
+      "cutIndices": [
+        36,
+        84
+      ],
+      "ancestors": [
+        "pendulum",
+        "rolling"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/781f353d920d1e5c2e7929a8.mp4",
+      "mediaSha256": "458cce3c27636675e72a632391d1717a94cba9507eebf12e226dafd20114491a",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/781f353d920d1e5c2e7929a8/inspection.json",
+      "inspectionSha256": "c54c0e8eee39360900bc599ba17e5edeedece264a4c89af742b3965c0b462c3e"
+    },
+    {
+      "caseId": "pendulum/hardcut/severe",
+      "id": "b8d6ec3609e5477b8502f41a",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 3,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.41189122200012207,
+      "cutIndices": [
+        18,
+        42
+      ],
+      "ancestors": [
+        "pendulum",
+        "rolling"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/b8d6ec3609e5477b8502f41a.mp4",
+      "mediaSha256": "c31f23e0e764ef3a0d2bb19d22ca68f711bdc9b414778dfae6eb8b9f9fd39ce6",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/b8d6ec3609e5477b8502f41a/inspection.json",
+      "inspectionSha256": "b822d06528d16d209d09db8eecdce19f3ae65ebc9a15a65d6ab35703ff64d6df"
+    },
+    {
+      "caseId": "pendulum/blend/master",
+      "id": "35b9e339a24d22ab15f5ee69",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.3989999294281006,
+      "cutIndices": [],
+      "ancestors": [
+        "pendulum",
+        "rolling"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/35b9e339a24d22ab15f5ee69.mp4",
+      "mediaSha256": "4f924405afd6669f1a018515d8f3e356a59f8f6839beaa781e44b97be18e5a9e",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/35b9e339a24d22ab15f5ee69/inspection.json",
+      "inspectionSha256": "8bc56816e14fd3448718428fba76a0859bf27e5f38c91fd516a11cd60d064c8b"
+    },
+    {
+      "caseId": "pendulum/blend/mild",
+      "id": "ddf6f5ab8e27de25b7024b28",
+      "decision": "ai",
+      "correct": false,
+      "windowCount": 2,
+      "positiveWindows": 1,
+      "maximumRawScore": 0.604199230670929,
+      "cutIndices": [],
+      "ancestors": [
+        "pendulum",
+        "rolling"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/ddf6f5ab8e27de25b7024b28.mp4",
+      "mediaSha256": "5b7552a3f82b48f32b9ec6b6655b919dbc65c9102b75dc51fa769bd87ee433b7",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/ddf6f5ab8e27de25b7024b28/inspection.json",
+      "inspectionSha256": "8cacae436cbf23dc14a72bad0ff240b13ec56f28c3a2a85f2efec1273891b3bc"
+    },
+    {
+      "caseId": "pendulum/blend/severe",
+      "id": "447e5fd57c36eebac4fa51ce",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.0004096299526281655,
+      "cutIndices": [],
+      "ancestors": [
+        "pendulum",
+        "rolling"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/447e5fd57c36eebac4fa51ce.mp4",
+      "mediaSha256": "2ab7195567464cfdfff39e21ccd1f9eb37f9d46751c57a4f7799dc118b88a1f4",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/447e5fd57c36eebac4fa51ce/inspection.json",
+      "inspectionSha256": "7048e93f9ea4bcef6b8a0777e781a6bf9e61efd51473d93e5e2284bad3c433cb"
+    },
+    {
+      "caseId": "rolling/base/master",
+      "id": "9849f2f46828f26857b55621",
+      "decision": "ai",
+      "correct": false,
+      "windowCount": 2,
+      "positiveWindows": 1,
+      "maximumRawScore": 0.7321218252182007,
+      "cutIndices": [],
+      "ancestors": [
+        "rolling"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/9849f2f46828f26857b55621.mp4",
+      "mediaSha256": "2b1bfbb6dc928c4c651a3e5904ca04f9c962402a6f7fe2837945d1f85fe0fd30",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/9849f2f46828f26857b55621/inspection.json",
+      "inspectionSha256": "eb5c7b01fdf6f241eafa8bc504e78dc563c550844c8a30ce5af6e201dd1f4c9a"
+    },
+    {
+      "caseId": "rolling/base/mild",
+      "id": "c8ff9f12de4023b267ef0fda",
+      "decision": "ai",
+      "correct": false,
+      "windowCount": 2,
+      "positiveWindows": 2,
+      "maximumRawScore": 0.784151554107666,
+      "cutIndices": [],
+      "ancestors": [
+        "rolling"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/c8ff9f12de4023b267ef0fda.mp4",
+      "mediaSha256": "d8a5773dda2255efb3055b2d42619c88ae8d1d29e75bd20df6a48436e26e7ae2",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/c8ff9f12de4023b267ef0fda/inspection.json",
+      "inspectionSha256": "7ea9dbcce4384e3e1feb4329f66bc7394d914a1f187d123194afa6d9449f0492"
+    },
+    {
+      "caseId": "rolling/base/severe",
+      "id": "db54b2138297309270c57e0b",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.006899856962263584,
+      "cutIndices": [],
+      "ancestors": [
+        "rolling"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/db54b2138297309270c57e0b.mp4",
+      "mediaSha256": "dff3727914a2f98f631d4bd896609ebf6abe5048f0e00692d22889e8a6e671b9",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/db54b2138297309270c57e0b/inspection.json",
+      "inspectionSha256": "cdb3d4558b80a226dbc84a466b68e848b927c34ee0f4e83f10f13af07f41defc"
+    },
+    {
+      "caseId": "rolling/hardcut/master",
+      "id": "14813413c62eed9e970d482a",
+      "decision": "ai",
+      "correct": false,
+      "windowCount": 3,
+      "positiveWindows": 1,
+      "maximumRawScore": 0.7086607813835144,
+      "cutIndices": [
+        36,
+        84
+      ],
+      "ancestors": [
+        "NASA",
+        "rolling"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/14813413c62eed9e970d482a.mp4",
+      "mediaSha256": "49de73ede8eda49d599a716a966b25941709ac7cf791a2047b0388d7af81febd",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/14813413c62eed9e970d482a/inspection.json",
+      "inspectionSha256": "49526d0286d358cdb5a656c9a9b341490520390511eaa02bab6764b60581e17d"
+    },
+    {
+      "caseId": "rolling/hardcut/mild",
+      "id": "7a6bb13bac632f174cd23595",
+      "decision": "ai",
+      "correct": false,
+      "windowCount": 3,
+      "positiveWindows": 1,
+      "maximumRawScore": 0.7947690486907959,
+      "cutIndices": [
+        36,
+        84
+      ],
+      "ancestors": [
+        "NASA",
+        "rolling"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/7a6bb13bac632f174cd23595.mp4",
+      "mediaSha256": "2586e40937d8017361dd682270863c4e89b006ced71b47a7ef0ed2956e5d8da5",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/7a6bb13bac632f174cd23595/inspection.json",
+      "inspectionSha256": "9a42b5f63234473083ed75ca0983069c36fdbcfcb2e0c3cb81209e1b14131060"
+    },
+    {
+      "caseId": "rolling/hardcut/severe",
+      "id": "0fede074e750b82f4440c5be",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 3,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.036872200667858124,
+      "cutIndices": [
+        18,
+        42
+      ],
+      "ancestors": [
+        "NASA",
+        "rolling"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/0fede074e750b82f4440c5be.mp4",
+      "mediaSha256": "3a46d85675dc070f68f2ed81075d4a7e279befc55b366a7bca5f1785fca3a66b",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/0fede074e750b82f4440c5be/inspection.json",
+      "inspectionSha256": "09a428c2cffcc5334d107c814709a8f4c1c2a06e8b2d541feb39c81e7b28f070"
+    },
+    {
+      "caseId": "rolling/blend/master",
+      "id": "39673f843b887c643d7b01ff",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.00188449677079916,
+      "cutIndices": [],
+      "ancestors": [
+        "NASA",
+        "rolling"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/39673f843b887c643d7b01ff.mp4",
+      "mediaSha256": "f35f83eae98bb02fbcca7b06b62a292966420aee4da2d2efc11b31f18cdfeac0",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/39673f843b887c643d7b01ff/inspection.json",
+      "inspectionSha256": "0491f0c58123599d6cf7b55a32ff9f70f48510c3cf79a38ee5cc5c70c0afa099"
+    },
+    {
+      "caseId": "rolling/blend/mild",
+      "id": "748b79b8b47aa2571243ddd1",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.0014179851859807968,
+      "cutIndices": [],
+      "ancestors": [
+        "NASA",
+        "rolling"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/748b79b8b47aa2571243ddd1.mp4",
+      "mediaSha256": "74b26f9bf620eb6cf68c1f98a4018eeeaa5aa7e3b70054a666ed0dd7f62d81a5",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/748b79b8b47aa2571243ddd1/inspection.json",
+      "inspectionSha256": "b98e9976173a1f8952e62bd97824f09f6eb5f3e6114b4894905585c2e10fcc8a"
+    },
+    {
+      "caseId": "rolling/blend/severe",
+      "id": "bede7198e0f100654104edb2",
+      "decision": "not_ai",
+      "correct": true,
+      "windowCount": 2,
+      "positiveWindows": 0,
+      "maximumRawScore": 0.00035551722976379097,
+      "cutIndices": [],
+      "ancestors": [
+        "NASA",
+        "rolling"
+      ],
+      "mediaPath": "eval/runs/aegis-shots-v1-negative-build/media/bede7198e0f100654104edb2.mp4",
+      "mediaSha256": "b60cf8a25d91414114b3af60b4d486ee60f94e585c00ad9480d0a45604783201",
+      "inspectionPath": "eval/runs/aegis-shots-negative-v1.artifacts/bede7198e0f100654104edb2/inspection.json",
+      "inspectionSha256": "83d6eb954ef85ca4fca59e9479e4e762a2faa29d24b25b6703be017ec5bd43a6"
+    }
+  ],
+  "positiveStages": {
+    "veo-30": {
+      "selected": 30,
+      "acquired": 0,
+      "constructed": 0,
+      "evaluated": 0,
+      "status": "not-authorized-after-negative-gate-failure"
+    },
+    "wan-30": {
+      "selected": 30,
+      "acquired": 0,
+      "constructed": 0,
+      "evaluated": 0,
+      "status": "not-authorized-after-negative-gate-failure"
+    }
+  },
+  "newGenerativeParents": {
+    "declared": 4,
+    "generated": 0
+  },
+  "wanWeightBodiesDownloaded": 0,
+  "productIntegration": false,
+  "limitations": [
+    "Five original negative parents form one connected ancestry family; quality/edit copies are dependent.",
+    "This rejection screen is not a population false-positive estimate.",
+    "AI-positive stages were not run, so the new wrapper has no measured AI recall.",
+    "Repost versions are controlled simulations, not actual platform uploads.",
+    "Do not tune this candidate on these consumed outcomes."
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "purpose": "Independently generated synthetic-audio development control",
+  "documentationUrl": "https://ai.google.dev/gemini-api/docs/speech-generation",
+  "request": {
+    "model": "gemini-3.1-flash-tts-preview",
+    "input": "The park is quiet this afternoon. A small group is standing near the path, watching the sky.",
+    "response_format": {
+      "type": "audio"
+    },
+    "generation_config": {
+      "speech_config": [
+        {
+          "voice": "Kore"
+        }
+      ]
+    },
+    "store": false
+  },
+  "requestCount": 1,
+  "startedAt": "2026-09-05T00:39:08.773Z",
+  "completedAt": "2026-09-05T00:39:15.111Z",
+  "responseId": null,
+  "responseStatus": "completed",
+  "usage": {
+    "total_tokens": 238,
+    "total_input_tokens": 21,
+    "input_tokens_by_modality": [
+      {
+        "modality": "text",
+        "tokens": 21
+      }
+    ],
+    "total_cached_tokens": 0,
+    "total_output_tokens": 217,
+    "output_tokens_by_modality": [
+      {
+        "modality": "audio",
+        "tokens": 217
+      }
+    ],
+    "total_tool_use_tokens": 0,
+    "total_thought_tokens": 0,
+    "raw_prompt_token": 294,
+    "model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 35
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 158
+          }
+        ]
+      },
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 99
+          },
+          {
+            "modality": "audio",
+            "tokens": 201
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 169
+          }
+        ]
+      }
+    ]
+  },
+  "returnedAudio": {
+    "mimeType": "audio/l16; rate=24000; channels=1",
+    "sampleRate": 24000,
+    "channels": 1,
+    "rawBytes": 324480,
+    "rawSha256": "e4264545822e0e317ac074ccf96435323411427b151909c5fb7070313c133fd0",
+    "container": "wav",
+    "conversion": "PCM was wrapped in a 16-bit little-endian WAV container without resampling, per official SDK example"
+  },
+  "audioPath": "eval/media/controls/6cfcf08a6d533eb72e49b760.wav",
+  "audioSha256": "6cfcf08a6d533eb72e49b760d429c370a4415662df74cb36df36a5823c89721c",
+  "audioBytes": 324524,
+  "responseIdNote": "The completed store:false response did not expose an interaction id in the SDK result; no id was fabricated and no second generation was requested.",
+  "audioDurationSeconds": 6.76,
+  "outputAudioProbe": {
+    "codec": "pcm_s16le",
+    "sampleRate": 24000,
+    "channels": 1
+  }
+}

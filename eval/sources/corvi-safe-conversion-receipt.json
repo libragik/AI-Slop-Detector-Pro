@@ -1,0 +1,12 @@
+{
+  "checkpointPath": "eval/vendor/corvi/weights/Grag2021_latent/model_epoch_best.pth",
+  "checkpointSha256": "0168451e84a2a35d0b141ad4f2e361a74efdd06eb8d11434087f8a0bb6e3abad",
+  "checkpointMatchesZipMember": true,
+  "unsafeGlobals": [],
+  "loadingMode": "torch.load(weights_only=True,map_location=cpu); no allowlisting",
+  "tensorStateEntries": 320,
+  "safetensorsPath": "eval/vendor/corvi/weights/Grag2021_latent/model_epoch_best.safetensors",
+  "safetensorsSha256": "8b7c1a9f463746dc6cf2fda33036b4ad0c48bc82fe3ef503d26c91162563e66a",
+  "roundtripTensorEquality": true,
+  "torchVersion": "2.8.0"
+}

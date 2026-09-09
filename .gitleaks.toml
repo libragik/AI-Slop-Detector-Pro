@@ -1,0 +1,14 @@
+title = "AI Slop Detector secret scanning"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "generic-api-key"
+
+[[rules.allowlists]]
+description = "Pinned SHA-256 of a research script, verified as a file checksum rather than a credential"
+condition = "AND"
+paths = ['''(^|/)scripts/eval-sightengine-original-counterparts\.py$''']
+regexTarget = "secret"
+regexes = ['''^b953a1dd11f3f2b5bf81f3c9d7819466fed1d98c7defeb234e0439c82ca852be$''']

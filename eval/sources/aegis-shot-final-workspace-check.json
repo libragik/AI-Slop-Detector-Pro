@@ -1,0 +1,35 @@
+{
+  "verifiedAtUnix": 1788581534.126571,
+  "frozenSourcesAndSnapshotsUnchanged": 41,
+  "reportLinksResolved": 11,
+  "vitestTestsPassed": 250,
+  "vitestFilesPassed": 22,
+  "targetedLintPassed": true,
+  "healthHttpStatus": 200,
+  "health": {
+    "ok": true,
+    "status": "ready",
+    "providers": {
+      "gemini": true,
+      "youtube": false,
+      "cache": false,
+      "c2pa": true,
+      "model": "gemini-3.7-flash",
+      "videoProcessing": "agentic",
+      "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+      "cacheConfigured": false,
+      "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+      "inspectionStrategy": "sweep_and_review",
+      "reviewModel": "gemini-3.7-flash",
+      "calibrated": false
+    },
+    "queue": {
+      "active": 0,
+      "pending": 0,
+      "concurrency": 2,
+      "maxQueue": 0
+    },
+    "timestamp": "2026-09-05T04:12:14.126Z"
+  },
+  "newClassifierCallsDuringVerification": 0
+}

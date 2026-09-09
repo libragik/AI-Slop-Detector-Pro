@@ -1,0 +1,9 @@
+{
+  "recordedAt": "2026-09-05T02:08:28.378Z",
+  "planSha256": "451586114592dec13aed0ab7264032c78e3f532038dabc0b16071cd9aaa064d0",
+  "planCreatedAtField": "2026-09-05T01:53:00Z",
+  "actualSubmissionStartedAt": "2026-09-05T01:52:34.795Z",
+  "offsetSeconds": 25.205,
+  "correction": "The plan.createdAt field was hand-entered and is not an authoritative clock receipt. Preserve the original plan hash. The generation helper read and hashed this exact plan and exclusively wrote the submitting record before calling the provider; that execution ordering establishes predeclaration. Use generation.startedAt as the recorded request-start timestamp.",
+  "planUnchanged": true
+}

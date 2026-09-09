@@ -1,0 +1,61 @@
+{
+  "status": "failed",
+  "testCount": 11,
+  "networkConnections": 0,
+  "apiSubmissions": 0,
+  "modelCalls": 0,
+  "fixtures": "Artificial bytes and mocked fetch responses only; temporary fixtures removed.",
+  "node": "v26.7.0",
+  "scriptSha256": "1fb237600686b4cc0d8b57aef054c34d74831e885f3dde8fdb4fd69dea3c0aff",
+  "contractFile": "scripts/eval-generate-veo-study.test.mjs",
+  "contractSha256": "81e23aaf1cd7afd71238c59baffc94cf21ff6a9210ab4bdc922cd03f545d8623",
+  "checks": [
+    {
+      "name": "SDK serializes exact text-only request without using a network",
+      "status": "failed",
+      "error": "seed parameter is only supported in Gemini Enterprise Agent Platform mode, not in Gemini Developer API mode."
+    },
+    {
+      "name": "SDK attempts1 cannot repeat a failed paid submission",
+      "status": "failed",
+      "error": "Expected values to be strictly equal:\n\n0 !== 1\n"
+    },
+    {
+      "name": "terminal failure, filtering, invalid output, and uncertainty stay distinct",
+      "status": "passed"
+    },
+    {
+      "name": "mutable state is complete JSON and immutable records refuse replacement",
+      "status": "passed"
+    },
+    {
+      "name": "wrapper finalization is idempotent and never changes the raw receipt",
+      "status": "passed"
+    },
+    {
+      "name": "failed wrapper creation resumes locally with the original raw hash",
+      "status": "passed"
+    },
+    {
+      "name": "changed completed media and source identity are rejected",
+      "status": "passed"
+    },
+    {
+      "name": "actual builder accepts matching schema and rejects an edited raw receipt",
+      "status": "failed",
+      "error": "Expected values to be strictly equal:\n\n1 !== 0\n"
+    },
+    {
+      "name": "a fabricated passing gate summary cannot authorize generation",
+      "status": "passed"
+    },
+    {
+      "name": "download watchdog terminates a stalled child",
+      "status": "passed"
+    },
+    {
+      "name": "download watchdog terminates an oversized child output",
+      "status": "passed"
+    }
+  ]
+}

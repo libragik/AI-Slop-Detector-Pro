@@ -1,0 +1,21 @@
+{
+  "repository": "https://github.com/mever-team/spai",
+  "revision": "8ff7b3b6779b4fcb43cf313471d9cb1c62d129a4",
+  "files": {
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "configs/spai.yaml": "66a3caee07d9af23de453eb604709d4a821aab41a6acfb983a5c9be9d05f3586",
+    "spai/__init__.py": "c8cbcf96bb07ad2c517efbea09b7a9fc07f7cb143082caa5b2d3f3f41f3b7b94",
+    "spai/config.py": "7ebda3d1862985870f2d70272dc80933af3ceb66b6df85f2f4d0a901299cb893",
+    "spai/models/__init__.py": "13abb55acc1e51dea398fc097aeb1ed348c8ba8f5f7fc5c5a71677bea4c4f538",
+    "spai/models/backbones.py": "5d048da7d6a43d9a4236f35e2d6746bc29457cc561943fb565764321c63c315d",
+    "spai/models/build.py": "d89eaade77bcb58d9b0de08ddbd0c7eec94b54dc08958cc169b3a06e47faddcd",
+    "spai/models/filters.py": "0d8006e6b8af445bac7a9edb9c48f69216b92b2cdbd5a2b94dea578666f17c4c",
+    "spai/models/frequency_loss.py": "6edc01f7cebbfd18fe0a29d50aa0952becb3aa6f53fe733e39498ba7d950db80",
+    "spai/models/losses.py": "538cae14b1c35a1f316a2465ad7711412e8e520629d1a21ea56f84e93fd62d87",
+    "spai/models/mfm.py": "795933cf358ac0daf3196a20746a646a43005c1a3e4a1ff2a8b58757df46d5be",
+    "spai/models/sid.py": "f748716a9d6223d36e5d60966193d5c46b1b26da0d475610b75bfc7ff9192c64",
+    "spai/models/swin_transformer.py": "b3bcc34ce1ab685d1dcf39cb61d5b76d280bb04a9639dc497c217c1db1b85388",
+    "spai/models/utils.py": "5c9940ecfb5002b3d0b1655f413987ac1a13214394657533719d47193227a507",
+    "spai/models/vision_transformer.py": "1ff53dbf64d9909b852c4727eebf7711265f2d8cdb644801a9ec3ff611c3acc5"
+  }
+}

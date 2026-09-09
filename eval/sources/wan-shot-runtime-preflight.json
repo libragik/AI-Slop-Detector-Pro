@@ -1,0 +1,231 @@
+{
+  "python": "3.12.9 (main, Feb 12 2025, 15:09:19) [Clang 19.1.6 ]",
+  "pythonExecutable": "eval/.venv-wan/bin/python",
+  "platform": "macOS-15.6.1-arm64-arm-64bit",
+  "architecture": "arm64",
+  "requirementsLockSha256": "9a08808dc827a91de2ff7b1154104f77a14fdd98dc2c828611e827df53f38677",
+  "packages": {
+    "accelerate": {
+      "version": "1.14.0",
+      "installationRecordSha256": "8ee0340c0a5f7582f02dde238588b52c341a36b45a52df88d04409c703fc5afe"
+    },
+    "annotated-doc": {
+      "version": "0.0.5",
+      "installationRecordSha256": "eee5b3b5754ae1cb431e5aba650cdab050673d518473f0fb2b4ad9f48671e2e7"
+    },
+    "anyio": {
+      "version": "4.15.0",
+      "installationRecordSha256": "e01796cb75d3e62a34b88f01239d141a129343ffa240698e9629b17b4c94784a"
+    },
+    "certifi": {
+      "version": "2026.7.22",
+      "installationRecordSha256": "cff9d243744c96445494c29abee3d592d0a6955d5504f4fbe034dce7aaf38490"
+    },
+    "charset-normalizer": {
+      "version": "3.5.1",
+      "installationRecordSha256": "cc6ec05278192b85d32498f927c6bec347b64abb983b91eea836479417ddc5dd"
+    },
+    "click": {
+      "version": "8.5.0",
+      "installationRecordSha256": "924078ec3a47b97192425dbc0c3693085af7a7b863afcf6b4e110cf0bd97dea4"
+    },
+    "diffusers": {
+      "version": "0.40.0",
+      "installationRecordSha256": "f2c07c40bec3041eeca5d6239dee49f7e389e56909b5d89c7f43ee74a26f70e2"
+    },
+    "filelock": {
+      "version": "3.32.5",
+      "installationRecordSha256": "6469d5867d6fb6705c4a34536b4684e1008206a9822cdff920b126030c9eabd3"
+    },
+    "fsspec": {
+      "version": "2026.7.0",
+      "installationRecordSha256": "bf8970ef32f4fa1da4c23e55e648fbcd3980d3d67f14268a514a5973514fd2a0"
+    },
+    "h11": {
+      "version": "0.16.0",
+      "installationRecordSha256": "3779e13c17d8e21c769ed9ee8780af123cc3f8656185f5f8d3af258ff5639b3e"
+    },
+    "hf-xet": {
+      "version": "1.6.0",
+      "installationRecordSha256": "bd94c1b2ef995d14c7f9c72f42af4ee0f22379123eb89093754d1be16f323df4"
+    },
+    "httpcore": {
+      "version": "1.0.9",
+      "installationRecordSha256": "67cb4644d84fef1df8c5a0862c57c3380eff058a153bac7a4ba2722779982554"
+    },
+    "httpx": {
+      "version": "0.28.1",
+      "installationRecordSha256": "408d01eef5c8796e812b266f14b053e76db331b25e212298a9603807368cf025"
+    },
+    "huggingface-hub": {
+      "version": "1.30.0",
+      "installationRecordSha256": "dfeab1341dfa6cd236c63402abb0a13eb40f9ee3b759b65b4767c6f5c0785934"
+    },
+    "idna": {
+      "version": "3.19",
+      "installationRecordSha256": "8cec469c40d1933ded1c0c5ccaf6d5bb9ab35af75a8c0802667636f55eea49f3"
+    },
+    "importlib-metadata": {
+      "version": "9.0.1",
+      "installationRecordSha256": "d8afce90e1c67162b90e7757baeff72e9c1fee77e49d8bf46fc842ac584c8b9c"
+    },
+    "jinja2": {
+      "version": "3.1.6",
+      "installationRecordSha256": "4551b3fb657b85a9f01e961c0f8a235da65d758149b619400211964b3ac02bdc"
+    },
+    "markdown-it-py": {
+      "version": "4.2.0",
+      "installationRecordSha256": "9c9d1c7da18f6598f8e8f4b5fdf0f1e90405288149b081e644bba513332d8ec0"
+    },
+    "markupsafe": {
+      "version": "3.0.3",
+      "installationRecordSha256": "a700c61cc26f1410beeefba1dcb4fc63bf7d7da103e3d3ad7c34445463fa40b8"
+    },
+    "mdurl": {
+      "version": "0.1.2",
+      "installationRecordSha256": "9a1b05128e711beabd7684e116fcf408ce8cff7ef10e7e8b359b248924fe529c"
+    },
+    "mpmath": {
+      "version": "1.3.0",
+      "installationRecordSha256": "09cbd04e87d0c5ab64aab08291b31883e4ea27e8d2c640710e0beb1995e86b9b"
+    },
+    "networkx": {
+      "version": "3.6.1",
+      "installationRecordSha256": "f6833bb525b720a7809dd6280817601af3dbd78efef02d9e55d4b887ec1f52da"
+    },
+    "numpy": {
+      "version": "2.2.6",
+      "installationRecordSha256": "b887a744b6a561ffc279917cec44f768f136cc5eac6e7bbc20bedf4e1713f8a6"
+    },
+    "packaging": {
+      "version": "26.3",
+      "installationRecordSha256": "1b8655965b0d83e9a067fd7f84b977bd1e117e0fb9f2874b2572781bdc9e2147"
+    },
+    "pillow": {
+      "version": "12.3.0",
+      "installationRecordSha256": "45c037b8a45b62c77f1a01fe5895a67a77c9c3cb68634f80a0d7a5b060ac5f65"
+    },
+    "psutil": {
+      "version": "7.2.2",
+      "installationRecordSha256": "82a0585abe618fd6b841c095e45a9970cb4c8ace9aab3209d3602a8a1233ed49"
+    },
+    "pygments": {
+      "version": "2.21.0",
+      "installationRecordSha256": "9e47f18f299e0f4e9c8fce01185e17ab7a905ed42ab47b4a50fde9aca1230af6"
+    },
+    "pyyaml": {
+      "version": "6.0.3",
+      "installationRecordSha256": "4e259774348bac93724047fa3547e03b71cbe2b7d37ca39be41513355d9cf36a"
+    },
+    "regex": {
+      "version": "2026.9.3",
+      "installationRecordSha256": "d7ecba304f4f904377a72e46cc0523ef5ba7f5500db93285ecf80eb1b29c75d1"
+    },
+    "requests": {
+      "version": "2.34.2",
+      "installationRecordSha256": "fc8c5216d0e865d815bd04cc240b5adc5d56f6c3dbe9aef3b4ea3b83d735bdfe"
+    },
+    "rich": {
+      "version": "15.0.0",
+      "installationRecordSha256": "1b725253b1bd316b53169a3a0b35d03d6c81bad9009ddae73d8645fb3cd3f292"
+    },
+    "safetensors": {
+      "version": "0.8.0",
+      "installationRecordSha256": "4e91dff79920a802e426762fc63266bfb5687612a27a6b9ee0c7d3774b65cd7b"
+    },
+    "sentencepiece": {
+      "version": "0.2.2",
+      "installationRecordSha256": "52f181822f4098d8aa5915f44b2f860b8db8dacff85197aa5c0be4c2a9d10c5d"
+    },
+    "setuptools": {
+      "version": "84.0.0",
+      "installationRecordSha256": "26b6656e2a9d04f4c1cc1e8580636454733af03d8dc2dac4b2d4636ff1ed6da8"
+    },
+    "shellingham": {
+      "version": "1.5.4",
+      "installationRecordSha256": "2a878ed08ec32adc6b08a9b6a83754cd7c30ffb8a67e26527292456da9ff2fee"
+    },
+    "sympy": {
+      "version": "1.14.0",
+      "installationRecordSha256": "1178796489688e302146d3ec6646906c11dbb68a6b05e3cb74dbaa77b1196c2e"
+    },
+    "tokenizers": {
+      "version": "0.23.2",
+      "installationRecordSha256": "88f59e57eb5e0340e516092d30e411049abcc943fc9b284c8dc2a7d136f481c5"
+    },
+    "torch": {
+      "version": "2.8.0",
+      "installationRecordSha256": "1ecf5a08cac96a33743224013c91b7f66042ad6017dd46cc1fe60381ecb7f819"
+    },
+    "torchvision": {
+      "version": "0.23.0",
+      "installationRecordSha256": "b7acc222eb69263b6fcf513024933f89600aca73a4b383d23fef141350b05ee9"
+    },
+    "tqdm": {
+      "version": "4.70.0",
+      "installationRecordSha256": "389c66fd42e1d6d8a931768eab2238084a95f9b5a27cd51a5ffafb4652ea19b3"
+    },
+    "transformers": {
+      "version": "5.16.1",
+      "installationRecordSha256": "ee902280481f385be3c0a130f882665e919fbb52f51dffe516b7ef28bdd669ea"
+    },
+    "typer": {
+      "version": "0.27.2",
+      "installationRecordSha256": "8b6cc5478bab969e8b1c8f814a70444eb0d6aa45fe2f2ed347870f4d6a9811ee"
+    },
+    "typing-extensions": {
+      "version": "4.16.0",
+      "installationRecordSha256": "9e07fea845cac76293d927afa7157a14ecba39b318bc8af236b8de530b7656c1"
+    },
+    "urllib3": {
+      "version": "2.7.0",
+      "installationRecordSha256": "4869c7ca2082c964b4e2bb8244deda15cfa069d93e4543d3a16eca6a63cbb81f"
+    },
+    "zipp": {
+      "version": "4.1.0",
+      "installationRecordSha256": "09471a1e570a024020ae32570ac57c6e906d76a4840b93b92801ea1b6eec71a1"
+    }
+  },
+  "criticalSources": [
+    {
+      "path": "diffusers/pipelines/wan/pipeline_wan.py",
+      "sha256": "2a5fcd905ad0fbcbd76240e02007e73ab3583f927da8b9fe0fbe5a4a54d792aa"
+    },
+    {
+      "path": "diffusers/models/transformers/transformer_wan.py",
+      "sha256": "74741d74c9fa4b9d02be83de9840b37a732080a795aa2d19037c03e312c76907"
+    },
+    {
+      "path": "diffusers/models/autoencoders/autoencoder_kl_wan.py",
+      "sha256": "a38de0c53adcb81887a0b48d44e3fb59737d7b1e4779a666febe83be666e8fa8"
+    },
+    {
+      "path": "diffusers/schedulers/scheduling_unipc_multistep.py",
+      "sha256": "5bfe1dcf55ebea6dbbf624d3af676b2529b81fbcaf493150d562ec9e1aba3872"
+    },
+    {
+      "path": "diffusers/models/modeling_utils.py",
+      "sha256": "7f0420803e8372da4b8d8608a72ca77252590d99cf8d0a080ca7873fbaf3f507"
+    },
+    {
+      "path": "transformers/models/umt5/modeling_umt5.py",
+      "sha256": "1cff5353264f815d82f72102f33f58a936983e01b223f5cfd2b144f63d4660e8"
+    },
+    {
+      "path": "transformers/models/t5/tokenization_t5.py",
+      "sha256": "6fa6696aa2bf6bf40bcd7c7aea81b5b581e365ada45c6d7768d53609174496d5"
+    },
+    {
+      "path": "transformers/tokenization_utils_tokenizers.py",
+      "sha256": "bf921a160f483c7a32973952ed82a08c7d8982f769726bd220933aae2df98de8"
+    },
+    {
+      "path": "transformers/modeling_utils.py",
+      "sha256": "f103dc66dd3f08e7842c3624c586b281250349e1c0707f394f98db992ec3cd8f"
+    }
+  ],
+  "createdAtUnix": 1788580086.689085,
+  "modelConstructed": false,
+  "forwardCalls": 0,
+  "scriptSha256": "039db81ca7363b07c15f0517c52e91cddbb81f263cc55e073f5fff8123814dd3"
+}

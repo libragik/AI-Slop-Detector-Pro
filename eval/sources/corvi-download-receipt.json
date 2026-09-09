@@ -1,0 +1,25 @@
+{
+  "sourceRepository": "https://github.com/grip-unina/DMimageDetection",
+  "codeRevision": "745ad9e1eee82bdac4aab6e1e7e7dbf20753633a",
+  "officialDriveUrl": "https://drive.google.com/file/d/1sAoAuOGCWS4dAMBhDkRHgBf4SgBgvkVf/view?usp=share_link",
+  "downloadUrl": "https://drive.usercontent.google.com/download?id=1sAoAuOGCWS4dAMBhDkRHgBf4SgBgvkVf&export=download&confirm=t",
+  "zipPath": "eval/vendor/corvi/weights.zip",
+  "zipBytes": 506074366,
+  "zipSha256": "253c524cb7919b097279c5d56a1ba048856103f05c03fae6b96017826f2876d9",
+  "archiveMember": "weights/Grag2021_latent/model_epoch_best.pth",
+  "checkpointBytes": 282549121,
+  "checkpointSha256": "0168451e84a2a35d0b141ad4f2e361a74efdd06eb8d11434087f8a0bb6e3abad",
+  "downloadReceipt": {
+    "taskSession": "01a06ecc-1da2-7623-9d72-de04c9f8a78d",
+    "downloadCallId": "call_pQ14DZVnMgmNd7FdyS19EzUx",
+    "resumeCallId": "call_2Rh6fWsJ1fxfsRtdepugx7bk",
+    "completedReceiptCallId": "call_AHl7xzCxWMAy9fFE8z67mkvE",
+    "receiptLines": [
+      630,
+      644,
+      660
+    ],
+    "completionContentRange": "bytes 499122176-506074365/506074366",
+    "note": "Initial bounded transfer hit500MB cap. A bounded HTTP206 range request completed the public506074366-byte archive. ZIP and extracted-member hashes were printed by the successful tool receipt. ZIP hash reverified from disk for this receipt."
+  }
+}

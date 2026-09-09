@@ -1,0 +1,33 @@
+{
+  "study": "Known-origin development diagnostic; not accuracy validation",
+  "createdAt": "2026-09-05T01:53:00Z",
+  "request": {
+    "model": "veo-3.1-generate-preview",
+    "prompt": "An ordinary handheld phone video in a small kitchen in daylight. An adult wearing a plain green sweater pours coffee from a glass carafe into a white ceramic mug on a wooden counter, sets the carafe down, picks up the mug, and turns toward a window. Natural unpolished home-video appearance, continuous single shot, realistic hands and reflections, subtle handheld movement. Quiet room ambience and liquid pouring, no dialogue, no music, no titles or captions.",
+    "config": {
+      "numberOfVideos": 1,
+      "durationSeconds": 8,
+      "resolution": "720p",
+      "aspectRatio": "16:9"
+    }
+  },
+  "inputMedia": [],
+  "priceReference": "https://ai.google.dev/gemini-api/docs/pricing#veo-3.1",
+  "estimatedGenerationUsd": 3.2,
+  "estimateLimitation": "Published 720p standard rate of USD 0.40 per generated second; actual billing not independently read.",
+  "freeze": {
+    "detectorPolicy": "evidence-2.8",
+    "fingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+    "changeDetector": false,
+    "inspectConsumedHoldout": false,
+    "generationSubmissions": 1,
+    "analysisUploads": 3,
+    "testPlan": [
+      "Whole generated clip with audio removed and metadata stripped, opaque filename.",
+      "Eight-second conventional CGI control from the 2010 Sintel trailer, source seconds 12 to 20, silent and identically encoded.",
+      "Same CGI control with source seconds 3 to 5 replaced by generated video seconds 3 to 5, silent and identically encoded."
+    ],
+    "derivativeEncoding": "1280x720 padded preserving aspect ratio, 24 fps, H.264 CRF 20, yuv420p, no audio",
+    "interpretation": "One generated source and one conventional CGI source. A hit is one diagnostic result. A miss demonstrates a concrete failure on known AI-origin material. No selection among generation outputs and no prompt or threshold tuning after these outcomes."
+  }
+}

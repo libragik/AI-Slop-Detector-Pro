@@ -1,0 +1,55 @@
+{
+  "repository": "https://github.com/MusapYildiz/ai_video_detection_benchmark",
+  "revision": "d86a774fd971954a023e1cd00ed7ff5b2575e0d1",
+  "unchangedUpstreamSources": true,
+  "files": {
+    "LICENSE": {
+      "path": "LICENSE",
+      "bytes": 1071,
+      "sha256": "dd5b94a9a7da625f5a0d1f9d855b7dbf96c92663af555b7ff8f3c34017fa0824",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/LICENSE"
+    },
+    "README.md": {
+      "path": "README.md",
+      "bytes": 23515,
+      "sha256": "ee2bd6c7c921b3184a02bd213649ed92ff55cbba9bb7f642f92d78b2a7820b14",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/README.md"
+    },
+    "requirements.txt": {
+      "path": "requirements.txt",
+      "bytes": 430,
+      "sha256": "745e6087a1ab3fd426430d0e62c0658ef7029194891cfc3be157eaf68bbd50ce",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/requirements.txt"
+    },
+    "src/branches/detector_model.py": {
+      "path": "src/branches/detector_model.py",
+      "bytes": 19013,
+      "sha256": "bdfcfddba6dfe305f462d0a094b28314ea208b2f4b7fa119978fd226d88f05a6",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/src/branches/detector_model.py"
+    },
+    "src/branches/pixel_branch.py": {
+      "path": "src/branches/pixel_branch.py",
+      "bytes": 13167,
+      "sha256": "e8d6d188729662187fcd04653d54337101bd8287820d3a87f2a4cf09e8bca26a",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/src/branches/pixel_branch.py"
+    },
+    "src/branches/motion_branch.py": {
+      "path": "src/branches/motion_branch.py",
+      "bytes": 17365,
+      "sha256": "5d809994c1597bcfc2a7c7cdf59faa1da15ba87b0701df1ab580ce138a3d7c34",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/src/branches/motion_branch.py"
+    },
+    "src/branches/consistency_branch.py": {
+      "path": "src/branches/consistency_branch.py",
+      "bytes": 14238,
+      "sha256": "bc0687fdc835037e18bafe28a80511e23fdc4f8c0603171a3c4897057b5c434b",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/src/branches/consistency_branch.py"
+    },
+    "src/utils/video_io.py": {
+      "path": "src/utils/video_io.py",
+      "bytes": 16010,
+      "sha256": "bab6ba4b8b1c07ff9bc392cf40487be8e8d31fdd248a4494563057e812a043dc",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/src/utils/video_io.py"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "repository": "https://github.com/LongMa-2025/AIGVDBench",
+  "revision": "e38c75abda3d319c0c3072c77594f6eeef1c028f",
+  "requests": [
+    {
+      "url": "https://api.github.com/repos/LongMa-2025/AIGVDBench",
+      "bytes": 5217,
+      "sha256": "096d12c18dae253f8b657e54254a6e74458b6dbc642ce43557caea2688e6048f"
+    },
+    {
+      "url": "https://api.github.com/repos/LongMa-2025/AIGVDBench/commits/main",
+      "bytes": 5438,
+      "sha256": "4c53200016b00d0cb460cfed0f7f2777fb5708da41f246a40152d768e391f0a1"
+    },
+    {
+      "url": "https://api.github.com/repos/LongMa-2025/AIGVDBench/git/trees/e38c75abda3d319c0c3072c77594f6eeef1c028f?recursive=1",
+      "bytes": 1775,
+      "sha256": "13e053ec667b771057e2811b71456790ec63f115ca6f6945607aa38e3f5a2d1c"
+    },
+    {
+      "url": "https://api.github.com/repos/LongMa-2025/AIGVDBench/releases?per_page=10",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LongMa-2025/AIGVDBench/e38c75abda3d319c0c3072c77594f6eeef1c028f/README.md",
+      "bytes": 5674,
+      "sha256": "cf5f379b56d490a1aad05f77a683846a70ac9ef3415d262a2939fd9dfa7a9962"
+    },
+    {
+      "url": "https://huggingface.co/api/datasets/AIGVDBench/AIGVDBench",
+      "bytes": 2450,
+      "sha256": "1b0282da6a381d88beafc27298895928ca39e855fa24a5f4c181a618b33c8934",
+      "paginationLink": null
+    },
+    {
+      "url": "https://huggingface.co/api/models?author=AIGVDBench&limit=100",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "paginationLink": null
+    },
+    {
+      "url": "https://huggingface.co/api/datasets/AIGVDBench/AIGVDBench/tree/main?recursive=true&limit=1000",
+      "bytes": 12137,
+      "sha256": "ed0646159c71fbd292e54f436c5483e7f7b2d0649a80af1f272b1e50f57dfc79",
+      "paginationLink": null
+    }
+  ]
+}

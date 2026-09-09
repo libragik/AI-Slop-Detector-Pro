@@ -1,0 +1,42 @@
+{
+  "name": "ai-slop-detector",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An explainable short-form video AI detector powered by Gemini agentic video understanding.",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "node scripts/start-production.mjs",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "setup:media": "bash scripts/setup-media.sh",
+    "eval:validate": "tsx scripts/eval-run.mjs",
+    "eval:run": "tsx scripts/eval-run.mjs --run"
+  },
+  "dependencies": {
+    "@contentauth/c2pa-node": "0.9.3",
+    "@google/genai": "2.21.0",
+    "@supabase/supabase-js": "2.114.0",
+    "file-type": "21.3.2",
+    "next": "16.3.4",
+    "p-limit": "7.2.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "zod": "4.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.0",
+    "@types/react": "19.1.10",
+    "@types/react-dom": "19.1.7",
+    "eslint": "9.34.0",
+    "eslint-config-next": "16.3.4",
+    "tsx": "4.23.13",
+    "typescript": "5.9.2",
+    "vitest": "3.2.4"
+  }
+}

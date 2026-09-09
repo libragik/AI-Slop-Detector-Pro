@@ -1,0 +1,243 @@
+{
+  "checkedAt": "2026-09-05T04:19:31.676820+00:00",
+  "scope": "Anonymous official metadata only; no datasets, models, credentials, terms acceptance, or inference",
+  "datasets": [
+    {
+      "repository": "l8cv/GenBuster-200K",
+      "metadataUrl": "https://huggingface.co/api/datasets/l8cv/GenBuster-200K",
+      "status": 200,
+      "bytes": 1467,
+      "responseSha256": "516d30fdcc38c9826baee649ff613fd2284d02b1912f1792614318d11a772040",
+      "revision": "74719a91dc957e87ce393be6585f50940376f4cb",
+      "private": false,
+      "gated": false,
+      "disabled": false,
+      "license": "mit",
+      "usedStorage": 113656178318,
+      "cardData": {
+        "license": "mit"
+      },
+      "files": [
+        ".gitattributes",
+        "GenBuster-200K.7z.001",
+        "GenBuster-200K.7z.002",
+        "GenBuster-200K.7z.003",
+        "GenBuster-200K.7z.004",
+        "GenBuster-200K.7z.005",
+        "GenBuster-200K.7z.006",
+        "GenBuster-200K.7z.007",
+        "GenBuster-200K.7z.008",
+        "GenBuster-200K.7z.009",
+        "GenBuster-200K.7z.010",
+        "GenBuster-200K.7z.011",
+        "GenBuster-200K.7z.012",
+        "GenBuster-200K.7z.013",
+        "GenBuster-200K.7z.014",
+        "GenBuster-200K.7z.015",
+        "GenBuster-200K.7z.016",
+        "GenBuster-200K.7z.017",
+        "GenBuster-200K.7z.018",
+        "GenBuster-200K.7z.019",
+        "GenBuster-200K.7z.020",
+        "GenBuster-200K.7z.021",
+        "GenBuster-200K.7z.022",
+        "GenBuster-200K.7z.023",
+        "GenBuster-200K.7z.024",
+        "GenBuster-200K.7z.025",
+        "GenBuster-200K.7z.026",
+        "GenBuster-200K.7z.027",
+        "README.md"
+      ]
+    },
+    {
+      "repository": "l8cv/GenBuster-200K-mini",
+      "metadataUrl": "https://huggingface.co/api/datasets/l8cv/GenBuster-200K-mini",
+      "status": 200,
+      "bytes": 569,
+      "responseSha256": "aee4d30656bb840aa5f08a58814e4edc8252ad2ba5ea6a9fc9af8993a9d14ccb",
+      "revision": "58af00f022d8272f42de3be912e9a905bf6087d2",
+      "private": false,
+      "gated": false,
+      "disabled": false,
+      "license": "mit",
+      "usedStorage": 3030292585,
+      "cardData": {
+        "license": "mit"
+      },
+      "files": [
+        ".gitattributes",
+        "GenBuster-200K-mini.zip",
+        "README.md"
+      ]
+    },
+    {
+      "repository": "AIGVDBench/AIGVDBench",
+      "metadataUrl": "https://huggingface.co/api/datasets/AIGVDBench/AIGVDBench",
+      "status": 200,
+      "bytes": 2450,
+      "responseSha256": "1b0282da6a381d88beafc27298895928ca39e855fa24a5f4c181a618b33c8934",
+      "revision": "bf48acaa4920990af3dd2a511ea88e63354df305",
+      "private": false,
+      "gated": false,
+      "disabled": false,
+      "license": "cc-by-4.0",
+      "usedStorage": 378386321051,
+      "cardData": {
+        "license": "cc-by-4.0"
+      },
+      "files": [
+        ".gitattributes",
+        "AIGVDBench/ClosedSource/Gen2.zip",
+        "AIGVDBench/ClosedSource/Gen3.zip",
+        "AIGVDBench/ClosedSource/Jimeng.zip",
+        "AIGVDBench/ClosedSource/Luma.zip",
+        "AIGVDBench/ClosedSource/Opensora.zip",
+        "AIGVDBench/ClosedSource/Sora.zip",
+        "AIGVDBench/ClosedSource/causvid_24fps.zip",
+        "AIGVDBench/ClosedSource/kling.zip",
+        "AIGVDBench/ClosedSource/pika.zip",
+        "AIGVDBench/ClosedSource/vidu.zip",
+        "AIGVDBench/ClosedSource/wan.zip",
+        "AIGVDBench/OpenSource/I2V/EasyAnimate.zip",
+        "AIGVDBench/OpenSource/I2V/LTX.zip",
+        "AIGVDBench/OpenSource/I2V/Pyramid-Flow.zip",
+        "AIGVDBench/OpenSource/I2V/SEINE.zip",
+        "AIGVDBench/OpenSource/I2V/SVD.zip",
+        "AIGVDBench/OpenSource/I2V/VideoCrafter.zip",
+        "AIGVDBench/OpenSource/T2V/AccVideo.zip",
+        "AIGVDBench/OpenSource/T2V/AnimateDiff.zip",
+        "AIGVDBench/OpenSource/T2V/Cogvideox1.5.zip",
+        "AIGVDBench/OpenSource/T2V/EasyAnimate.zip",
+        "AIGVDBench/OpenSource/T2V/HunyuanVideo.zip",
+        "AIGVDBench/OpenSource/T2V/IPOC.zip",
+        "AIGVDBench/OpenSource/T2V/LTX.zip",
+        "AIGVDBench/OpenSource/T2V/Open-Sora.zip",
+        "AIGVDBench/OpenSource/T2V/Pyramid-Flow.zip",
+        "AIGVDBench/OpenSource/T2V/RepVideo.zip",
+        "AIGVDBench/OpenSource/T2V/VideoCrafter.zip",
+        "AIGVDBench/OpenSource/T2V/Wan2.1.zip",
+        "AIGVDBench/OpenSource/V2V/Cogvideox1.5.zip",
+        "AIGVDBench/OpenSource/V2V/LTX.zip",
+        "AIGVDBench/Real/Real.zip",
+        "README.md",
+        "Split/test.jsonl",
+        "Split/train.jsonl",
+        "Split/val.jsonl",
+        "Weights/DeCoF.tar"
+      ]
+    }
+  ],
+  "miniFileMetadata": {
+    "url": "https://huggingface.co/api/datasets/l8cv/GenBuster-200K-mini/tree/58af00f022d8272f42de3be912e9a905bf6087d2?recursive=true&expand=false",
+    "bytes": 506,
+    "sha256": "406242bdcb25477d76aa3db5b106ad85d9458b0c706a736ec86e0c8c26633ec6",
+    "files": [
+      {
+        "type": "file",
+        "oid": "1ef325f1b111266a6b26e0196871bd78baa8c2f3",
+        "size": 2461,
+        "path": ".gitattributes"
+      },
+      {
+        "type": "file",
+        "oid": "c0d5036c77dccc2d17ddf93dc2ea109dce879fcc",
+        "size": 5458325142,
+        "lfs": {
+          "oid": "332a012eac1c0207378714d639391f991a9a200108d9c3c8f9f493a1e4c81c20",
+          "size": 5458325142,
+          "pointerSize": 135
+        },
+        "xetHash": "b944985d2a8d5506dfb4b377ccc992ec7fe3ca6b5763ed61b3d3565a63b5fc8c",
+        "path": "GenBuster-200K-mini.zip"
+      },
+      {
+        "type": "file",
+        "oid": "7be5fc7f47d5db027d120b8024982df93db95b74",
+        "size": 24,
+        "path": "README.md"
+      }
+    ]
+  },
+  "hardware": {
+    "cpu": "Apple M3 Ultra",
+    "physicalMemoryBytes": 274877906944,
+    "logicalCpuCount": 32,
+    "isolatedPython": "eval/.venv/bin/python",
+    "torchVersion": "2.8.0",
+    "mpsBuilt": true,
+    "mpsAvailable": true,
+    "cudaAvailable": false,
+    "testScope": "sysctl and torch availability queries only; no tensor/model forward or backward",
+    "sysctlRaw": [
+      "274877906944",
+      "Apple M3 Ultra",
+      "32"
+    ]
+  },
+  "localEvidence": [
+    {
+      "path": "eval/manifest.jsonl",
+      "sha256": "cb49a2ea8e403656c67ce6741e61abe1e06207918a5cbecb963309d61e598f67"
+    },
+    {
+      "path": "eval/transformed-manifest.jsonl",
+      "sha256": "a9a7b07a9e8513b753fb879e9e41154454d789a34c9fcf6edb7755e615db7fa1"
+    },
+    {
+      "path": "eval/control-manifest.jsonl",
+      "sha256": "cc5c3a2907a9fb8252aaf962ddf1136a708f2f66373dddc81081005804903349"
+    },
+    {
+      "path": "eval/generated-origin-manifest.jsonl",
+      "sha256": "122b79147249eab01d06e0fbd0b33955fc86eb9479d8df1697fd123c480b8b55"
+    },
+    {
+      "path": "eval/instagram-manifest.jsonl",
+      "sha256": "c628f8eeb83826015ca928f9751d41e26b2768700ac20fdbc9e9993280388d38"
+    },
+    {
+      "path": "eval/audio-control-manifest.jsonl",
+      "sha256": "0feb6960135bc9e6c2652e87961f204ca0782f3f1ea422421454b2db36337f99"
+    },
+    {
+      "path": "eval/runs/aegis-shots-v1-negative-build/manifest.jsonl",
+      "sha256": "87c02fc0b447bb0a5cc9f39ca18bda788c773db6f8e145b88bd863b54eb4dc4f"
+    },
+    {
+      "path": "eval/AEGIS_SHOT_DEVELOPMENT.md",
+      "sha256": "07c42f9a1a0d31adf628935f03c52a39db4afaff26a9da71e598bf8ca78bf98a"
+    },
+    {
+      "path": "eval/RESEARCH_DECISION.md",
+      "sha256": "2db06c8cbd0a908876f665d39df72fe49d447a281e95c1f72da2a50cb2e70d84"
+    },
+    {
+      "path": "eval/CORPUS_SOURCE_LIMITS.md",
+      "sha256": "ebc4ab6b0bf6c17fffb674d6ff21a026a901a0ab944137291187a74818ff0b41"
+    },
+    {
+      "path": "eval/BUSTERX_ASSESSMENT.md",
+      "sha256": "94f3b04257be1cc15c8537c36e9a13eae6196c8632869ab5bf21a2b2f6bd2275"
+    },
+    {
+      "path": "eval/AIGVDBENCH_ACCESS.md",
+      "sha256": "2c2dc2ad3da94ac03c191d54b001fe0b9f23a236942c2f349fa2bef994fa4dd0"
+    },
+    {
+      "path": "eval/MNW_ASSESSMENT.md",
+      "sha256": "742b56487ea52dc373bc25acd8a6aa7fd25dd9e40396e2798c19747be47bdb24"
+    }
+  ],
+  "restrictions": {
+    "newMediaOrModelBodiesDownloaded": false,
+    "classifierCalls": 0,
+    "trainingSteps": 0,
+    "calibrationPredictionsRead": false,
+    "applicationCodeChanged": false,
+    "frozenStudyFilesChanged": false
+  },
+  "report": {
+    "path": "eval/TRAINING_FEASIBILITY.md",
+    "sha256": "d9181d550b0e9d318e2eab7e54de3404f556e5b51575800ccc6ca714a8ef99e5"
+  }
+}

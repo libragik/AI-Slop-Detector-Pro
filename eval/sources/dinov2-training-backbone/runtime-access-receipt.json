@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-09-05T04:35:30.191233+00:00",
+  "head": {
+    "url": "https://huggingface.co/facebook/dinov2-small/resolve/ed25f3a31f01632728cabb09d1542f84ab7b0056/model.safetensors",
+    "status": 200,
+    "contentLength": "88249960",
+    "etag": "\"58591664a535b604df1061ec047ff77f564b950071c0f9045f4bb6bbea71c30f\"",
+    "bodyBytesReceived": 0,
+    "provenance": "Exact result retained from preceding successful HEAD tool output; no second request. Receipt finalization failed when querying packages with system Python and was recovered locally using eval/.venv."
+  },
+  "records": [
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v4.57.6/src/transformers/models/dinov2/modeling_dinov2.py",
+      "path": "eval/sources/dinov2-training-backbone/transformers-4.57.6-models__dinov2__modeling_dinov2.py",
+      "bytes": 28715,
+      "sha256": "e1376e0decc4cf3fd60042a17464a4118f1802a4e1ca2af4496c211fabb6d34b",
+      "installedByteIdentical": true,
+      "installedPath": "eval/.venv/lib/python3.12/site-packages/transformers/models/dinov2/modeling_dinov2.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v4.57.6/src/transformers/models/bit/image_processing_bit.py",
+      "path": "eval/sources/dinov2-training-backbone/transformers-4.57.6-models__bit__image_processing_bit.py",
+      "bytes": 15932,
+      "sha256": "4375facc5a89b1ed31aaefc74181f516a07d9cd292e7c7e26798ff17e728a96d",
+      "installedByteIdentical": true,
+      "installedPath": "eval/.venv/lib/python3.12/site-packages/transformers/models/bit/image_processing_bit.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v4.57.6/src/transformers/models/dinov2/configuration_dinov2.py",
+      "path": "eval/sources/dinov2-training-backbone/transformers-4.57.6-models__dinov2__configuration_dinov2.py",
+      "bytes": 8291,
+      "sha256": "d36d05e792619389f06e9cf17c3c738bbecfa1efb93a9b8667e7fe9b11036058",
+      "installedByteIdentical": true,
+      "installedPath": "eval/.venv/lib/python3.12/site-packages/transformers/models/dinov2/configuration_dinov2.py"
+    }
+  ],
+  "environment": {
+    "torch": "2.8.0",
+    "torchvision": "0.23.0",
+    "transformers": "4.57.6",
+    "safetensors": "0.8.0",
+    "Pillow": "12.3.0"
+  },
+  "modelForwards": 0,
+  "weightsDownloaded": false
+}

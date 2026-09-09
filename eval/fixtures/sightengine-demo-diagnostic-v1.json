@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "id": "sightengine-demo-diagnostic-v1",
+  "frozen": true,
+  "frozenAt": "2026-09-05T04:23:18.722094+00:00",
+  "purpose": "One bounded public-demo diagnostic of already consumed development controls. Not validation, calibration, population accuracy estimation, or authorization to integrate the vendor into the product.",
+  "target": "any generative visual contribution",
+  "scope": {
+    "plannedUploads": 5,
+    "fixedOrder": [
+      "dff4042041e63458ae52bc1f",
+      "10a7c358371f29ddd7acb538",
+      "0d90f27f1d7915a793493ee4",
+      "fresh-cgi-pendulum-v1-parent",
+      "69f4467b368b62d21149195b"
+    ],
+    "browserUiOnly": true,
+    "apiCallsByThisPreparation": 0,
+    "modelCallsByThisPreparation": 0,
+    "sourceFilesChanged": false,
+    "noCredentialsOrAccountCreation": true,
+    "priorStudyFilesUnchanged": true,
+    "allSourcesConsumedDevelopment": true,
+    "independenceQualification": "Five files do not represent five independent source families. The first three share the same generated parent and/or Sintel source. The last two come from a previously consumed connected negative-study ancestry family. No fresh holdout evidence is created."
+  },
+  "executionPolicy": {
+    "submitEachFileAtMostOnce": true,
+    "completeAllFiveRegardlessOfClassificationIfAccessPermits": true,
+    "verifyMediaSha256BeforeEachUpload": true,
+    "noReencodingOrAlternateVariants": true,
+    "noPromptThresholdOrSourceSelectionChangesAfterResults": true,
+    "stopConditions": [
+      "Authentication, account creation, credentials, or contact sharing required.",
+      "CAPTCHA or other access-control challenge.",
+      "Free-use limit, quota exhaustion, payment requirement, or explicit service refusal."
+    ],
+    "onStop": "Stop submissions immediately and record every remaining case as not_attempted_due_to_stop. Keep prior outcomes and the visible stopping evidence. Do not bypass, create an account, purchase access, or retry with another session.",
+    "singleCaseFailure": "Retain an error/no-result with visible evidence. Continue the next fixed case only if the failure is file-specific and no stopping condition applies.",
+    "noFavorableRetry": "Do not resubmit a file after an error, timeout, uncertain result, unfavorable result, or ambiguous submission. Reload/poll only an already accepted in-progress operation if the UI requires it; never start another job.",
+    "capture": "Preserve visible submission status, file identity, final video-level verdict and score, temporal graph, timestamps, and screenshots for every attempted case. Retain raw responses only if exposed by the browser UI. Preserve errors, uncertainty, and disagreement; do not replace or omit any result.",
+    "placeholderRule": "The initial hidden-result/default98% placeholder is not an outcome. Only a completed result visibly associated with the newly submitted file is evidence."
+  },
+  "decisionPolicy": {
+    "primary": "Use the displayed VIDEO-LEVEL vendor categorical verdict for the current completed upload. Reveal the optional Show video-level results panel if necessary.",
+    "categoricalMapping": {
+      "Likely AI-generated": "ai",
+      "Not likely AI-generated": "not_ai",
+      "Uncertain": "no_result"
+    },
+    "categoricalMeaning": "Match semantically equivalent complete displayed labels and retain their exact text. Unknown/ambiguous labels are no_result. An explicit uncertain verdict remains no_result even when a score is visible.",
+    "numericFallback": "Only if no categorical video-level verdict is provided and the completed UI explicitly identifies a numeric AI-generated video-level score on a known0–1 or0–100% scale: AI when score>=0.5 or>=50%, otherwise not_ai. Unknown scales, generic confidence scores, placeholders, or frame-only scores cannot supply the primary result.",
+    "scoreQualification": "Numeric vendor output is retained as an uncalibrated diagnostic score, not an established probability or certainty of generative origin.",
+    "primaryScoreDisagreement": "If an explicit video-level verdict and numeric score disagree under the fallback threshold, preserve both and flag the disagreement; the explicit video-level verdict remains primary.",
+    "temporalSecondary": "Record all exposed temporal graph/frame results separately. Any exposed per-time AI-generated score>=0.5 or>=50% is a secondary positive-coverage finding only; it never replaces or rescues a primary video-level error or no_result. Record the relationship to the known mixed interval[3,5) without claiming every-frame coverage or validated localization.",
+    "casePass": "A completed interpretable primary ai/not_ai decision exactly matches expectedPrimaryDecision.",
+    "caseFail": "A completed interpretable primary ai/not_ai decision conflicts with expectedPrimaryDecision.",
+    "caseNoResult": "Uncertain or uninterpretable primary result, processing error, timeout, or no completed result associated with the submitted file. No_result is not a correct classification.",
+    "diagnosticPass": "All five fixed cases produce interpretable primary results and all five match. A pass supports only considering a separately frozen independent evaluation, not reliability claims or integration.",
+    "diagnosticFail": "At least one interpretable primary result conflicts with its expected decision. Complete the remaining fixed cases if access permits.",
+    "diagnosticIncomplete": "No primary mismatch was observed, but one or more cases are no_result or not_attempted. Incomplete is not a pass.",
+    "reporting": "Report exact file-level primary and secondary outcomes, attempts, no-results, and stop reasons. Do not report population sensitivity/specificity, calibration, or independent sample counts from this diagnostic."
+  },
+  "cases": [
+    {
+      "order": 1,
+      "id": "dff4042041e63458ae52bc1f",
+      "description": "Receipt-backed whole generated Veo video",
+      "path": "eval/media/controls/dff4042041e63458ae52bc1f.mp4",
+      "sha256": "e575e1447fe39f97dd9e3bda98d76ea091fc730fc7c33fb7320f9cd879d087bc",
+      "sourceLabel": "ai",
+      "expectedGenerativeVisualContribution": true,
+      "expectedPrimaryDecision": "ai",
+      "sourceManifest": {
+        "path": "eval/generated-origin-manifest.jsonl",
+        "sha256": "122b79147249eab01d06e0fbd0b33955fc86eb9479d8df1697fd123c480b8b55"
+      },
+      "registeredGroupId": "known-origin-development-family",
+      "parentGroups": [
+        "generated-operation:models/veo-3.1-generate-preview/operations/local-generation-redacted"
+      ],
+      "media": {
+        "bytes": 3205223,
+        "durationSeconds": 8,
+        "width": 1280,
+        "height": 720,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "generativeVisualIntervalSeconds": [
+        0,
+        8
+      ],
+      "truthBasis": "Direct text-only Google generation operation, original SHA-256, deterministic silent derivative.",
+      "sourceUrl": "https://ai.google.dev/gemini-api/docs/veo",
+      "limitations": "One generated source and one 2010 conventional CGI source. No camera-origin population estimate."
+    },
+    {
+      "order": 2,
+      "id": "10a7c358371f29ddd7acb538",
+      "description": "Sintel CGI with a two-second Veo insert",
+      "path": "eval/media/controls/10a7c358371f29ddd7acb538.mp4",
+      "sha256": "3f90460f31c82699d239abedfdf1fae1f5b476d9a369755778b16e877c6df2b7",
+      "sourceLabel": "mixed",
+      "expectedGenerativeVisualContribution": true,
+      "expectedPrimaryDecision": "ai",
+      "sourceManifest": {
+        "path": "eval/generated-origin-manifest.jsonl",
+        "sha256": "122b79147249eab01d06e0fbd0b33955fc86eb9479d8df1697fd123c480b8b55"
+      },
+      "registeredGroupId": "known-origin-development-family",
+      "parentGroups": [
+        "sintel-2010",
+        "generated-operation:models/veo-3.1-generate-preview/operations/local-generation-redacted"
+      ],
+      "media": {
+        "bytes": 2162987,
+        "durationSeconds": 8,
+        "width": 1280,
+        "height": 720,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "generativeVisualIntervalSeconds": [
+        3,
+        5
+      ],
+      "truthBasis": "Deterministic edit of documented2010 CGI and the text-only generation output; exact parent and operation hashes retained.",
+      "sourceUrl": "https://ai.google.dev/gemini-api/docs/veo",
+      "limitations": "One generated source and one 2010 conventional CGI source. No camera-origin population estimate."
+    },
+    {
+      "order": 3,
+      "id": "0d90f27f1d7915a793493ee4",
+      "description": "Normalized conventional Sintel CGI",
+      "path": "eval/media/controls/0d90f27f1d7915a793493ee4.mp4",
+      "sha256": "b203b07011f3ee6711460da6081401772cf5b69359fd0f1db2347f191b8daacd",
+      "sourceLabel": "cgi",
+      "expectedGenerativeVisualContribution": false,
+      "expectedPrimaryDecision": "not_ai",
+      "sourceManifest": {
+        "path": "eval/generated-origin-manifest.jsonl",
+        "sha256": "122b79147249eab01d06e0fbd0b33955fc86eb9479d8df1697fd123c480b8b55"
+      },
+      "registeredGroupId": "known-origin-development-family",
+      "parentGroups": [
+        "sintel-2010"
+      ],
+      "media": {
+        "bytes": 1580536,
+        "durationSeconds": 8,
+        "width": 1280,
+        "height": 720,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "generativeVisualIntervalSeconds": [],
+      "truthBasis": "Blender Foundation Sintel2010 conventional CGI, source seconds12-20, CC BY3.0.",
+      "sourceUrl": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+      "limitations": "One generated source and one 2010 conventional CGI source. No camera-origin population estimate."
+    },
+    {
+      "order": 4,
+      "id": "fresh-cgi-pendulum-v1-parent",
+      "description": "Original procedural pendulum render, all eight seconds",
+      "path": "eval/media/fresh-cgi/attempt-01/pendulum-v1/parent.mp4",
+      "sha256": "5be143d5551c4434f800610e337285901c83f71f6cd5814251c95db4ba9ac7e6",
+      "sourceLabel": "cgi",
+      "expectedGenerativeVisualContribution": false,
+      "expectedPrimaryDecision": "not_ai",
+      "sourceManifest": {
+        "path": "eval/fixtures/shot-study-source-plan.json",
+        "sha256": "4a1a354bdd31b466d571c33ac96403982045b4cb829d738dbd47997d6ae1e852"
+      },
+      "sourceManifestParentId": "pendulum",
+      "originReceipt": {
+        "path": "eval/sources/fresh-cgi-render-receipt.json",
+        "sha256": "5b50f4ad0edb53d80d95c1fe57109430b8a2c76390751c3ddc50fc50a42394fc"
+      },
+      "registeredGroupId": "fresh-shot-study-linked-family",
+      "parentGroups": [
+        "fresh-cgi-pendulum-v1"
+      ],
+      "media": {
+        "bytes": 361751,
+        "durationSeconds": 8,
+        "width": 640,
+        "height": 360,
+        "frameRate": "24/1",
+        "frames": 192,
+        "hasAudio": false
+      },
+      "generativeVisualIntervalSeconds": [],
+      "truthBasis": "Conventional Blender Cycles render from the preserved assistant-authored scene code; no generative pixel model. Original eight-second rendered MP4, not the five-second study derivative.",
+      "limitations": "One procedural CGI scene with retained path-tracing grain. Assistant-authored scene code is disclosed; this is negative only for generative visual contribution, not for any AI assistance in production. Its source family is already consumed development evidence."
+    },
+    {
+      "order": 5,
+      "id": "69f4467b368b62d21149195b",
+      "description": "Frozen NOAA camera trim, source seconds20–25",
+      "path": "eval/runs/aegis-shots-v1-negative-build/media/69f4467b368b62d21149195b.mp4",
+      "sha256": "33cd1073d4f6ef5cd8eb427d4953182d8329981ed64cce5cc0282bfdc2b14927",
+      "sourceLabel": "camera",
+      "expectedGenerativeVisualContribution": false,
+      "expectedPrimaryDecision": "not_ai",
+      "sourceManifest": {
+        "path": "eval/runs/aegis-shots-v1-negative-build/manifest.jsonl",
+        "sha256": "87c02fc0b447bb0a5cc9f39ca18bda788c773db6f8e145b88bd863b54eb4dc4f"
+      },
+      "sourceCaseId": "NOAA/base/master",
+      "registeredGroupId": "fresh-shot-study-linked-family",
+      "parentGroups": [
+        "NOAA"
+      ],
+      "media": {
+        "bytes": 761421,
+        "durationSeconds": 5,
+        "fps": 24,
+        "frames": 120,
+        "hasAudio": false,
+        "height": 360,
+        "width": 640
+      },
+      "generativeVisualIntervalSeconds": [],
+      "truthBasis": "Documented NOAA archive camera source, fixed source interval20–25seconds, canonicalized without a donor. The existing frozen identity master is used byte-for-byte.",
+      "originReceipt": {
+        "path": "eval/sources/camera-origin-acquisition.json",
+        "sha256": "521e1d4474fbddfd947bb9e4502b0c0c7e5f943c3e68ba72f5f6ca603f7029ec"
+      },
+      "constructionReceipt": {
+        "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/69f4467b368b62d21149195b/construction.json",
+        "sha256": "32cc30d1fe8ce24d5bab88f39663b2a123d21b558a07702dccfbff689e547f7b"
+      },
+      "frameLineage": {
+        "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/69f4467b368b62d21149195b/frame-lineage.json",
+        "sha256": "e5c2aeebe5102f0c1e537b35988d6a558e536753948ea173c712cf01522fd471"
+      },
+      "limitations": "Processed agency archive footage, not a pristine capture master or independently signed camera file. Five-second normalized two-encode-pass identity trim; it is not the full NOAA original and has no mixed insert. Already used in the negative development screen."
+    }
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "checkedAt": "2026-09-04 America/Los_Angeles",
+  "endpoint": "https://thehive.ai/demos/ai-generated-content-detection?hideSidebar=true&isFromIframe=true",
+  "count": 5,
+  "attemptedUploads": 5,
+  "completedModelResults": 5,
+  "topLevelFailures": 0,
+  "aiTP": 0,
+  "aiFN": 2,
+  "nonAiFP": 0,
+  "nonAiTN": 3,
+  "abstentions": 0,
+  "selection": "Targeted development diagnostic, two earlier Gemini AI misses plus two author-real and one CGI; not representative accuracy.",
+  "derivativesRun": false,
+  "derivativeStopReason": "Both targeted AI originals were missed; prerequisite to expand failed.",
+  "limitations": [
+    "Four HEVC originals could not play in the browser, although server responses reported matching decoded dimensions/durations and five sampled frames each.",
+    "Returned media filename is null; association uses sequential upload completion, local file SHA, unique response ID and technical media receipt.",
+    "No production API access or supported automation contract established.",
+    "UI aggregation/rounding is not documented here; preserve displayed clip score separately from the calculated raw frame mean.",
+    "Model scores remain uncalibrated; no population inference from this targeted five-clip sample."
+  ],
+  "records": [
+    {
+      "id": "b0ab41201fe0f1483d8016b7",
+      "groupId": "genbuster:baccf4b9b2963412930a62302754377ec6cc3561c7ab1a1daf6f7850b0490878",
+      "label": "ai",
+      "generator": "kling2.5_turbo",
+      "split": "development",
+      "path": "eval/media/b0ab41201fe0f1483d8016b7.mp4",
+      "sha256": "baccf4b9b2963412930a62302754377ec6cc3561c7ab1a1daf6f7850b0490878",
+      "bytes": 623087,
+      "provider": "Hive official public demo",
+      "providerModel": "AI art and deepfake and audio detection",
+      "providerModelVersion": 1,
+      "providerResponseId": "c25ef1c0-a8c2-11f1-a11f-8314311ef81f",
+      "providerCreatedOn": "2026-09-05T00:43:06.332Z",
+      "providerMedia": {
+        "url": null,
+        "filename": null,
+        "type": "VIDEO",
+        "mime_type": "mp4",
+        "mimetype": "video/mp4",
+        "width": 1024,
+        "height": 1024,
+        "num_frames": 5,
+        "duration": 5.041667
+      },
+      "uiAiGeneratedVideoPercent": 28.9,
+      "computedMeanFrameAiGeneratedScore": 0.28948879411366074,
+      "uiVerdict": "This input is not likely to contain AI-generated or deepfake content",
+      "decision": "not_ai",
+      "frames": [
+        {
+          "time": 0,
+          "aiGeneratedScore": 0.1820310054241362,
+          "deepfakeScore": 0
+        },
+        {
+          "time": 1,
+          "aiGeneratedScore": 0.14703150685680205,
+          "deepfakeScore": 0
+        },
+        {
+          "time": 2,
+          "aiGeneratedScore": 0.1900437223414324,
+          "deepfakeScore": 0
+        },
+        {
+          "time": 3,
+          "aiGeneratedScore": 0.35853464345972436,
+          "deepfakeScore": 0
+        },
+        {
+          "time": 4,
+          "aiGeneratedScore": 0.5698030924862086,
+          "deepfakeScore": 1.8414684060489307e-05
+        }
+      ],
+      "browserPreview": "failed (model returned processed frames)",
+      "rawResponsePath": "eval/runs/hive-demo-v1/b0ab41201fe0f1483d8016b7.json",
+      "rawResponseSha256": "44b1ab9e4cd45ce3ff3425d1de8fdb54a1490489669cf54628b836ee95b3d667",
+      "screenshotPath": "eval/runs/hive-demo-v1/b0ab41201fe0f1483d8016b7.png"
+    },
+    {
+      "id": "fe403bf0a111ced391ee0b02",
+      "groupId": "genbuster:ebcd8e65de999b86146e573da989337c0bcbc459ecd4fd901005ee6cb73843df",
+      "label": "ai",
+      "generator": "hunyuanvideo",
+      "split": "development",
+      "path": "eval/media/fe403bf0a111ced391ee0b02.mp4",
+      "sha256": "ebcd8e65de999b86146e573da989337c0bcbc459ecd4fd901005ee6cb73843df",
+      "bytes": 510648,
+      "provider": "Hive official public demo",
+      "providerModel": "AI art and deepfake and audio detection",
+      "providerModelVersion": 1,
+      "providerResponseId": "e9317390-a8c2-11f1-9ccf-1bce6a781cf1",
+      "providerCreatedOn": "2026-09-05T00:44:11.465Z",
+      "providerMedia": {
+        "url": null,
+        "filename": null,
+        "type": "VIDEO",
+        "mime_type": "mp4",
+        "mimetype": "video/mp4",
+        "width": 1024,
+        "height": 1024,
+        "num_frames": 5,
+        "duration": 5.041667
+      },
+      "uiAiGeneratedVideoPercent": 36.1,
+      "computedMeanFrameAiGeneratedScore": 0.3613950091246897,
+      "uiVerdict": "This input is not likely to contain AI-generated or deepfake content",
+      "decision": "not_ai",
+      "frames": [
+        {
+          "time": 0,
+          "aiGeneratedScore": 0.2956523533138598,
+          "deepfakeScore": 0
+        },
+        {
+          "time": 1,
+          "aiGeneratedScore": 0.4030536855968049,
+          "deepfakeScore": 0
+        },
+        {
+          "time": 2,
+          "aiGeneratedScore": 0.3642994902126231,
+          "deepfakeScore": 0
+        },
+        {
+          "time": 3,
+          "aiGeneratedScore": 0.4938138303873131,
+          "deepfakeScore": 0
+        },
+        {
+          "time": 4,
+          "aiGeneratedScore": 0.25015568611284755,
+          "deepfakeScore": 0
+        }
+      ],
+      "browserPreview": "failed (model returned processed frames)",
+      "rawResponsePath": "eval/runs/hive-demo-v1/fe403bf0a111ced391ee0b02.json",
+      "rawResponseSha256": "a0ab8bb44f8977b21c3480d874fe9b29faf0c933274ea572e98ad61f690298d3",
+      "screenshotPath": "eval/runs/hive-demo-v1/fe403bf0a111ced391ee0b02.png"
+    },
+    {
+      "id": "2c9ef7e6f3765b6365c25022",
+      "groupId": "genbuster:ea12d8848544c35ba515f0544d6aed303072d6dcee2d88ca54d9142db4e37eb7",
+      "label": "real",
+      "generator": null,
+      "split": "development",
+      "path": "eval/media/2c9ef7e6f3765b6365c25022.mp4",
+      "sha256": "ea12d8848544c35ba515f0544d6aed303072d6dcee2d88ca54d9142db4e37eb7",
+      "bytes": 720998,
+      "provider": "Hive official public demo",
+      "providerModel": "AI art and deepfake and audio detection",
+      "providerModelVersion": 1,
+      "providerResponseId": "faf666d1-a8c2-11f1-878d-3518d3ca60f8",
+      "providerCreatedOn": "2026-09-05T00:44:41.277Z",
+      "providerMedia": {
+        "url": null,
+        "filename": null,
+        "type": "VIDEO",
+        "mime_type": "mp4",
+        "mimetype": "video/mp4",
+        "width": 1024,
+        "height": 1024,
+        "num_frames": 5,
+        "duration": 5.041667
+      },
+      "uiAiGeneratedVideoPercent": 29.9,
+      "computedMeanFrameAiGeneratedScore": 0.2997156949141374,
+      "uiVerdict": "This input is not likely to contain AI-generated or deepfake content",
+      "decision": "not_ai",
+      "frames": [
+        {
+          "time": 0,
+          "aiGeneratedScore": 0.25379164715900504,
+          "deepfakeScore": 1.9525885208642217e-05
+        },
+        {
+          "time": 1,
+          "aiGeneratedScore": 0.3760903885451147,
+          "deepfakeScore": 9.278282255095852e-05
+        },
+        {
+          "time": 2,
+          "aiGeneratedScore": 0.18676391116806867,
+          "deepfakeScore": 6.339210403977636e-06
+        },
+        {
+          "time": 3,
+          "aiGeneratedScore": 0.2679020490974912,
+          "deepfakeScore": 1.2411496080609797e-05
+        },
+        {
+          "time": 4,
+          "aiGeneratedScore": 0.41403047860100745,
+          "deepfakeScore": 1.848675576370609e-05
+        }
+      ],
+      "browserPreview": "failed (model returned processed frames)",
+      "rawResponsePath": "eval/runs/hive-demo-v1/2c9ef7e6f3765b6365c25022.json",
+      "rawResponseSha256": "92848a23e05ddfc439df5895f66a0f3c600891dee9794c63530b4a1089b992fa",
+      "screenshotPath": "eval/runs/hive-demo-v1/2c9ef7e6f3765b6365c25022.png"
+    },
+    {
+      "id": "3b80a00a9e76c405498fe39c",
+      "groupId": "genbuster:93d9d410267c8d8e2af10910eaebf8f1df884445d5ad9465284840f3beb327fd",
+      "label": "real",
+      "generator": null,
+      "split": "development",
+      "path": "eval/media/3b80a00a9e76c405498fe39c.mp4",
+      "sha256": "93d9d410267c8d8e2af10910eaebf8f1df884445d5ad9465284840f3beb327fd",
+      "bytes": 851630,
+      "provider": "Hive official public demo",
+      "providerModel": "AI art and deepfake and audio detection",
+      "providerModelVersion": 1,
+      "providerResponseId": "0e06c5d0-a8c3-11f1-8154-a9195373f8c9",
+      "providerCreatedOn": "2026-09-05T00:45:13.261Z",
+      "providerMedia": {
+        "url": null,
+        "filename": null,
+        "type": "VIDEO",
+        "mime_type": "mp4",
+        "mimetype": "video/mp4",
+        "width": 1024,
+        "height": 1024,
+        "num_frames": 5,
+        "duration": 5.041667
+      },
+      "uiAiGeneratedVideoPercent": 37.4,
+      "computedMeanFrameAiGeneratedScore": 0.37428145581477673,
+      "uiVerdict": "This input is not likely to contain AI-generated or deepfake content",
+      "decision": "not_ai",
+      "frames": [
+        {
+          "time": 0,
+          "aiGeneratedScore": 0.4847430877655163,
+          "deepfakeScore": 0.002662612717117335
+        },
+        {
+          "time": 1,
+          "aiGeneratedScore": 0.5669057072548884,
+          "deepfakeScore": 5.77192003016332e-06
+        },
+        {
+          "time": 2,
+          "aiGeneratedScore": 0.20973447977636375,
+          "deepfakeScore": 4.785094494890118e-06
+        },
+        {
+          "time": 3,
+          "aiGeneratedScore": 0.2583946964772675,
+          "deepfakeScore": 4.637873297353725e-06
+        },
+        {
+          "time": 4,
+          "aiGeneratedScore": 0.35162930779984775,
+          "deepfakeScore": 6.240930669504435e-06
+        }
+      ],
+      "browserPreview": "failed (model returned processed frames)",
+      "rawResponsePath": "eval/runs/hive-demo-v1/3b80a00a9e76c405498fe39c.json",
+      "rawResponseSha256": "a2d156f1234e79b6877727eaae5a06312b19731d9b8b18c32c1cd4e8b340d121",
+      "screenshotPath": "eval/runs/hive-demo-v1/3b80a00a9e76c405498fe39c.png"
+    },
+    {
+      "id": "703e6214f3cd696b71512d76",
+      "groupId": "sintel-2010",
+      "label": "cgi",
+      "generator": "none",
+      "split": "development",
+      "path": "eval/media/controls/703e6214f3cd696b71512d76.mp4",
+      "sha256": "2ad5fe3a09897829694efbff54245523d441ce39170435b0a3a2a56cf3373de6",
+      "bytes": 601138,
+      "provider": "Hive official public demo",
+      "providerModel": "AI art and deepfake and audio detection",
+      "providerModelVersion": 1,
+      "providerResponseId": "1ba3ba40-a8c3-11f1-91f8-f11e19dc49ad",
+      "providerCreatedOn": "2026-09-05T00:45:36.100Z",
+      "providerMedia": {
+        "url": null,
+        "filename": null,
+        "type": "VIDEO",
+        "mime_type": "mp4",
+        "mimetype": "video/mp4",
+        "width": 854,
+        "height": 480,
+        "num_frames": 6,
+        "duration": 6
+      },
+      "uiAiGeneratedVideoPercent": 0.6,
+      "computedMeanFrameAiGeneratedScore": 0.005244902810799902,
+      "uiVerdict": "This input is not likely to contain AI-generated or deepfake content",
+      "decision": "not_ai",
+      "frames": [
+        {
+          "time": 0,
+          "aiGeneratedScore": 0.002979785827756914,
+          "deepfakeScore": 0
+        },
+        {
+          "time": 1,
+          "aiGeneratedScore": 0.0011746907794553667,
+          "deepfakeScore": 0
+        },
+        {
+          "time": 2,
+          "aiGeneratedScore": 0.016460492327776154,
+          "deepfakeScore": 5.359590069747161e-05
+        },
+        {
+          "time": 3,
+          "aiGeneratedScore": 0.00911584633894695,
+          "deepfakeScore": 0.0005152656843015681
+        },
+        {
+          "time": 4,
+          "aiGeneratedScore": 0.0013971399168912337,
+          "deepfakeScore": 0
+        },
+        {
+          "time": 5,
+          "aiGeneratedScore": 0.00034146167397279325,
+          "deepfakeScore": 2.6688529572628563e-05
+        }
+      ],
+      "browserPreview": "working",
+      "rawResponsePath": "eval/runs/hive-demo-v1/703e6214f3cd696b71512d76.json",
+      "rawResponseSha256": "77145b4e75e6e52e6d7d7774c3435938bba27e0e92cef5e7a8cf3a06cc3c1c4a",
+      "screenshotPath": "eval/runs/hive-demo-v1/703e6214f3cd696b71512d76.png"
+    }
+  ]
+}

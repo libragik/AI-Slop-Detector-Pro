@@ -1,0 +1,60 @@
+{
+  "stallRepository": "https://github.com/OmerBenHayun/STALL",
+  "stallRevision": "bfcc603ae83b4e609681277b9b5e80e7a9497e15",
+  "stallLicense": "CC BY-NC 4.0",
+  "paramsPath": "precomputed/stall_params_vatex_dino_v3.npz",
+  "paramsBytes": 16820270,
+  "paramsAnonymousHeadStatus": 200,
+  "paramsDownloaded": false,
+  "modelRepository": "facebook/dinov3-vitl16-pretrain-lvd1689m",
+  "modelRevision": "ea8dc2863c51be0a264bab82070e3e8836b02d51",
+  "modelGated": "manual",
+  "modelAnonymousHeadStatus": 401,
+  "modelAnonymousErrorCode": "GatedRepo",
+  "modelFile": "model.safetensors",
+  "modelParameterCount": 303129600,
+  "modelParameterDtype": "F32",
+  "modelWeightsDownloaded": false,
+  "modelLicense": "DINOv3 License, last updated August19 2025",
+  "termsAccepted": false,
+  "contactInformationSubmitted": false,
+  "noModelCalls": true,
+  "readOnlySources": [
+    {
+      "path": "eval/sources/stall-readonly/DINOv3-LICENSE.md",
+      "sha256": "25d122eb8f5b880fd23c736fb6ea8018ee45c12237e00b8a86d14c653904999e"
+    },
+    {
+      "path": "eval/sources/stall-readonly/environment.yml",
+      "sha256": "46301e50ee7a452f99c53ad3a0b532c3f2b60e394d9a8dff3e06b104155db79d"
+    },
+    {
+      "path": "eval/sources/stall-readonly/DINOv3-README.md",
+      "sha256": "da4e6e2fa1f2580be9a782338dc108ae68f98b6c9d10636583f97d8a340e664d"
+    },
+    {
+      "path": "eval/sources/stall-readonly/LICENSE.txt",
+      "sha256": "3711f963c05d0be80d53e5923308a6dee31b203da23435c9cfb7c7b6e4dd5e19"
+    },
+    {
+      "path": "eval/sources/stall-readonly/DINOv3-backbones.py",
+      "sha256": "6c9a18aca0b5fcb1fce439213a94a528e072376a6023718e03dbd9fcfaa10deb"
+    },
+    {
+      "path": "eval/sources/stall-readonly/src/whitening_transform.py",
+      "sha256": "d393d2a9d19a2ef11dfef9882feac2bbea944559a97b21472ce2d84e5072c343"
+    },
+    {
+      "path": "eval/sources/stall-readonly/src/stall.py",
+      "sha256": "7d259ee3b3d11bd36902a368a4f9195328d3804b974dc0639fb767bb2cf759af"
+    },
+    {
+      "path": "eval/sources/stall-readonly/src/eval.py",
+      "sha256": "9dcc4260092799432df65c1fc9ac5b6f769f6d46f12fc07518a8f6032921e352"
+    },
+    {
+      "path": "eval/sources/stall-readonly/src/create_params.py",
+      "sha256": "9dd0cb2fca5e0ae696a6b294712fa9d6494d58a5c479fda76a223576d677245b"
+    }
+  ]
+}

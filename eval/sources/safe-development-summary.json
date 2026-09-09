@@ -1,0 +1,12 @@
+{
+  "rows": 125,
+  "ai": 61,
+  "real": 64,
+  "auroc": 0.7123463114754098,
+  "threshold": 0.3493382311436103,
+  "recall": 0.08196721311475409,
+  "fpr": 0.046875,
+  "defaultThreshold0Recall": 0.26229508196721313,
+  "defaultThreshold0Fpr": 0.09375,
+  "medianElapsedMs": 158
+}

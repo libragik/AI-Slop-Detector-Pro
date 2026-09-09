@@ -1,0 +1,10 @@
+{
+  "url": "https://huggingface.co/datasets/AIGVDBench/AIGVDBench/resolve/bf48acaa4920990af3dd2a511ea88e63354df305/Weights/DeCoF.tar",
+  "status": 206,
+  "contentRange": "bytes 0-65535/56815450",
+  "contentLength": "65536",
+  "contentType": "application/x-tar",
+  "bytesRead": 65536,
+  "sha256": "91e018b7e8ba320aa01c17da998893e5a58cf4761c15abec13c2fa0d613f6e8b",
+  "magicHex": "504b0304000008080000000000000000"
+}

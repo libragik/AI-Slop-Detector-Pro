@@ -1,0 +1,23 @@
+{
+  "checks": [
+    {
+      "errorType": "RuntimeError",
+      "name": "socket_resolution_disabled",
+      "passed": true
+    },
+    {
+      "errorType": "RuntimeError",
+      "name": "pickle_load_disabled",
+      "passed": true
+    },
+    {
+      "errorType": "ValueError",
+      "name": "nonfinite_decode_rejected",
+      "passed": true
+    }
+  ],
+  "forwardCalls": 0,
+  "modelLoaded": false,
+  "scriptSha256": "fdbaff6004e57fcc3cb71595a7e35a347edc2877e56dd83231f49e9412951752",
+  "status": "passed"
+}

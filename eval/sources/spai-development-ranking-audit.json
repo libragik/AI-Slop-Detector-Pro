@@ -1,0 +1,186 @@
+{
+  "scope": "exploratory development scores only; no calibration or holdout used",
+  "thresholdRule": "score > threshold; each within-set low-FPR threshold fitted on that development set only, not a deployable transform-aware rule",
+  "inputFiles": [
+    {
+      "path": "eval/runs/spai-development-v1.jsonl",
+      "sha256": "74d22762df9c76a44d7dc7b8599ef0a79450d907f75ec683512d7b56bca18e8e"
+    },
+    {
+      "path": "eval/runs/spai-social-development-v1.jsonl",
+      "sha256": "a86a4c4b5fb58718de065d4fc0f0496d7eac6868132c0ea6c2e84a40d8ab565c"
+    }
+  ],
+  "sets": {
+    "original125": {
+      "rows": 125,
+      "auroc": 0.8486168032786885,
+      "defaultZero": {
+        "threshold": 0,
+        "TP": 22,
+        "AI": 61,
+        "FP": 3,
+        "real": 64
+      },
+      "developmentFpr0": {
+        "threshold": 7.394463211297989,
+        "TP": 4,
+        "AI": 61,
+        "FP": 0,
+        "real": 64
+      },
+      "developmentFpr5": {
+        "threshold": -1.9279261827468872,
+        "TP": 27,
+        "AI": 61,
+        "FP": 3,
+        "real": 64
+      },
+      "developmentFpr10": {
+        "threshold": -6.081118993461132,
+        "TP": 41,
+        "AI": 61,
+        "FP": 6,
+        "real": 64
+      },
+      "medianAi": -3.0354907885193825,
+      "medianReal": -24.51714962720871
+    },
+    "matchedOriginal35": {
+      "rows": 35,
+      "auroc": 0.8623188405797102,
+      "defaultZero": {
+        "threshold": 0,
+        "TP": 10,
+        "AI": 23,
+        "FP": 0,
+        "real": 12
+      },
+      "developmentFpr0": {
+        "threshold": -1.9279261827468872,
+        "TP": 11,
+        "AI": 23,
+        "FP": 0,
+        "real": 12
+      },
+      "developmentFpr5": {
+        "threshold": -1.9279261827468872,
+        "TP": 11,
+        "AI": 23,
+        "FP": 0,
+        "real": 12
+      },
+      "developmentFpr10": {
+        "threshold": -5.31247141212225,
+        "TP": 15,
+        "AI": 23,
+        "FP": 1,
+        "real": 12
+      },
+      "medianAi": -2.1971647664904594,
+      "medianReal": -20.45726978778839
+    },
+    "repost_360p_crf36_12fps_crop": {
+      "rows": 35,
+      "auroc": 0.6666666666666666,
+      "defaultZero": {
+        "threshold": 0,
+        "TP": 0,
+        "AI": 23,
+        "FP": 0,
+        "real": 12
+      },
+      "developmentFpr0": {
+        "threshold": -11.732653588056564,
+        "TP": 5,
+        "AI": 23,
+        "FP": 0,
+        "real": 12
+      },
+      "developmentFpr5": {
+        "threshold": -11.732653588056564,
+        "TP": 5,
+        "AI": 23,
+        "FP": 0,
+        "real": 12
+      },
+      "developmentFpr10": {
+        "threshold": -20.122540593147278,
+        "TP": 9,
+        "AI": 23,
+        "FP": 1,
+        "real": 12
+      },
+      "medianAi": -24.554930448532104,
+      "medianReal": -47.681434869766235
+    },
+    "social_720p_crf28": {
+      "rows": 35,
+      "auroc": 0.8260869565217391,
+      "defaultZero": {
+        "threshold": 0,
+        "TP": 3,
+        "AI": 23,
+        "FP": 0,
+        "real": 12
+      },
+      "developmentFpr0": {
+        "threshold": -8.600184082984924,
+        "TP": 9,
+        "AI": 23,
+        "FP": 0,
+        "real": 12
+      },
+      "developmentFpr5": {
+        "threshold": -8.600184082984924,
+        "TP": 9,
+        "AI": 23,
+        "FP": 0,
+        "real": 12
+      },
+      "developmentFpr10": {
+        "threshold": -13.128875385969877,
+        "TP": 13,
+        "AI": 23,
+        "FP": 1,
+        "real": 12
+      },
+      "medianAi": -11.266220450401306,
+      "medianReal": -37.22781813144684
+    },
+    "pooled195": {
+      "rows": 195,
+      "auroc": 0.7668861512319456,
+      "defaultZero": {
+        "threshold": 0,
+        "TP": 25,
+        "AI": 107,
+        "FP": 3,
+        "real": 88
+      },
+      "developmentFpr0": {
+        "threshold": 7.394463211297989,
+        "TP": 4,
+        "AI": 107,
+        "FP": 0,
+        "real": 88
+      },
+      "developmentFpr5": {
+        "threshold": -2.8806994315236807,
+        "TP": 36,
+        "AI": 107,
+        "FP": 4,
+        "real": 88
+      },
+      "developmentFpr10": {
+        "threshold": -6.921441280283034,
+        "TP": 54,
+        "AI": 107,
+        "FP": 8,
+        "real": 88
+      },
+      "medianAi": -6.744241923093796,
+      "medianReal": -31.79354679584503
+    }
+  }
+}

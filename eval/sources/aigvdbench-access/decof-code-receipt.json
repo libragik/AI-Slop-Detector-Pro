@@ -1,0 +1,62 @@
+[
+  {
+    "file": "eval/sources/aigvdbench-access/decof-source/README.md",
+    "url": "https://raw.githubusercontent.com/LongMa-2025/DeCoF/5f73e8dc4f8cd9faeed07d767c9517e3f2c66044/README.md",
+    "bytes": 4446,
+    "sha256": "68a4c25b7c415f227d29321d5e34dcea224cad1059de54f56b7ad44ea4a0ea11"
+  },
+  {
+    "file": "eval/sources/aigvdbench-access/decof-source/src/model.py",
+    "url": "https://raw.githubusercontent.com/LongMa-2025/DeCoF/5f73e8dc4f8cd9faeed07d767c9517e3f2c66044/src/model.py",
+    "bytes": 1485,
+    "sha256": "cd9ea793670dd403b8b0ebfa1d6f1a1ae1e6ac5b60ad39d22f079bbc7f84ee0a"
+  },
+  {
+    "file": "eval/sources/aigvdbench-access/decof-source/src/vit.py",
+    "url": "https://raw.githubusercontent.com/LongMa-2025/DeCoF/5f73e8dc4f8cd9faeed07d767c9517e3f2c66044/src/vit.py",
+    "bytes": 3859,
+    "sha256": "6ced8d37ad483fd69b8d0985b9dbc4a7314e3ec611460aab9f6994792fc4b085"
+  },
+  {
+    "file": "eval/sources/aigvdbench-access/decof-source/src/test.py",
+    "url": "https://raw.githubusercontent.com/LongMa-2025/DeCoF/5f73e8dc4f8cd9faeed07d767c9517e3f2c66044/src/test.py",
+    "bytes": 2917,
+    "sha256": "0777810b3c56d019081ee56fe9adc9bc803b457ccd87c0d92c4737daa6088d6d"
+  },
+  {
+    "file": "eval/sources/aigvdbench-access/decof-source/src/train.py",
+    "url": "https://raw.githubusercontent.com/LongMa-2025/DeCoF/5f73e8dc4f8cd9faeed07d767c9517e3f2c66044/src/train.py",
+    "bytes": 6314,
+    "sha256": "388ab70a5971d5ba02dc40c95fc30a9bcf59c94f84a17b84d4e47cfe4cc69997"
+  },
+  {
+    "file": "eval/sources/aigvdbench-access/decof-source/src/clip_models.py",
+    "url": "https://raw.githubusercontent.com/LongMa-2025/DeCoF/5f73e8dc4f8cd9faeed07d767c9517e3f2c66044/src/clip_models.py",
+    "bytes": 618,
+    "sha256": "b3c325d995f545a398a80bcbd193eb3dd59de4b2630bdb555fd43a9931662682"
+  },
+  {
+    "file": "eval/sources/aigvdbench-access/decof-source/src/clip/clip.py",
+    "url": "https://raw.githubusercontent.com/LongMa-2025/DeCoF/5f73e8dc4f8cd9faeed07d767c9517e3f2c66044/src/clip/clip.py",
+    "bytes": 9396,
+    "sha256": "c3f1c09abe0a0d9c429e0d47f2b8d4a4ec09dbd11eec3d7dd9846babd717e43b"
+  },
+  {
+    "file": "eval/sources/aigvdbench-access/decof-source/src/clip/model.py",
+    "url": "https://raw.githubusercontent.com/LongMa-2025/DeCoF/5f73e8dc4f8cd9faeed07d767c9517e3f2c66044/src/clip/model.py",
+    "bytes": 17845,
+    "sha256": "c071d011e92226f1ca0a6f7c5098d8d7d08eadc7d6db125a81b52fc234b1ec59"
+  },
+  {
+    "file": "eval/sources/aigvdbench-access/decof-source/src/utils/data.py",
+    "url": "https://raw.githubusercontent.com/LongMa-2025/DeCoF/5f73e8dc4f8cd9faeed07d767c9517e3f2c66044/src/utils/data.py",
+    "bytes": 4006,
+    "sha256": "7a56e09555831a8ed6f6d7d33417ce0ae41e66031d96cf30114b4522e99744b2"
+  },
+  {
+    "file": "eval/sources/aigvdbench-access/decof-source/src/configs/base.json",
+    "url": "https://raw.githubusercontent.com/LongMa-2025/DeCoF/5f73e8dc4f8cd9faeed07d767c9517e3f2c66044/src/configs/base.json",
+    "bytes": 107,
+    "sha256": "097bd70015efb9072a0532d158580d7272f21b6e59be9162a14113ca681bb2bf"
+  }
+]

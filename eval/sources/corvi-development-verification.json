@@ -1,0 +1,38 @@
+{
+  "count": 35,
+  "sourceGroups": 35,
+  "labels": {
+    "ai": 23,
+    "real": 12
+  },
+  "errors": 0,
+  "framesAnalyzed": 280,
+  "inputShapes": [
+    [
+      3,
+      1024,
+      1024
+    ]
+  ],
+  "scoreMapShapes": [
+    [
+      1,
+      1,
+      128,
+      128
+    ]
+  ],
+  "predictionSha256": "560e7cb7eb367cc480e1a225271ec943eb758dee97290ef88e93496b238deb3b",
+  "elapsedSeconds": 78.4196720123291,
+  "medianClipMs": 2234,
+  "p95NearestRankClipMs": 2285,
+  "maxClipMs": 2333,
+  "fullSourceSnapshotVerified": true,
+  "modelUnchanged": true,
+  "threshold": 0,
+  "confusion": {
+    "ai_not_ai": 22,
+    "real_not_ai": 12,
+    "ai_ai": 1
+  }
+}

@@ -1,0 +1,986 @@
+{
+  "analysis": {
+    "errorsRetained": true,
+    "hypothesis": "Original-positive/severe-nondetection is evidence of sensitivity to the combined local social transformation; original-nondetection does not establish a compression-induced loss.",
+    "limitations": [
+      "Four publisher-labeled development parents, not independently authenticated origins or population accuracy.",
+      "Severe transform combines crop, resize, frame rate, overlay and encoding; no individual-factor or motion-causality attribution.",
+      "Prior negative failures remain failures; this AI-only diagnostic cannot establish specificity.",
+      "Provider model version is not externally pinned; the calls and prior receipt are dated.",
+      "No new Gemini, image-model or other-provider calls."
+    ],
+    "noAdvanceOnPass": true,
+    "noThresholdFitting": true,
+    "primary": "Apply unchanged temporal policy to originals and pair with saved severe outcomes. Report all four parents and full sampled-score sequences."
+  },
+  "api": {
+    "endpoint": "https://api.sightengine.com/1.0/video/check-sync.json",
+    "intervalSeconds": 0.5,
+    "models": "genai"
+  },
+  "cases": [
+    {
+      "archiveMember": "GenBuster-Bench/ood/fake/vidu/764ce52d7a07e4537959b1c46d062f5990df32e46cf29372eabe12a2e64a1079.mp4",
+      "dataset": "GenBuster-Bench",
+      "downloadUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench/resolve/68e41ab55726013f1c7455980180114302196c23/GenBuster-Bench.zip",
+      "generator": "vidu",
+      "groundTruth": {
+        "basis": "dataset-author-label",
+        "evidenceUrl": "https://github.com/l8cv/BusterX",
+        "labelPath": "GenBuster-Bench/ood/fake/vidu/764ce52d7a07e4537959b1c46d062f5990df32e46cf29372eabe12a2e64a1079.mp4",
+        "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+      },
+      "groupId": "genbuster:764ce52d7a07e4537959b1c46d062f5990df32e46cf29372eabe12a2e64a1079",
+      "id": "503cbc93e819772076b46e86",
+      "label": "ai",
+      "labelEvidenceStrength": "publisher-assigned-benchmark",
+      "license": "MIT (dataset card)",
+      "media": {
+        "bytes": 494193,
+        "durationSeconds": 5.041667,
+        "frameRate": "24/1",
+        "hasAudio": false,
+        "height": 1024,
+        "width": 1024
+      },
+      "mimeType": "video/mp4",
+      "order": 1,
+      "pairedSevere": {
+        "id": "6a072e50471d7830efaa77f0",
+        "media": {
+          "bytes": 32656,
+          "durationSeconds": 5.083333,
+          "frameRate": "12/1",
+          "hasAudio": false,
+          "height": 360,
+          "width": 360
+        },
+        "path": "eval/media/6a072e50471d7830efaa77f0.mp4",
+        "savedRequest": {
+          "id": "req_lnineowwE6nsGEuytBPBO",
+          "operations": 55,
+          "timestamp": 1788895171.395387
+        },
+        "savedTemporal": {
+          "adjacentSamplesAreIndependent": false,
+          "callerTechnicalComplete": true,
+          "configuration": {
+            "adjacentSamplesAreIndependent": false,
+            "coverage": {
+              "firstFrameMaxSeconds": 0.1,
+              "maximumGapSeconds": 0.6,
+              "tailGapSeconds": 0.6
+            },
+            "declaredIntervalSeconds": 0.5,
+            "insufficientForSubsecondExclusion": true,
+            "maximumPositiveGapSeconds": 0.6,
+            "minimumPersistentSamples": 2,
+            "policyVersion": "sightengine-temporal-evidence-v1",
+            "positionUnit": "seconds",
+            "scoreThreshold": 0.5,
+            "scoresAreCalibratedProbabilities": false,
+            "sequenceOrder": "received-order-no-sort-or-deduplication",
+            "temporalInterpolation": false
+          },
+          "coverage": {
+            "basis": "caller_declaration_and_returned_sample_positions_not_every_frame_inspection",
+            "complete": true,
+            "declaredIntervalSeconds": 0.5,
+            "durationSeconds": 5.083333,
+            "insufficientForSubsecondExclusion": true,
+            "issues": [],
+            "sampledPositionsSeconds": [
+              0.0,
+              0.5,
+              1.0,
+              1.5,
+              2.0,
+              2.5,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0
+            ]
+          },
+          "decisionReasons": [
+            "Isolated positive samples remain unresolved.",
+            "Sampled evidence does not establish origin or exclude AI between samples, including subsecond inserts."
+          ],
+          "isolatedAlerts": [
+            {
+              "aiGenerated": 0.68,
+              "positionSeconds": 0.0,
+              "sampleIndex": 0,
+              "status": "unresolved"
+            }
+          ],
+          "notProofOfOrigin": true,
+          "persistentRuns": [],
+          "policyFingerprint": "6544a9d76ce994fecfc2c736b4f3af79b744f1cafa11a1e66145e849e30aea89",
+          "researchOnly": true,
+          "reviewRequired": true,
+          "sampleRecords": [
+            {
+              "aiGenerated": 0.68,
+              "index": 0,
+              "issues": [],
+              "positionSeconds": 0.0,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.001,
+              "index": 1,
+              "issues": [],
+              "positionSeconds": 0.5,
+              "positive": false,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.05,
+              "index": 2,
+              "issues": [],
+              "positionSeconds": 1.0,
+              "positive": false,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.01,
+              "index": 3,
+              "issues": [],
+              "positionSeconds": 1.5,
+              "positive": false,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.001,
+              "index": 4,
+              "issues": [],
+              "positionSeconds": 2.0,
+              "positive": false,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.01,
+              "index": 5,
+              "issues": [],
+              "positionSeconds": 2.5,
+              "positive": false,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.001,
+              "index": 6,
+              "issues": [],
+              "positionSeconds": 3.0,
+              "positive": false,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.01,
+              "index": 7,
+              "issues": [],
+              "positionSeconds": 3.5,
+              "positive": false,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.09,
+              "index": 8,
+              "issues": [],
+              "positionSeconds": 4.0,
+              "positive": false,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.001,
+              "index": 9,
+              "issues": [],
+              "positionSeconds": 4.5,
+              "positive": false,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.001,
+              "index": 10,
+              "issues": [],
+              "positionSeconds": 5.0,
+              "positive": false,
+              "valid": true
+            }
+          ],
+          "schemaVersion": 1,
+          "scoresAreCalibratedProbabilities": false,
+          "technicalComplete": true,
+          "technicalIssues": [],
+          "verdict": "inconclusive"
+        },
+        "sha256": "9a37d69557dd629e3391685774b8b6555c65932f673eaaf322bf604a0b7a7b5a"
+      },
+      "path": "eval/media/503cbc93e819772076b46e86.mp4",
+      "platform": "dataset",
+      "sha256": "764ce52d7a07e4537959b1c46d062f5990df32e46cf29372eabe12a2e64a1079",
+      "sourceLabel": "ai",
+      "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+      "split": "development",
+      "transformation": "original"
+    },
+    {
+      "archiveMember": "GenBuster-Bench/wild/fake/hailuo2.3/3dcbd8e1721d6532cb8293ceeb796adc5a84133e44c8d1de10287b6d28ed92bb.mp4",
+      "dataset": "GenBuster-Bench",
+      "downloadUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench/resolve/68e41ab55726013f1c7455980180114302196c23/GenBuster-Bench.zip",
+      "generator": "hailuo2.3",
+      "groundTruth": {
+        "basis": "dataset-author-label",
+        "evidenceUrl": "https://github.com/l8cv/BusterX",
+        "labelPath": "GenBuster-Bench/wild/fake/hailuo2.3/3dcbd8e1721d6532cb8293ceeb796adc5a84133e44c8d1de10287b6d28ed92bb.mp4",
+        "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+      },
+      "groupId": "genbuster:3dcbd8e1721d6532cb8293ceeb796adc5a84133e44c8d1de10287b6d28ed92bb",
+      "id": "1f1759afdcf54d2091e65df7",
+      "label": "ai",
+      "labelEvidenceStrength": "publisher-assigned-benchmark",
+      "license": "MIT (dataset card)",
+      "media": {
+        "bytes": 490844,
+        "durationSeconds": 5.041667,
+        "frameRate": "24/1",
+        "hasAudio": false,
+        "height": 1024,
+        "width": 1024
+      },
+      "mimeType": "video/mp4",
+      "order": 2,
+      "pairedSevere": {
+        "id": "a8d754226ed275ebdc840b15",
+        "media": {
+          "bytes": 44855,
+          "durationSeconds": 5.083333,
+          "frameRate": "12/1",
+          "hasAudio": false,
+          "height": 360,
+          "width": 360
+        },
+        "path": "eval/media/a8d754226ed275ebdc840b15.mp4",
+        "savedRequest": {
+          "id": "req_lnio5508fsJZSmvhr6E6h",
+          "operations": 55,
+          "timestamp": 1788895204.986399
+        },
+        "savedTemporal": {
+          "adjacentSamplesAreIndependent": false,
+          "callerTechnicalComplete": true,
+          "configuration": {
+            "adjacentSamplesAreIndependent": false,
+            "coverage": {
+              "firstFrameMaxSeconds": 0.1,
+              "maximumGapSeconds": 0.6,
+              "tailGapSeconds": 0.6
+            },
+            "declaredIntervalSeconds": 0.5,
+            "insufficientForSubsecondExclusion": true,
+            "maximumPositiveGapSeconds": 0.6,
+            "minimumPersistentSamples": 2,
+            "policyVersion": "sightengine-temporal-evidence-v1",
+            "positionUnit": "seconds",
+            "scoreThreshold": 0.5,
+            "scoresAreCalibratedProbabilities": false,
+            "sequenceOrder": "received-order-no-sort-or-deduplication",
+            "temporalInterpolation": false
+          },
+          "coverage": {
+            "basis": "caller_declaration_and_returned_sample_positions_not_every_frame_inspection",
+            "complete": true,
+            "declaredIntervalSeconds": 0.5,
+            "durationSeconds": 5.083333,
+            "insufficientForSubsecondExclusion": true,
+            "issues": [],
+            "sampledPositionsSeconds": [
+              0.0,
+              0.5,
+              1.0,
+              1.5,
+              2.0,
+              2.5,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0
+            ]
+          },
+          "decisionReasons": [
+            "Isolated positive samples remain unresolved.",
+            "Sampled evidence does not establish origin or exclude AI between samples, including subsecond inserts."
+          ],
+          "isolatedAlerts": [
+            {
+              "aiGenerated": 0.56,
+              "positionSeconds": 3.0,
+              "sampleIndex": 6,
+              "status": "unresolved"
+            }
+          ],
+          "notProofOfOrigin": true,
+          "persistentRuns": [],
+          "policyFingerprint": "6544a9d76ce994fecfc2c736b4f3af79b744f1cafa11a1e66145e849e30aea89",
+          "researchOnly": true,
+          "reviewRequired": true,
+          "sampleRecords": [
+            {
+              "aiGenerated": 0.001,
+              "index": 0,
+              "issues": [],
+              "positionSeconds": 0.0,
+              "positive": false,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.001,
+              "index": 1,
+              "issues": [],
+              "positionSeconds": 0.5,
+              "positive": false,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.001,
+              "index": 2,
+              "issues": [],
+              "positionSeconds": 1.0,
+              "positive": false,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.001,
+              "index": 3,
+              "issues": [],
+              "positionSeconds": 1.5,
+              "positive": false,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.001,
+              "index": 4,
+              "issues": [],
+              "positionSeconds": 2.0,
+              "positive": false,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.001,
+              "index": 5,
+              "issues": [],
+              "positionSeconds": 2.5,
+              "positive": false,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.56,
+              "index": 6,
+              "issues": [],
+              "positionSeconds": 3.0,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.06,
+              "index": 7,
+              "issues": [],
+              "positionSeconds": 3.5,
+              "positive": false,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.01,
+              "index": 8,
+              "issues": [],
+              "positionSeconds": 4.0,
+              "positive": false,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.02,
+              "index": 9,
+              "issues": [],
+              "positionSeconds": 4.5,
+              "positive": false,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.02,
+              "index": 10,
+              "issues": [],
+              "positionSeconds": 5.0,
+              "positive": false,
+              "valid": true
+            }
+          ],
+          "schemaVersion": 1,
+          "scoresAreCalibratedProbabilities": false,
+          "technicalComplete": true,
+          "technicalIssues": [],
+          "verdict": "inconclusive"
+        },
+        "sha256": "7a20e1bb2d5d085f86849e56eb8cc78ec5bcc751a8c5b69aecf5d360f143f6ce"
+      },
+      "path": "eval/media/1f1759afdcf54d2091e65df7.mp4",
+      "platform": "dataset",
+      "sha256": "3dcbd8e1721d6532cb8293ceeb796adc5a84133e44c8d1de10287b6d28ed92bb",
+      "sourceLabel": "ai",
+      "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+      "split": "development",
+      "transformation": "original"
+    },
+    {
+      "archiveMember": "GenBuster-Bench/ood/fake/pika/b7a22f47e8b8166ff8661b248067e4a62eade1978bd88b1bb363d1735597775e.mp4",
+      "dataset": "GenBuster-Bench",
+      "downloadUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench/resolve/68e41ab55726013f1c7455980180114302196c23/GenBuster-Bench.zip",
+      "generator": "pika",
+      "groundTruth": {
+        "basis": "dataset-author-label",
+        "evidenceUrl": "https://github.com/l8cv/BusterX",
+        "labelPath": "GenBuster-Bench/ood/fake/pika/b7a22f47e8b8166ff8661b248067e4a62eade1978bd88b1bb363d1735597775e.mp4",
+        "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+      },
+      "groupId": "genbuster:b7a22f47e8b8166ff8661b248067e4a62eade1978bd88b1bb363d1735597775e",
+      "id": "92d5b530d758407930843bc8",
+      "label": "ai",
+      "labelEvidenceStrength": "publisher-assigned-benchmark",
+      "license": "MIT (dataset card)",
+      "media": {
+        "bytes": 514142,
+        "durationSeconds": 5.041667,
+        "frameRate": "24/1",
+        "hasAudio": false,
+        "height": 1024,
+        "width": 1024
+      },
+      "mimeType": "video/mp4",
+      "order": 3,
+      "pairedSevere": {
+        "id": "9a4938a20ee0c244e3bbcea5",
+        "media": {
+          "bytes": 23010,
+          "durationSeconds": 5.083333,
+          "frameRate": "12/1",
+          "hasAudio": false,
+          "height": 360,
+          "width": 360
+        },
+        "path": "eval/media/9a4938a20ee0c244e3bbcea5.mp4",
+        "savedRequest": {
+          "id": "req_lnipKO05M7Ojn2Apl8wQ5",
+          "operations": 55,
+          "timestamp": 1788895263.158285
+        },
+        "savedTemporal": {
+          "adjacentSamplesAreIndependent": false,
+          "callerTechnicalComplete": true,
+          "configuration": {
+            "adjacentSamplesAreIndependent": false,
+            "coverage": {
+              "firstFrameMaxSeconds": 0.1,
+              "maximumGapSeconds": 0.6,
+              "tailGapSeconds": 0.6
+            },
+            "declaredIntervalSeconds": 0.5,
+            "insufficientForSubsecondExclusion": true,
+            "maximumPositiveGapSeconds": 0.6,
+            "minimumPersistentSamples": 2,
+            "policyVersion": "sightengine-temporal-evidence-v1",
+            "positionUnit": "seconds",
+            "scoreThreshold": 0.5,
+            "scoresAreCalibratedProbabilities": false,
+            "sequenceOrder": "received-order-no-sort-or-deduplication",
+            "temporalInterpolation": false
+          },
+          "coverage": {
+            "basis": "caller_declaration_and_returned_sample_positions_not_every_frame_inspection",
+            "complete": true,
+            "declaredIntervalSeconds": 0.5,
+            "durationSeconds": 5.083333,
+            "insufficientForSubsecondExclusion": true,
+            "issues": [],
+            "sampledPositionsSeconds": [
+              0.0,
+              0.5,
+              1.0,
+              1.5,
+              2.0,
+              2.5,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0
+            ]
+          },
+          "decisionReasons": [
+            "At least two consecutive positive sampled observations meet the fixed spacing rule.",
+            "Sampled evidence does not establish origin or exclude AI between samples, including subsecond inserts."
+          ],
+          "isolatedAlerts": [],
+          "notProofOfOrigin": true,
+          "persistentRuns": [
+            {
+              "adjacentSamplesAreIndependent": false,
+              "extentMeaning": "sample_endpoints_only_not_a_continuous_AI_interval",
+              "firstSampleSeconds": 0.0,
+              "lastSampleSeconds": 5.0,
+              "sampleIndices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "sampleScores": [
+                0.99,
+                0.99,
+                0.99,
+                0.99,
+                0.99,
+                0.99,
+                0.99,
+                0.99,
+                0.99,
+                0.99,
+                0.99
+              ],
+              "sampledPositionsSeconds": [
+                0.0,
+                0.5,
+                1.0,
+                1.5,
+                2.0,
+                2.5,
+                3.0,
+                3.5,
+                4.0,
+                4.5,
+                5.0
+              ]
+            }
+          ],
+          "policyFingerprint": "6544a9d76ce994fecfc2c736b4f3af79b744f1cafa11a1e66145e849e30aea89",
+          "researchOnly": true,
+          "reviewRequired": false,
+          "sampleRecords": [
+            {
+              "aiGenerated": 0.99,
+              "index": 0,
+              "issues": [],
+              "positionSeconds": 0.0,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.99,
+              "index": 1,
+              "issues": [],
+              "positionSeconds": 0.5,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.99,
+              "index": 2,
+              "issues": [],
+              "positionSeconds": 1.0,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.99,
+              "index": 3,
+              "issues": [],
+              "positionSeconds": 1.5,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.99,
+              "index": 4,
+              "issues": [],
+              "positionSeconds": 2.0,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.99,
+              "index": 5,
+              "issues": [],
+              "positionSeconds": 2.5,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.99,
+              "index": 6,
+              "issues": [],
+              "positionSeconds": 3.0,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.99,
+              "index": 7,
+              "issues": [],
+              "positionSeconds": 3.5,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.99,
+              "index": 8,
+              "issues": [],
+              "positionSeconds": 4.0,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.99,
+              "index": 9,
+              "issues": [],
+              "positionSeconds": 4.5,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.99,
+              "index": 10,
+              "issues": [],
+              "positionSeconds": 5.0,
+              "positive": true,
+              "valid": true
+            }
+          ],
+          "schemaVersion": 1,
+          "scoresAreCalibratedProbabilities": false,
+          "technicalComplete": true,
+          "technicalIssues": [],
+          "verdict": "persistent_ai_indicators"
+        },
+        "sha256": "f25c5cd45d14221d22bdb58cdd88f92a85fbeb2d53f5703896242c6e9140e7bd"
+      },
+      "path": "eval/media/92d5b530d758407930843bc8.mp4",
+      "platform": "dataset",
+      "sha256": "b7a22f47e8b8166ff8661b248067e4a62eade1978bd88b1bb363d1735597775e",
+      "sourceLabel": "ai",
+      "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+      "split": "development",
+      "transformation": "original"
+    },
+    {
+      "archiveMember": "GenBuster-Bench/wild/fake/veo3.1/0c0d15b1521d959f8860adebc49387f58bad07adc8a451ea45a84b8b14af6e8d.mp4",
+      "dataset": "GenBuster-Bench",
+      "downloadUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench/resolve/68e41ab55726013f1c7455980180114302196c23/GenBuster-Bench.zip",
+      "generator": "veo3.1",
+      "groundTruth": {
+        "basis": "dataset-author-label",
+        "evidenceUrl": "https://github.com/l8cv/BusterX",
+        "labelPath": "GenBuster-Bench/wild/fake/veo3.1/0c0d15b1521d959f8860adebc49387f58bad07adc8a451ea45a84b8b14af6e8d.mp4",
+        "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+      },
+      "groupId": "genbuster:0c0d15b1521d959f8860adebc49387f58bad07adc8a451ea45a84b8b14af6e8d",
+      "id": "e4dd72c3ce6fe3ec4787f1b4",
+      "label": "ai",
+      "labelEvidenceStrength": "publisher-assigned-benchmark",
+      "license": "MIT (dataset card)",
+      "media": {
+        "bytes": 588531,
+        "durationSeconds": 5.041667,
+        "frameRate": "24/1",
+        "hasAudio": false,
+        "height": 1024,
+        "width": 1024
+      },
+      "mimeType": "video/mp4",
+      "order": 4,
+      "pairedSevere": {
+        "id": "e3559c5de44c980c6a0484e4",
+        "media": {
+          "bytes": 28301,
+          "durationSeconds": 5.083333,
+          "frameRate": "12/1",
+          "hasAudio": false,
+          "height": 360,
+          "width": 360
+        },
+        "path": "eval/media/e3559c5de44c980c6a0484e4.mp4",
+        "savedRequest": {
+          "id": "req_lnipk7w0HRK1wnoemFslF",
+          "operations": 55,
+          "timestamp": 1788895290.938235
+        },
+        "savedTemporal": {
+          "adjacentSamplesAreIndependent": false,
+          "callerTechnicalComplete": true,
+          "configuration": {
+            "adjacentSamplesAreIndependent": false,
+            "coverage": {
+              "firstFrameMaxSeconds": 0.1,
+              "maximumGapSeconds": 0.6,
+              "tailGapSeconds": 0.6
+            },
+            "declaredIntervalSeconds": 0.5,
+            "insufficientForSubsecondExclusion": true,
+            "maximumPositiveGapSeconds": 0.6,
+            "minimumPersistentSamples": 2,
+            "policyVersion": "sightengine-temporal-evidence-v1",
+            "positionUnit": "seconds",
+            "scoreThreshold": 0.5,
+            "scoresAreCalibratedProbabilities": false,
+            "sequenceOrder": "received-order-no-sort-or-deduplication",
+            "temporalInterpolation": false
+          },
+          "coverage": {
+            "basis": "caller_declaration_and_returned_sample_positions_not_every_frame_inspection",
+            "complete": true,
+            "declaredIntervalSeconds": 0.5,
+            "durationSeconds": 5.083333,
+            "insufficientForSubsecondExclusion": true,
+            "issues": [],
+            "sampledPositionsSeconds": [
+              0.0,
+              0.5,
+              1.0,
+              1.5,
+              2.0,
+              2.5,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0
+            ]
+          },
+          "decisionReasons": [
+            "At least two consecutive positive sampled observations meet the fixed spacing rule.",
+            "Sampled evidence does not establish origin or exclude AI between samples, including subsecond inserts."
+          ],
+          "isolatedAlerts": [],
+          "notProofOfOrigin": true,
+          "persistentRuns": [
+            {
+              "adjacentSamplesAreIndependent": false,
+              "extentMeaning": "sample_endpoints_only_not_a_continuous_AI_interval",
+              "firstSampleSeconds": 0.0,
+              "lastSampleSeconds": 5.0,
+              "sampleIndices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+              ],
+              "sampleScores": [
+                0.99,
+                0.99,
+                0.99,
+                0.99,
+                0.99,
+                0.99,
+                0.99,
+                0.99,
+                0.99,
+                0.99,
+                0.99
+              ],
+              "sampledPositionsSeconds": [
+                0.0,
+                0.5,
+                1.0,
+                1.5,
+                2.0,
+                2.5,
+                3.0,
+                3.5,
+                4.0,
+                4.5,
+                5.0
+              ]
+            }
+          ],
+          "policyFingerprint": "6544a9d76ce994fecfc2c736b4f3af79b744f1cafa11a1e66145e849e30aea89",
+          "researchOnly": true,
+          "reviewRequired": false,
+          "sampleRecords": [
+            {
+              "aiGenerated": 0.99,
+              "index": 0,
+              "issues": [],
+              "positionSeconds": 0.0,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.99,
+              "index": 1,
+              "issues": [],
+              "positionSeconds": 0.5,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.99,
+              "index": 2,
+              "issues": [],
+              "positionSeconds": 1.0,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.99,
+              "index": 3,
+              "issues": [],
+              "positionSeconds": 1.5,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.99,
+              "index": 4,
+              "issues": [],
+              "positionSeconds": 2.0,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.99,
+              "index": 5,
+              "issues": [],
+              "positionSeconds": 2.5,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.99,
+              "index": 6,
+              "issues": [],
+              "positionSeconds": 3.0,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.99,
+              "index": 7,
+              "issues": [],
+              "positionSeconds": 3.5,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.99,
+              "index": 8,
+              "issues": [],
+              "positionSeconds": 4.0,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.99,
+              "index": 9,
+              "issues": [],
+              "positionSeconds": 4.5,
+              "positive": true,
+              "valid": true
+            },
+            {
+              "aiGenerated": 0.99,
+              "index": 10,
+              "issues": [],
+              "positionSeconds": 5.0,
+              "positive": true,
+              "valid": true
+            }
+          ],
+          "schemaVersion": 1,
+          "scoresAreCalibratedProbabilities": false,
+          "technicalComplete": true,
+          "technicalIssues": [],
+          "verdict": "persistent_ai_indicators"
+        },
+        "sha256": "57567b8f3ad584277a8ebf17332073a6bb3895ab40900c71f6a9188a114ab49f"
+      },
+      "path": "eval/media/e4dd72c3ce6fe3ec4787f1b4.mp4",
+      "platform": "dataset",
+      "sha256": "0c0d15b1521d959f8860adebc49387f58bad07adc8a451ea45a84b8b14af6e8d",
+      "sourceLabel": "ai",
+      "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+      "split": "development",
+      "transformation": "original"
+    }
+  ],
+  "frozen": true,
+  "frozenAt": "2026-09-08T19:58:03.190372+00:00",
+  "id": "sightengine-original-counterparts-v1",
+  "labelsSentToProvider": false,
+  "limits": {
+    "concurrency": 1,
+    "maxOperations": 240,
+    "requestSeconds": 180,
+    "requests": 4,
+    "reservedOperations": 240,
+    "responseBytes": 1048576,
+    "retries": 0
+  },
+  "policyConfiguration": {
+    "adjacentSamplesAreIndependent": false,
+    "coverage": {
+      "firstFrameMaxSeconds": 0.1,
+      "maximumGapSeconds": 0.6,
+      "tailGapSeconds": 0.6
+    },
+    "declaredIntervalSeconds": 0.5,
+    "insufficientForSubsecondExclusion": true,
+    "maximumPositiveGapSeconds": 0.6,
+    "minimumPersistentSamples": 2,
+    "policyVersion": "sightengine-temporal-evidence-v1",
+    "positionUnit": "seconds",
+    "scoreThreshold": 0.5,
+    "scoresAreCalibratedProbabilities": false,
+    "sequenceOrder": "received-order-no-sort-or-deduplication",
+    "temporalInterpolation": false
+  },
+  "policyFingerprint": "6544a9d76ce994fecfc2c736b4f3af79b744f1cafa11a1e66145e849e30aea89",
+  "runnerSha256": "88cd5433c049282b09ea958eeeee891c81c9cd7a167e3821422d6527bfe5618d",
+  "schemaVersion": 1,
+  "selection": "All four publisher-labeled severe parents from the prior fixed25 screen, in its order; original counterparts only, including its two hits and two non-detections.",
+  "sources": [
+    {
+      "path": "scripts/eval-sightengine-api.py",
+      "sha256": "b953a1dd11f3f2b5bf81f3c9d7819466fed1d98c7defeb234e0439c82ca852be"
+    },
+    {
+      "path": "scripts/sightengine-temporal-evidence.py",
+      "sha256": "527b15281583255c975c60b7f8f3b44981c2a6744a6ab4af514bc61b667a7453"
+    },
+    {
+      "path": "eval/fixtures/sightengine-temporal-screen-v2.json",
+      "sha256": "1374a18b17699d6aef0ef0868b21f9f580bdbaa667f26caa45d92d0dcacc25b7"
+    },
+    {
+      "path": "eval/runs/sightengine-temporal-screen-v2/receipt.json",
+      "sha256": "4081f41523aafb1193dd06e52f48d83226fbf0985276c45355c78f5535c9fb34"
+    },
+    {
+      "path": "eval/smoke-manifest.jsonl",
+      "sha256": "a73696821312e5e286d9b96906331129a36ed912f281389e0eae43cfb2c8909f"
+    }
+  ]
+}

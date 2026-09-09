@@ -1,0 +1,44 @@
+{
+  "checks": [
+    {
+      "name": "wall_timeout",
+      "passed": true,
+      "result": {
+        "exitCode": -15,
+        "limitType": "supervisor polling; transient allocation overshoot is possible",
+        "peakSampledProcessTreeRssBytes": 13336576,
+        "resourceFailure": "wall_time_limit",
+        "samplingIntervalSeconds": 0.25,
+        "wallSeconds": 0.2812467500043567
+      }
+    },
+    {
+      "name": "rss_limit",
+      "passed": true,
+      "result": {
+        "exitCode": -15,
+        "limitType": "supervisor polling; transient allocation overshoot is possible",
+        "peakSampledProcessTreeRssBytes": 12730368,
+        "resourceFailure": "rss_limit",
+        "samplingIntervalSeconds": 0.25,
+        "wallSeconds": 0.014953541991417296
+      }
+    },
+    {
+      "name": "interrupt",
+      "passed": true,
+      "result": {
+        "exitCode": -15,
+        "limitType": "supervisor polling; transient allocation overshoot is possible",
+        "peakSampledProcessTreeRssBytes": 13320192,
+        "resourceFailure": "supervisor_interrupted",
+        "samplingIntervalSeconds": 0.25,
+        "wallSeconds": 0.3060596660070587
+      }
+    }
+  ],
+  "forwardCalls": 0,
+  "fullModelLoaded": false,
+  "scriptSha256": "dde53f3fa6d58d450e59b52ac14bbdd40289a9e21f0216c126682faf85b505e8",
+  "status": "passed"
+}

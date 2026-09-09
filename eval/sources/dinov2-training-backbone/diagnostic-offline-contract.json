@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "syntheticDecisionsOnly": true,
+  "modelCalls": 0,
+  "checks": [
+    "exact153rows-and82negative-denominators",
+    "perfect-mocked-matrix",
+    "single-camera-false-flag-rejects",
+    "incomplete-coverage-rejects",
+    "outside-folder-recall-gate-distinct",
+    "missing-result-refused"
+  ],
+  "evaluatorSha256": "bb002381afd0d92be72ce34b469160171993dd29e3d94de367a57ca4313e15b2"
+}

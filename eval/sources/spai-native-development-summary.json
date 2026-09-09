@@ -1,0 +1,1047 @@
+{
+  "scope": "development-only; no holdout or calibration rows used",
+  "predeclaredStudy": "eval/spai-fullframe-study.json",
+  "sourceFingerprint": "adec79ea69d9cde4af1f49e32ec1e6c099b999dcd7e4e5890078a0af955af5a0",
+  "configuration": {
+    "aggregation": "mean-logit",
+    "device": "mps",
+    "featureExtractionBatchSize": 8,
+    "fftDevice": "cpu",
+    "frames": 8,
+    "manifestSha256": "a73696821312e5e286d9b96906331129a36ed912f281389e0eae43cfb2c8909f",
+    "maxDimension": 1024,
+    "maxDurationSeconds": 60,
+    "maxFileBytes": 20000000,
+    "maxPixels": 1048576,
+    "minimumDimension": 224,
+    "model": "mever-team/spai",
+    "preprocessing": "uniform-native-full-frame-rgb-unit-range-official-arbitrary-resolution-patch-attention",
+    "revision": "8ff7b3b6779b4fcb43cf313471d9cb1c62d129a4",
+    "safetensorsSha256": "2f713987c34dbbbddc5cc02e53d5990d77f15c66d814f9dff2194e2faeb35fd9",
+    "scoreIsProbability": false,
+    "sourceFingerprint": "adec79ea69d9cde4af1f49e32ec1e6c099b999dcd7e4e5890078a0af955af5a0",
+    "sourceSnapshot": "eval/runs/spai-native-smoke-v1.source",
+    "torchThreads": 4,
+    "torchVersion": "2.8.0",
+    "torchvisionVersion": "0.23.0",
+    "workers": 1
+  },
+  "files": [
+    {
+      "path": "eval/runs/spai-native-smoke-v1.jsonl",
+      "sha256": "429283e1d817536f153bfb29a9e41e12b2b83377538d30817c96ea8351270eca",
+      "rows": 35
+    },
+    {
+      "path": "eval/runs/spai-native-social-v1.jsonl",
+      "sha256": "14fee6bf72b88fcd561a81a84e3f4e1a4310660641b5a98c30d6e0217f91d999",
+      "rows": 70
+    },
+    {
+      "path": "eval/runs/spai-native-controls-v1.jsonl",
+      "sha256": "ccd5c25238ebc3f10da23627ab92dfef2ab1cd6cd039b79110c013e888c2044e",
+      "rows": 6
+    }
+  ],
+  "threshold": 0,
+  "decisionRule": "syntheticScore >0",
+  "scoreIsProbability": false,
+  "sets": {
+    "original": {
+      "AI": 23,
+      "real": 12,
+      "TP": 8,
+      "FP": 0,
+      "auroc": 0.8876811594202898,
+      "aurocBootstrap95": [
+        0.7613636363636364,
+        0.9810606060606061
+      ],
+      "bootstrapCaveat": "Development-only descriptive bootstrap of unique nominal source rows within this stage; not a deployment validation. CGI/mixed controls have onlytwo underlying scenarios so no confidence interval for them.",
+      "medianMs": 2512,
+      "maximumNegativeScore": -3.896127838641405,
+      "hitsAboveMaximumNegative": 11
+    },
+    "repost_360p_crf36_12fps_crop": {
+      "AI": 23,
+      "real": 12,
+      "TP": 0,
+      "FP": 0,
+      "auroc": 0.6304347826086957,
+      "aurocBootstrap95": [
+        0.42857142857142855,
+        0.8387096774193549
+      ],
+      "bootstrapCaveat": "Development-only descriptive bootstrap of unique nominal source rows within this stage; not a deployment validation. CGI/mixed controls have onlytwo underlying scenarios so no confidence interval for them.",
+      "medianMs": 680,
+      "maximumNegativeScore": -13.630913078784943,
+      "hitsAboveMaximumNegative": 3
+    },
+    "social_720p_crf28": {
+      "AI": 23,
+      "real": 12,
+      "TP": 0,
+      "FP": 0,
+      "auroc": 0.7898550724637681,
+      "aurocBootstrap95": [
+        0.592,
+        0.9333333333333333
+      ],
+      "bootstrapCaveat": "Development-only descriptive bootstrap of unique nominal source rows within this stage; not a deployment validation. CGI/mixed controls have onlytwo underlying scenarios so no confidence interval for them.",
+      "medianMs": 1221,
+      "maximumNegativeScore": -8.745073765516281,
+      "hitsAboveMaximumNegative": 8
+    }
+  },
+  "controls": [
+    {
+      "id": "703e6214f3cd696b71512d76",
+      "label": "cgi",
+      "score": -11.116389364004135,
+      "positive": false
+    },
+    {
+      "id": "9d01860ad2c4dfa73fe779b0",
+      "label": "cgi",
+      "score": -26.403870344161987,
+      "positive": false
+    },
+    {
+      "id": "fc45bccf51b8b03a5aad0542",
+      "label": "cgi",
+      "score": -1.8139395266771317,
+      "positive": false
+    },
+    {
+      "id": "0038f7ed04ca0c22d90586dd",
+      "label": "mixed",
+      "score": -0.611792242154479,
+      "positive": false
+    },
+    {
+      "id": "528a540f40e0e96af72933a3",
+      "label": "mixed",
+      "score": -0.7982412318233401,
+      "positive": false
+    },
+    {
+      "id": "b75decf7062254d2fa31ce9f",
+      "label": "mixed",
+      "score": -0.8991528954356909,
+      "positive": false
+    }
+  ],
+  "coverage": [
+    {
+      "id": "056c0a6ab03ea042ef9969b7",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "14b4ba66fa34440f9c90b5c5",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "16fd60b936b5b83c323cb0ef",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "1f1759afdcf54d2091e65df7",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "2129c615634c154928e05d23",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "2c9ef7e6f3765b6365c25022",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "3b80a00a9e76c405498fe39c",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "3e886e3823440ad7f2634150",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "503cbc93e819772076b46e86",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "58af87435f2f1afcd7681c0f",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "6c3f30da83724e5a857637a6",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "767e401480a40f8f7cb6a28b",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "7db67e621251095c5037878e",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "7ec6bdefce0addbe25200bfe",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "8484b633cb1946fa0b128045",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "91db232f4192b76281052f1f",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "92d5b530d758407930843bc8",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "95b344f04899dfc97ef49ec6",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "97d7a57bda2b38050278ccea",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "a8c41ae44bab44da510f356e",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "ace6763706e43bb691ded1e1",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "b0ab41201fe0f1483d8016b7",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "b3ca93a3fd4d871394078d3e",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "ba47ebdcc33c48fa672c537d",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "c3731b5956ca53fa53e4615f",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "c3838dd6d1982352acdd3660",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "c4beb48cd83d43468c0faf4e",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "c65784c9e279879328fc9be6",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "d18552d88079d0eff777f694",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "dda4b9e86ed0f9a6f42ef83a",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "e4dd72c3ce6fe3ec4787f1b4",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "f2bec8d2074184cf9427e5d4",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "f620cabf7d519f94a0a19699",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "f7ec655351b2c985c2d59e69",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "fe403bf0a111ced391ee0b02",
+      "width": 1024,
+      "height": 1024,
+      "patchesPerFrame": 16,
+      "gridCoverageFraction": 0.765625,
+      "uninspectedRightPixels": 128,
+      "uninspectedBottomPixels": 128
+    },
+    {
+      "id": "017c9b723904a8ecdba070bb",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "0381a1169a169782c89644af",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "044516a177ae95d243651b71",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "0466d5fc4edadb343e304eaa",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "079fdb4e4b5e6e2667eb83a8",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "0b3ce51bb0f248f7b87fc450",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "0e9001370fc23f760c04106c",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "0efd92c053074145653dc5c6",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "143c31393c86f1ef3aa6bd1f",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "161a7584d0c0565078ae4e89",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "1eee963f36d3be88570059b6",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "215cdd518d2db5811394a0c8",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "23d579bf12985caf0f400517",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "362010bb990595b9728b9f3a",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "37c70b6a50b2684cb12b67ad",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "3aa69fcaee3b9e4010848276",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "3c82085d49c6f5ee9e0ca3c3",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "3d393a67251a5444d0d76b35",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "3f8a2367a924565d29218c85",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "415351b3b646e9b990a4ed45",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "56e71115ce7db76fe86455af",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "5aa97073cbab58482da92cbe",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "5c71a88eed05739c6028ab5d",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "6034611a3152e7568950abec",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "6a072e50471d7830efaa77f0",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "6fb9b2bff63818fd1e64ad9d",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "7112329420b64dcc7e74e6d8",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "720fac324dea4fdc2187762a",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "79a0b96c67702587a68f6440",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "79ccf50fadb177767e1d4a98",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "7c696f2a7058bf1c9e6fba21",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "85252c1ebf73386b2db8459e",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "8739de9b719005e18a439d52",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "8f8fe8d2b89aa9c32576f9ac",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "8faa7a52a89a2742b3f4e43b",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "9929cd25bd00ea9f5523b64d",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "9a4938a20ee0c244e3bbcea5",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "9d1c7ec4cdc8d253e3b02a6d",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "9f9f14a28bc67f946cc7037d",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "a106a441f651d906dee2f0ea",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "a5b6766be089ee5d738f2626",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "a5e2b4f1dfe95710720e89d3",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "a7190cc1a61f082f14c3835a",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "a8d754226ed275ebdc840b15",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "ae7de3cb19bfed6143cabedc",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "b0b99809f182d3298d89d794",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "b2acd72a4a0229bf3d5b5e25",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "b352c7777fbaa708fa39281c",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "b55be41eaab78e3c84f1ac16",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "ba35a2fea051825d84fd6f01",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "bd15769528f11dcc40634cbe",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "bee1b6929e2b6706ee0aa028",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "cb7e1823901c46c29b2f8751",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "cc847da368040540741bf584",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "d2f9ddb2b9abdb1c938d162d",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "d4607110002f23c79c0756d0",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "dbc3681f4f128e690b25b6a2",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "dd0920229068dd50d5076934",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "ddb281567b7c2eb69bc558ff",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "e08354f42fa664f8c9d14304",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "e3559c5de44c980c6a0484e4",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "e405c97a5e050f2c75261459",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "e5ebcb90abc84a817f4526fa",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "e89a5f456bf5fd617b154b26",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "e9588a9c548b0af276648897",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "ede414b319b5c17003f4208f",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    },
+    {
+      "id": "efde9f7da40f6a695a90e021",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "f459328354627cdb50910b04",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "fa78b8dacafccfedd6a5ca0d",
+      "width": 360,
+      "height": 360,
+      "patchesPerFrame": 5,
+      "fiveCropFallback": true,
+      "coverageNote": "Official224pixel corner/center crops; grid coverage formula doesnotapply."
+    },
+    {
+      "id": "fb9b25dae104994323853d85",
+      "width": 720,
+      "height": 720,
+      "patchesPerFrame": 9,
+      "gridCoverageFraction": 0.8711111111111111,
+      "uninspectedRightPixels": 48,
+      "uninspectedBottomPixels": 48
+    }
+  ],
+  "conclusion": "Faithful native-frame patch inference didnotrescue detection:0/23mild,0/23severe AIhits and0/3mixedcontrols. Do not integrate or try further threshold variants from these data."
+}

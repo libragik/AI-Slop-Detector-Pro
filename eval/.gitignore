@@ -1,0 +1,8 @@
+media/
+runs/
+sources/*-zip-index.json
+__pycache__/
+.venv/
+.venv-wan/
+models/
+vendor/

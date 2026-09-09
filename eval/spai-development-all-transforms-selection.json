@@ -1,0 +1,56 @@
+{
+  "preparedAt": "2026-09-05T01:23:56.766242+00:00",
+  "sourceManifest": "eval/transformed-manifest.jsonl",
+  "sourceManifestSha256": "a9a7b07a9e8513b753fb879e9e41154454d789a34c9fcf6edb7755e615db7fa1",
+  "allManifest": "eval/spai-development-all-transforms-manifest.jsonl",
+  "allManifestSha256": "8e7c10af3f99e5bcfdf8f401e495c25ffd04fdc72986537ad5da73ca16d3a8a8",
+  "remainingManifest": "eval/spai-development-rest-transforms-manifest.jsonl",
+  "remainingManifestSha256": "1baaeb79d1b73d3a97bc8d05e87989951e6386c84b278ca67eab1c099059bb10",
+  "totalDerivativeClips": 250,
+  "sourceGroups": 125,
+  "labels": {
+    "ai": 122,
+    "real": 128
+  },
+  "transformations": {
+    "social_720p_crf28": 125,
+    "repost_360p_crf36_12fps_crop": 125
+  },
+  "split": "development",
+  "priorRawPredictions": "eval/runs/spai-social-development-v1.jsonl",
+  "priorRawPredictionSha256": "a86a4c4b5fb58718de065d4fc0f0496d7eac6868132c0ea6c2e84a40d8ab565c",
+  "verifiedPreviousClips": 70,
+  "remainingClips": 180,
+  "remainingSourceGroups": 90,
+  "safetensorsSha256": "2f713987c34dbbbddc5cc02e53d5990d77f15c66d814f9dff2194e2faeb35fd9",
+  "runnerSha256": "ab699aef7c9af9eb82f07ce0bc7dd76f7b8e3160f30380c46d0bed936da01da8",
+  "vendorManifestSha256": "0cfb1b2459fbe8379068ec3650d147d0e084631973b63d68032a5d10b3520a37",
+  "configuration": {
+    "aggregation": "mean-logit",
+    "device": "mps",
+    "fftDevice": "cpu",
+    "frames": 8,
+    "model": "mever-team/spai",
+    "preprocessing": "uniform-native-center-crop256-five-spai-patches-rgb-unit-range",
+    "revision": "8ff7b3b6779b4fcb43cf313471d9cb1c62d129a4",
+    "safetensorsSha256": "2f713987c34dbbbddc5cc02e53d5990d77f15c66d814f9dff2194e2faeb35fd9",
+    "sourceSha256": "ab699aef7c9af9eb82f07ce0bc7dd76f7b8e3160f30380c46d0bed936da01da8",
+    "vendorManifestSha256": "0cfb1b2459fbe8379068ec3650d147d0e084631973b63d68032a5d10b3520a37"
+  },
+  "verification": [
+    "Manifest rows copied verbatim",
+    "All 250 local media hashes verified",
+    "All 70 prior rows match complete source metadata including path and SHA256",
+    "No calibration or holdout groups or hashes included",
+    "All pinned vendor source files exist and verify against original digest after audited dependency-only patches",
+    "Audited safetensors already exists; no checkpoint loading/conversion required"
+  ],
+  "interpretation": "Existing development source groups, not a new independent holdout",
+  "modelCallsStarted": false,
+  "executionStatus": "not_started_parent_paused",
+  "pausedAt": "2026-09-05T01:24:25.716146+00:00",
+  "pauseReason": "Parent redirected to a faithful full-frame SPAI study after identifying that the unchanged legacy center-crop256 adaptation discards spatial coverage expected by official ORIGINAL_RESOLUTION inference.",
+  "newModelCalls": 0,
+  "plannedOutput": "eval/runs/spai-development-rest-transforms.jsonl",
+  "plannedOutputExists": false
+}

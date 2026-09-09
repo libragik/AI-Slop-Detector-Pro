@@ -1,0 +1,57 @@
+{
+  "purpose": "read-only source feasibility; no media download or inference",
+  "files": [
+    {
+      "id": "nasa-iss-20110917",
+      "url": "https://svs.gsfc.nasa.gov/vis/a030000/a030100/a030179/iss029_aurora_20110917_720p.mp4",
+      "status": 200,
+      "finalUrl": "https://svs.gsfc.nasa.gov/vis/a030000/a030100/a030179/iss029_aurora_20110917_720p.mp4",
+      "contentLength": "22735783",
+      "contentType": "video/mp4",
+      "lastModified": "Mon, 25 May 2015 19:37:16 GMT",
+      "etag": "\"15aeba7-516ed23215300\"",
+      "acceptRanges": "bytes",
+      "method": "HEAD",
+      "mediaBodyBytesRead": 0
+    },
+    {
+      "id": "usgs-mlk-20060502",
+      "url": "https://svs.gsfc.nasa.gov/vis/a010000/a010300/a010398/MLK_cone_collapse_320x240.mp4",
+      "status": 200,
+      "finalUrl": "https://svs.gsfc.nasa.gov/vis/a010000/a010300/a010398/MLK_cone_collapse_320x240.mp4",
+      "contentLength": "942636",
+      "contentType": "video/mp4",
+      "lastModified": "Wed, 18 Nov 2009 16:17:27 GMT",
+      "etag": "\"e622c-478a7942273c0\"",
+      "acceptRanges": "bytes",
+      "method": "HEAD",
+      "mediaBodyBytesRead": 0
+    },
+    {
+      "id": "noaa-index-2010",
+      "url": "https://oceanexplorer.noaa.gov/wp-content/uploads/2021/02/10index-seacuke-swims.mp4",
+      "status": 200,
+      "finalUrl": "https://oceanexplorer.noaa.gov/wp-content/uploads/2021/02/10index-seacuke-swims.mp4",
+      "contentLength": "16432384",
+      "contentType": "video/mp4",
+      "lastModified": "Mon, 12 May 2025 02:39:09 GMT",
+      "etag": "\"fabd00-634e7386cad40\"",
+      "acceptRanges": "bytes",
+      "method": "HEAD",
+      "mediaBodyBytesRead": 0
+    },
+    {
+      "id": "usgs-mlk-20050502-original-agency-download",
+      "url": "https://usgs-ocapsv2-public-input-media.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/video/multimediaFile-256.mp4",
+      "status": 200,
+      "contentLength": "16199189",
+      "contentType": "video/mp4",
+      "lastModified": "Wed, 05 Nov 2025 02:51:49 GMT",
+      "etag": "\"5bd9e81e1f25742b5d89d40b63e46e07-2\"",
+      "acceptRanges": "bytes",
+      "method": "HEAD",
+      "mediaBodyBytesRead": 0
+    }
+  ],
+  "selectionCorrection": "NASA SVS MLK collapse mirror labels 2006; primary USGS camera record labels 2005. Recommend direct USGS file only; no byte identity asserted between mirror and USGS file."
+}

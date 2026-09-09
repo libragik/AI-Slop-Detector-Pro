@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-09-05T04:51:22.153850+00:00",
+  "status": "passed",
+  "testCount": 12,
+  "failures": 0,
+  "command": "eval/.venv/bin/python scripts/dinov2-temporal-features.test.py",
+  "elapsedSeconds": 1.629,
+  "script": {
+    "path": "scripts/dinov2-temporal-features.py",
+    "sha256": "28e520039e48cc9a91daccccb9fb74b0d90a8fd5192148ccbcc99327621105f9"
+  },
+  "tests": {
+    "path": "scripts/dinov2-temporal-features.test.py",
+    "sha256": "e0689124191069bbc3a21e51b6e35618b23a8f031c5f1c513d3bd450f83bf2d4"
+  },
+  "scope": [
+    "metadata-only module import",
+    "runtime identity JSON roundtrip",
+    "PIL exact processor numerical agreement on synthetic images",
+    "stable original-hash windows reused across quality timelines",
+    "stride/tail coverage and eight distinct native frame indexes",
+    "short/sparse rejection",
+    "network guard restoration",
+    "subprocess wall and output-byte limits",
+    "missing weights and missing runtime-contract rejection",
+    "lossless synthetic FFV1 decoding with exact RGB equality and independently checked ffmpeg timestamps",
+    "timestamp/source tamper rejection",
+    "immutable finite float32 cls-only NPZ roundtrip",
+    "fixed numeric agreement threshold tests on synthetic arrays"
+  ],
+  "pretrainedWeightsDownloaded": false,
+  "pretrainedModelsConstructed": 0,
+  "modelForwards": 0,
+  "trainingSteps": 0,
+  "realMediaFeaturesExtracted": 0,
+  "actualCpuMpsBackboneAgreement": "not run; CLI contract remains mandatory before data features"
+}

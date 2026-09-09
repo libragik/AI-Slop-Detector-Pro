@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-09-05T04:25:51.019593+00:00",
+  "datasetRevision": "58af00f022d8272f42de3be912e9a905bf6087d2",
+  "codeRevision": "734e280c894caca5eafa79e40aa08e2be1b30a85",
+  "records": [
+    {
+      "sourceUrl": "https://api.github.com/repos/l8cv/BusterX/commits/main",
+      "status": 200,
+      "bytes": 5501,
+      "sha256": "9ef6b7dcabe2b01eb7ebe6fc46f77c8fe08319e6a551e472305364e760c50422",
+      "path": "eval/sources/training-source-audit/busterx-commit.json"
+    },
+    {
+      "sourceUrl": "https://api.github.com/repos/l8cv/BusterX/git/trees/734e280c894caca5eafa79e40aa08e2be1b30a85?recursive=1",
+      "status": 200,
+      "bytes": 11923,
+      "sha256": "5297f6ca7e864b90e70b281b96cef5a8ea3853ec8d22c7eefc032c5aad2b7c4e",
+      "path": "eval/sources/training-source-audit/busterx-tree.json"
+    },
+    {
+      "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-200K-mini/resolve/58af00f022d8272f42de3be912e9a905bf6087d2/GenBuster-200K-mini.zip",
+      "requestedRange": "bytes=-22",
+      "status": 206,
+      "responseHeaders": {
+        "content-type": "application/zip",
+        "accept-ranges": "bytes",
+        "etag": "\"b944985d2a8d5506dfb4b377ccc992ec7fe3ca6b5763ed61b3d3565a63b5fc8c\"",
+        "content-length": "22",
+        "content-range": "bytes 5458325120-5458325141/5458325142"
+      },
+      "bytes": 22,
+      "sha256": "152c126514ca653597cce5d4f2029e169ddf44adaa61fb47d7937361426585d1",
+      "path": "eval/sources/training-source-audit/zip-eocd.bin",
+      "eocd": {
+        "disk": 0,
+        "centralDisk": 0,
+        "entriesOnDisk": 9807,
+        "entriesTotal": 9807,
+        "centralBytes": 1665339,
+        "centralOffset": 4294967295,
+        "commentBytes": 0
+      }
+    }
+  ]
+}

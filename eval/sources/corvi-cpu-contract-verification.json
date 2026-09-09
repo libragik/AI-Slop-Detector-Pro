@@ -1,0 +1,36 @@
+{
+  "contract": "passed",
+  "rows": 2,
+  "frameCount": 16,
+  "inputFrameShape": [
+    3,
+    1024,
+    1024
+  ],
+  "spatialScoreShape": [
+    1,
+    1,
+    128,
+    128
+  ],
+  "threshold": 0,
+  "errors": 0,
+  "elapsedSeconds": 66.47643709182739,
+  "modelAndSourceUnchanged": true,
+  "outputSha256": "7ccef0b5679bce8785a20502694fd2a9cee87a7251e72571d3d4eadf87323e67",
+  "purpose": "Execution and preprocessing validation, not accuracy evidence",
+  "outcomes": [
+    {
+      "id": "056c0a6ab03ea042ef9969b7",
+      "label": "ai",
+      "score": -0.4362870301119983,
+      "decision": "not_ai"
+    },
+    {
+      "id": "2c9ef7e6f3765b6365c25022",
+      "label": "real",
+      "score": -6.880106270313263,
+      "decision": "not_ai"
+    }
+  ]
+}

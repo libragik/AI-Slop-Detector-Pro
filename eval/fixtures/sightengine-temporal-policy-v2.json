@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "sightengine-temporal-bound-policy-v2",
+  "frozen": true,
+  "frozenAt": "2026-09-08T19:16:24.956551+00:00",
+  "aggregatorPath": "scripts/sightengine-temporal-evidence.py",
+  "aggregatorSha256": "527b15281583255c975c60b7f8f3b44981c2a6744a6ab4af514bc61b667a7453",
+  "policyFingerprint": "6544a9d76ce994fecfc2c736b4f3af79b744f1cafa11a1e66145e849e30aea89",
+  "configuration": {
+    "adjacentSamplesAreIndependent": false,
+    "coverage": {
+      "firstFrameMaxSeconds": 0.1,
+      "maximumGapSeconds": 0.6,
+      "tailGapSeconds": 0.6
+    },
+    "declaredIntervalSeconds": 0.5,
+    "insufficientForSubsecondExclusion": true,
+    "maximumPositiveGapSeconds": 0.6,
+    "minimumPersistentSamples": 2,
+    "policyVersion": "sightengine-temporal-evidence-v1",
+    "positionUnit": "seconds",
+    "scoreThreshold": 0.5,
+    "scoresAreCalibratedProbabilities": false,
+    "sequenceOrder": "received-order-no-sort-or-deduplication",
+    "temporalInterpolation": false
+  },
+  "api": {
+    "endpoint": "https://api.sightengine.com/1.0/video/check-sync.json",
+    "models": "genai",
+    "intervalSeconds": 0.5,
+    "positionUnit": "milliseconds",
+    "normalization": "Divide raw info.position by1000 to supply positionSeconds; preserve original values and received order."
+  },
+  "decisionMeaning": {
+    "persistent_ai_indicators": "A valid persistent run exists; any additional isolated alerts stay unresolved and reviewRequired remains true.",
+    "inconclusive": "Isolated positives without a persistent run, or technical/coverage failure. Technical failure must be reported separately and fails advancement.",
+    "no_clear_indicators": "No positive samples with complete coverage. Not proof of real origin or exclusion of AI between samples."
+  },
+  "excludedOverrides": [
+    "No Gemini/style/provenance decision override",
+    "No threshold or run-length tuning",
+    "No source/label metadata in request"
+  ],
+  "scope": "Narrow uncalibrated development rejection screen. No subsecond, new mixed-positive, population or independent validation claim."
+}

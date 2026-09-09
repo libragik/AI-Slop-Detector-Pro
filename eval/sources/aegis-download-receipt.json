@@ -1,0 +1,8 @@
+{
+  "url": "https://huggingface.co/MusapYildiz/aegis-video-detector/resolve/95b71346cec650165e6ad3fb20ed9e80f4b6702a/checkpoint_best.pt",
+  "path": "eval/models/aegis/checkpoint_best.pt",
+  "bytes": 453829089,
+  "sha256": "7df233979f9d3ef340e101d0d635a4d074577d43e6d1591d677cde31f80e44ba",
+  "publisherHashMatches": true,
+  "unsafeGlobals": []
+}

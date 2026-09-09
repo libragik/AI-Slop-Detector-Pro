@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "testCount": 12,
+  "networkConnections": 0,
+  "apiSubmissions": 0,
+  "modelCalls": 0,
+  "fixtures": "Artificial bytes and mocked fetch responses only; temporary fixtures removed.",
+  "node": "v26.7.0",
+  "scriptSha256": "064f60cac0a18387f5b361102f2e18b910ae0526ad1581225f3d267e43b2ea0f",
+  "contractFile": "scripts/eval-generate-veo-study.test.mjs",
+  "contractSha256": "5f29111e847f72580e33a41674c6b50ec7066d6407a67dc17238e854174d183c",
+  "checks": [
+    {
+      "name": "SDK serializes exact text-only request without using a network",
+      "status": "passed"
+    },
+    {
+      "name": "SDK attempts1 cannot repeat a failed paid submission",
+      "status": "passed"
+    },
+    {
+      "name": "unsupported caller seed fails before even the mock transport",
+      "status": "passed"
+    },
+    {
+      "name": "terminal failure, filtering, invalid output, and uncertainty stay distinct",
+      "status": "passed"
+    },
+    {
+      "name": "mutable state is complete JSON and immutable records refuse replacement",
+      "status": "passed"
+    },
+    {
+      "name": "wrapper finalization is idempotent and never changes the raw receipt",
+      "status": "passed"
+    },
+    {
+      "name": "failed wrapper creation resumes locally with the original raw hash",
+      "status": "passed"
+    },
+    {
+      "name": "changed completed media and source identity are rejected",
+      "status": "passed"
+    },
+    {
+      "name": "actual builder accepts matching schema and rejects an edited raw receipt",
+      "status": "passed"
+    },
+    {
+      "name": "a fabricated passing gate summary cannot authorize generation",
+      "status": "passed"
+    },
+    {
+      "name": "download watchdog terminates a stalled child",
+      "status": "passed"
+    },
+    {
+      "name": "download watchdog terminates an oversized child output",
+      "status": "passed"
+    }
+  ]
+}

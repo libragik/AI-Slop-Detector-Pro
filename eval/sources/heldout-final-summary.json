@@ -1,0 +1,5038 @@
+{
+  "createdAt": "2026-09-05T01:11:50.050Z",
+  "manifestSha256": "cb49a2ea8e403656c67ce6741e61abe1e06207918a5cbecb963309d61e598f67",
+  "split": "holdout",
+  "selectionFreezeFile": "eval/heldout-selection.json",
+  "replay": {
+    "mode": "offline-score-replay",
+    "policyVersion": "evidence-2.8",
+    "modelRequests": 0,
+    "sourceFingerprint": "6e2e586b2b619b5eb73bda46fcb96d0680db6e4516a4d2e744724406cacd0dad",
+    "bundleSha256": "2ceebeb81a2b5ecfd6dc8b4cf4f0baf4cc0ebc39896553bf013aac3a13122403",
+    "originalRun": "eval/runs/current-holdout-e27",
+    "originalPredictionSha256": "b16c0df6b53792f9270547a8e37f38e283b25f851f7f760c037354360dd61340",
+    "attempted": 75,
+    "replayed": 75,
+    "retainedErrors": 0,
+    "decisionsEquivalent": true,
+    "everyScoreFieldEquivalent": true,
+    "changedDecisionCount": 0,
+    "changedScoreCount": 0,
+    "caveat": "Only the deterministic score aggregator was replayed. Model observations, prompts, media, pass status, token usage and original latency were retained. This is not a new full-pipeline API run. Original analyzerVersion and detectorFingerprint identify observation collection; scoreReplay identifies the new decision policy."
+  },
+  "baseline": {
+    "predictionSha256": "eeb534e765e0e872f5e8be618af17b7b832c04b60e4ea787ea785d710e12b585",
+    "sourceFingerprint": "67bac37dce2fd6fba6d55cad8bae208e44e3c9e80b92030a38ba72c3f37aa2c5",
+    "bundleSha256": "c4a9e3023f98a5c39b035ed0c37938eceeff3257f4c2f1c82782221d26e4cfa1",
+    "metrics": {
+      "attempted": 75,
+      "completed": 75,
+      "errors": 0,
+      "sourceGroups": 75,
+      "confusion": {
+        "truePositive": 26,
+        "falseNegative": 13,
+        "falsePositive": 0,
+        "trueNegative": 36,
+        "abstainedAi": 0,
+        "abstainedNonAi": 0
+      },
+      "aiRecall": {
+        "numerator": 26,
+        "denominator": 39,
+        "estimate": 0.6666666666666666,
+        "interval95": [
+          0.5097739439934599,
+          0.7936704381040163
+        ]
+      },
+      "falsePositiveRate": {
+        "numerator": 0,
+        "denominator": 36,
+        "estimate": 0,
+        "interval95": [
+          0,
+          0.09641862859446367
+        ]
+      },
+      "aiDetectionFailureRate": {
+        "numerator": 13,
+        "denominator": 39,
+        "estimate": 0.3333333333333333,
+        "interval95": [
+          0.20632956189598373,
+          0.4902260560065401
+        ]
+      },
+      "falseNegativeRate": {
+        "numerator": 13,
+        "denominator": 39,
+        "estimate": 0.3333333333333333,
+        "interval95": [
+          0.20632956189598373,
+          0.4902260560065401
+        ]
+      },
+      "falseNegativeContamination": {
+        "numerator": 13,
+        "denominator": 49,
+        "estimate": 0.2653061224489796,
+        "interval95": [
+          0.16211282134957408,
+          0.4026228897131079
+        ]
+      },
+      "aiPrecision": {
+        "numerator": 26,
+        "denominator": 26,
+        "estimate": 1,
+        "interval95": [
+          0.8712710781407846,
+          1
+        ]
+      },
+      "abstentionRate": {
+        "numerator": 0,
+        "denominator": 75,
+        "estimate": 0,
+        "interval95": [
+          3.469446951953614e-18,
+          0.04872384248280587
+        ]
+      },
+      "coverage": {
+        "numerator": 75,
+        "denominator": 75,
+        "estimate": 1,
+        "interval95": [
+          0.9512761575171942,
+          1
+        ]
+      },
+      "committedAccuracy": {
+        "numerator": 62,
+        "denominator": 75,
+        "estimate": 0.8266666666666667,
+        "interval95": [
+          0.7256918855948061,
+          0.8958085373164274
+        ]
+      },
+      "highConfidenceErrorRate": {
+        "numerator": 13,
+        "denominator": 75,
+        "estimate": 0.17333333333333334,
+        "interval95": [
+          0.1041914626835726,
+          0.2743081144051939
+        ]
+      },
+      "completionRate": {
+        "numerator": 75,
+        "denominator": 75,
+        "estimate": 1,
+        "interval95": [
+          0.9512761575171942,
+          1
+        ]
+      }
+    },
+    "execution": {
+      "selected": 75,
+      "endToEndAiRecall": {
+        "numerator": 26,
+        "denominator": 39,
+        "estimate": 0.6666666666666666,
+        "interval95": [
+          0.5097739439934599,
+          0.7936704381040163
+        ]
+      },
+      "endToEndCorrectDecisionRate": {
+        "numerator": 62,
+        "denominator": 75,
+        "estimate": 0.8266666666666667,
+        "interval95": [
+          0.7256918855948061,
+          0.8958085373164274
+        ]
+      },
+      "latencyMs": {
+        "measured": 75,
+        "median": 13430,
+        "p95": 17345,
+        "max": 22376
+      },
+      "scansWithoutPassTrace": 75,
+      "scansWithFailedPass": 0,
+      "scansWithInvalidCorroboration": 0,
+      "failedPassScanMetrics": {
+        "attempted": 0,
+        "completed": 0,
+        "errors": 0,
+        "sourceGroups": 0,
+        "confusion": {
+          "truePositive": 0,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiPrecision": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "coverage": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "committedAccuracy": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        }
+      },
+      "byPass": {},
+      "caveat": "Pass summaries describe recorded attempts only. Missing traces are unavailable, not zero failures. Conditional adjudications not attempted are not failures. End-to-end rates count scan errors, missing attempts and abstentions as failures to make a correct decision."
+    },
+    "byGenerator": {
+      "easyanimate": {
+        "attempted": 2,
+        "completed": 2,
+        "errors": 0,
+        "sourceGroups": 2,
+        "confusion": {
+          "truePositive": 2,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiPrecision": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "coverage": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "completionRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        }
+      },
+      "gen4.5": {
+        "attempted": 1,
+        "completed": 1,
+        "errors": 0,
+        "sourceGroups": 1,
+        "confusion": {
+          "truePositive": 1,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiPrecision": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "coverage": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "completionRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        }
+      },
+      "hailuo2.3": {
+        "attempted": 1,
+        "completed": 1,
+        "errors": 0,
+        "sourceGroups": 1,
+        "confusion": {
+          "truePositive": 0,
+          "falseNegative": 1,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "coverage": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "completionRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        }
+      },
+      "hunyuanvideo": {
+        "attempted": 3,
+        "completed": 3,
+        "errors": 0,
+        "sourceGroups": 3,
+        "confusion": {
+          "truePositive": 1,
+          "falseNegative": 2,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 1,
+          "denominator": 3,
+          "estimate": 0.3333333333333333,
+          "interval95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 2,
+          "denominator": 3,
+          "estimate": 0.6666666666666666,
+          "interval95": [
+            0.2076596008020477,
+            0.9385080552796037
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 2,
+          "denominator": 3,
+          "estimate": 0.6666666666666666,
+          "interval95": [
+            0.2076596008020477,
+            0.9385080552796037
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "coverage": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 1,
+          "denominator": 3,
+          "estimate": 0.3333333333333333,
+          "interval95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 2,
+          "denominator": 3,
+          "estimate": 0.6666666666666666,
+          "interval95": [
+            0.2076596008020477,
+            0.9385080552796037
+          ]
+        },
+        "completionRate": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        }
+      },
+      "jimeng": {
+        "attempted": 2,
+        "completed": 2,
+        "errors": 0,
+        "sourceGroups": 2,
+        "confusion": {
+          "truePositive": 1,
+          "falseNegative": 1,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "coverage": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "completionRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        }
+      },
+      "kling": {
+        "attempted": 2,
+        "completed": 2,
+        "errors": 0,
+        "sourceGroups": 2,
+        "confusion": {
+          "truePositive": 1,
+          "falseNegative": 1,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "coverage": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "completionRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        }
+      },
+      "kling2.5_turbo": {
+        "attempted": 2,
+        "completed": 2,
+        "errors": 0,
+        "sourceGroups": 2,
+        "confusion": {
+          "truePositive": 1,
+          "falseNegative": 1,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "coverage": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "completionRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        }
+      },
+      "kling2.6": {
+        "attempted": 2,
+        "completed": 2,
+        "errors": 0,
+        "sourceGroups": 2,
+        "confusion": {
+          "truePositive": 2,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiPrecision": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "coverage": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "completionRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        }
+      },
+      "ltxvideo": {
+        "attempted": 3,
+        "completed": 3,
+        "errors": 0,
+        "sourceGroups": 3,
+        "confusion": {
+          "truePositive": 3,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiPrecision": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "coverage": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "completionRate": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        }
+      },
+      "luma": {
+        "attempted": 1,
+        "completed": 1,
+        "errors": 0,
+        "sourceGroups": 1,
+        "confusion": {
+          "truePositive": 1,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiPrecision": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "coverage": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "completionRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        }
+      },
+      "pika": {
+        "attempted": 2,
+        "completed": 2,
+        "errors": 0,
+        "sourceGroups": 2,
+        "confusion": {
+          "truePositive": 2,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiPrecision": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "coverage": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "completionRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        }
+      },
+      "pixverse_v5": {
+        "attempted": 3,
+        "completed": 3,
+        "errors": 0,
+        "sourceGroups": 3,
+        "confusion": {
+          "truePositive": 3,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiPrecision": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "coverage": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "completionRate": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        }
+      },
+      "seedance1.5_pro": {
+        "attempted": 3,
+        "completed": 3,
+        "errors": 0,
+        "sourceGroups": 3,
+        "confusion": {
+          "truePositive": 2,
+          "falseNegative": 1,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 2,
+          "denominator": 3,
+          "estimate": 0.6666666666666666,
+          "interval95": [
+            0.2076596008020477,
+            0.9385080552796037
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 1,
+          "denominator": 3,
+          "estimate": 0.3333333333333333,
+          "interval95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 1,
+          "denominator": 3,
+          "estimate": 0.3333333333333333,
+          "interval95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "coverage": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 2,
+          "denominator": 3,
+          "estimate": 0.6666666666666666,
+          "interval95": [
+            0.2076596008020477,
+            0.9385080552796037
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 1,
+          "denominator": 3,
+          "estimate": 0.3333333333333333,
+          "interval95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ]
+        },
+        "completionRate": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        }
+      },
+      "seedance2.0": {
+        "attempted": 2,
+        "completed": 2,
+        "errors": 0,
+        "sourceGroups": 2,
+        "confusion": {
+          "truePositive": 0,
+          "falseNegative": 2,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "coverage": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "completionRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        }
+      },
+      "sora": {
+        "attempted": 1,
+        "completed": 1,
+        "errors": 0,
+        "sourceGroups": 1,
+        "confusion": {
+          "truePositive": 1,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiPrecision": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "coverage": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "completionRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        }
+      },
+      "sora2": {
+        "attempted": 2,
+        "completed": 2,
+        "errors": 0,
+        "sourceGroups": 2,
+        "confusion": {
+          "truePositive": 1,
+          "falseNegative": 1,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "coverage": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "completionRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        }
+      },
+      "unknown": {
+        "attempted": 36,
+        "completed": 36,
+        "errors": 0,
+        "sourceGroups": 36,
+        "confusion": {
+          "truePositive": 0,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 36,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 36,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.09641862859446367
+          ]
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 36,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.09641862859446367
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 36,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.09641862859446367
+          ]
+        },
+        "coverage": {
+          "numerator": 36,
+          "denominator": 36,
+          "estimate": 1,
+          "interval95": [
+            0.9035813714055363,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 36,
+          "denominator": 36,
+          "estimate": 1,
+          "interval95": [
+            0.9035813714055363,
+            1
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 36,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.09641862859446367
+          ]
+        },
+        "completionRate": {
+          "numerator": 36,
+          "denominator": 36,
+          "estimate": 1,
+          "interval95": [
+            0.9035813714055363,
+            1
+          ]
+        }
+      },
+      "veo3.1": {
+        "attempted": 1,
+        "completed": 1,
+        "errors": 0,
+        "sourceGroups": 1,
+        "confusion": {
+          "truePositive": 0,
+          "falseNegative": 1,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "coverage": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "completionRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        }
+      },
+      "wan2.5": {
+        "attempted": 3,
+        "completed": 3,
+        "errors": 0,
+        "sourceGroups": 3,
+        "confusion": {
+          "truePositive": 2,
+          "falseNegative": 1,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 2,
+          "denominator": 3,
+          "estimate": 0.6666666666666666,
+          "interval95": [
+            0.2076596008020477,
+            0.9385080552796037
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 1,
+          "denominator": 3,
+          "estimate": 0.3333333333333333,
+          "interval95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 1,
+          "denominator": 3,
+          "estimate": 0.3333333333333333,
+          "interval95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "coverage": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 2,
+          "denominator": 3,
+          "estimate": 0.6666666666666666,
+          "interval95": [
+            0.2076596008020477,
+            0.9385080552796037
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 1,
+          "denominator": 3,
+          "estimate": 0.3333333333333333,
+          "interval95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ]
+        },
+        "completionRate": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        }
+      },
+      "wan2.6": {
+        "attempted": 2,
+        "completed": 2,
+        "errors": 0,
+        "sourceGroups": 2,
+        "confusion": {
+          "truePositive": 1,
+          "falseNegative": 1,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "coverage": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "completionRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        }
+      },
+      "wanx": {
+        "attempted": 1,
+        "completed": 1,
+        "errors": 0,
+        "sourceGroups": 1,
+        "confusion": {
+          "truePositive": 1,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiPrecision": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "coverage": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "completionRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        }
+      }
+    }
+  },
+  "final": {
+    "predictionSha256": "e6c4eebd083a4b9541065138e7bae0b32ce65447ff12b5f3e6f961bd376a372e",
+    "originalObservationBundleSha256": "fa09b96dd4702cbc3c45b99e5c8b9492459303a0c3a021a288e44df67e3cc75a",
+    "metrics": {
+      "attempted": 75,
+      "completed": 75,
+      "errors": 0,
+      "sourceGroups": 75,
+      "confusion": {
+        "truePositive": 23,
+        "falseNegative": 15,
+        "falsePositive": 2,
+        "trueNegative": 34,
+        "abstainedAi": 1,
+        "abstainedNonAi": 0
+      },
+      "aiRecall": {
+        "numerator": 23,
+        "denominator": 39,
+        "estimate": 0.5897435897435898,
+        "interval95": [
+          0.43418622882896973,
+          0.7292068999927483
+        ]
+      },
+      "falsePositiveRate": {
+        "numerator": 2,
+        "denominator": 36,
+        "estimate": 0.05555555555555555,
+        "interval95": [
+          0.015369986664161853,
+          0.18144657208647252
+        ]
+      },
+      "aiDetectionFailureRate": {
+        "numerator": 16,
+        "denominator": 39,
+        "estimate": 0.41025641025641024,
+        "interval95": [
+          0.27079310000725176,
+          0.5658137711710304
+        ]
+      },
+      "falseNegativeRate": {
+        "numerator": 15,
+        "denominator": 39,
+        "estimate": 0.38461538461538464,
+        "interval95": [
+          0.24891373465561348,
+          0.5410093854307493
+        ]
+      },
+      "falseNegativeContamination": {
+        "numerator": 15,
+        "denominator": 49,
+        "estimate": 0.30612244897959184,
+        "interval95": [
+          0.19515491268006566,
+          0.44527893558910636
+        ]
+      },
+      "aiPrecision": {
+        "numerator": 23,
+        "denominator": 25,
+        "estimate": 0.92,
+        "interval95": [
+          0.7503389104960468,
+          0.9777795987151524
+        ]
+      },
+      "abstentionRate": {
+        "numerator": 1,
+        "denominator": 75,
+        "estimate": 0.013333333333333334,
+        "interval95": [
+          0.002357551139048661,
+          0.07173365554421572
+        ]
+      },
+      "coverage": {
+        "numerator": 74,
+        "denominator": 75,
+        "estimate": 0.9866666666666667,
+        "interval95": [
+          0.9282663444557845,
+          0.9976424488609515
+        ]
+      },
+      "committedAccuracy": {
+        "numerator": 57,
+        "denominator": 74,
+        "estimate": 0.7702702702702703,
+        "interval95": [
+          0.6625368552184813,
+          0.8513281288915803
+        ]
+      },
+      "highConfidenceErrorRate": {
+        "numerator": 0,
+        "denominator": 0,
+        "estimate": null,
+        "interval95": null
+      },
+      "completionRate": {
+        "numerator": 75,
+        "denominator": 75,
+        "estimate": 1,
+        "interval95": [
+          0.9512761575171942,
+          1
+        ]
+      }
+    },
+    "execution": {
+      "selected": 75,
+      "endToEndAiRecall": {
+        "numerator": 23,
+        "denominator": 39,
+        "estimate": 0.5897435897435898,
+        "interval95": [
+          0.43418622882896973,
+          0.7292068999927483
+        ]
+      },
+      "endToEndCorrectDecisionRate": {
+        "numerator": 57,
+        "denominator": 75,
+        "estimate": 0.76,
+        "interval95": [
+          0.6522123385089702,
+          0.8424512633999708
+        ]
+      },
+      "latencyMs": {
+        "measured": 75,
+        "median": 19509,
+        "p95": 36020.4,
+        "max": 44044
+      },
+      "scansWithoutPassTrace": 0,
+      "scansWithFailedPass": 0,
+      "scansWithInvalidCorroboration": 1,
+      "failedPassScanMetrics": {
+        "attempted": 0,
+        "completed": 0,
+        "errors": 0,
+        "sourceGroups": 0,
+        "confusion": {
+          "truePositive": 0,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiPrecision": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "coverage": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "committedAccuracy": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        }
+      },
+      "byPass": {
+        "sweep/static/gemini-3.7-flash": {
+          "observed": 75,
+          "complete": 75,
+          "failed": 0,
+          "unknown": 0,
+          "completeInvalidForCorroboration": 0,
+          "reportedInputTokens": 245025,
+          "reportedOutputTokens": 92885,
+          "missingInputTokenCount": 0,
+          "missingOutputTokenCount": 0,
+          "latencyMs": {
+            "measured": 75,
+            "median": 7032,
+            "p95": 9904.699999999999
+          }
+        },
+        "review/agentic/gemini-3.7-flash": {
+          "observed": 75,
+          "complete": 75,
+          "failed": 0,
+          "unknown": 0,
+          "completeInvalidForCorroboration": 0,
+          "reportedInputTokens": 1210243,
+          "reportedOutputTokens": 170829,
+          "missingInputTokenCount": 0,
+          "missingOutputTokenCount": 0,
+          "latencyMs": {
+            "measured": 75,
+            "median": 14950,
+            "p95": 24670.89999999999
+          }
+        },
+        "adjudication/static/gemini-3.7-flash": {
+          "observed": 9,
+          "complete": 9,
+          "failed": 0,
+          "unknown": 0,
+          "completeInvalidForCorroboration": 1,
+          "reportedInputTokens": 77125,
+          "reportedOutputTokens": 13586,
+          "missingInputTokenCount": 0,
+          "missingOutputTokenCount": 0,
+          "latencyMs": {
+            "measured": 9,
+            "median": 7798,
+            "p95": 9089.8
+          }
+        }
+      },
+      "caveat": "Pass summaries describe recorded attempts only. Missing traces are unavailable, not zero failures. Conditional adjudications not attempted are not failures. End-to-end rates count scan errors, missing attempts and abstentions as failures to make a correct decision."
+    },
+    "byGenerator": {
+      "easyanimate": {
+        "attempted": 2,
+        "completed": 2,
+        "errors": 0,
+        "sourceGroups": 2,
+        "confusion": {
+          "truePositive": 2,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiPrecision": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "coverage": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        }
+      },
+      "gen4.5": {
+        "attempted": 1,
+        "completed": 1,
+        "errors": 0,
+        "sourceGroups": 1,
+        "confusion": {
+          "truePositive": 1,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiPrecision": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "coverage": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        }
+      },
+      "hailuo2.3": {
+        "attempted": 1,
+        "completed": 1,
+        "errors": 0,
+        "sourceGroups": 1,
+        "confusion": {
+          "truePositive": 0,
+          "falseNegative": 1,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "coverage": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        }
+      },
+      "hunyuanvideo": {
+        "attempted": 3,
+        "completed": 3,
+        "errors": 0,
+        "sourceGroups": 3,
+        "confusion": {
+          "truePositive": 0,
+          "falseNegative": 3,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "coverage": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        }
+      },
+      "jimeng": {
+        "attempted": 2,
+        "completed": 2,
+        "errors": 0,
+        "sourceGroups": 2,
+        "confusion": {
+          "truePositive": 1,
+          "falseNegative": 1,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "coverage": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        }
+      },
+      "kling": {
+        "attempted": 2,
+        "completed": 2,
+        "errors": 0,
+        "sourceGroups": 2,
+        "confusion": {
+          "truePositive": 1,
+          "falseNegative": 1,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "coverage": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        }
+      },
+      "kling2.5_turbo": {
+        "attempted": 2,
+        "completed": 2,
+        "errors": 0,
+        "sourceGroups": 2,
+        "confusion": {
+          "truePositive": 0,
+          "falseNegative": 2,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "coverage": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        }
+      },
+      "kling2.6": {
+        "attempted": 2,
+        "completed": 2,
+        "errors": 0,
+        "sourceGroups": 2,
+        "confusion": {
+          "truePositive": 2,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiPrecision": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "coverage": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        }
+      },
+      "ltxvideo": {
+        "attempted": 3,
+        "completed": 3,
+        "errors": 0,
+        "sourceGroups": 3,
+        "confusion": {
+          "truePositive": 3,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiPrecision": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "coverage": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        }
+      },
+      "luma": {
+        "attempted": 1,
+        "completed": 1,
+        "errors": 0,
+        "sourceGroups": 1,
+        "confusion": {
+          "truePositive": 1,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiPrecision": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "coverage": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        }
+      },
+      "pika": {
+        "attempted": 2,
+        "completed": 2,
+        "errors": 0,
+        "sourceGroups": 2,
+        "confusion": {
+          "truePositive": 2,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiPrecision": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "coverage": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        }
+      },
+      "pixverse_v5": {
+        "attempted": 3,
+        "completed": 3,
+        "errors": 0,
+        "sourceGroups": 3,
+        "confusion": {
+          "truePositive": 3,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiPrecision": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "coverage": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        }
+      },
+      "seedance1.5_pro": {
+        "attempted": 3,
+        "completed": 3,
+        "errors": 0,
+        "sourceGroups": 3,
+        "confusion": {
+          "truePositive": 2,
+          "falseNegative": 1,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 2,
+          "denominator": 3,
+          "estimate": 0.6666666666666666,
+          "interval95": [
+            0.2076596008020477,
+            0.9385080552796037
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 1,
+          "denominator": 3,
+          "estimate": 0.3333333333333333,
+          "interval95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 1,
+          "denominator": 3,
+          "estimate": 0.3333333333333333,
+          "interval95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "coverage": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 2,
+          "denominator": 3,
+          "estimate": 0.6666666666666666,
+          "interval95": [
+            0.2076596008020477,
+            0.9385080552796037
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        }
+      },
+      "seedance2.0": {
+        "attempted": 2,
+        "completed": 2,
+        "errors": 0,
+        "sourceGroups": 2,
+        "confusion": {
+          "truePositive": 1,
+          "falseNegative": 1,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "coverage": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        }
+      },
+      "sora": {
+        "attempted": 1,
+        "completed": 1,
+        "errors": 0,
+        "sourceGroups": 1,
+        "confusion": {
+          "truePositive": 0,
+          "falseNegative": 1,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "coverage": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        }
+      },
+      "sora2": {
+        "attempted": 2,
+        "completed": 2,
+        "errors": 0,
+        "sourceGroups": 2,
+        "confusion": {
+          "truePositive": 0,
+          "falseNegative": 2,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "coverage": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        }
+      },
+      "unknown": {
+        "attempted": 36,
+        "completed": 36,
+        "errors": 0,
+        "sourceGroups": 36,
+        "confusion": {
+          "truePositive": 0,
+          "falseNegative": 0,
+          "falsePositive": 2,
+          "trueNegative": 34,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "falsePositiveRate": {
+          "numerator": 2,
+          "denominator": 36,
+          "estimate": 0.05555555555555555,
+          "interval95": [
+            0.015369986664161853,
+            0.18144657208647252
+          ]
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 34,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.10151455415332376
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 36,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.09641862859446367
+          ]
+        },
+        "coverage": {
+          "numerator": 36,
+          "denominator": 36,
+          "estimate": 1,
+          "interval95": [
+            0.9035813714055363,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 34,
+          "denominator": 36,
+          "estimate": 0.9444444444444444,
+          "interval95": [
+            0.8185534279135275,
+            0.9846300133358382
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 36,
+          "denominator": 36,
+          "estimate": 1,
+          "interval95": [
+            0.9035813714055363,
+            1
+          ]
+        }
+      },
+      "veo3.1": {
+        "attempted": 1,
+        "completed": 1,
+        "errors": 0,
+        "sourceGroups": 1,
+        "confusion": {
+          "truePositive": 0,
+          "falseNegative": 1,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "coverage": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        }
+      },
+      "wan2.5": {
+        "attempted": 3,
+        "completed": 3,
+        "errors": 0,
+        "sourceGroups": 3,
+        "confusion": {
+          "truePositive": 3,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiPrecision": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 3,
+          "estimate": 0,
+          "interval95": [
+            5.551115123125783e-17,
+            0.5614970317550454
+          ]
+        },
+        "coverage": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        }
+      },
+      "wan2.6": {
+        "attempted": 2,
+        "completed": 2,
+        "errors": 0,
+        "sourceGroups": 2,
+        "confusion": {
+          "truePositive": 1,
+          "falseNegative": 1,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 2,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.6576197724933469
+          ]
+        },
+        "coverage": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 2,
+          "denominator": 2,
+          "estimate": 1,
+          "interval95": [
+            0.34238022750665303,
+            1
+          ]
+        }
+      },
+      "wanx": {
+        "attempted": 1,
+        "completed": 1,
+        "errors": 0,
+        "sourceGroups": 1,
+        "confusion": {
+          "truePositive": 0,
+          "falseNegative": 0,
+          "falsePositive": 0,
+          "trueNegative": 0,
+          "abstainedAi": 1,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "aiPrecision": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "abstentionRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        },
+        "coverage": {
+          "numerator": 0,
+          "denominator": 1,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.7934506856227626
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 1,
+          "denominator": 1,
+          "estimate": 1,
+          "interval95": [
+            0.20654931437723745,
+            1
+          ]
+        }
+      }
+    }
+  },
+  "paired": {
+    "transitions": {
+      "ai": {
+        "ai -> ai": 20,
+        "not_ai -> not_ai": 10,
+        "ai -> not_ai": 5,
+        "not_ai -> ai": 3,
+        "ai -> abstain": 1
+      },
+      "nonAi": {
+        "not_ai -> not_ai": 34,
+        "not_ai -> ai": 2
+      }
+    },
+    "ai": {
+      "count": 39,
+      "sourceGroups": 39,
+      "improved": 3,
+      "regressed": 6,
+      "recallDifference": -0.07692307692307693,
+      "sourceGroupBootstrap95": [
+        -0.23076923076923078,
+        0.07692307692307693
+      ],
+      "exactPairedTwoSidedP": 0.5078125,
+      "caveat": "Exact McNemar assumes independent source pairs; transformed derivatives require source-group analysis. Bootstrap interval is pointwise and can degenerate at boundaries. This is descriptive evaluation, not permission to tune on holdout."
+    }
+  },
+  "reportedUsage": {
+    "baselineRawTotals": {
+      "total_tokens": 569207,
+      "total_input_tokens": 34900,
+      "total_tool_use_tokens": 459957,
+      "total_output_tokens": 33742,
+      "total_thought_tokens": 40608,
+      "total_cached_tokens": 0
+    },
+    "baselineInputIncludingTool": 494857,
+    "baselineOutputIncludingThought": 74350,
+    "finalInputIncludingTool": 1532393,
+    "finalOutputIncludingThought": 277300,
+    "billedCost": null,
+    "caveat": "Reported tokens include agentic tool and thought tokens using the same mapping as the detector. Billing receipt and provider pricing are not supplied, so no dollar cost is inferred."
+  },
+  "caveats": [
+    "Candidate selection must be frozen before this report is generated; do not tune from these outcomes.",
+    "Conditional class metrics exclude scan errors; execution rates include every selected source and count missing attempts and abstentions as failure to make a correct decision.",
+    "Pass failures are separate from completed scan responses; baseline missing pass traces do not prove zero pass failures.",
+    "Per-generator sample sizes are small; the corpus is author-labeled, publicly available and lacks independent camera provenance.",
+    "Paired bootstrap is pointwise; test and interval do not establish broad deployment reliability or calibrated confidence."
+  ]
+}

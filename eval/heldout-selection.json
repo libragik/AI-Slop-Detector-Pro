@@ -1,0 +1,56 @@
+{
+  "frozenAt": "2026-09-05T00:52:57.143Z",
+  "policy": "evidence-2.7",
+  "model": "gemini-3.7-flash",
+  "reviewModel": "gemini-3.7-flash",
+  "sweepFps": 2,
+  "reviewFps": 6,
+  "reviewMode": "agentic",
+  "sourceHashes": {
+    "src/lib/analyzer/detection-policy.ts": "5f6c6a748a3fee44dcbe825a775e6498692228e131a717bc5090644c2170b6be",
+    "src/lib/analyzer/schemas.ts": "1bbe1939496ea74408d22234f4a96ca9b440c79228e1c782b216a2fbeed3abd3",
+    "src/lib/analyzer/scoring.ts": "d02e3d3bc716b1f09d99b3734833ba563b7f91c66479d782b31c339ae7c672af",
+    "src/lib/analyzer/evidence-consistency.ts": "f8e1190fd5cf253ef20a697b7d49f76eb1ffc425e6a49c52492c9485454e7fec",
+    "src/lib/analyzer/video-inspection.ts": "ec57a69f15263c659907b777f058b9de4d1708f90073ce18c4c47cd7aa566f82",
+    "src/lib/analyzer/gemini.ts": "ae0a3819a7a2707098a29eb284d483fde84c722b005db26e0984237cc97b5862"
+  },
+  "developmentEvidence": [
+    "baseline-smoke-v1",
+    "improved-smoke-v1",
+    "g38-smoke-e24",
+    "g37-smoke-e25",
+    "g37-smoke-e25-fps8",
+    "g37-audio-e26"
+  ],
+  "rationale": "Keep 3.7 and 2 fps: 3.8 introduced a false positive and more abstentions; 8 fps gained one AI detection on35developmentclips, insufficient evidence to justify the denser default. No specialist passed the relevant development tests. Final policy changes address low-score veto of grounded modality evidence and missing audio citations. No holdout outcomes have been inspected.",
+  "holdout": "75 original clips in eval/manifest.jsonl split=holdout; do not tune after unsealing",
+  "currentRun": "eval/runs/current-holdout-e27",
+  "baselineRun": "eval/runs/baseline-holdout-e0188f6",
+  "finalDecisionAmendment": {
+    "frozenAt": "2026-09-05T01:11:14.863289+00:00",
+    "policy": "evidence-2.8",
+    "sourceHashes": {
+      "src/lib/analyzer/detection-policy.ts": "cc5ddada3c8306350fbe777efebb858c4f16c009ff7ee207ef59f6d9b86a8966",
+      "src/lib/analyzer/schemas.ts": "1bbe1939496ea74408d22234f4a96ca9b440c79228e1c782b216a2fbeed3abd3",
+      "src/lib/analyzer/scoring.ts": "a17582e15f5e0de592c98d2267cc63cfa42d8204be8248070b4e65fbaa8fe3ef",
+      "src/lib/analyzer/evidence-consistency.ts": "f8e1190fd5cf253ef20a697b7d49f76eb1ffc425e6a49c52492c9485454e7fec",
+      "src/lib/analyzer/video-inspection.ts": "ec57a69f15263c659907b777f058b9de4d1708f90073ce18c4c47cd7aa566f82",
+      "src/lib/analyzer/gemini.ts": "ae0a3819a7a2707098a29eb284d483fde84c722b005db26e0984237cc97b5862"
+    },
+    "developmentEvidence": [
+      "eval/runs/live-e27/audio-real.json",
+      "eval/runs/live-e27/audio-mixed.json",
+      "eval/fixtures/human-audio-source-receipt.json",
+      "eval/fixtures/audio-generation-receipt.json"
+    ],
+    "rationale": "Before any holdout outcomes were read, a documented 2006 human narration and a generated TTS control both received AI-positive audio findings. Final scorer abstains when only audio observations support the AI claim, including audio-only lip-sync claims. Raw observations remain visible. Trusted disclosure/provenance and grounded non-audio findings are preserved.",
+    "inferenceUnchanged": true,
+    "promptUnchangedExceptVersionConstant": true,
+    "holdoutOutcomesInspected": false,
+    "holdoutAudioMetadata": {
+      "count": 75,
+      "allHaveNoAudioTrack": true
+    },
+    "replayRequirement": "Preserve frozen evidence-2.7 inference outputs; replay final evidence-2.8 scoring over them, verify and report all differences. Do not change policy after unsealing."
+  }
+}

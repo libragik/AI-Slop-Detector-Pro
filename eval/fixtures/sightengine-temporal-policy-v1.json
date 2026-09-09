@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "sightengine-temporal-policy-v1",
+  "frozen": true,
+  "frozenAt": "2026-09-08T19:15:04.762735+00:00",
+  "api": {
+    "endpoint": "https://api.sightengine.com/1.0/video/check-sync.json",
+    "models": "genai",
+    "intervalSeconds": 0.5,
+    "positionUnit": "milliseconds"
+  },
+  "threshold": 0.5,
+  "minimumConsecutivePositiveSamples": 2,
+  "maximumConsecutiveGapSeconds": 0.6,
+  "positiveDefinition": "finite ai_generated score >=0.5",
+  "consecutiveDefinition": "Adjacent elements in the complete, strictly time-ordered returned frame list; every element in the run positive and every time gap <=0.6 seconds. Never skip an intervening negative sample.",
+  "decisions": {
+    "ai": "At least one qualifying run of two or more positive returned samples.",
+    "inconclusive": "One or more positive samples but no qualifying run, including multiple separated isolated positives.",
+    "no_clear_indicators": "Zero positive samples with complete validated reported sampling coverage; not proof of non-generative origin.",
+    "error": "Any request, schema, accounting, timestamp or coverage failure; no partial-result salvage."
+  },
+  "coverage": {
+    "firstFrameMaxSeconds": 0.1,
+    "maxGapSeconds": 0.6,
+    "tailGapSeconds": 0.6,
+    "required": "Finite distinct ordered timestamps in [0,duration); finite scores in [0,1]; complete reported sampling required for every decision."
+  },
+  "prohibited": [
+    "No threshold/run-length/quality-specific tuning",
+    "No Gemini or style override",
+    "No captions, source labels or provenance metadata in classifier request",
+    "No retries of uncertain submissions",
+    "No inference that consecutive errors are independent"
+  ],
+  "limitations": [
+    "Sampled temporal corroboration is not physical proof of origin.",
+    "Brief subsecond inserts can yield one or zero hits and be Inconclusive or missed. No subsecond sensitivity claim.",
+    "Scores remain uncalibrated; no population accuracy claim.",
+    "Vendor model version is not immutably pinned; retain date and returned model/request identifiers."
+  ]
+}

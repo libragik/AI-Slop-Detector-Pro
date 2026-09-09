@@ -1,0 +1,28 @@
+{
+  "checkpointPath": "eval/models/aegis/checkpoint_best.pt",
+  "checkpointSha256": "7df233979f9d3ef340e101d0d635a4d074577d43e6d1591d677cde31f80e44ba",
+  "restrictedLoad": true,
+  "unsafeGlobals": [],
+  "allowlistedGlobals": [],
+  "checkpointKeys": [
+    "epoch",
+    "model_state",
+    "optimizer_state",
+    "metrics"
+  ],
+  "epoch": 7,
+  "tensorCount": 467,
+  "tensorElements": 94960168,
+  "statePrefixes": [
+    "consistency_branch",
+    "fusion",
+    "motion_branch",
+    "pixel_branch"
+  ],
+  "backboneTensorCount": 174,
+  "safetensorsPath": "eval/models/aegis/model.safetensors",
+  "safetensorsBytes": 379894560,
+  "safetensorsSha256": "c464af41b7528f18c1a3de748dde4dc5171aafaf8469c8848036ac45329ae474",
+  "roundtripEveryTensorEqual": true,
+  "torchVersion": "2.8.0"
+}

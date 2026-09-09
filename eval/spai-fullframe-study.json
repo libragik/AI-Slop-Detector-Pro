@@ -1,0 +1,28 @@
+{
+  "createdAt": "2026-09-05T01:26:49.574804+00:00",
+  "purpose": "Evaluate a faithful full-frame native-resolution SPAI path before considering calibration or production integration. The prior center-crop adapter is preserved as a separate limited experiment.",
+  "model": "mever-team/spai",
+  "revision": "8ff7b3b6779b4fcb43cf313471d9cb1c62d129a4",
+  "weightsSha256": "2f713987c34dbbbddc5cc02e53d5990d77f15c66d814f9dff2194e2faeb35fd9",
+  "phase1": {
+    "manifest": "eval/smoke-manifest.jsonl",
+    "manifestSha256": "a73696821312e5e286d9b96906331129a36ed912f281389e0eae43cfb2c8909f",
+    "rows": 35,
+    "labels": {
+      "ai": 23,
+      "real": 12
+    },
+    "split": "development",
+    "sampling": "8 uniform frames; same times as prior adapter",
+    "aggregation": "mean raw frame logit; initial threshold0; scores are not probabilities",
+    "comparison": "Paired old cropped versus new full-frame model path, default threshold, ranking AUROC, frame and clip scores, failures, latency, pixel and patch coverage."
+  },
+  "followups": "Only if corrected inference supplies a credible development signal, evaluate the preexisting70development derivatives and6CGI/mixed controls with unchanged configuration. Freeze any later candidate and threshold before using a new untouched evaluation set.",
+  "guardrails": [
+    "No app/prompt/scorer changes during this study.",
+    "Do not use consumed75clip holdout or its derivatives for selection/tuning.",
+    "All development variants stay grouped by parent media identity; these identities do not establish semantic source independence.",
+    "Do not infer deployment probabilities or general accuracy from development results.",
+    "Any production claim requires improved recall with controlled false positives, robustness to reposts and controls, and better-grounded test origins."
+  ]
+}

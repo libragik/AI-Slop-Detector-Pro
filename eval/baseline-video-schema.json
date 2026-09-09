@@ -1,0 +1,141 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "ai_likelihood": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 99,
+      "description": "An uncalibrated estimate based only on observable evidence in the supplied media."
+    },
+    "visual_classification": {
+      "type": "string",
+      "enum": [
+        "likely_ai_generated",
+        "possibly_ai_generated",
+        "mixed_or_ai_edited",
+        "likely_not_ai_generated",
+        "inconclusive"
+      ]
+    },
+    "visual_assessment": {
+      "type": "string",
+      "enum": [
+        "generated",
+        "edited",
+        "likely_authentic",
+        "inconclusive"
+      ]
+    },
+    "audio_assessment": {
+      "type": "string",
+      "enum": [
+        "synthetic",
+        "likely_synthetic",
+        "likely_recorded",
+        "inconclusive"
+      ]
+    },
+    "identity_manipulation": {
+      "type": "string",
+      "enum": [
+        "face_swap",
+        "lip_sync_manipulation",
+        "none_detected",
+        "inconclusive"
+      ]
+    },
+    "content_type": {
+      "type": "string",
+      "enum": [
+        "camera_footage",
+        "animation",
+        "cgi",
+        "mixed",
+        "unknown"
+      ]
+    },
+    "summary": {
+      "type": "string"
+    },
+    "suspicious_moments": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "timestamp": {
+            "type": "string",
+            "description": "Timestamp as MM:SS or HH:MM:SS."
+          },
+          "observation": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "anatomy",
+              "text",
+              "physics",
+              "identity",
+              "temporal",
+              "lighting",
+              "audio",
+              "camera",
+              "other"
+            ]
+          }
+        },
+        "required": [
+          "timestamp",
+          "observation",
+          "severity",
+          "category"
+        ]
+      }
+    },
+    "evidence_against_ai": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 5
+    },
+    "alternative_explanations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 5
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 5
+    }
+  },
+  "required": [
+    "ai_likelihood",
+    "visual_classification",
+    "visual_assessment",
+    "audio_assessment",
+    "identity_manipulation",
+    "content_type",
+    "summary",
+    "suspicious_moments",
+    "evidence_against_ai",
+    "alternative_explanations",
+    "limitations"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "mode": "validated-dry-run",
+  "manifestSha256": "a9a7b07a9e8513b753fb879e9e41154454d789a34c9fcf6edb7755e615db7fa1",
+  "selected": 690,
+  "sourceGroups": 230,
+  "split": "all",
+  "labels": {
+    "real": 345,
+    "ai": 345
+  },
+  "adapter": "src/lib/analyzer/evaluation.ts",
+  "adapterExport": "analyzeEvaluationVideo"
+}

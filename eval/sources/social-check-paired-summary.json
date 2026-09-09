@@ -1,0 +1,2897 @@
+{
+  "generatedAt": "2026-09-05T01:19:04.385Z",
+  "policy": "evidence-2.8",
+  "design": {
+    "sourceGroups": 16,
+    "aiSourceGroups": 8,
+    "realSourceGroups": 8,
+    "newDerivativeCases": 32,
+    "selectionRule": "Within each source label (ai and real), filter split=holdout, compute lowercase hex SHA256 of UTF-8 'social-check-v1:'+groupId, sort ascending (groupId tie-break), take the first 8 distinct groups. No ranking by generator, quality, or predictions.",
+    "noOutcomeSelection": true,
+    "frozenBeforeSocialInference": true,
+    "inferenceConfiguration": {
+      "model": "gemini-3.7-flash",
+      "reviewModel": "gemini-3.7-flash",
+      "sweepFps": 2,
+      "reviewFps": 6,
+      "reviewMode": "agentic",
+      "concurrency": 3
+    },
+    "samplingNote": "Agentic review sampling is model-controlled and reports fps null. Configured reviewFps 6 applies to static detailed/adjudication windows, where used."
+  },
+  "provenance": {
+    "selectionPath": "eval/social-check-selection.json",
+    "selectionFileSha256": "c8c9816e82b5e0f14d066c955074b22232e9626d3cbd50584f5f83bf3a3ba5d1",
+    "manifestSha256": "67a769da22008bd2800a32c927ac0ae6d48bea06f3a2d92fb0953bc793112c2a",
+    "derivativePath": "eval/runs/social-check-e28/predictions.jsonl",
+    "derivativePredictionSha256": "2478baf0d8ad8c1debf98d985172c5d024019b60d26153863b0ecf4ec4ea2fe0",
+    "originalPath": "eval/runs/current-holdout-e28-replay/predictions.jsonl",
+    "originalPredictionSha256": "e6c4eebd083a4b9541065138e7bae0b32ce65447ff12b5f3e6f961bd376a372e",
+    "adapterBundleSha256": "af2f22c7a406b165273f480af3cec16604981c2ef5b436efa0ab80d253de69d5",
+    "sourceFingerprint": "60725bbfb49b81ec2c76070d95942ff1af9bc514f19e966206f01414c0883654",
+    "configurationFingerprint": "04152663882e0fb9ba598b79269fc70013e081947fa1b10e15b003982e924c0d",
+    "scoringSha256": "a17582e15f5e0de592c98d2267cc63cfa42d8204be8248070b4e65fbaa8fe3ef",
+    "originalInferenceNote": "Original Gemini outputs were generated under 2.7, then offline rescored with the frozen 2.8 scorer; all decisions and score fields were equivalent. Raw 2.7 inference receipts remain preserved.",
+    "originalReplayDecisionsEquivalent": true,
+    "originalReplayScoreFieldsEquivalent": true
+  },
+  "audits": {
+    "issues": [],
+    "sourceChangedDuringRun": false,
+    "adapterBundleChangedDuringRun": false,
+    "detectorFingerprints": [
+      "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f"
+    ],
+    "failedPasses": [
+      {
+        "id": "3c31c2116a70b1efee3b34bb",
+        "kind": "adjudication",
+        "status": "failed"
+      }
+    ]
+  },
+  "byStage": {
+    "original": {
+      "metrics": {
+        "attempted": 16,
+        "completed": 16,
+        "errors": 0,
+        "sourceGroups": 16,
+        "confusion": {
+          "truePositive": 4,
+          "falseNegative": 4,
+          "falsePositive": 1,
+          "trueNegative": 7,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 4,
+          "denominator": 8,
+          "estimate": 0.5,
+          "interval95": [
+            0.21521606221387757,
+            0.7847839377861224
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 1,
+          "denominator": 8,
+          "estimate": 0.125,
+          "interval95": [
+            0.02241749145005667,
+            0.4708881822128535
+          ]
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 4,
+          "denominator": 8,
+          "estimate": 0.5,
+          "interval95": [
+            0.21521606221387757,
+            0.7847839377861224
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 4,
+          "denominator": 8,
+          "estimate": 0.5,
+          "interval95": [
+            0.21521606221387757,
+            0.7847839377861224
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 4,
+          "denominator": 11,
+          "estimate": 0.36363636363636365,
+          "interval95": [
+            0.15166471095367573,
+            0.6461988254921511
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 4,
+          "denominator": 5,
+          "estimate": 0.8,
+          "interval95": [
+            0.37553462976252533,
+            0.9637758913675698
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 16,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.1936076805344365
+          ]
+        },
+        "coverage": {
+          "numerator": 16,
+          "denominator": 16,
+          "estimate": 1,
+          "interval95": [
+            0.8063923194655637,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 11,
+          "denominator": 16,
+          "estimate": 0.6875,
+          "interval95": [
+            0.44404355834740666,
+            0.8583535614521796
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 16,
+          "denominator": 16,
+          "estimate": 1,
+          "interval95": [
+            0.8063923194655637,
+            1
+          ]
+        }
+      },
+      "latency": {
+        "count": 16,
+        "minMs": 15476,
+        "medianMs": 18615,
+        "p95NearestRankMs": 41700,
+        "maxMs": 41700,
+        "summedMs": 363043
+      }
+    },
+    "mild": {
+      "metrics": {
+        "attempted": 16,
+        "completed": 16,
+        "errors": 0,
+        "sourceGroups": 16,
+        "confusion": {
+          "truePositive": 3,
+          "falseNegative": 5,
+          "falsePositive": 0,
+          "trueNegative": 8,
+          "abstainedAi": 0,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 3,
+          "denominator": 8,
+          "estimate": 0.375,
+          "interval95": [
+            0.13684428582359742,
+            0.6942576053973727
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 0,
+          "denominator": 8,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.32440756488388023
+          ]
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 5,
+          "denominator": 8,
+          "estimate": 0.625,
+          "interval95": [
+            0.30574239460262737,
+            0.8631557141764026
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 5,
+          "denominator": 8,
+          "estimate": 0.625,
+          "interval95": [
+            0.30574239460262737,
+            0.8631557141764026
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 5,
+          "denominator": 13,
+          "estimate": 0.38461538461538464,
+          "interval95": [
+            0.17709707797762575,
+            0.6447710848733431
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 3,
+          "denominator": 3,
+          "estimate": 1,
+          "interval95": [
+            0.4385029682449546,
+            1
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 0,
+          "denominator": 16,
+          "estimate": 0,
+          "interval95": [
+            0,
+            0.1936076805344365
+          ]
+        },
+        "coverage": {
+          "numerator": 16,
+          "denominator": 16,
+          "estimate": 1,
+          "interval95": [
+            0.8063923194655637,
+            1
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 11,
+          "denominator": 16,
+          "estimate": 0.6875,
+          "interval95": [
+            0.44404355834740666,
+            0.8583535614521796
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 16,
+          "denominator": 16,
+          "estimate": 1,
+          "interval95": [
+            0.8063923194655637,
+            1
+          ]
+        }
+      },
+      "latency": {
+        "count": 16,
+        "minMs": 12207,
+        "medianMs": 17184.5,
+        "p95NearestRankMs": 31369,
+        "maxMs": 31369,
+        "summedMs": 299816
+      }
+    },
+    "severe": {
+      "metrics": {
+        "attempted": 16,
+        "completed": 16,
+        "errors": 0,
+        "sourceGroups": 16,
+        "confusion": {
+          "truePositive": 1,
+          "falseNegative": 5,
+          "falsePositive": 1,
+          "trueNegative": 7,
+          "abstainedAi": 2,
+          "abstainedNonAi": 0
+        },
+        "aiRecall": {
+          "numerator": 1,
+          "denominator": 8,
+          "estimate": 0.125,
+          "interval95": [
+            0.02241749145005667,
+            0.4708881822128535
+          ]
+        },
+        "falsePositiveRate": {
+          "numerator": 1,
+          "denominator": 8,
+          "estimate": 0.125,
+          "interval95": [
+            0.02241749145005667,
+            0.4708881822128535
+          ]
+        },
+        "aiDetectionFailureRate": {
+          "numerator": 7,
+          "denominator": 8,
+          "estimate": 0.875,
+          "interval95": [
+            0.5291118177871464,
+            0.9775825085499433
+          ]
+        },
+        "falseNegativeRate": {
+          "numerator": 5,
+          "denominator": 8,
+          "estimate": 0.625,
+          "interval95": [
+            0.30574239460262737,
+            0.8631557141764026
+          ]
+        },
+        "falseNegativeContamination": {
+          "numerator": 5,
+          "denominator": 12,
+          "estimate": 0.4166666666666667,
+          "interval95": [
+            0.19326031365875665,
+            0.6804886874504503
+          ]
+        },
+        "aiPrecision": {
+          "numerator": 1,
+          "denominator": 2,
+          "estimate": 0.5,
+          "interval95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ]
+        },
+        "abstentionRate": {
+          "numerator": 2,
+          "denominator": 16,
+          "estimate": 0.125,
+          "interval95": [
+            0.03497748774324047,
+            0.36022827265758695
+          ]
+        },
+        "coverage": {
+          "numerator": 14,
+          "denominator": 16,
+          "estimate": 0.875,
+          "interval95": [
+            0.639771727342413,
+            0.9650225122567595
+          ]
+        },
+        "committedAccuracy": {
+          "numerator": 8,
+          "denominator": 14,
+          "estimate": 0.5714285714285714,
+          "interval95": [
+            0.3259064457965074,
+            0.7861920109552588
+          ]
+        },
+        "highConfidenceErrorRate": {
+          "numerator": 0,
+          "denominator": 0,
+          "estimate": null,
+          "interval95": null
+        },
+        "completionRate": {
+          "numerator": 16,
+          "denominator": 16,
+          "estimate": 1,
+          "interval95": [
+            0.8063923194655637,
+            1
+          ]
+        }
+      },
+      "latency": {
+        "count": 16,
+        "minMs": 14015,
+        "medianMs": 18000.5,
+        "p95NearestRankMs": 31685,
+        "maxMs": 31685,
+        "summedMs": 308252
+      }
+    }
+  },
+  "newRunLatency": {
+    "count": 32,
+    "minMs": 12207,
+    "medianMs": 18000.5,
+    "p95NearestRankMs": 31369,
+    "maxMs": 31685,
+    "summedMs": 608068
+  },
+  "transitions": {
+    "ai": {
+      "originalToMild": {
+        "ai->ai": 3,
+        "not_ai->not_ai": 4,
+        "ai->not_ai": 1
+      },
+      "originalToSevere": {
+        "ai->not_ai": 3,
+        "not_ai->abstain": 2,
+        "not_ai->not_ai": 2,
+        "ai->ai": 1
+      }
+    },
+    "real": {
+      "originalToMild": {
+        "not_ai->not_ai": 7,
+        "ai->not_ai": 1
+      },
+      "originalToSevere": {
+        "not_ai->not_ai": 6,
+        "not_ai->ai": 1,
+        "ai->not_ai": 1
+      }
+    }
+  },
+  "pairs": [
+    {
+      "groupId": "genbuster:badb62ed0e7280dc364876d46df4ae9bd6387e860c55476937130b56e4a96ddf",
+      "label": "ai",
+      "original": {
+        "id": "9a742aea700afda5a925ec2f",
+        "sha256": "badb62ed0e7280dc364876d46df4ae9bd6387e860c55476937130b56e4a96ddf",
+        "decision": "ai",
+        "error": null,
+        "verdict": "AI indicators detected",
+        "elapsedMs": 26149,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.7:912f5b51787dde7adc1d8fd5",
+        "detectorFingerprint": "912f5b51787dde7adc1d8fd5e320cbf0e99df70b2d6ba341d77c923056c54e29",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 7224,
+            "inputTokens": 3267,
+            "outputTokens": 1462
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 19629,
+            "inputTokens": 24063,
+            "outputTokens": 3028
+          }
+        ]
+      },
+      "mild": {
+        "id": "187a2b39cd8b22abeeb7acf3",
+        "sha256": "68ceda226420cadd5880638959714b8cd63cc949e8ac985b8f1c65129331cfb0",
+        "decision": "ai",
+        "error": null,
+        "verdict": "AI indicators detected",
+        "elapsedMs": 21592,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 6780,
+            "inputTokens": 3267,
+            "outputTokens": 1422
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 17457,
+            "inputTokens": 17410,
+            "outputTokens": 2501
+          }
+        ]
+      },
+      "severe": {
+        "id": "61580d205a6f0c84bdad9fa5",
+        "sha256": "811f6cd554aafb6b46196b7d2bf34277f2647b1fc4fd41093f1c72877b890f96",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 21007,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 6448,
+            "inputTokens": 3267,
+            "outputTokens": 1298
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 17328,
+            "inputTokens": 22883,
+            "outputTokens": 1846
+          }
+        ]
+      }
+    },
+    {
+      "groupId": "genbuster:cd48f87e6a49886e516254a70516d3bf9965221a89574747bb2e6fa2ebf4ccc8",
+      "label": "ai",
+      "original": {
+        "id": "27b4cf51b8fd4064411a0f2c",
+        "sha256": "cd48f87e6a49886e516254a70516d3bf9965221a89574747bb2e6fa2ebf4ccc8",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 28483,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.7:912f5b51787dde7adc1d8fd5",
+        "detectorFingerprint": "912f5b51787dde7adc1d8fd5e320cbf0e99df70b2d6ba341d77c923056c54e29",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 10700,
+            "inputTokens": 3267,
+            "outputTokens": 2063
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 15099,
+            "inputTokens": 9409,
+            "outputTokens": 2176
+          },
+          {
+            "kind": "adjudication",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              },
+              {
+                "startSeconds": 0,
+                "endSeconds": 2,
+                "fps": 6
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 7405,
+            "inputTokens": 6661,
+            "outputTokens": 1295
+          }
+        ]
+      },
+      "mild": {
+        "id": "70a2c05536c00853cd120122",
+        "sha256": "9565400b54e0980f580bdb6a1dbe6f86d5ab7ef098db20465fc09036f99d17a8",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 31369,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 6311,
+            "inputTokens": 3267,
+            "outputTokens": 1191
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 24829,
+            "inputTokens": 46366,
+            "outputTokens": 4430
+          }
+        ]
+      },
+      "severe": {
+        "id": "cc1bb9229ee3cbcd4a014586",
+        "sha256": "b32524744f30b14a83c4477e6d298671d03aa882226ad83be04f2b20f5149538",
+        "decision": "abstain",
+        "error": null,
+        "verdict": "Inconclusive",
+        "elapsedMs": 24885,
+        "assessmentStatus": "conflicting",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 6600,
+            "inputTokens": 3267,
+            "outputTokens": 1355
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 14075,
+            "inputTokens": 13642,
+            "outputTokens": 1992
+          },
+          {
+            "kind": "adjudication",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 6,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": 6
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 4913,
+            "inputTokens": 8648,
+            "outputTokens": 1049
+          }
+        ]
+      }
+    },
+    {
+      "groupId": "genbuster:defb9f0611dcfa0fd0978521f2fb689c98172c6b9f23e056a1625791d6f6e983",
+      "label": "ai",
+      "original": {
+        "id": "549f99f804eb55002750cf8b",
+        "sha256": "defb9f0611dcfa0fd0978521f2fb689c98172c6b9f23e056a1625791d6f6e983",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 18237,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.7:912f5b51787dde7adc1d8fd5",
+        "detectorFingerprint": "912f5b51787dde7adc1d8fd5e320cbf0e99df70b2d6ba341d77c923056c54e29",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 7170,
+            "inputTokens": 3267,
+            "outputTokens": 1359
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 13844,
+            "inputTokens": 16733,
+            "outputTokens": 1847
+          }
+        ]
+      },
+      "mild": {
+        "id": "46b384d1859b5bf2040eb591",
+        "sha256": "5deeb6a6953240e9cd798d9e430be23ac04c2957c3b16bcb2f9615ee88bc4f9a",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 14971,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5768,
+            "inputTokens": 3267,
+            "outputTokens": 1343
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 10968,
+            "inputTokens": 13624,
+            "outputTokens": 1876
+          }
+        ]
+      },
+      "severe": {
+        "id": "eaeeb2aaddffa50ce52b2ea6",
+        "sha256": "7d8a01ac73f87fb8ac7b48360c45e9e12f86151fbc9c9fbee2cbbe24dcff7900",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 17766,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5267,
+            "inputTokens": 3267,
+            "outputTokens": 934
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 11771,
+            "inputTokens": 13087,
+            "outputTokens": 1549
+          }
+        ]
+      }
+    },
+    {
+      "groupId": "genbuster:d760078c523c061133c00a86022ee120d77ae3fb279f1319bda7be5ac91353d5",
+      "label": "ai",
+      "original": {
+        "id": "33d627aa653f9aeef1d7caaa",
+        "sha256": "d760078c523c061133c00a86022ee120d77ae3fb279f1319bda7be5ac91353d5",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 16510,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.7:912f5b51787dde7adc1d8fd5",
+        "detectorFingerprint": "912f5b51787dde7adc1d8fd5e320cbf0e99df70b2d6ba341d77c923056c54e29",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 6548,
+            "inputTokens": 3267,
+            "outputTokens": 895
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 12139,
+            "inputTokens": 12001,
+            "outputTokens": 1753
+          }
+        ]
+      },
+      "mild": {
+        "id": "d4c2b712c998602e45c2d081",
+        "sha256": "b3e98b6276ecdd8e9717832d677494188d70bf7e2c784e24202a81cde525b06d",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 12207,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5073,
+            "inputTokens": 3267,
+            "outputTokens": 848
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 8612,
+            "inputTokens": 9308,
+            "outputTokens": 1406
+          }
+        ]
+      },
+      "severe": {
+        "id": "3c31c2116a70b1efee3b34bb",
+        "sha256": "9deb897c0cc190e6581c558249962c295d35badbcf582055a13d796268ebae79",
+        "decision": "abstain",
+        "error": null,
+        "verdict": "Inconclusive",
+        "elapsedMs": 21502,
+        "assessmentStatus": "conflicting",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 6281,
+            "inputTokens": 3267,
+            "outputTokens": 1258
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 17808,
+            "inputTokens": 33518,
+            "outputTokens": 2623
+          },
+          {
+            "kind": "adjudication",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [],
+            "status": "failed",
+            "elapsedMs": 99,
+            "inputTokens": null,
+            "outputTokens": null
+          }
+        ]
+      }
+    },
+    {
+      "groupId": "genbuster:1f58f7e50180e401041bae33951bab27bed35b5bd6b725accfb1251cb9f953d6",
+      "label": "ai",
+      "original": {
+        "id": "fc36d444b527e7dbf51b0ab7",
+        "sha256": "1f58f7e50180e401041bae33951bab27bed35b5bd6b725accfb1251cb9f953d6",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 17286,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.7:912f5b51787dde7adc1d8fd5",
+        "detectorFingerprint": "912f5b51787dde7adc1d8fd5e320cbf0e99df70b2d6ba341d77c923056c54e29",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5299,
+            "inputTokens": 3267,
+            "outputTokens": 790
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 13379,
+            "inputTokens": 12550,
+            "outputTokens": 1615
+          }
+        ]
+      },
+      "mild": {
+        "id": "c32f45b909e7efec79a204dc",
+        "sha256": "9a86575f82cafe5ac88e59a6a3cce1d0e8d813d035cbc0d5c0d3d3a22ca4cb9f",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 15722,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5319,
+            "inputTokens": 3267,
+            "outputTokens": 1183
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 12285,
+            "inputTokens": 16695,
+            "outputTokens": 1841
+          }
+        ]
+      },
+      "severe": {
+        "id": "90d6baeb097e1bdbcffa7074",
+        "sha256": "707c188ef4e68b82fe4b972d74357019cca713902d107d8d96f7f1d52702bb1d",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 16510,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5563,
+            "inputTokens": 3267,
+            "outputTokens": 1101
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 9584,
+            "inputTokens": 12753,
+            "outputTokens": 1693
+          }
+        ]
+      }
+    },
+    {
+      "groupId": "genbuster:a91f6505eb6fed85737243ea2a3b70d1993e0d33df54b762efacae18cbf0457e",
+      "label": "ai",
+      "original": {
+        "id": "2b1dc134d88cbcc180e33729",
+        "sha256": "a91f6505eb6fed85737243ea2a3b70d1993e0d33df54b762efacae18cbf0457e",
+        "decision": "ai",
+        "error": null,
+        "verdict": "AI indicators detected",
+        "elapsedMs": 36425,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.7:912f5b51787dde7adc1d8fd5",
+        "detectorFingerprint": "912f5b51787dde7adc1d8fd5e320cbf0e99df70b2d6ba341d77c923056c54e29",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 9806,
+            "inputTokens": 3267,
+            "outputTokens": 1739
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 32493,
+            "inputTokens": 30707,
+            "outputTokens": 4732
+          }
+        ]
+      },
+      "mild": {
+        "id": "ba2a91a45da36f1e517fa08a",
+        "sha256": "2d3fe64b56151e7b5918487170088c890f4979b359647ba88c96ff15023a85c8",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 18897,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5493,
+            "inputTokens": 3267,
+            "outputTokens": 904
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 12033,
+            "inputTokens": 13655,
+            "outputTokens": 1934
+          }
+        ]
+      },
+      "severe": {
+        "id": "abfdde3ec446a479951586c9",
+        "sha256": "a12b5494fb6e6c8cec5dace10118e6228beff0a9d08523113283278bb9babb29",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 14705,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5424,
+            "inputTokens": 3267,
+            "outputTokens": 1076
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 10412,
+            "inputTokens": 14301,
+            "outputTokens": 1525
+          }
+        ]
+      }
+    },
+    {
+      "groupId": "genbuster:ffe888c91d40538183456a2f8603bed4ead5d84013127ac4130812e26c186d45",
+      "label": "ai",
+      "original": {
+        "id": "50e49097c645cbcdf1d1ded2",
+        "sha256": "ffe888c91d40538183456a2f8603bed4ead5d84013127ac4130812e26c186d45",
+        "decision": "ai",
+        "error": null,
+        "verdict": "AI indicators detected",
+        "elapsedMs": 26052,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.7:912f5b51787dde7adc1d8fd5",
+        "detectorFingerprint": "912f5b51787dde7adc1d8fd5e320cbf0e99df70b2d6ba341d77c923056c54e29",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 7859,
+            "inputTokens": 3267,
+            "outputTokens": 1466
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 21551,
+            "inputTokens": 28371,
+            "outputTokens": 2257
+          }
+        ]
+      },
+      "mild": {
+        "id": "fb7490339af5f51404294bc1",
+        "sha256": "86871ccbc0eab7fa0d85608b233e1b3c9ba880ca0b1f9e19c2545edf05b6ab62",
+        "decision": "ai",
+        "error": null,
+        "verdict": "AI indicators detected",
+        "elapsedMs": 22917,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5155,
+            "inputTokens": 3267,
+            "outputTokens": 998
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 16661,
+            "inputTokens": 25518,
+            "outputTokens": 2361
+          }
+        ]
+      },
+      "severe": {
+        "id": "1000e2c3e802571860a127c6",
+        "sha256": "68686747288db1ec34ef8771b0e6cebe9ee111d64c96622bb946e5b52fc6c464",
+        "decision": "ai",
+        "error": null,
+        "verdict": "AI indicators detected",
+        "elapsedMs": 22236,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 6440,
+            "inputTokens": 3267,
+            "outputTokens": 1415
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 18201,
+            "inputTokens": 32698,
+            "outputTokens": 2172
+          }
+        ]
+      }
+    },
+    {
+      "groupId": "genbuster:22e4d336a9954796f6903a726c4484a01cc9c57957ba00661180f15b5527a60e",
+      "label": "ai",
+      "original": {
+        "id": "742610e2a546103d49cbfadd",
+        "sha256": "22e4d336a9954796f6903a726c4484a01cc9c57957ba00661180f15b5527a60e",
+        "decision": "ai",
+        "error": null,
+        "verdict": "AI indicators detected",
+        "elapsedMs": 25735,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.7:912f5b51787dde7adc1d8fd5",
+        "detectorFingerprint": "912f5b51787dde7adc1d8fd5e320cbf0e99df70b2d6ba341d77c923056c54e29",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 8569,
+            "inputTokens": 3267,
+            "outputTokens": 1566
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 21874,
+            "inputTokens": 26989,
+            "outputTokens": 3019
+          }
+        ]
+      },
+      "mild": {
+        "id": "ccda81d511f4fd6d278ffd81",
+        "sha256": "6def1cc02432ea4d79c04d6a27d712c865af64037495026894c00d244a01c917",
+        "decision": "ai",
+        "error": null,
+        "verdict": "AI indicators detected",
+        "elapsedMs": 27380,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 6755,
+            "inputTokens": 3267,
+            "outputTokens": 1612
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 14385,
+            "inputTokens": 15384,
+            "outputTokens": 2437
+          },
+          {
+            "kind": "adjudication",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              },
+              {
+                "startSeconds": 0,
+                "endSeconds": 3.5,
+                "fps": 6
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 8880,
+            "inputTokens": 8958,
+            "outputTokens": 2255
+          }
+        ]
+      },
+      "severe": {
+        "id": "a4f42fec05c6ce01cbe6dff6",
+        "sha256": "f9f28ff044c8c8af377aeacace9f22a73df340099f4af13a406217360d06ce0f",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 18235,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5499,
+            "inputTokens": 3267,
+            "outputTokens": 1145
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 14269,
+            "inputTokens": 20054,
+            "outputTokens": 2417
+          }
+        ]
+      }
+    },
+    {
+      "groupId": "genbuster:94ed1b5a1b18ca18f930fc549ed4dcc8f36102c25431e14ca4204288cba8e2cc",
+      "label": "real",
+      "original": {
+        "id": "48c583eb5bedfceac8785a7d",
+        "sha256": "94ed1b5a1b18ca18f930fc549ed4dcc8f36102c25431e14ca4204288cba8e2cc",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 15476,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.7:912f5b51787dde7adc1d8fd5",
+        "detectorFingerprint": "912f5b51787dde7adc1d8fd5e320cbf0e99df70b2d6ba341d77c923056c54e29",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 6612,
+            "inputTokens": 3267,
+            "outputTokens": 1134
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 11852,
+            "inputTokens": 10096,
+            "outputTokens": 1708
+          }
+        ]
+      },
+      "mild": {
+        "id": "d417995d4d377556a066b8d1",
+        "sha256": "ed7482e0bb85c8542315db4cda4d3e4fd8f46c09ad5c03c5a72f28a7b0e561a9",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 15016,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5718,
+            "inputTokens": 3267,
+            "outputTokens": 1092
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 11179,
+            "inputTokens": 9231,
+            "outputTokens": 2009
+          }
+        ]
+      },
+      "severe": {
+        "id": "1577092de2186a9457322ff3",
+        "sha256": "ce1cf0847efafdd93de08641592b916e2d32d1c2628b2f30bd7e27bed820b8f9",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 16274,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5134,
+            "inputTokens": 3267,
+            "outputTokens": 813
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 12517,
+            "inputTokens": 13936,
+            "outputTokens": 2089
+          }
+        ]
+      }
+    },
+    {
+      "groupId": "genbuster:3388f38ad7f3f4fc3cbd7c6e95858801c142a42dd8e2cafe9d4918768f1ca874",
+      "label": "real",
+      "original": {
+        "id": "8b4b0a11d44ea1d0205d7bb5",
+        "sha256": "3388f38ad7f3f4fc3cbd7c6e95858801c142a42dd8e2cafe9d4918768f1ca874",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 20955,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.7:912f5b51787dde7adc1d8fd5",
+        "detectorFingerprint": "912f5b51787dde7adc1d8fd5e320cbf0e99df70b2d6ba341d77c923056c54e29",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 7099,
+            "inputTokens": 3267,
+            "outputTokens": 1196
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 16863,
+            "inputTokens": 26910,
+            "outputTokens": 1806
+          }
+        ]
+      },
+      "mild": {
+        "id": "789831041328ae6b9816e448",
+        "sha256": "7674a5b0405c1167cadab04d2b8a1585f70ff97c49935e756dc67b2cc8658cfd",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 20048,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 6828,
+            "inputTokens": 3267,
+            "outputTokens": 1446
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 15990,
+            "inputTokens": 26627,
+            "outputTokens": 2262
+          }
+        ]
+      },
+      "severe": {
+        "id": "24fc589585b137802a739a61",
+        "sha256": "0c8a6514bd6690316e3892f0b4504d6f624ff641243f7d16bdb118a400640896",
+        "decision": "ai",
+        "error": null,
+        "verdict": "AI indicators detected",
+        "elapsedMs": 31685,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 6838,
+            "inputTokens": 3267,
+            "outputTokens": 1356
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 22699,
+            "inputTokens": 47665,
+            "outputTokens": 2875
+          },
+          {
+            "kind": "adjudication",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": 2
+              },
+              {
+                "startSeconds": 2.5,
+                "endSeconds": 5.083333,
+                "fps": 6
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5351,
+            "inputTokens": 7508,
+            "outputTokens": 981
+          }
+        ]
+      }
+    },
+    {
+      "groupId": "genbuster:c3533dbe343bd595667495f1be2deeb2f67b7a1fdf997dc598e51eece9cb9db8",
+      "label": "real",
+      "original": {
+        "id": "32d3f2110234f8a398d1a920",
+        "sha256": "c3533dbe343bd595667495f1be2deeb2f67b7a1fdf997dc598e51eece9cb9db8",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 18393,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.7:912f5b51787dde7adc1d8fd5",
+        "detectorFingerprint": "912f5b51787dde7adc1d8fd5e320cbf0e99df70b2d6ba341d77c923056c54e29",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 6465,
+            "inputTokens": 3267,
+            "outputTokens": 983
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 14489,
+            "inputTokens": 20614,
+            "outputTokens": 1519
+          }
+        ]
+      },
+      "mild": {
+        "id": "afb5d373975b2dc5d6d8529f",
+        "sha256": "75a326e344e15826d51ff27fe144ca980780956390467da0510bb1115b1bb70d",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 15729,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5545,
+            "inputTokens": 3267,
+            "outputTokens": 1016
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 11041,
+            "inputTokens": 19958,
+            "outputTokens": 1455
+          }
+        ]
+      },
+      "severe": {
+        "id": "2b32f490fefcb0b2747ad30b",
+        "sha256": "eecd130de8cb9fdd2a70d23aba9b7f57a891820e87e8771336a6d3a9f9359613",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 19848,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5228,
+            "inputTokens": 3267,
+            "outputTokens": 758
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 13868,
+            "inputTokens": 33458,
+            "outputTokens": 1984
+          }
+        ]
+      }
+    },
+    {
+      "groupId": "genbuster:7223c07684001cac03c97dd75185975c6639cebe264cdce2817298bc45398197",
+      "label": "real",
+      "original": {
+        "id": "0876ee5cc40b7f3906ce1986",
+        "sha256": "7223c07684001cac03c97dd75185975c6639cebe264cdce2817298bc45398197",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 18339,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.7:912f5b51787dde7adc1d8fd5",
+        "detectorFingerprint": "912f5b51787dde7adc1d8fd5e320cbf0e99df70b2d6ba341d77c923056c54e29",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 6631,
+            "inputTokens": 3267,
+            "outputTokens": 946
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 13760,
+            "inputTokens": 12550,
+            "outputTokens": 1657
+          }
+        ]
+      },
+      "mild": {
+        "id": "75d0854bc230dd8dc15499c8",
+        "sha256": "7733b3c09962021562ed9fb624823dd1bd6fb377312ea91f69e103ffa6837cb0",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 15643,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 4822,
+            "inputTokens": 3267,
+            "outputTokens": 816
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 11603,
+            "inputTokens": 8989,
+            "outputTokens": 1833
+          }
+        ]
+      },
+      "severe": {
+        "id": "ac99a9ed65308e6ba87bf4fc",
+        "sha256": "9e9e989de389a56881ca9e422c40dd6f636ef0396d9376c74b3bcbaa097e240a",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 14015,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5538,
+            "inputTokens": 3267,
+            "outputTokens": 1255
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 10143,
+            "inputTokens": 9342,
+            "outputTokens": 1735
+          }
+        ]
+      }
+    },
+    {
+      "groupId": "genbuster:29671af3c279821833ad5f90781870488953e8467d44b28e806a57596905d0ee",
+      "label": "real",
+      "original": {
+        "id": "f68177620d510f7f9c98cc5d",
+        "sha256": "29671af3c279821833ad5f90781870488953e8467d44b28e806a57596905d0ee",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 16450,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.7:912f5b51787dde7adc1d8fd5",
+        "detectorFingerprint": "912f5b51787dde7adc1d8fd5e320cbf0e99df70b2d6ba341d77c923056c54e29",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 7126,
+            "inputTokens": 3267,
+            "outputTokens": 1246
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 12246,
+            "inputTokens": 15725,
+            "outputTokens": 2337
+          }
+        ]
+      },
+      "mild": {
+        "id": "5a3115afddbadc8efa9a3e5e",
+        "sha256": "e6b209251d2d18c347cc86695e0ef6394fa9266552b864ea4e92503a6d1ea2f2",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 18540,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 6591,
+            "inputTokens": 3267,
+            "outputTokens": 1531
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 14590,
+            "inputTokens": 19778,
+            "outputTokens": 2051
+          }
+        ]
+      },
+      "severe": {
+        "id": "60587363bb9e3aa6f36aa746",
+        "sha256": "a87e69dac14e4ce88912949599fcbfe91d5b1be2fd60a0a491c7150b3eb3597d",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 17226,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5915,
+            "inputTokens": 3267,
+            "outputTokens": 998
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 13358,
+            "inputTokens": 25583,
+            "outputTokens": 1878
+          }
+        ]
+      }
+    },
+    {
+      "groupId": "genbuster:23e3546d2c6809a6a0c6a9a85740bba9a957f6d45acf5b5fc408ef5dbea7d5b6",
+      "label": "real",
+      "original": {
+        "id": "6ec9b7bd788a325da777c629",
+        "sha256": "23e3546d2c6809a6a0c6a9a85740bba9a957f6d45acf5b5fc408ef5dbea7d5b6",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 18016,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.7:912f5b51787dde7adc1d8fd5",
+        "detectorFingerprint": "912f5b51787dde7adc1d8fd5e320cbf0e99df70b2d6ba341d77c923056c54e29",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 6104,
+            "inputTokens": 3267,
+            "outputTokens": 838
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 11755,
+            "inputTokens": 11896,
+            "outputTokens": 1307
+          }
+        ]
+      },
+      "mild": {
+        "id": "67476702ea70dc8782213498",
+        "sha256": "5b2f27908944415bf0e54f279db6508cad1dcb9ffe75923a2c309345e1f4e262",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 15829,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5095,
+            "inputTokens": 3267,
+            "outputTokens": 929
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 12281,
+            "inputTokens": 9560,
+            "outputTokens": 1546
+          }
+        ]
+      },
+      "severe": {
+        "id": "a069a3542be51b8028485200",
+        "sha256": "85ee08104de6f0f4d718b9cb8cb777f4662778eb43ad6d3c674448dbe9d9babc",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 22272,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 4738,
+            "inputTokens": 3267,
+            "outputTokens": 732
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 18545,
+            "inputTokens": 19367,
+            "outputTokens": 3987
+          }
+        ]
+      }
+    },
+    {
+      "groupId": "genbuster:74b35e9265b593483b484b1af8b8a0503f0cc6af4ca8b41f606214ea784475d4",
+      "label": "real",
+      "original": {
+        "id": "9fc29db32cdb49266b629f20",
+        "sha256": "74b35e9265b593483b484b1af8b8a0503f0cc6af4ca8b41f606214ea784475d4",
+        "decision": "ai",
+        "error": null,
+        "verdict": "AI indicators detected",
+        "elapsedMs": 41700,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.7:912f5b51787dde7adc1d8fd5",
+        "detectorFingerprint": "912f5b51787dde7adc1d8fd5e320cbf0e99df70b2d6ba341d77c923056c54e29",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5873,
+            "inputTokens": 3267,
+            "outputTokens": 1037
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 26899,
+            "inputTokens": 34015,
+            "outputTokens": 3475
+          },
+          {
+            "kind": "adjudication",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              },
+              {
+                "startSeconds": 0,
+                "endSeconds": 3.5,
+                "fps": 6
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 8911,
+            "inputTokens": 9066,
+            "outputTokens": 1702
+          }
+        ]
+      },
+      "mild": {
+        "id": "8e577f8aea7a4c6833b70f86",
+        "sha256": "545d17b9d6acac3c64748768e033dde9f1ae26a407c95080d42dabb4db1d6658",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 19338,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5503,
+            "inputTokens": 3267,
+            "outputTokens": 1107
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 14734,
+            "inputTokens": 26778,
+            "outputTokens": 2357
+          }
+        ]
+      },
+      "severe": {
+        "id": "4546b7d153faf5aee336233c",
+        "sha256": "53faac263beeaa5305aef228a32662da42ac9282f2c27e90f638470ef931c4d7",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 15443,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5844,
+            "inputTokens": 3267,
+            "outputTokens": 1096
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 11265,
+            "inputTokens": 13193,
+            "outputTokens": 1833
+          }
+        ]
+      }
+    },
+    {
+      "groupId": "genbuster:70564667434350fbfeb774306848d08fa1610278c3d4a981a35a15534e384833",
+      "label": "real",
+      "original": {
+        "id": "d934cb4a46b407423ce981b0",
+        "sha256": "70564667434350fbfeb774306848d08fa1610278c3d4a981a35a15534e384833",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 18837,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.7:912f5b51787dde7adc1d8fd5",
+        "detectorFingerprint": "912f5b51787dde7adc1d8fd5e320cbf0e99df70b2d6ba341d77c923056c54e29",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5666,
+            "inputTokens": 3267,
+            "outputTokens": 919
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 14933,
+            "inputTokens": 13634,
+            "outputTokens": 1968
+          }
+        ]
+      },
+      "mild": {
+        "id": "90e8d4d1fdcea49bd6fa9ac8",
+        "sha256": "949905c3632148a3a7bb57760816851af15a31cc0a04575792d7cabb0791ac1a",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 14618,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5288,
+            "inputTokens": 3267,
+            "outputTokens": 820
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.041667,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 10084,
+            "inputTokens": 11075,
+            "outputTokens": 1801
+          }
+        ]
+      },
+      "severe": {
+        "id": "6996b29ac526d53dacd36858",
+        "sha256": "fa451dae34d7322f2426fb72ea514f3a898e7abc2505c8d725ec508f41baece5",
+        "decision": "not_ai",
+        "error": null,
+        "verdict": "No clear AI indicators",
+        "elapsedMs": 14643,
+        "assessmentStatus": "complete",
+        "analyzerVersion": "evidence-2.8:e5924b9a24e01b6da7c2a096",
+        "detectorFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+        "passes": [
+          {
+            "kind": "sweep",
+            "model": "gemini-3.7-flash",
+            "mode": "static",
+            "fps": 2,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": 2
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 5583,
+            "inputTokens": 3267,
+            "outputTokens": 1100
+          },
+          {
+            "kind": "review",
+            "model": "gemini-3.7-flash",
+            "mode": "agentic",
+            "fps": null,
+            "intervals": [
+              {
+                "startSeconds": 0,
+                "endSeconds": 5.083333,
+                "fps": null
+              }
+            ],
+            "status": "complete",
+            "elapsedMs": 11080,
+            "inputTokens": 12648,
+            "outputTokens": 1871
+          }
+        ]
+      }
+    }
+  ],
+  "caveats": [
+    "These are 16 preselected source groups with paired derivatives, not 32 independent new sources.",
+    "Each stage has eight AI and eight real sources; this small sample has wide uncertainty.",
+    "These are local transformations, not actual Instagram, TikTok, or X upload/download roundtrips.",
+    "Severe transformation changes crop, frame rate, resolution, encoding and adds an overlay; changes cannot be attributed to compression alone.",
+    "Single model runs per version confound transformation effects with model response variability; no causal attribution is claimed.",
+    "Ground truth is the benchmark author label, not independently authenticated per-clip creator/camera provenance.",
+    "Abstentions count as detection misses for AI recall; they are reported separately from explicit negative decisions.",
+    "Original latency is the original inference duration, not offline replay duration. Concurrent experiment latency is not a deployment service-level guarantee."
+  ]
+}

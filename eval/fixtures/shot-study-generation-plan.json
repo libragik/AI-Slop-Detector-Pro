@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "frozen": true,
+  "createdAt": "2026-09-05T03:01:29.021461+00:00",
+  "purpose": "Fresh generation parents for shot-based AEGIS rejection study; no reference media, no outcome-based regeneration.",
+  "stageOrder": [
+    "negative-45",
+    "veo-30",
+    "wan-contract",
+    "wan-30"
+  ],
+  "modelId": "Wan-AI/Wan2.1-T2V-1.3B-Diffusers",
+  "revision": "0fad780a534b6463e45facd96134c9f345acfa5b",
+  "publisherManifestPath": "eval/sources/wan-model-publisher-manifest.json",
+  "publisherManifestSha256": "d6ac9e61cf268af253238d61d4708437ed7e147c323b4716a59c99ac9aeabbdd",
+  "runs": [
+    {
+      "id": "wan-technical-contract",
+      "purpose": "technical-contract-excluded-from-evaluation",
+      "prompt": "A red wooden ball resting on a plain table in daylight.",
+      "negative_prompt": "",
+      "seed": 2026090500,
+      "width": 128,
+      "height": 128,
+      "num_frames": 9,
+      "num_inference_steps": 2,
+      "guidance_scale": 5.0,
+      "max_sequence_length": 512,
+      "fps": 16,
+      "device": "cpu",
+      "dtype": "float32",
+      "threads": 4,
+      "timeoutSeconds": 600,
+      "maxRssBytes": 68719476736,
+      "outputDir": "eval/runs/wan-shot-wan-technical-contract-v1"
+    },
+    {
+      "id": "W1",
+      "purpose": "evaluation-parent",
+      "prompt": "A single continuous tripod camera recording inside a modest mechanical workshop. A polished steel pendulum ball swings naturally from a thin dark cord in front of a wooden workbench. Small bolts and a ruler lie still on the bench. Soft side light from a window, realistic materials, subtle reflections, ordinary documentary footage. The camera stays stationary. No titles or graphics.",
+      "negative_prompt": "",
+      "seed": 2026090501,
+      "width": 832,
+      "height": 480,
+      "num_frames": 81,
+      "num_inference_steps": 50,
+      "guidance_scale": 5.0,
+      "max_sequence_length": 512,
+      "fps": 16,
+      "device": "cpu",
+      "dtype": "float32",
+      "threads": 4,
+      "timeoutSeconds": 1800,
+      "maxRssBytes": 68719476736,
+      "outputDir": "eval/runs/wan-shot-w1-v1"
+    },
+    {
+      "id": "W2",
+      "purpose": "evaluation-parent",
+      "prompt": "A single continuous handheld daytime camera recording of an adult wearing a plain dark green shirt folding a blue cotton cloth on a light wooden workbench. Their hands lift the corners, bring them together, and smooth the fabric. Soft window light and ordinary physical motion, documentary camera footage with slight natural camera movement. No cuts, titles, or graphics.",
+      "negative_prompt": "",
+      "seed": 2026090502,
+      "width": 832,
+      "height": 480,
+      "num_frames": 81,
+      "num_inference_steps": 50,
+      "guidance_scale": 5.0,
+      "max_sequence_length": 512,
+      "fps": 16,
+      "device": "cpu",
+      "dtype": "float32",
+      "threads": 4,
+      "timeoutSeconds": 1800,
+      "maxRssBytes": 68719476736,
+      "outputDir": "eval/runs/wan-shot-w2-v1"
+    }
+  ],
+  "wanScheduler": {
+    "class": "UniPCMultistepScheduler",
+    "usePinnedModelConfig": true,
+    "flow_shift": 3.0,
+    "prediction_type": "flow_prediction",
+    "use_flow_sigmas": true,
+    "solver_order": 2,
+    "solver_type": "bh2",
+    "num_train_timesteps": 1000
+  },
+  "veoRuns": [
+    {
+      "id": "V1",
+      "purpose": "evaluation-parent",
+      "request": {
+        "model": "veo-3.1-generate-preview",
+        "source": {
+          "prompt": "A single continuous documentary camera shot recorded by an underwater remotely operated vehicle. A translucent pale pink sea cucumber swims slowly above a dark rocky seafloor, gently moving its fins. Fine particles drift through the vehicle lights. The camera follows slowly with small natural corrections. Realistic underwater optics, ordinary scientific expedition footage. No cuts, text, logos, or graphics."
+        },
+        "config": {
+          "numberOfVideos": 1,
+          "durationSeconds": 8,
+          "resolution": "720p",
+          "aspectRatio": "16:9"
+        }
+      },
+      "inputMedia": [],
+      "maxNewSubmissions": 1,
+      "outputDir": "eval/runs/veo-shot-v1-v1",
+      "seedPolicy": {
+        "supportedBySelectedApi": false,
+        "valueSubmitted": null,
+        "reason": "The installed Google GenAI 2.21.0 SDK rejects seed for the Gemini Developer API Veo path. No seed is sent; provider-side generation is not reproducible from a caller seed.",
+        "removedBeforeAnySubmissionOrStudyInference": true
+      }
+    },
+    {
+      "id": "V2",
+      "purpose": "evaluation-parent",
+      "request": {
+        "model": "veo-3.1-generate-preview",
+        "source": {
+          "prompt": "A single continuous handheld daylight camera recording in an ordinary small workshop. An adult wearing a plain gray shirt adjusts a camera tripod, turns a small silver fastening knob, and checks that the legs are stable. Natural hands, coherent tool geometry, soft window light and subtle camera movement. Ordinary documentary footage. No cuts, text, logos, or graphics."
+        },
+        "config": {
+          "numberOfVideos": 1,
+          "durationSeconds": 8,
+          "resolution": "720p",
+          "aspectRatio": "16:9"
+        }
+      },
+      "inputMedia": [],
+      "maxNewSubmissions": 1,
+      "outputDir": "eval/runs/veo-shot-v2-v1",
+      "seedPolicy": {
+        "supportedBySelectedApi": false,
+        "valueSubmitted": null,
+        "reason": "The installed Google GenAI 2.21.0 SDK rejects seed for the Gemini Developer API Veo path. No seed is sent; provider-side generation is not reproducible from a caller seed.",
+        "removedBeforeAnySubmissionOrStudyInference": true
+      }
+    }
+  ],
+  "veoCostEstimate": {
+    "currency": "USD",
+    "estimatedTotal": 6.4,
+    "basis": "Two clips, eight seconds each, at the previously verified USD 0.40 per second. Actual billing has not been read.",
+    "verifyCurrentPricingBeforeSubmit": true
+  },
+  "noRetriesOrReplacementParentsAfterOutcome": true,
+  "normalization": {
+    "clipIntervalSeconds": [
+      0,
+      5
+    ],
+    "outputWidth": 640,
+    "outputHeight": 360,
+    "outputFps": 24,
+    "outputFrames": 120,
+    "aspect": "aspect-preserving center fill/crop",
+    "audio": "removed",
+    "codec": "libx264",
+    "crf": 20,
+    "retainOriginalParents": true
+  },
+  "freezeRequirement": "Set frozen true and pin completed generator script/lock hashes before any new detector inference. No content/settings edits after first detector output.",
+  "scriptSha256": "039db81ca7363b07c15f0517c52e91cddbb81f263cc55e073f5fff8123814dd3",
+  "requirementsLockSha256": "9a08808dc827a91de2ff7b1154104f77a14fdd98dc2c828611e827df53f38677",
+  "veoScriptSha256": "064f60cac0a18387f5b361102f2e18b910ae0526ad1581225f3d267e43b2ea0f",
+  "frozenAt": "2026-09-05T03:53:07.323310+00:00"
+}

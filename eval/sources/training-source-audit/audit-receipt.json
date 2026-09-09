@@ -1,0 +1,111 @@
+{
+  "finishedAt": "2026-09-05T04:29:40.010596+00:00",
+  "datasetRevision": "58af00f022d8272f42de3be912e9a905bf6087d2",
+  "codeRevision": "734e280c894caca5eafa79e40aa08e2be1b30a85",
+  "archiveRangeBytesReceived": 1665437,
+  "archiveRangeLimitBytes": 2097152,
+  "mediaPayloadBytesReceived": 0,
+  "modelCalls": 0,
+  "trainingSteps": 0,
+  "files": [
+    {
+      "path": "eval/sources/training-source-audit/busterx-commit.json",
+      "bytes": 5501,
+      "sha256": "9ef6b7dcabe2b01eb7ebe6fc46f77c8fe08319e6a551e472305364e760c50422"
+    },
+    {
+      "path": "eval/sources/training-source-audit/busterx-tree.json",
+      "bytes": 11923,
+      "sha256": "5297f6ca7e864b90e70b281b96cef5a8ea3853ec8d22c7eefc032c5aad2b7c4e"
+    },
+    {
+      "path": "eval/sources/training-source-audit/census-overlap-summary.json",
+      "bytes": 2441,
+      "sha256": "76b2376bd0be513d0c427cc3e83da2327dc97d070d2db775db302df564933f6c"
+    },
+    {
+      "path": "eval/sources/training-source-audit/initial-access-receipt.json",
+      "bytes": 1739,
+      "sha256": "016f9405df3d21b5038cb412bec9b07cde9e45a234b194a87ab578cac3c1007e"
+    },
+    {
+      "path": "eval/sources/training-source-audit/range-access-receipt.json",
+      "bytes": 1847,
+      "sha256": "b0491d435e60735647bf2c646b5150747b78da7314249afb7b6f889e474563c6"
+    },
+    {
+      "path": "eval/sources/training-source-audit/reader-source-receipt.json",
+      "bytes": 2766,
+      "sha256": "d28e7accb7096c155024188f09f902b8f15a46031d72a9ddf678ebc6e1927f47"
+    },
+    {
+      "path": "eval/sources/training-source-audit/source-Makefile",
+      "bytes": 4079,
+      "sha256": "d85fa768ff1c8ae7a9e61323b4ee3efd1551db65d5c200e9ccd08562b0d3e924"
+    },
+    {
+      "path": "eval/sources/training-source-audit/source-README.md",
+      "bytes": 3701,
+      "sha256": "32764e19b552313ae9583427f6f52574b81e1d89f6474e1ab918de8d30807331"
+    },
+    {
+      "path": "eval/sources/training-source-audit/source-busterx__build_dataset.py",
+      "bytes": 2131,
+      "sha256": "a9215fc8f4bfe272f11116bf48ab147e78ebdb01a6993f02f286013b0c005074"
+    },
+    {
+      "path": "eval/sources/training-source-audit/source-busterx__datasetpp__base.py",
+      "bytes": 10875,
+      "sha256": "3c9a3a2f0d2dbb949d8f5248a9420d5244b676a074b4381f3a89d922af814d2a"
+    },
+    {
+      "path": "eval/sources/training-source-audit/source-busterx__datasetpp__genbuster_200k.py",
+      "bytes": 326,
+      "sha256": "dcbd56fb135d8aa960be13523b9f4eeb2270f56dca27639bbfb7a0029da1e09e"
+    },
+    {
+      "path": "eval/sources/training-source-audit/source-busterx__datasetpp__genbuster_bench.py",
+      "bytes": 7382,
+      "sha256": "ccf909a263097dc14826f11a7b17d3558aefc35e14acc39d78f3d0ee01c39dbe"
+    },
+    {
+      "path": "eval/sources/training-source-audit/source-busterx__datasetpp__mixin.py",
+      "bytes": 4989,
+      "sha256": "0fd238ba2ebaa69d9959b38f2d248833a1963c4560bd5a9d03e9d813ca61203f"
+    },
+    {
+      "path": "eval/sources/training-source-audit/source-scripts__train_dapo.sh",
+      "bytes": 2322,
+      "sha256": "eb49e0e67a3b6b8f860ff595abdcf4c851951696aa1067916cc9fb37f04fb273"
+    },
+    {
+      "path": "eval/sources/training-source-audit/zip-central-directory.bin",
+      "bytes": 1665339,
+      "sha256": "8ec46b65298ca386992636a88784a4224fc6db9868d4ca62457dd94774b47d71"
+    },
+    {
+      "path": "eval/sources/training-source-audit/zip-entry-census.json",
+      "bytes": 2623606,
+      "sha256": "b10f999f5da2b7b12f1291bd33af89f26f3af1092999879d5b10a4a2bb668f08"
+    },
+    {
+      "path": "eval/sources/training-source-audit/zip-eocd.bin",
+      "bytes": 22,
+      "sha256": "152c126514ca653597cce5d4f2029e169ddf44adaa61fb47d7937361426585d1"
+    },
+    {
+      "path": "eval/sources/training-source-audit/zip64-eocd.bin",
+      "bytes": 56,
+      "sha256": "7591537c60e42a70f175dea0d49067896646334548ef1e647dad4a3b5eff1347"
+    },
+    {
+      "path": "eval/sources/training-source-audit/zip64-locator.bin",
+      "bytes": 20,
+      "sha256": "948ac359914deed8a97b8a5b72c74fad1e22fec1f66300236855fa100142daa8"
+    }
+  ],
+  "report": {
+    "path": "eval/TRAINING_SOURCE_AUDIT.md",
+    "sha256": "872a84636cd4b051ea6b8c11345ad1bbe707e2c10c24e6d6ae478d7eaffda35d"
+  }
+}

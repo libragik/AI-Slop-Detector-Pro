@@ -1,0 +1,12 @@
+{
+  "retrievedAt": "2026-09-05T07:44:16.046907+00:00",
+  "url": "https://sightengine.com/docs/moderate-stored-video",
+  "status": 200,
+  "path": "eval/sources/sightengine-api-v1/moderate-stored-video.html",
+  "bytes": 102640,
+  "sha256": "87e815e8df4c49574f1b579099704ce094aecb09c275f2189a9d36569c404567",
+  "positionUnitInterpretation": "milliseconds",
+  "basis": "Official synchronous example second frame position2000; documented endpoint only allows videos less than60seconds. Default interval is2seconds. This is an inference from the official example, not a separately explicit field-unit declaration.",
+  "noLiveApiResponseObserved": true,
+  "apiInferenceCalls": 0
+}

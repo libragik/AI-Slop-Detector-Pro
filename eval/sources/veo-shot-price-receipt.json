@@ -1,0 +1,8 @@
+{
+  "verifiedAt": "2026-09-05T04:03:54Z",
+  "model": "veo-3.1-generate-preview",
+  "currency": "USD",
+  "unit": "second",
+  "pricePerSecond": 0.4,
+  "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing"
+}

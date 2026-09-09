@@ -1,0 +1,64 @@
+{
+  "command": [
+    "eval/.venv/bin/python",
+    "scripts/train-dinov2-temporal.py",
+    "contract"
+  ],
+  "createdAt": "2026-09-05T05:15:05.517588+00:00",
+  "exitCode": 0,
+  "metadataOnlyRuntimeReadback": {
+    "contractPath": "eval/runs/dinov2-backbone-contract-v1/contract.json",
+    "contractSha256": "c916a1fea7352abd854121d4f4978f1ea522ad96b18d8e1880afefe401786374",
+    "driverSha256": "750a2230bd0af10724303c2fd153f230fff93390e17b5224092d7ab208fa2245",
+    "featureModuleSha256": "28e520039e48cc9a91daccccb9fb74b0d90a8fd5192148ccbcc99327621105f9",
+    "note": "Used the unfrozen protocol draft with current script hashes in memory only; checked existing synthetic contract arrays and official weight bytes without loading the backbone. Acquisition completion identity remains pending.",
+    "passed": true
+  },
+  "noVideoDecodeOrBackboneLoadOrForward": true,
+  "qualification": "Full cache uses temporary artificial media byte files and synthetic CLS features, with external acquisition/runtime validators stubbed only in that temporary workspace. A real short sleeping child exercises the pinned resource supervisor. No acquired training media or diagnostic predictions were read.",
+  "result": {
+    "checks": [
+      "cache-not-mutated",
+      "splice-differences-recomputed",
+      "last-difference-zero",
+      "max-pooling",
+      "class-and-quality-balance",
+      "finite-gradients-and-updates",
+      "bitwise-save-resume",
+      "safetensors-score-equivalence",
+      "matched-reference-initialization",
+      "orphan-state-recovery-without-overwrite",
+      "resume-hash-recipe-optimizer-guards",
+      "idempotent-final-export",
+      "batch-deadline",
+      "nonfinite-training-rejected",
+      "full-2304-parent-6912-row-synthetic-cache-accepted",
+      "cache-rejects-generator",
+      "cache-rejects-sourceSha256",
+      "cache-rejects-parentId",
+      "cache-rejects-split",
+      "cache-rejects-featurePath",
+      "cache-rejects-receiptPath",
+      "extraction-rejects-device",
+      "extraction-rejects-clsBytesSha256",
+      "extraction-rejects-status",
+      "real-owned-child-hard-timeout-with-prior-budget",
+      "resume-cumulative-budget-and-evidence-preservation",
+      "unfinished-supervisor-journal-fails-closed",
+      "supervision-binds-cache-identity"
+    ],
+    "numpy": "2.2.6",
+    "parameters": {
+      "appearance_control": 100097,
+      "temporal": 100097
+    },
+    "passed": true,
+    "sourceSha256": "36b405e3b255cbbad6c1a97a1ecee2ebfea453eb57d0aaa7baeb837b5394fbba",
+    "syntheticFeatureOnly": true,
+    "torch": "2.8.0"
+  },
+  "schemaVersion": 1,
+  "status": "passed",
+  "stderr": "",
+  "syntheticOnly": true
+}

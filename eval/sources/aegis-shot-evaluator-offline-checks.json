@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUtc": "2026-09-05 03:47:01 UTC",
+  "purpose": "Summary of observed offline evaluator contracts before the first shot-study inference.",
+  "evidenceKind": "Execution summary transcribed from tool outputs; not a retained omnibus test log.",
+  "sourceIdentity": {
+    "evaluator": {
+      "path": "scripts/eval-aegis-shots.py",
+      "sha256": "3d4a837b58a2adf2b5683b04aff74d4bfaa6332a6da33031c99bcad458404882"
+    },
+    "protocol": {
+      "path": "eval/AEGIS_SHOT_EVALUATION_PROTOCOL.md",
+      "sha256": "6a9d4e3f4788392093adb90ba300a76739eec1c736aa92f16044efdb7a32e3d4"
+    },
+    "builder": {
+      "path": "scripts/build-shot-study.py",
+      "sha256": "738c0f005cdd8378ceee69f8aa6584f5684723d50d482539dc375a33d123ba36"
+    },
+    "originalEvaluator": {
+      "path": "scripts/eval-aegis.py",
+      "sha256": "1390d13e5b54f0122316e672a0c0456f2602ee02ec68ada328dd3b1d50578838",
+      "unchanged": true
+    }
+  },
+  "realDetectorForwardCalls": 0,
+  "modelWeightsLoaded": false,
+  "studyMediaScored": 0,
+  "fixturePolicy": "Parser/gate fixtures and synthetic lavfi media were created in TemporaryDirectory directories, then deleted. No consumed or new study footage was used as a detector input.",
+  "checks": [
+    {
+      "name": "Temporal windows and marker parsing",
+      "status": "passed",
+      "details": "Five-second 24/12fps tail windows; boundary starts its new shot; unsupported subsecond shots; valid repeated requested indices; rounded scene score10 without marker does not create a cut; wrong exact integerPTS rejects."
+    },
+    {
+      "name": "Independent window failures",
+      "status": "passed",
+      "details": "Four synthetic callbacks were attempted despite the first throwing and the third returning nonfinite output; results error,ok,error,ok; nonfinite values retained as string diagnostics and null numerical fields. No real detector was invoked."
+    },
+    {
+      "name": "Native decoder and official preprocessing",
+      "status": "passed",
+      "details": "Synthetic lavfi master120frames and severe60frames both fully decoded with valid PTS/durations/SAR/pixel format, two windows and expected B1x16x3x224x224 tensors. No detector model loaded or called."
+    },
+    {
+      "name": "Manifest and saved-gate evidence",
+      "status": "passed",
+      "details": "Complete synthetic45-row gate with build/source/canonical/frame-lineage receipts passed. Separate mutations rejected missing windows, positive scores in a negative gate, score/logit mismatch, false coverage, changed labels, misreported AI overlap, reordered cohort, false origin weights and self-consistent incorrect parent-frame construction evidence."
+    },
+    {
+      "name": "Resource watcher subprocesses",
+      "status": "passed",
+      "details": "Synthetic memory and elapsed-time triggers each exited124 and retained a resource-failed receipt with unfinishedSelectedIds. No large memory allocation or model call."
+    },
+    {
+      "name": "Self-reported recipe cannot substitute model",
+      "status": "passed",
+      "details": "A saved gate whose caller supplied its own consistent recipe fingerprint but changed modelSha256 was rejected before media/model loading."
+    },
+    {
+      "name": "Supported GCD sequential execution",
+      "status": "passed",
+      "opencvDistribution": "4.13.0.92",
+      "oldPositiveRequestReportedThreads": 32,
+      "newThreadsRequested": 0,
+      "newThreadsReported": 1,
+      "parallelBackend": "GCD",
+      "torchThreads": 4,
+      "torchInteropThreads": 1,
+      "officialPreprocessingBitwiseEqual": true,
+      "syntheticTensorSha256": "2eb0745723f9397726a0d25e5142f1df03aced037574e8f621b3046c40c61536"
+    },
+    {
+      "name": "Final source readback",
+      "status": "passed",
+      "details": "Final Python AST/syntax, trailing-whitespace check,17 common source/vendor entries, exact builder identity and unchanged original evaluator verified after final evaluator/protocol edits."
+    }
+  ],
+  "scopeQualification": "These were separate contracts executed across pre-freeze revisions, with final source-identity readback; they were not one retained omnibus run of every assertion against the final revision. Final expected-model binding and GCD control were separately tested after the broader gate fixture. A real successful45-video gate has not been observed.",
+  "relatedRawEvidence": [
+    "eval/runs/shot-builder-contract/fps-lineage/contract-v1/receipt.json"
+  ],
+  "claim": "Software/receipt guards only. This does not establish detector accuracy or passage of any study stage."
+}

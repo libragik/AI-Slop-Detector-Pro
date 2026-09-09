@@ -1,0 +1,112 @@
+import type {
+  CommentAnalysis,
+  ProvenanceAnalysis,
+  ScoreAdjustment,
+  ScoreResult,
+  VideoAnalysis,
+  YoutubeMetadata,
+} from "./types";
+
+export interface ScoreInputs {
+  video: Pick<VideoAnalysis, "aiLikelihood" | "visualClassification">;
+  provenance?: Pick<ProvenanceAnalysis, "indicatesGenerativeAi" | "valid" | "trusted"> | null;
+  metadata?: Pick<YoutubeMetadata, "containsSyntheticMedia" | "hasExplicitAiDisclosure"> | null;
+  comments?: Pick<
+    CommentAnalysis,
+    | "status"
+    | "sampleSize"
+    | "commentsClaimingAi"
+    | "commentsClaimingReal"
+    | "creatorAdmissionFound"
+  > | null;
+}
+
+const clamp = (value: number) => Math.max(1, Math.min(99, Math.round(value)));
+
+export function aggregateScore(inputs: ScoreInputs): ScoreResult {
+  const baseScore = clamp(inputs.video.aiLikelihood);
+  let score = baseScore;
+  let scoreFloor = 1;
+  const adjustments: ScoreAdjustment[] = [
+    {
+      source: "gemini",
+      rule: "base_score",
+      scoreBefore: baseScore,
+      scoreAfter: baseScore,
+      delta: 0,
+      reason: "Gemini visual-forensics likelihood is the starting score.",
+    },
+  ];
+
+  const applyFloor = (
+    source: ScoreAdjustment["source"],
+    rule: string,
+    floor: number,
+    reason: string,
+  ) => {
+    const before = score;
+    scoreFloor = Math.max(scoreFloor, floor);
+    score = Math.max(score, floor);
+    adjustments.push({ source, rule, scoreBefore: before, scoreAfter: score, delta: score - before, reason });
+  };
+
+  const applyDelta = (
+    source: ScoreAdjustment["source"],
+    rule: string,
+    delta: number,
+    reason: string,
+  ) => {
+    const before = score;
+    score = Math.max(scoreFloor, clamp(score + delta));
+    adjustments.push({ source, rule, scoreBefore: before, scoreAfter: score, delta: score - before, reason });
+  };
+
+  // A C2PA manifest is hard evidence only when it is valid, trusted, and its
+  // source type explicitly identifies algorithmically generated media.
+  const verifiedC2pa =
+    inputs.provenance?.indicatesGenerativeAi === true &&
+    inputs.provenance.valid === true &&
+    inputs.provenance.trusted === true;
+  if (verifiedC2pa) {
+    applyFloor("c2pa", "verified_synthetic_floor", 98, "Trusted C2PA provenance identifies generative media.");
+  }
+
+  const disclosed =
+    inputs.metadata?.containsSyntheticMedia === true ||
+    inputs.metadata?.hasExplicitAiDisclosure === true;
+  if (disclosed) {
+    applyFloor("youtube_disclosure", "creator_disclosure_floor", 95, "The platform metadata or description discloses synthetic or altered media.");
+  }
+
+  if (inputs.comments?.status === "complete" && inputs.comments.creatorAdmissionFound) {
+    applyFloor("creator_comment", "creator_admission_floor", 95, "A sampled comment from the creator explicitly admits AI generation or material AI alteration.");
+  }
+
+  const comments = inputs.comments;
+  if (comments?.status === "complete" && comments.sampleSize >= 10) {
+    const directional = comments.commentsClaimingAi + comments.commentsClaimingReal;
+    const aiRatio = directional > 0 ? comments.commentsClaimingAi / directional : null;
+    if (aiRatio !== null && aiRatio >= 0.75) {
+      applyDelta("public_comments", "strong_ai_consensus", 8, `${Math.round(aiRatio * 100)}% of directional sampled comments claimed the video is AI.`);
+    } else if (aiRatio !== null && aiRatio >= 0.6) {
+      applyDelta("public_comments", "moderate_ai_consensus", 4, `${Math.round(aiRatio * 100)}% of directional sampled comments claimed the video is AI.`);
+    } else if (aiRatio !== null && aiRatio <= 0.25) {
+      applyDelta("public_comments", "strong_real_consensus", -4, `${Math.round((1 - aiRatio) * 100)}% of directional sampled comments claimed the video is real.`);
+    }
+  }
+
+  score = clamp(score);
+  const verdict = score >= 50 ? "Probably AI" : "Probably Not AI";
+  const confidence =
+    score >= 85 || score <= 15 ? "High" : score >= 65 || score <= 35 ? "Medium" : "Low";
+
+  let evidenceLabel: ScoreResult["evidenceLabel"];
+  if (verifiedC2pa) evidenceLabel = "Verified synthetic";
+  else if (disclosed || (comments?.status === "complete" && comments.creatorAdmissionFound)) evidenceLabel = "Disclosed synthetic or altered";
+  else if (inputs.video.visualClassification === "mixed_or_ai_edited") evidenceLabel = "Mixed or AI-edited";
+  else if (score >= 65) evidenceLabel = "Likely synthetic";
+  else if (score >= 35) evidenceLabel = "Inconclusive";
+  else evidenceLabel = "No reliable evidence of AI found";
+
+  return { baseScore, finalScore: score, verdict, confidence, evidenceLabel, adjustments };
+}

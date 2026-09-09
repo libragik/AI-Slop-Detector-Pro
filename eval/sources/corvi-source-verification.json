@@ -1,0 +1,73 @@
+{
+  "repository": "https://github.com/grip-unina/DMimageDetection",
+  "revision": "745ad9e1eee82bdac4aab6e1e7e7dbf20753633a",
+  "verifiedFiles": {
+    "test_code/main.py": {
+      "upstreamPath": "test_code/main.py",
+      "sha256": "b612156614e342f2bcb735b708aa3acd2b9d64fc4d99aa09bacc9b8232186e03"
+    },
+    "test_code/get_method_here.py": {
+      "upstreamPath": "test_code/get_method_here.py",
+      "sha256": "fc0ec31218646b897c96cea787d0cbbef200609e2a2bc5cfc62372134e18396e"
+    },
+    "test_code/normalization.py": {
+      "upstreamPath": "test_code/normalization.py",
+      "sha256": "914f1ccb82f88a7ea7a6f00a68c005d0203befec0f35f093c442b2313e93be34"
+    },
+    "test_code/networks/resnet_mod.py": {
+      "upstreamPath": "test_code/networks/resnet_mod.py",
+      "sha256": "4b69acc4e4c778130d02e05c97e6d3254c9d47e524074ac183252bc1fab824a0"
+    },
+    "test_code/LICENSE.md": {
+      "upstreamPath": "test_code/LICENSE.md",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "upstream/README.md": {
+      "upstreamPath": "README.md",
+      "sha256": "2d6f659e26ae2397583bfa695b39cb53553c4108d115358d48f65ab975b3ee5f"
+    },
+    "upstream/test_code/README.md": {
+      "upstreamPath": "test_code/README.md",
+      "sha256": "0e85d5808bcb5f03c8327a11840e2ba16d88ee246443a25e01f2a0ed70960067"
+    },
+    "upstream/test_code/metrics_evaluation.py": {
+      "upstreamPath": "test_code/metrics_evaluation.py",
+      "sha256": "dbc878bdcbad350e59d48e5bf0b8caf04f76ccc3c6d0d239be5beeb2f85eda44"
+    },
+    "upstream/test_code/dmetrics.py": {
+      "upstreamPath": "test_code/dmetrics.py",
+      "sha256": "3b70d6639169ea3c2980f7ff1f596cb71f3fa07200f59eca69908fe9cffb0635"
+    },
+    "upstream/training_code/utils/dataset.py": {
+      "upstreamPath": "training_code/utils/dataset.py",
+      "sha256": "eb9bdd4efc8092dcec10e39f3dbe712fe5cec26c40767e340f745d7bf17065b9"
+    },
+    "upstream/training_code/utils/training.py": {
+      "upstreamPath": "training_code/utils/training.py",
+      "sha256": "1e3daf585f74fdccf1c3d2f1c5ac127ee89ab10408dda1849acacf516de7e58f"
+    }
+  },
+  "weightsProvenance": {
+    "officialReadme": "https://github.com/grip-unina/DMimageDetection/blob/745ad9e1eee82bdac4aab6e1e7e7dbf20753633a/test_code/README.md",
+    "officialWeightsLink": "https://drive.google.com/file/d/1sAoAuOGCWS4dAMBhDkRHgBf4SgBgvkVf/view",
+    "downloadUrl": "https://drive.usercontent.google.com/download?id=1sAoAuOGCWS4dAMBhDkRHgBf4SgBgvkVf&export=download&confirm=t",
+    "downloadReceiptVerifiedBy": "root and research agent from original current-task tool receipts",
+    "zipSha256": "253c524cb7919b097279c5d56a1ba048856103f05c03fae6b96017826f2876d9",
+    "zipBytes": 506074366,
+    "checkpointZipMember": "weights/Grag2021_latent/model_epoch_best.pth",
+    "checkpointSha256": "0168451e84a2a35d0b141ad4f2e361a74efdd06eb8d11434087f8a0bb6e3abad",
+    "checkpointBytes": 282549121
+  },
+  "license": {
+    "name": "Apache-2.0",
+    "evidence": "Official test README supplies the weight link and Apache-2.0 license without a separate weight restriction; test_code/LICENSE.md and source file notices agree.",
+    "scopeOfUse": "Local development evaluation; no weight redistribution or production integration."
+  },
+  "officialInference": {
+    "architecture": "res50stride1, num_classes=1, gap_size=1, stride0=1",
+    "patch_size": null,
+    "preprocessing": "Full native RGB PIL image; ToTensor; ImageNet mean/std normalization. No resizing/cropping/padding.",
+    "score": "Mean spatial logits; image synthetic if logit positive.",
+    "temporalAdaptation": "Eight uniformly sampled full frames, mean frame logits; unvalidated image-to-video adaptation."
+  }
+}

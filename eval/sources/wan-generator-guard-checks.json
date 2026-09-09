@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "name": "all_three_frozen_recipe_shapes",
+      "passed": true
+    },
+    {
+      "errorType": "ValueError",
+      "name": "nonempty_loading_report",
+      "passed": true
+    },
+    {
+      "errorType": "ValueError",
+      "name": "unknown_loading_report",
+      "passed": true
+    },
+    {
+      "errorType": "ValueError",
+      "name": "path_traversal",
+      "passed": true
+    },
+    {
+      "errorType": "ValueError",
+      "name": "absolute_path",
+      "passed": true
+    },
+    {
+      "errorType": "ValueError",
+      "name": "changed_resolution",
+      "passed": true
+    },
+    {
+      "errorType": "ValueError",
+      "name": "unfrozen_plan",
+      "passed": true
+    },
+    {
+      "errorType": "ValueError",
+      "name": "missing_veo_gate",
+      "passed": true
+    },
+    {
+      "errorType": "ValueError",
+      "name": "missing_contract_for_normal",
+      "passed": true
+    },
+    {
+      "name": "wall_timeout",
+      "passed": true,
+      "result": {
+        "exitCode": -15,
+        "limitType": "supervisor polling; transient allocation overshoot is possible",
+        "peakSampledProcessTreeRssBytes": 13221888,
+        "resourceFailure": "wall_time_limit",
+        "samplingIntervalSeconds": 0.25,
+        "wallSeconds": 0.2850149159930879
+      }
+    },
+    {
+      "name": "rss_limit",
+      "passed": true,
+      "result": {
+        "exitCode": -15,
+        "limitType": "supervisor polling; transient allocation overshoot is possible",
+        "peakSampledProcessTreeRssBytes": 13025280,
+        "resourceFailure": "rss_limit",
+        "samplingIntervalSeconds": 0.25,
+        "wallSeconds": 0.014324167001177557
+      }
+    },
+    {
+      "exitCode": 2,
+      "name": "full_loading_requires_explicit_pins_and_prerequisites",
+      "passed": true
+    },
+    {
+      "exitCode": 1,
+      "name": "single_use_output_rejected",
+      "passed": true
+    }
+  ],
+  "forwardCalls": 0,
+  "fullModelLoaded": false,
+  "scriptSha256": "bd2cdf7a6f0fa61151c680d465c81203eaad6f7f910cd912b2cfe4b1b696e284",
+  "status": "passed"
+}

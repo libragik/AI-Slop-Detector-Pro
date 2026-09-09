@@ -1,0 +1,33 @@
+{
+  "preparedAt": "2026-09-05T01:36:11.223231+00:00",
+  "cpuInput": "eval/runs/corvi-cpu-contract-v1.jsonl",
+  "mpsInput": "eval/runs/corvi-mps-contract-v1.jsonl",
+  "comparison": "Corresponding eight frame logits and clip mean scores, same two development files and preprocessing",
+  "absoluteTolerance": 0.001,
+  "relativeTolerance": 0.001,
+  "decisionsMustAgree": true,
+  "note": "Predeclared numerical equivalence check before inspecting MPS results; not a calibration or accuracy claim.",
+  "resourceBounds": {
+    "maxClips": 35,
+    "framesPerClip": 8,
+    "nativeMaxWidth": 1536,
+    "nativeMaxHeight": 1536,
+    "maxDurationSeconds": 120,
+    "maxCpuThreads": 4,
+    "parallelClips": 1,
+    "frameBatchSize": 1,
+    "abortOnFirstClipError": true,
+    "implicitResizeCropPadding": false,
+    "modelApiCalls": 0
+  },
+  "status": "passed",
+  "frameComparisons": 16,
+  "maxAbsoluteFrameLogitDifference": 3.337860107421875e-06,
+  "maxAbsoluteClipScoreDifference": 2.4437904357910156e-06,
+  "cpuPredictionSha256": "7ccef0b5679bce8785a20502694fd2a9cee87a7251e72571d3d4eadf87323e67",
+  "mpsPredictionSha256": "798c5192ce3e5f7c2d5dc9323b01e456c3f4700990841bbe0752e9106c6bf596",
+  "mpsClipElapsedMs": [
+    2755,
+    2200
+  ]
+}

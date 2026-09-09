@@ -1,0 +1,10 @@
+# Isolated Wan CPU generation environment. The generated lock pins all transitive dependencies.
+diffusers==0.40.0
+transformers==5.16.1
+accelerate==1.14.0
+torch==2.8.0
+torchvision==0.23.0
+safetensors==0.8.0
+sentencepiece==0.2.2
+psutil==7.2.2
+numpy==2.2.6

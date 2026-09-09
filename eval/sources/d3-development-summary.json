@@ -1,0 +1,14 @@
+{
+  "scope": "development only, no holdout read",
+  "clips": 125,
+  "ai": 61,
+  "real": 64,
+  "auc": 0.4930840163934426,
+  "threshold": -0.8740668296813964,
+  "aiRecall": 0.14754098360655737,
+  "falsePositiveRate": 0.046875,
+  "medianMs": 190,
+  "device": "mps",
+  "scoreDirection": "higher syntheticScore (-D3 std) is more AI-like; not a probability",
+  "note": "Threshold chosen by real development 95th percentile. Not deployment calibration."
+}

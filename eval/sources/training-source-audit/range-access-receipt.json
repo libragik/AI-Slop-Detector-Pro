@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-09-05T04:26:46.402910+00:00",
+  "rangeLimitBytes": 2097152,
+  "rangeBytesIncludingInitialEOCD": 1665437,
+  "records": [
+    {
+      "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-200K-mini/resolve/58af00f022d8272f42de3be912e9a905bf6087d2/GenBuster-200K-mini.zip",
+      "requestedRange": "bytes=5458325100-5458325119",
+      "status": 206,
+      "contentRange": "bytes 5458325100-5458325119/5458325142",
+      "etag": "\"b944985d2a8d5506dfb4b377ccc992ec7fe3ca6b5763ed61b3d3565a63b5fc8c\"",
+      "bytes": 20,
+      "sha256": "948ac359914deed8a97b8a5b72c74fad1e22fec1f66300236855fa100142daa8",
+      "path": "eval/sources/training-source-audit/zip64-locator.bin"
+    },
+    {
+      "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-200K-mini/resolve/58af00f022d8272f42de3be912e9a905bf6087d2/GenBuster-200K-mini.zip",
+      "requestedRange": "bytes=5458325044-5458325099",
+      "status": 206,
+      "contentRange": "bytes 5458325044-5458325099/5458325142",
+      "etag": "\"b944985d2a8d5506dfb4b377ccc992ec7fe3ca6b5763ed61b3d3565a63b5fc8c\"",
+      "bytes": 56,
+      "sha256": "7591537c60e42a70f175dea0d49067896646334548ef1e647dad4a3b5eff1347",
+      "path": "eval/sources/training-source-audit/zip64-eocd.bin"
+    },
+    {
+      "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-200K-mini/resolve/58af00f022d8272f42de3be912e9a905bf6087d2/GenBuster-200K-mini.zip",
+      "requestedRange": "bytes=5456659705-5458325043",
+      "status": 206,
+      "contentRange": "bytes 5456659705-5458325043/5458325142",
+      "etag": "\"b944985d2a8d5506dfb4b377ccc992ec7fe3ca6b5763ed61b3d3565a63b5fc8c\"",
+      "bytes": 1665339,
+      "sha256": "8ec46b65298ca386992636a88784a4224fc6db9868d4ca62457dd94774b47d71",
+      "path": "eval/sources/training-source-audit/zip-central-directory.bin"
+    }
+  ]
+}

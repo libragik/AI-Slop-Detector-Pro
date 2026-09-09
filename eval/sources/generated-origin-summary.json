@@ -1,0 +1,264 @@
+{
+  "study": "Receipt-backed generated-origin development diagnostic",
+  "createdAt": "2026-09-05T02:02:11.140Z",
+  "plan": "eval/fixtures/video-generation-plan.json",
+  "planSha256": "451586114592dec13aed0ab7264032c78e3f532038dabc0b16071cd9aaa064d0",
+  "generationReceipt": "eval/fixtures/video-generation-receipt.json",
+  "generationSubmissions": 1,
+  "analysisSubmissions": 3,
+  "independentGeneratedSources": 1,
+  "conventionalCgiSources": 1,
+  "allRelatedControlsStayInOneDevelopmentGroup": true,
+  "analysisFingerprint": "e5924b9a24e01b6da7c2a09667f9122a7e8bc4bf42d097212e3bac40f74c352f",
+  "allRequestsCompleted": true,
+  "allSixPassesCompleted": true,
+  "aiPositiveDecisions": 0,
+  "generatedOrMixedControls": 2,
+  "cgiFalsePositiveDecisions": 0,
+  "outputs": [
+    {
+      "id": "dff4042041e63458ae52bc1f",
+      "status": 200,
+      "elapsedMs": 21512,
+      "completedAt": "2026-09-05T01:57:45.285Z",
+      "analysisId": "e089579d-30f6-4b4b-926f-08780d8a1dfa",
+      "verdict": "No clear AI indicators",
+      "rawVisualAssessment": "likely_authentic",
+      "confidence": "Not calibrated",
+      "cacheHit": false,
+      "inputHashMatches": true,
+      "actualReceiptHash": "e575e1447fe39f97dd9e3bda98d76ea091fc730fc7c33fb7320f9cd879d087bc",
+      "sourceIdentityMatches": true,
+      "fingerprintMatches": true,
+      "passes": [
+        {
+          "kind": "sweep",
+          "status": "complete"
+        },
+        {
+          "kind": "review",
+          "status": "complete"
+        }
+      ],
+      "label": "ai",
+      "path": "eval/media/controls/dff4042041e63458ae52bc1f.mp4",
+      "inputSha256": "e575e1447fe39f97dd9e3bda98d76ea091fc730fc7c33fb7320f9cd879d087bc",
+      "responseSha256": "a5a647c61e78fa6c24f8e7d1295b6aab7d10e40aa5d4bce1d354572441696d47",
+      "provenance": {
+        "status": "not_found",
+        "embedded": false,
+        "valid": null,
+        "trusted": null,
+        "indicatesGenerativeAi": false,
+        "digitalSourceTypes": [],
+        "signer": null,
+        "validationMessages": [],
+        "note": "No embedded Content Credential was found. Its absence is neutral evidence."
+      },
+      "summary": "Footage shows coherent physical interactions, fluid dynamics, and natural motion blur with no observable generative AI artifacts.",
+      "modelPasses": [
+        {
+          "kind": "sweep",
+          "status": "complete",
+          "model": "gemini-3.7-flash",
+          "mode": "static",
+          "intervals": [
+            {
+              "startSeconds": 0,
+              "endSeconds": 8,
+              "fps": 2
+            }
+          ],
+          "summary": "Footage shows coherent physical interactions, fluid dynamics, and natural motion blur with no observable generative AI artifacts.",
+          "validForCorroboration": true,
+          "inputTokens": 4931,
+          "outputTokens": 1073
+        },
+        {
+          "kind": "review",
+          "status": "complete",
+          "model": "gemini-3.7-flash",
+          "mode": "agentic",
+          "intervals": [
+            {
+              "startSeconds": 0,
+              "endSeconds": 8,
+              "fps": null
+            }
+          ],
+          "summary": "The footage displays authentic optical capture of a person pouring coffee from a glass carafe into a mug and walking across a kitchen. Fluid dynamics, rising steam, hand anatomy, reflections, and camera focus shifts all show consistent physical coherence with no observable generative artifacts.",
+          "validForCorroboration": true,
+          "inputTokens": 16672,
+          "outputTokens": 1788
+        }
+      ],
+      "decisionReasons": [
+        "The completed analysis passes agree that no clear AI indicators were observed in the inspected media.",
+        "This does not establish that the clip is authentic; a convincing AI video can lack observable artifacts."
+      ]
+    },
+    {
+      "id": "0d90f27f1d7915a793493ee4",
+      "status": 200,
+      "elapsedMs": 14395,
+      "completedAt": "2026-09-05T01:57:59.684Z",
+      "analysisId": "00932ca6-8f09-49aa-a0e5-8f22927d34d3",
+      "verdict": "No clear AI indicators",
+      "rawVisualAssessment": "likely_authentic",
+      "confidence": "Not calibrated",
+      "cacheHit": false,
+      "inputHashMatches": true,
+      "actualReceiptHash": "b203b07011f3ee6711460da6081401772cf5b69359fd0f1db2347f191b8daacd",
+      "sourceIdentityMatches": true,
+      "fingerprintMatches": true,
+      "passes": [
+        {
+          "kind": "sweep",
+          "status": "complete"
+        },
+        {
+          "kind": "review",
+          "status": "complete"
+        }
+      ],
+      "label": "cgi",
+      "path": "eval/media/controls/0d90f27f1d7915a793493ee4.mp4",
+      "inputSha256": "b203b07011f3ee6711460da6081401772cf5b69359fd0f1db2347f191b8daacd",
+      "responseSha256": "16f98dfa43064bac8fff52101dd4a473a13fa01c5d47ab0769cc4f04ab209403",
+      "provenance": {
+        "status": "not_found",
+        "embedded": false,
+        "valid": null,
+        "trusted": null,
+        "indicatesGenerativeAi": false,
+        "digitalSourceTypes": [],
+        "signer": null,
+        "validationMessages": [],
+        "note": "No embedded Content Credential was found. Its absence is neutral evidence."
+      },
+      "summary": "The video consists of traditional 3D computer animation shots displaying consistent character models, standard digital lighting, and conventional keyframe animation.",
+      "modelPasses": [
+        {
+          "kind": "sweep",
+          "status": "complete",
+          "model": "gemini-3.7-flash",
+          "mode": "static",
+          "intervals": [
+            {
+              "startSeconds": 0,
+              "endSeconds": 8,
+              "fps": 2
+            }
+          ],
+          "summary": "The video consists of traditional 3D computer animation shots displaying consistent character models, standard digital lighting, and conventional keyframe animation.",
+          "validForCorroboration": true,
+          "inputTokens": 4931,
+          "outputTokens": 1252
+        },
+        {
+          "kind": "review",
+          "status": "complete",
+          "model": "gemini-3.7-flash",
+          "mode": "agentic",
+          "intervals": [
+            {
+              "startSeconds": 0,
+              "endSeconds": 8,
+              "fps": null
+            }
+          ],
+          "summary": "The video consists of multiple short sequence cuts from standard 3D computer animation (the open-source CGI film Sintel). Keyframe character rigging, stable 3D meshes, consistent surface UV textures, and typical CGI rendering artifacts are visible with no temporal or structural generative AI anomalies.",
+          "validForCorroboration": true,
+          "inputTokens": 12629,
+          "outputTokens": 1321
+        }
+      ],
+      "decisionReasons": [
+        "The completed analysis passes agree that no clear AI indicators were observed in the inspected media.",
+        "This does not establish that the clip is authentic; a convincing AI video can lack observable artifacts."
+      ]
+    },
+    {
+      "id": "10a7c358371f29ddd7acb538",
+      "status": 200,
+      "elapsedMs": 23275,
+      "completedAt": "2026-09-05T01:58:22.962Z",
+      "analysisId": "05de149f-094c-4114-8d02-63923f1ff9e6",
+      "verdict": "No clear AI indicators",
+      "rawVisualAssessment": "likely_authentic",
+      "confidence": "Not calibrated",
+      "cacheHit": false,
+      "inputHashMatches": true,
+      "actualReceiptHash": "3f90460f31c82699d239abedfdf1fae1f5b476d9a369755778b16e877c6df2b7",
+      "sourceIdentityMatches": true,
+      "fingerprintMatches": true,
+      "passes": [
+        {
+          "kind": "sweep",
+          "status": "complete"
+        },
+        {
+          "kind": "review",
+          "status": "complete"
+        }
+      ],
+      "label": "mixed",
+      "path": "eval/media/controls/10a7c358371f29ddd7acb538.mp4",
+      "inputSha256": "3f90460f31c82699d239abedfdf1fae1f5b476d9a369755778b16e877c6df2b7",
+      "responseSha256": "0cc47c454fb9274fcf93ec824806ff4a95e41a9e76cc5fc667a8dc80f44e7b43",
+      "provenance": {
+        "status": "not_found",
+        "embedded": false,
+        "valid": null,
+        "trusted": null,
+        "indicatesGenerativeAi": false,
+        "digitalSourceTypes": [],
+        "signer": null,
+        "validationMessages": [],
+        "note": "No embedded Content Credential was found. Its absence is neutral evidence."
+      },
+      "summary": "The video combines standard 3D CGI video game cinematic footage with a brief live-action camera insert, showing no structural or temporal AI generation artifacts.",
+      "modelPasses": [
+        {
+          "kind": "sweep",
+          "status": "complete",
+          "model": "gemini-3.7-flash",
+          "mode": "static",
+          "intervals": [
+            {
+              "startSeconds": 0,
+              "endSeconds": 8,
+              "fps": 2
+            }
+          ],
+          "summary": "The video combines standard 3D CGI video game cinematic footage with a brief live-action camera insert, showing no structural or temporal AI generation artifacts.",
+          "validForCorroboration": true,
+          "inputTokens": 4931,
+          "outputTokens": 875
+        },
+        {
+          "kind": "review",
+          "status": "complete",
+          "model": "gemini-3.7-flash",
+          "mode": "agentic",
+          "intervals": [
+            {
+              "startSeconds": 0,
+              "endSeconds": 8,
+              "fps": null
+            }
+          ],
+          "summary": "The video is an edited montage combining standard 3D CGI animation clips (from the open-source short film Sintel) and authentic live-action camera footage of a person holding a coffee mug. No visual generative artifacts, warping, or synthetic inconsistencies were observed.",
+          "validForCorroboration": true,
+          "inputTokens": 24140,
+          "outputTokens": 2496
+        }
+      ],
+      "decisionReasons": [
+        "The completed analysis passes agree that no clear AI indicators were observed in the inspected media.",
+        "This does not establish that the clip is authentic; a convincing AI video can lack observable artifacts."
+      ]
+    }
+  ],
+  "limitation": "A concrete miss on one first-party generated output and its derivative; not a population estimate or proof of other-generator/platform performance. SynthID watermark decoding is not available in these reports."
+}

@@ -1,0 +1,710 @@
+{
+  "checkId": "social-check-v1",
+  "preparedAt": "2026-09-05T01:10:56.285839+00:00",
+  "purpose": "Frozen paired robustness against simulated social-media transformations on 16 source groups and 32 derivatives; not actual Instagram or other platform roundtrips.",
+  "sourceManifest": "eval/transformed-manifest.jsonl",
+  "sourceManifestSha256": "a9a7b07a9e8513b753fb879e9e41154454d789a34c9fcf6edb7755e615db7fa1",
+  "manifest": "eval/social-check-manifest.jsonl",
+  "manifestSha256": "67a769da22008bd2800a32c927ac0ae6d48bea06f3a2d92fb0953bc793112c2a",
+  "selectionSha256": "65bad02d3d32ca444549a2b7a9df783a28cb522f6d4a793f5d40bb9990ed9f2d",
+  "selectionRule": "Within each source label (ai and real), filter split=holdout, compute lowercase hex SHA256 of UTF-8 'social-check-v1:'+groupId, sort ascending (groupId tie-break), take the first 8 distinct groups. No ranking by generator, quality, or predictions.",
+  "eligibleHoldoutSourceGroups": {
+    "ai": 39,
+    "real": 36
+  },
+  "selectedSourceGroups": 16,
+  "selectedDerivatives": 32,
+  "selectedLabels": {
+    "ai": 8,
+    "real": 8
+  },
+  "derivativesPerGroup": [
+    "social_720p_crf28",
+    "repost_360p_crf36_12fps_crop"
+  ],
+  "rowPreservation": "Derivative JSONL rows copied verbatim from the source manifest. Original IDs, hashes, paths, provenance, parent links and holdout splits are unchanged.",
+  "verification": "All 32 selected derivative files exist and their SHA256 matches metadata; parent IDs and source provenance match the corresponding original row. No media frames or predictions inspected during selection.",
+  "predictionAccess": "None; selection used manifest metadata only. No holdout predictions or outcome files were opened.",
+  "modelCallsStarted": false,
+  "runCondition": "Do not start model calls until root confirms final evidence-2.8 freeze.",
+  "pairing": [
+    {
+      "label": "ai",
+      "rankWithinLabel": 1,
+      "groupId": "genbuster:badb62ed0e7280dc364876d46df4ae9bd6387e860c55476937130b56e4a96ddf",
+      "selectionDigest": "0beb6c2f4ce938719a10ed172226c3e6604f879e802e648f3ff697659d5fccc3",
+      "original": {
+        "id": "9a742aea700afda5a925ec2f",
+        "sha256": "badb62ed0e7280dc364876d46df4ae9bd6387e860c55476937130b56e4a96ddf",
+        "path": "eval/media/9a742aea700afda5a925ec2f.mp4",
+        "groupId": "genbuster:badb62ed0e7280dc364876d46df4ae9bd6387e860c55476937130b56e4a96ddf",
+        "split": "holdout",
+        "label": "ai",
+        "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+        "archiveMember": "GenBuster-Bench/wild/fake/pixverse_v5/badb62ed0e7280dc364876d46df4ae9bd6387e860c55476937130b56e4a96ddf.mp4",
+        "groundTruth": {
+          "basis": "dataset-author-label",
+          "evidenceUrl": "https://github.com/l8cv/BusterX",
+          "labelPath": "GenBuster-Bench/wild/fake/pixverse_v5/badb62ed0e7280dc364876d46df4ae9bd6387e860c55476937130b56e4a96ddf.mp4",
+          "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+        }
+      },
+      "derivatives": [
+        {
+          "id": "187a2b39cd8b22abeeb7acf3",
+          "parentId": "9a742aea700afda5a925ec2f",
+          "sha256": "68ceda226420cadd5880638959714b8cd63cc949e8ac985b8f1c65129331cfb0",
+          "path": "eval/media/187a2b39cd8b22abeeb7acf3.mp4",
+          "transformation": "social_720p_crf28",
+          "platform": "simulated_social",
+          "split": "holdout"
+        },
+        {
+          "id": "61580d205a6f0c84bdad9fa5",
+          "parentId": "9a742aea700afda5a925ec2f",
+          "sha256": "811f6cd554aafb6b46196b7d2bf34277f2647b1fc4fd41093f1c72877b890f96",
+          "path": "eval/media/61580d205a6f0c84bdad9fa5.mp4",
+          "transformation": "repost_360p_crf36_12fps_crop",
+          "platform": "simulated_social",
+          "split": "holdout"
+        }
+      ]
+    },
+    {
+      "label": "ai",
+      "rankWithinLabel": 2,
+      "groupId": "genbuster:cd48f87e6a49886e516254a70516d3bf9965221a89574747bb2e6fa2ebf4ccc8",
+      "selectionDigest": "0c0daf29b50e812a0e33981d298592ffd5793dceb89749d07de99f7c0ed23911",
+      "original": {
+        "id": "27b4cf51b8fd4064411a0f2c",
+        "sha256": "cd48f87e6a49886e516254a70516d3bf9965221a89574747bb2e6fa2ebf4ccc8",
+        "path": "eval/media/27b4cf51b8fd4064411a0f2c.mp4",
+        "groupId": "genbuster:cd48f87e6a49886e516254a70516d3bf9965221a89574747bb2e6fa2ebf4ccc8",
+        "split": "holdout",
+        "label": "ai",
+        "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+        "archiveMember": "GenBuster-Bench/id/fake/hunyuanvideo/cd48f87e6a49886e516254a70516d3bf9965221a89574747bb2e6fa2ebf4ccc8.mp4",
+        "groundTruth": {
+          "basis": "dataset-author-label",
+          "evidenceUrl": "https://github.com/l8cv/BusterX",
+          "labelPath": "GenBuster-Bench/id/fake/hunyuanvideo/cd48f87e6a49886e516254a70516d3bf9965221a89574747bb2e6fa2ebf4ccc8.mp4",
+          "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+        }
+      },
+      "derivatives": [
+        {
+          "id": "70a2c05536c00853cd120122",
+          "parentId": "27b4cf51b8fd4064411a0f2c",
+          "sha256": "9565400b54e0980f580bdb6a1dbe6f86d5ab7ef098db20465fc09036f99d17a8",
+          "path": "eval/media/70a2c05536c00853cd120122.mp4",
+          "transformation": "social_720p_crf28",
+          "platform": "simulated_social",
+          "split": "holdout"
+        },
+        {
+          "id": "cc1bb9229ee3cbcd4a014586",
+          "parentId": "27b4cf51b8fd4064411a0f2c",
+          "sha256": "b32524744f30b14a83c4477e6d298671d03aa882226ad83be04f2b20f5149538",
+          "path": "eval/media/cc1bb9229ee3cbcd4a014586.mp4",
+          "transformation": "repost_360p_crf36_12fps_crop",
+          "platform": "simulated_social",
+          "split": "holdout"
+        }
+      ]
+    },
+    {
+      "label": "ai",
+      "rankWithinLabel": 3,
+      "groupId": "genbuster:defb9f0611dcfa0fd0978521f2fb689c98172c6b9f23e056a1625791d6f6e983",
+      "selectionDigest": "0ea8fe928cce01694e69ccd9b3f1bf4932fe1c6033356a7f927268fe4b06ed09",
+      "original": {
+        "id": "549f99f804eb55002750cf8b",
+        "sha256": "defb9f0611dcfa0fd0978521f2fb689c98172c6b9f23e056a1625791d6f6e983",
+        "path": "eval/media/549f99f804eb55002750cf8b.mp4",
+        "groupId": "genbuster:defb9f0611dcfa0fd0978521f2fb689c98172c6b9f23e056a1625791d6f6e983",
+        "split": "holdout",
+        "label": "ai",
+        "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+        "archiveMember": "GenBuster-Bench/wild/fake/hailuo2.3/defb9f0611dcfa0fd0978521f2fb689c98172c6b9f23e056a1625791d6f6e983.mp4",
+        "groundTruth": {
+          "basis": "dataset-author-label",
+          "evidenceUrl": "https://github.com/l8cv/BusterX",
+          "labelPath": "GenBuster-Bench/wild/fake/hailuo2.3/defb9f0611dcfa0fd0978521f2fb689c98172c6b9f23e056a1625791d6f6e983.mp4",
+          "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+        }
+      },
+      "derivatives": [
+        {
+          "id": "46b384d1859b5bf2040eb591",
+          "parentId": "549f99f804eb55002750cf8b",
+          "sha256": "5deeb6a6953240e9cd798d9e430be23ac04c2957c3b16bcb2f9615ee88bc4f9a",
+          "path": "eval/media/46b384d1859b5bf2040eb591.mp4",
+          "transformation": "social_720p_crf28",
+          "platform": "simulated_social",
+          "split": "holdout"
+        },
+        {
+          "id": "eaeeb2aaddffa50ce52b2ea6",
+          "parentId": "549f99f804eb55002750cf8b",
+          "sha256": "7d8a01ac73f87fb8ac7b48360c45e9e12f86151fbc9c9fbee2cbbe24dcff7900",
+          "path": "eval/media/eaeeb2aaddffa50ce52b2ea6.mp4",
+          "transformation": "repost_360p_crf36_12fps_crop",
+          "platform": "simulated_social",
+          "split": "holdout"
+        }
+      ]
+    },
+    {
+      "label": "ai",
+      "rankWithinLabel": 4,
+      "groupId": "genbuster:d760078c523c061133c00a86022ee120d77ae3fb279f1319bda7be5ac91353d5",
+      "selectionDigest": "104b67fef6f66c8b751f4aa5223998b47c3149f3a7e5541196872f7e892c4617",
+      "original": {
+        "id": "33d627aa653f9aeef1d7caaa",
+        "sha256": "d760078c523c061133c00a86022ee120d77ae3fb279f1319bda7be5ac91353d5",
+        "path": "eval/media/33d627aa653f9aeef1d7caaa.mp4",
+        "groupId": "genbuster:d760078c523c061133c00a86022ee120d77ae3fb279f1319bda7be5ac91353d5",
+        "split": "holdout",
+        "label": "ai",
+        "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+        "archiveMember": "GenBuster-Bench/id/fake/hunyuanvideo/d760078c523c061133c00a86022ee120d77ae3fb279f1319bda7be5ac91353d5.mp4",
+        "groundTruth": {
+          "basis": "dataset-author-label",
+          "evidenceUrl": "https://github.com/l8cv/BusterX",
+          "labelPath": "GenBuster-Bench/id/fake/hunyuanvideo/d760078c523c061133c00a86022ee120d77ae3fb279f1319bda7be5ac91353d5.mp4",
+          "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+        }
+      },
+      "derivatives": [
+        {
+          "id": "d4c2b712c998602e45c2d081",
+          "parentId": "33d627aa653f9aeef1d7caaa",
+          "sha256": "b3e98b6276ecdd8e9717832d677494188d70bf7e2c784e24202a81cde525b06d",
+          "path": "eval/media/d4c2b712c998602e45c2d081.mp4",
+          "transformation": "social_720p_crf28",
+          "platform": "simulated_social",
+          "split": "holdout"
+        },
+        {
+          "id": "3c31c2116a70b1efee3b34bb",
+          "parentId": "33d627aa653f9aeef1d7caaa",
+          "sha256": "9deb897c0cc190e6581c558249962c295d35badbcf582055a13d796268ebae79",
+          "path": "eval/media/3c31c2116a70b1efee3b34bb.mp4",
+          "transformation": "repost_360p_crf36_12fps_crop",
+          "platform": "simulated_social",
+          "split": "holdout"
+        }
+      ]
+    },
+    {
+      "label": "ai",
+      "rankWithinLabel": 5,
+      "groupId": "genbuster:1f58f7e50180e401041bae33951bab27bed35b5bd6b725accfb1251cb9f953d6",
+      "selectionDigest": "11e5d559a3e16fed50af5c80a187db8191a09d25352d161f51bd48d545b595b5",
+      "original": {
+        "id": "fc36d444b527e7dbf51b0ab7",
+        "sha256": "1f58f7e50180e401041bae33951bab27bed35b5bd6b725accfb1251cb9f953d6",
+        "path": "eval/media/fc36d444b527e7dbf51b0ab7.mp4",
+        "groupId": "genbuster:1f58f7e50180e401041bae33951bab27bed35b5bd6b725accfb1251cb9f953d6",
+        "split": "holdout",
+        "label": "ai",
+        "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+        "archiveMember": "GenBuster-Bench/wild/fake/seedance2.0/1f58f7e50180e401041bae33951bab27bed35b5bd6b725accfb1251cb9f953d6.mp4",
+        "groundTruth": {
+          "basis": "dataset-author-label",
+          "evidenceUrl": "https://github.com/l8cv/BusterX",
+          "labelPath": "GenBuster-Bench/wild/fake/seedance2.0/1f58f7e50180e401041bae33951bab27bed35b5bd6b725accfb1251cb9f953d6.mp4",
+          "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+        }
+      },
+      "derivatives": [
+        {
+          "id": "c32f45b909e7efec79a204dc",
+          "parentId": "fc36d444b527e7dbf51b0ab7",
+          "sha256": "9a86575f82cafe5ac88e59a6a3cce1d0e8d813d035cbc0d5c0d3d3a22ca4cb9f",
+          "path": "eval/media/c32f45b909e7efec79a204dc.mp4",
+          "transformation": "social_720p_crf28",
+          "platform": "simulated_social",
+          "split": "holdout"
+        },
+        {
+          "id": "90d6baeb097e1bdbcffa7074",
+          "parentId": "fc36d444b527e7dbf51b0ab7",
+          "sha256": "707c188ef4e68b82fe4b972d74357019cca713902d107d8d96f7f1d52702bb1d",
+          "path": "eval/media/90d6baeb097e1bdbcffa7074.mp4",
+          "transformation": "repost_360p_crf36_12fps_crop",
+          "platform": "simulated_social",
+          "split": "holdout"
+        }
+      ]
+    },
+    {
+      "label": "ai",
+      "rankWithinLabel": 6,
+      "groupId": "genbuster:a91f6505eb6fed85737243ea2a3b70d1993e0d33df54b762efacae18cbf0457e",
+      "selectionDigest": "16a311cf86b8dac0cf1e48a489bbd5cb797afd61461eab9f0814af0db6c0385a",
+      "original": {
+        "id": "2b1dc134d88cbcc180e33729",
+        "sha256": "a91f6505eb6fed85737243ea2a3b70d1993e0d33df54b762efacae18cbf0457e",
+        "path": "eval/media/2b1dc134d88cbcc180e33729.mp4",
+        "groupId": "genbuster:a91f6505eb6fed85737243ea2a3b70d1993e0d33df54b762efacae18cbf0457e",
+        "split": "holdout",
+        "label": "ai",
+        "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+        "archiveMember": "GenBuster-Bench/wild/fake/wan2.5/a91f6505eb6fed85737243ea2a3b70d1993e0d33df54b762efacae18cbf0457e.mp4",
+        "groundTruth": {
+          "basis": "dataset-author-label",
+          "evidenceUrl": "https://github.com/l8cv/BusterX",
+          "labelPath": "GenBuster-Bench/wild/fake/wan2.5/a91f6505eb6fed85737243ea2a3b70d1993e0d33df54b762efacae18cbf0457e.mp4",
+          "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+        }
+      },
+      "derivatives": [
+        {
+          "id": "ba2a91a45da36f1e517fa08a",
+          "parentId": "2b1dc134d88cbcc180e33729",
+          "sha256": "2d3fe64b56151e7b5918487170088c890f4979b359647ba88c96ff15023a85c8",
+          "path": "eval/media/ba2a91a45da36f1e517fa08a.mp4",
+          "transformation": "social_720p_crf28",
+          "platform": "simulated_social",
+          "split": "holdout"
+        },
+        {
+          "id": "abfdde3ec446a479951586c9",
+          "parentId": "2b1dc134d88cbcc180e33729",
+          "sha256": "a12b5494fb6e6c8cec5dace10118e6228beff0a9d08523113283278bb9babb29",
+          "path": "eval/media/abfdde3ec446a479951586c9.mp4",
+          "transformation": "repost_360p_crf36_12fps_crop",
+          "platform": "simulated_social",
+          "split": "holdout"
+        }
+      ]
+    },
+    {
+      "label": "ai",
+      "rankWithinLabel": 7,
+      "groupId": "genbuster:ffe888c91d40538183456a2f8603bed4ead5d84013127ac4130812e26c186d45",
+      "selectionDigest": "1b6996ff099091db314ed611dac872608d583f60e76e30f474c1df942172ef0e",
+      "original": {
+        "id": "50e49097c645cbcdf1d1ded2",
+        "sha256": "ffe888c91d40538183456a2f8603bed4ead5d84013127ac4130812e26c186d45",
+        "path": "eval/media/50e49097c645cbcdf1d1ded2.mp4",
+        "groupId": "genbuster:ffe888c91d40538183456a2f8603bed4ead5d84013127ac4130812e26c186d45",
+        "split": "holdout",
+        "label": "ai",
+        "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+        "archiveMember": "GenBuster-Bench/id/fake/easyanimate/ffe888c91d40538183456a2f8603bed4ead5d84013127ac4130812e26c186d45.mp4",
+        "groundTruth": {
+          "basis": "dataset-author-label",
+          "evidenceUrl": "https://github.com/l8cv/BusterX",
+          "labelPath": "GenBuster-Bench/id/fake/easyanimate/ffe888c91d40538183456a2f8603bed4ead5d84013127ac4130812e26c186d45.mp4",
+          "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+        }
+      },
+      "derivatives": [
+        {
+          "id": "fb7490339af5f51404294bc1",
+          "parentId": "50e49097c645cbcdf1d1ded2",
+          "sha256": "86871ccbc0eab7fa0d85608b233e1b3c9ba880ca0b1f9e19c2545edf05b6ab62",
+          "path": "eval/media/fb7490339af5f51404294bc1.mp4",
+          "transformation": "social_720p_crf28",
+          "platform": "simulated_social",
+          "split": "holdout"
+        },
+        {
+          "id": "1000e2c3e802571860a127c6",
+          "parentId": "50e49097c645cbcdf1d1ded2",
+          "sha256": "68686747288db1ec34ef8771b0e6cebe9ee111d64c96622bb946e5b52fc6c464",
+          "path": "eval/media/1000e2c3e802571860a127c6.mp4",
+          "transformation": "repost_360p_crf36_12fps_crop",
+          "platform": "simulated_social",
+          "split": "holdout"
+        }
+      ]
+    },
+    {
+      "label": "ai",
+      "rankWithinLabel": 8,
+      "groupId": "genbuster:22e4d336a9954796f6903a726c4484a01cc9c57957ba00661180f15b5527a60e",
+      "selectionDigest": "1b956b4f1546f7100c23ed84feff14fc0bc5587eebeaa583996248d533b616bb",
+      "original": {
+        "id": "742610e2a546103d49cbfadd",
+        "sha256": "22e4d336a9954796f6903a726c4484a01cc9c57957ba00661180f15b5527a60e",
+        "path": "eval/media/742610e2a546103d49cbfadd.mp4",
+        "groupId": "genbuster:22e4d336a9954796f6903a726c4484a01cc9c57957ba00661180f15b5527a60e",
+        "split": "holdout",
+        "label": "ai",
+        "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+        "archiveMember": "GenBuster-Bench/wild/fake/wan2.6/22e4d336a9954796f6903a726c4484a01cc9c57957ba00661180f15b5527a60e.mp4",
+        "groundTruth": {
+          "basis": "dataset-author-label",
+          "evidenceUrl": "https://github.com/l8cv/BusterX",
+          "labelPath": "GenBuster-Bench/wild/fake/wan2.6/22e4d336a9954796f6903a726c4484a01cc9c57957ba00661180f15b5527a60e.mp4",
+          "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+        }
+      },
+      "derivatives": [
+        {
+          "id": "ccda81d511f4fd6d278ffd81",
+          "parentId": "742610e2a546103d49cbfadd",
+          "sha256": "6def1cc02432ea4d79c04d6a27d712c865af64037495026894c00d244a01c917",
+          "path": "eval/media/ccda81d511f4fd6d278ffd81.mp4",
+          "transformation": "social_720p_crf28",
+          "platform": "simulated_social",
+          "split": "holdout"
+        },
+        {
+          "id": "a4f42fec05c6ce01cbe6dff6",
+          "parentId": "742610e2a546103d49cbfadd",
+          "sha256": "f9f28ff044c8c8af377aeacace9f22a73df340099f4af13a406217360d06ce0f",
+          "path": "eval/media/a4f42fec05c6ce01cbe6dff6.mp4",
+          "transformation": "repost_360p_crf36_12fps_crop",
+          "platform": "simulated_social",
+          "split": "holdout"
+        }
+      ]
+    },
+    {
+      "label": "real",
+      "rankWithinLabel": 1,
+      "groupId": "genbuster:94ed1b5a1b18ca18f930fc549ed4dcc8f36102c25431e14ca4204288cba8e2cc",
+      "selectionDigest": "013123f300eb0aecacf3f632c07f34ef098a96321b5f5b7becc2f44af53caa1a",
+      "original": {
+        "id": "48c583eb5bedfceac8785a7d",
+        "sha256": "94ed1b5a1b18ca18f930fc549ed4dcc8f36102c25431e14ca4204288cba8e2cc",
+        "path": "eval/media/48c583eb5bedfceac8785a7d.mp4",
+        "groupId": "genbuster:94ed1b5a1b18ca18f930fc549ed4dcc8f36102c25431e14ca4204288cba8e2cc",
+        "split": "holdout",
+        "label": "real",
+        "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+        "archiveMember": "GenBuster-Bench/id/real/94ed1b5a1b18ca18f930fc549ed4dcc8f36102c25431e14ca4204288cba8e2cc.mp4",
+        "groundTruth": {
+          "basis": "dataset-author-label",
+          "evidenceUrl": "https://github.com/l8cv/BusterX",
+          "labelPath": "GenBuster-Bench/id/real/94ed1b5a1b18ca18f930fc549ed4dcc8f36102c25431e14ca4204288cba8e2cc.mp4",
+          "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+        }
+      },
+      "derivatives": [
+        {
+          "id": "d417995d4d377556a066b8d1",
+          "parentId": "48c583eb5bedfceac8785a7d",
+          "sha256": "ed7482e0bb85c8542315db4cda4d3e4fd8f46c09ad5c03c5a72f28a7b0e561a9",
+          "path": "eval/media/d417995d4d377556a066b8d1.mp4",
+          "transformation": "social_720p_crf28",
+          "platform": "simulated_social",
+          "split": "holdout"
+        },
+        {
+          "id": "1577092de2186a9457322ff3",
+          "parentId": "48c583eb5bedfceac8785a7d",
+          "sha256": "ce1cf0847efafdd93de08641592b916e2d32d1c2628b2f30bd7e27bed820b8f9",
+          "path": "eval/media/1577092de2186a9457322ff3.mp4",
+          "transformation": "repost_360p_crf36_12fps_crop",
+          "platform": "simulated_social",
+          "split": "holdout"
+        }
+      ]
+    },
+    {
+      "label": "real",
+      "rankWithinLabel": 2,
+      "groupId": "genbuster:3388f38ad7f3f4fc3cbd7c6e95858801c142a42dd8e2cafe9d4918768f1ca874",
+      "selectionDigest": "154460d18c727c4be517fbf3c57aeafb8f497cf24c6e46fa45ccae253eb764a0",
+      "original": {
+        "id": "8b4b0a11d44ea1d0205d7bb5",
+        "sha256": "3388f38ad7f3f4fc3cbd7c6e95858801c142a42dd8e2cafe9d4918768f1ca874",
+        "path": "eval/media/8b4b0a11d44ea1d0205d7bb5.mp4",
+        "groupId": "genbuster:3388f38ad7f3f4fc3cbd7c6e95858801c142a42dd8e2cafe9d4918768f1ca874",
+        "split": "holdout",
+        "label": "real",
+        "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+        "archiveMember": "GenBuster-Bench/id/real/3388f38ad7f3f4fc3cbd7c6e95858801c142a42dd8e2cafe9d4918768f1ca874.mp4",
+        "groundTruth": {
+          "basis": "dataset-author-label",
+          "evidenceUrl": "https://github.com/l8cv/BusterX",
+          "labelPath": "GenBuster-Bench/id/real/3388f38ad7f3f4fc3cbd7c6e95858801c142a42dd8e2cafe9d4918768f1ca874.mp4",
+          "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+        }
+      },
+      "derivatives": [
+        {
+          "id": "789831041328ae6b9816e448",
+          "parentId": "8b4b0a11d44ea1d0205d7bb5",
+          "sha256": "7674a5b0405c1167cadab04d2b8a1585f70ff97c49935e756dc67b2cc8658cfd",
+          "path": "eval/media/789831041328ae6b9816e448.mp4",
+          "transformation": "social_720p_crf28",
+          "platform": "simulated_social",
+          "split": "holdout"
+        },
+        {
+          "id": "24fc589585b137802a739a61",
+          "parentId": "8b4b0a11d44ea1d0205d7bb5",
+          "sha256": "0c8a6514bd6690316e3892f0b4504d6f624ff641243f7d16bdb118a400640896",
+          "path": "eval/media/24fc589585b137802a739a61.mp4",
+          "transformation": "repost_360p_crf36_12fps_crop",
+          "platform": "simulated_social",
+          "split": "holdout"
+        }
+      ]
+    },
+    {
+      "label": "real",
+      "rankWithinLabel": 3,
+      "groupId": "genbuster:c3533dbe343bd595667495f1be2deeb2f67b7a1fdf997dc598e51eece9cb9db8",
+      "selectionDigest": "1c21eaf3dc31a6b6a0a9a41420f3a5efb9f5945cf90946809b9461a8a39f609c",
+      "original": {
+        "id": "32d3f2110234f8a398d1a920",
+        "sha256": "c3533dbe343bd595667495f1be2deeb2f67b7a1fdf997dc598e51eece9cb9db8",
+        "path": "eval/media/32d3f2110234f8a398d1a920.mp4",
+        "groupId": "genbuster:c3533dbe343bd595667495f1be2deeb2f67b7a1fdf997dc598e51eece9cb9db8",
+        "split": "holdout",
+        "label": "real",
+        "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+        "archiveMember": "GenBuster-Bench/id/real/c3533dbe343bd595667495f1be2deeb2f67b7a1fdf997dc598e51eece9cb9db8.mp4",
+        "groundTruth": {
+          "basis": "dataset-author-label",
+          "evidenceUrl": "https://github.com/l8cv/BusterX",
+          "labelPath": "GenBuster-Bench/id/real/c3533dbe343bd595667495f1be2deeb2f67b7a1fdf997dc598e51eece9cb9db8.mp4",
+          "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+        }
+      },
+      "derivatives": [
+        {
+          "id": "afb5d373975b2dc5d6d8529f",
+          "parentId": "32d3f2110234f8a398d1a920",
+          "sha256": "75a326e344e15826d51ff27fe144ca980780956390467da0510bb1115b1bb70d",
+          "path": "eval/media/afb5d373975b2dc5d6d8529f.mp4",
+          "transformation": "social_720p_crf28",
+          "platform": "simulated_social",
+          "split": "holdout"
+        },
+        {
+          "id": "2b32f490fefcb0b2747ad30b",
+          "parentId": "32d3f2110234f8a398d1a920",
+          "sha256": "eecd130de8cb9fdd2a70d23aba9b7f57a891820e87e8771336a6d3a9f9359613",
+          "path": "eval/media/2b32f490fefcb0b2747ad30b.mp4",
+          "transformation": "repost_360p_crf36_12fps_crop",
+          "platform": "simulated_social",
+          "split": "holdout"
+        }
+      ]
+    },
+    {
+      "label": "real",
+      "rankWithinLabel": 4,
+      "groupId": "genbuster:7223c07684001cac03c97dd75185975c6639cebe264cdce2817298bc45398197",
+      "selectionDigest": "2ef051db25732535ad9e67469176ed1a84e9c3b34da2a3f73136cf5c8d9515de",
+      "original": {
+        "id": "0876ee5cc40b7f3906ce1986",
+        "sha256": "7223c07684001cac03c97dd75185975c6639cebe264cdce2817298bc45398197",
+        "path": "eval/media/0876ee5cc40b7f3906ce1986.mp4",
+        "groupId": "genbuster:7223c07684001cac03c97dd75185975c6639cebe264cdce2817298bc45398197",
+        "split": "holdout",
+        "label": "real",
+        "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+        "archiveMember": "GenBuster-Bench/id/real/7223c07684001cac03c97dd75185975c6639cebe264cdce2817298bc45398197.mp4",
+        "groundTruth": {
+          "basis": "dataset-author-label",
+          "evidenceUrl": "https://github.com/l8cv/BusterX",
+          "labelPath": "GenBuster-Bench/id/real/7223c07684001cac03c97dd75185975c6639cebe264cdce2817298bc45398197.mp4",
+          "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+        }
+      },
+      "derivatives": [
+        {
+          "id": "75d0854bc230dd8dc15499c8",
+          "parentId": "0876ee5cc40b7f3906ce1986",
+          "sha256": "7733b3c09962021562ed9fb624823dd1bd6fb377312ea91f69e103ffa6837cb0",
+          "path": "eval/media/75d0854bc230dd8dc15499c8.mp4",
+          "transformation": "social_720p_crf28",
+          "platform": "simulated_social",
+          "split": "holdout"
+        },
+        {
+          "id": "ac99a9ed65308e6ba87bf4fc",
+          "parentId": "0876ee5cc40b7f3906ce1986",
+          "sha256": "9e9e989de389a56881ca9e422c40dd6f636ef0396d9376c74b3bcbaa097e240a",
+          "path": "eval/media/ac99a9ed65308e6ba87bf4fc.mp4",
+          "transformation": "repost_360p_crf36_12fps_crop",
+          "platform": "simulated_social",
+          "split": "holdout"
+        }
+      ]
+    },
+    {
+      "label": "real",
+      "rankWithinLabel": 5,
+      "groupId": "genbuster:29671af3c279821833ad5f90781870488953e8467d44b28e806a57596905d0ee",
+      "selectionDigest": "30958272a9bc7fa58718377afbed9442fc9b909df006d2020b71f8411489565e",
+      "original": {
+        "id": "f68177620d510f7f9c98cc5d",
+        "sha256": "29671af3c279821833ad5f90781870488953e8467d44b28e806a57596905d0ee",
+        "path": "eval/media/f68177620d510f7f9c98cc5d.mp4",
+        "groupId": "genbuster:29671af3c279821833ad5f90781870488953e8467d44b28e806a57596905d0ee",
+        "split": "holdout",
+        "label": "real",
+        "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+        "archiveMember": "GenBuster-Bench/id/real/29671af3c279821833ad5f90781870488953e8467d44b28e806a57596905d0ee.mp4",
+        "groundTruth": {
+          "basis": "dataset-author-label",
+          "evidenceUrl": "https://github.com/l8cv/BusterX",
+          "labelPath": "GenBuster-Bench/id/real/29671af3c279821833ad5f90781870488953e8467d44b28e806a57596905d0ee.mp4",
+          "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+        }
+      },
+      "derivatives": [
+        {
+          "id": "5a3115afddbadc8efa9a3e5e",
+          "parentId": "f68177620d510f7f9c98cc5d",
+          "sha256": "e6b209251d2d18c347cc86695e0ef6394fa9266552b864ea4e92503a6d1ea2f2",
+          "path": "eval/media/5a3115afddbadc8efa9a3e5e.mp4",
+          "transformation": "social_720p_crf28",
+          "platform": "simulated_social",
+          "split": "holdout"
+        },
+        {
+          "id": "60587363bb9e3aa6f36aa746",
+          "parentId": "f68177620d510f7f9c98cc5d",
+          "sha256": "a87e69dac14e4ce88912949599fcbfe91d5b1be2fd60a0a491c7150b3eb3597d",
+          "path": "eval/media/60587363bb9e3aa6f36aa746.mp4",
+          "transformation": "repost_360p_crf36_12fps_crop",
+          "platform": "simulated_social",
+          "split": "holdout"
+        }
+      ]
+    },
+    {
+      "label": "real",
+      "rankWithinLabel": 6,
+      "groupId": "genbuster:23e3546d2c6809a6a0c6a9a85740bba9a957f6d45acf5b5fc408ef5dbea7d5b6",
+      "selectionDigest": "3fac9a86307ca3180fb54b80cbea2efb18fdeb01a75c810108455599e3d9c5f4",
+      "original": {
+        "id": "6ec9b7bd788a325da777c629",
+        "sha256": "23e3546d2c6809a6a0c6a9a85740bba9a957f6d45acf5b5fc408ef5dbea7d5b6",
+        "path": "eval/media/6ec9b7bd788a325da777c629.mp4",
+        "groupId": "genbuster:23e3546d2c6809a6a0c6a9a85740bba9a957f6d45acf5b5fc408ef5dbea7d5b6",
+        "split": "holdout",
+        "label": "real",
+        "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+        "archiveMember": "GenBuster-Bench/id/real/23e3546d2c6809a6a0c6a9a85740bba9a957f6d45acf5b5fc408ef5dbea7d5b6.mp4",
+        "groundTruth": {
+          "basis": "dataset-author-label",
+          "evidenceUrl": "https://github.com/l8cv/BusterX",
+          "labelPath": "GenBuster-Bench/id/real/23e3546d2c6809a6a0c6a9a85740bba9a957f6d45acf5b5fc408ef5dbea7d5b6.mp4",
+          "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+        }
+      },
+      "derivatives": [
+        {
+          "id": "67476702ea70dc8782213498",
+          "parentId": "6ec9b7bd788a325da777c629",
+          "sha256": "5b2f27908944415bf0e54f279db6508cad1dcb9ffe75923a2c309345e1f4e262",
+          "path": "eval/media/67476702ea70dc8782213498.mp4",
+          "transformation": "social_720p_crf28",
+          "platform": "simulated_social",
+          "split": "holdout"
+        },
+        {
+          "id": "a069a3542be51b8028485200",
+          "parentId": "6ec9b7bd788a325da777c629",
+          "sha256": "85ee08104de6f0f4d718b9cb8cb777f4662778eb43ad6d3c674448dbe9d9babc",
+          "path": "eval/media/a069a3542be51b8028485200.mp4",
+          "transformation": "repost_360p_crf36_12fps_crop",
+          "platform": "simulated_social",
+          "split": "holdout"
+        }
+      ]
+    },
+    {
+      "label": "real",
+      "rankWithinLabel": 7,
+      "groupId": "genbuster:74b35e9265b593483b484b1af8b8a0503f0cc6af4ca8b41f606214ea784475d4",
+      "selectionDigest": "3fb731c573313cfed8e83ac2d10d8b2751329899aa957a9a0f69a1ee9ad580e9",
+      "original": {
+        "id": "9fc29db32cdb49266b629f20",
+        "sha256": "74b35e9265b593483b484b1af8b8a0503f0cc6af4ca8b41f606214ea784475d4",
+        "path": "eval/media/9fc29db32cdb49266b629f20.mp4",
+        "groupId": "genbuster:74b35e9265b593483b484b1af8b8a0503f0cc6af4ca8b41f606214ea784475d4",
+        "split": "holdout",
+        "label": "real",
+        "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+        "archiveMember": "GenBuster-Bench/id/real/74b35e9265b593483b484b1af8b8a0503f0cc6af4ca8b41f606214ea784475d4.mp4",
+        "groundTruth": {
+          "basis": "dataset-author-label",
+          "evidenceUrl": "https://github.com/l8cv/BusterX",
+          "labelPath": "GenBuster-Bench/id/real/74b35e9265b593483b484b1af8b8a0503f0cc6af4ca8b41f606214ea784475d4.mp4",
+          "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+        }
+      },
+      "derivatives": [
+        {
+          "id": "8e577f8aea7a4c6833b70f86",
+          "parentId": "9fc29db32cdb49266b629f20",
+          "sha256": "545d17b9d6acac3c64748768e033dde9f1ae26a407c95080d42dabb4db1d6658",
+          "path": "eval/media/8e577f8aea7a4c6833b70f86.mp4",
+          "transformation": "social_720p_crf28",
+          "platform": "simulated_social",
+          "split": "holdout"
+        },
+        {
+          "id": "4546b7d153faf5aee336233c",
+          "parentId": "9fc29db32cdb49266b629f20",
+          "sha256": "53faac263beeaa5305aef228a32662da42ac9282f2c27e90f638470ef931c4d7",
+          "path": "eval/media/4546b7d153faf5aee336233c.mp4",
+          "transformation": "repost_360p_crf36_12fps_crop",
+          "platform": "simulated_social",
+          "split": "holdout"
+        }
+      ]
+    },
+    {
+      "label": "real",
+      "rankWithinLabel": 8,
+      "groupId": "genbuster:70564667434350fbfeb774306848d08fa1610278c3d4a981a35a15534e384833",
+      "selectionDigest": "4edc0e80240d154f4c06b4a2576d80b214febdd78f318d06e074609d43c7476d",
+      "original": {
+        "id": "d934cb4a46b407423ce981b0",
+        "sha256": "70564667434350fbfeb774306848d08fa1610278c3d4a981a35a15534e384833",
+        "path": "eval/media/d934cb4a46b407423ce981b0.mp4",
+        "groupId": "genbuster:70564667434350fbfeb774306848d08fa1610278c3d4a981a35a15534e384833",
+        "split": "holdout",
+        "label": "real",
+        "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+        "archiveMember": "GenBuster-Bench/id/real/70564667434350fbfeb774306848d08fa1610278c3d4a981a35a15534e384833.mp4",
+        "groundTruth": {
+          "basis": "dataset-author-label",
+          "evidenceUrl": "https://github.com/l8cv/BusterX",
+          "labelPath": "GenBuster-Bench/id/real/70564667434350fbfeb774306848d08fa1610278c3d4a981a35a15534e384833.mp4",
+          "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+        }
+      },
+      "derivatives": [
+        {
+          "id": "90e8d4d1fdcea49bd6fa9ac8",
+          "parentId": "d934cb4a46b407423ce981b0",
+          "sha256": "949905c3632148a3a7bb57760816851af15a31cc0a04575792d7cabb0791ac1a",
+          "path": "eval/media/90e8d4d1fdcea49bd6fa9ac8.mp4",
+          "transformation": "social_720p_crf28",
+          "platform": "simulated_social",
+          "split": "holdout"
+        },
+        {
+          "id": "6996b29ac526d53dacd36858",
+          "parentId": "d934cb4a46b407423ce981b0",
+          "sha256": "fa451dae34d7322f2426fb72ea514f3a898e7abc2505c8d725ec508f41baece5",
+          "path": "eval/media/6996b29ac526d53dacd36858.mp4",
+          "transformation": "repost_360p_crf36_12fps_crop",
+          "platform": "simulated_social",
+          "split": "holdout"
+        }
+      ]
+    }
+  ],
+  "reportingNotes": [
+    "Join original frozen outcomes only after selection and protocol are fixed, using pairing[].original.id.",
+    "Report mild/severe within-source verdict transitions, false negatives, false positives, abstentions and pass failures; count 16 independent source groups, not 32 independent source videos.",
+    "Severe recipe includes crop, frame-rate reduction and black top-bar overlay as well as compression; resulting differences cannot be attributed to compression alone.",
+    "Class balance is deliberate and does not estimate deployment prevalence. Labels remain dataset-author assertions."
+  ]
+}

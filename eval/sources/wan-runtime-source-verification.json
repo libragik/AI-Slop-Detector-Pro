@@ -1,0 +1,79 @@
+{
+  "status": "matched",
+  "forwardCalls": 0,
+  "weightsDownloaded": false,
+  "files": [
+    {
+      "path": "diffusers/pipelines/wan/pipeline_wan.py",
+      "officialUrl": "https://raw.githubusercontent.com/huggingface/diffusers/d035dcd7cc7c88e0a154609b62887d50bba9fdc2/src/diffusers/pipelines/wan/pipeline_wan.py",
+      "officialSha256": "2a5fcd905ad0fbcbd76240e02007e73ab3583f927da8b9fe0fbe5a4a54d792aa",
+      "installedSha256": "2a5fcd905ad0fbcbd76240e02007e73ab3583f927da8b9fe0fbe5a4a54d792aa",
+      "matches": true,
+      "bytes": 32040
+    },
+    {
+      "path": "diffusers/models/transformers/transformer_wan.py",
+      "officialUrl": "https://raw.githubusercontent.com/huggingface/diffusers/d035dcd7cc7c88e0a154609b62887d50bba9fdc2/src/diffusers/models/transformers/transformer_wan.py",
+      "officialSha256": "74741d74c9fa4b9d02be83de9840b37a732080a795aa2d19037c03e312c76907",
+      "installedSha256": "74741d74c9fa4b9d02be83de9840b37a732080a795aa2d19037c03e312c76907",
+      "matches": true,
+      "bytes": 31082
+    },
+    {
+      "path": "diffusers/models/autoencoders/autoencoder_kl_wan.py",
+      "officialUrl": "https://raw.githubusercontent.com/huggingface/diffusers/d035dcd7cc7c88e0a154609b62887d50bba9fdc2/src/diffusers/models/autoencoders/autoencoder_kl_wan.py",
+      "officialSha256": "a38de0c53adcb81887a0b48d44e3fb59737d7b1e4779a666febe83be666e8fa8",
+      "installedSha256": "a38de0c53adcb81887a0b48d44e3fb59737d7b1e4779a666febe83be666e8fa8",
+      "matches": true,
+      "bytes": 54261
+    },
+    {
+      "path": "diffusers/schedulers/scheduling_unipc_multistep.py",
+      "officialUrl": "https://raw.githubusercontent.com/huggingface/diffusers/d035dcd7cc7c88e0a154609b62887d50bba9fdc2/src/diffusers/schedulers/scheduling_unipc_multistep.py",
+      "officialSha256": "5bfe1dcf55ebea6dbbf624d3af676b2529b81fbcaf493150d562ec9e1aba3872",
+      "installedSha256": "5bfe1dcf55ebea6dbbf624d3af676b2529b81fbcaf493150d562ec9e1aba3872",
+      "matches": true,
+      "bytes": 56242
+    },
+    {
+      "path": "diffusers/models/modeling_utils.py",
+      "officialUrl": "https://raw.githubusercontent.com/huggingface/diffusers/d035dcd7cc7c88e0a154609b62887d50bba9fdc2/src/diffusers/models/modeling_utils.py",
+      "officialSha256": "7f0420803e8372da4b8d8608a72ca77252590d99cf8d0a080ca7873fbaf3f507",
+      "installedSha256": "7f0420803e8372da4b8d8608a72ca77252590d99cf8d0a080ca7873fbaf3f507",
+      "matches": true,
+      "bytes": 102332
+    },
+    {
+      "path": "transformers/models/umt5/modeling_umt5.py",
+      "officialUrl": "https://raw.githubusercontent.com/huggingface/transformers/v5.16.1/src/transformers/models/umt5/modeling_umt5.py",
+      "officialSha256": "1cff5353264f815d82f72102f33f58a936983e01b223f5cfd2b144f63d4660e8",
+      "installedSha256": "1cff5353264f815d82f72102f33f58a936983e01b223f5cfd2b144f63d4660e8",
+      "matches": true,
+      "bytes": 69277
+    },
+    {
+      "path": "transformers/models/t5/tokenization_t5.py",
+      "officialUrl": "https://raw.githubusercontent.com/huggingface/transformers/v5.16.1/src/transformers/models/t5/tokenization_t5.py",
+      "officialSha256": "6fa6696aa2bf6bf40bcd7c7aea81b5b581e365ada45c6d7768d53609174496d5",
+      "installedSha256": "6fa6696aa2bf6bf40bcd7c7aea81b5b581e365ada45c6d7768d53609174496d5",
+      "matches": true,
+      "bytes": 6540
+    },
+    {
+      "path": "transformers/tokenization_utils_tokenizers.py",
+      "officialUrl": "https://raw.githubusercontent.com/huggingface/transformers/v5.16.1/src/transformers/tokenization_utils_tokenizers.py",
+      "officialSha256": "bf921a160f483c7a32973952ed82a08c7d8982f769726bd220933aae2df98de8",
+      "installedSha256": "bf921a160f483c7a32973952ed82a08c7d8982f769726bd220933aae2df98de8",
+      "matches": true,
+      "bytes": 69842
+    },
+    {
+      "path": "transformers/modeling_utils.py",
+      "officialUrl": "https://raw.githubusercontent.com/huggingface/transformers/v5.16.1/src/transformers/modeling_utils.py",
+      "officialSha256": "f103dc66dd3f08e7842c3624c586b281250349e1c0707f394f98db992ec3cd8f",
+      "installedSha256": "f103dc66dd3f08e7842c3624c586b281250349e1c0707f394f98db992ec3cd8f",
+      "matches": true,
+      "bytes": 271832
+    }
+  ]
+}

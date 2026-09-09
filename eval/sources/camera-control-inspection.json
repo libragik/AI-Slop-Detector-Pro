@@ -1,0 +1,163 @@
+{
+  "purpose": "Visual/cadence/source inspection only; no experiment started",
+  "acquisitionReceiptSha256": "521e1d4474fbddfd947bb9e4502b0c0c7e5f943c3e68ba72f5f6ca603f7029ec",
+  "decodeReceiptPath": "eval/runs/camera-control-inspection/decode-inspection.json",
+  "decodeReceiptSha256": "0bf53b16a9d914ed30e0691ce3ba717a8cdba7d502301d43b3806444004fd894",
+  "networkRequests": 0,
+  "detectorCalls": 0,
+  "originalVideosModified": false,
+  "visualReviewCoverage": "Every integer playback second plus final frame; no full-motion playback or exhaustive per-frame semantic inspection",
+  "intervalConvention": "Half-open playback seconds; proposed excerpts selected from visual/source properties before any detector calls",
+  "records": [
+    {
+      "id": "nasa-iss-20110917",
+      "path": "eval/media/camera-origins/bdb30be02d028f903c820f44.mp4",
+      "sha256": "bdb30be02d028f903c820f4424eddf36036a504d90671ff4151e442940788960",
+      "bytes": 22735783,
+      "sourceUrl": "https://svs.gsfc.nasa.gov/vis/a030000/a030100/a030179/iss029_aurora_20110917_720p.mp4",
+      "durationSeconds": 45.766667,
+      "width": 1280,
+      "height": 720,
+      "fps": "30/1",
+      "frames": 1373,
+      "cadenceSeconds": {
+        "minimum": 0.03333299999999895,
+        "median": 0.03333300000000072,
+        "maximum": 0.03333400000000353,
+        "nonpositiveIntervals": 0
+      },
+      "nativeRgbUniqueFrames": 1369,
+      "adjacentExactDuplicates": 3,
+      "contactSheets": [
+        {
+          "path": "eval/runs/camera-control-inspection/nasa-iss-20110917/contact-1.png",
+          "sha256": "1e126bb8298680969348c20830cb8a9b88dcbb3b48f4b7efc0b2e0d42fbacb4d"
+        },
+        {
+          "path": "eval/runs/camera-control-inspection/nasa-iss-20110917/contact-2.png",
+          "sha256": "05429833be258ea5e21e016c512f707b7d6077a09f9fc5b68e98f3e29468f908"
+        }
+      ],
+      "cameraImageryIntervalsSeconds": [
+        [
+          0,
+          45.766667
+        ]
+      ],
+      "conservativeShortIntervalSeconds": [
+        1,
+        9
+      ],
+      "overlayFreeIntervalsSeconds": [
+        [
+          0,
+          45.766667
+        ]
+      ],
+      "observedOverlays": [],
+      "audio": "No audio stream",
+      "timeManipulation": "Explicit ISS still-photo timelapse; not real-time video",
+      "cuts": "No title slate, fade, or shot cut seen in fixed1second review; no exhaustive cut certification",
+      "sourceDate": "Primary NASA record:2011-09-17 17:22:27\u201317:37:21 GMT"
+    },
+    {
+      "id": "noaa-index-2010",
+      "path": "eval/media/camera-origins/32bdae2f731bf4190c796a6f.mp4",
+      "sha256": "32bdae2f731bf4190c796a6fbef6a6e9bed601b5ee3de1ca43739625b940c45a",
+      "bytes": 16432384,
+      "sourceUrl": "https://oceanexplorer.noaa.gov/wp-content/uploads/2021/02/10index-seacuke-swims.mp4",
+      "durationSeconds": 40.3403,
+      "width": 960,
+      "height": 540,
+      "fps": "30000/1001",
+      "frames": 1209,
+      "cadenceSeconds": {
+        "minimum": 0.03336599999999734,
+        "median": 0.03336699999999837,
+        "maximum": 0.033367000000005476,
+        "nonpositiveIntervals": 0
+      },
+      "nativeRgbUniqueFrames": 1192,
+      "adjacentExactDuplicates": 13,
+      "contactSheets": [
+        {
+          "path": "eval/runs/camera-control-inspection/noaa-index-2010/contact-1.png",
+          "sha256": "1158683151810d2e15a35eec199b63cf5f900d8e8869218b2045c6ae037da6b9"
+        },
+        {
+          "path": "eval/runs/camera-control-inspection/noaa-index-2010/contact-2.png",
+          "sha256": "b8645cf70f44132a412bd45240094b143c29abaa7c84e9860c0f7eba7c25ea61"
+        }
+      ],
+      "cameraImageryIntervalsSeconds": [
+        [
+          5,
+          35
+        ]
+      ],
+      "conservativeShortIntervalSeconds": [
+        20,
+        27
+      ],
+      "overlayFreeIntervalsSeconds": [
+        [
+          5,
+          35
+        ]
+      ],
+      "observedOverlays": [
+        "Species label visible about2\u20134s including fade",
+        "End slate visible about37\u201339s; black tail around40s"
+      ],
+      "audio": "Full native PCM float32 decode:3872768 scalar samples, every sample exactly0.0",
+      "timeManipulation": "Camera tracks/reframes/changes apparent magnification; actual acquisition rate and postproduction speed are not established",
+      "cuts": "Composition/scale changes around11\u201312s,18\u201319s,28\u201329s; cut versus camera operation not certified by sampled review. Do not treat5\u201335s as verified uninterrupted take.20\u201327s is a conservative stable-framing excerpt.",
+      "sourceDate": "Agency page identifies INDEX2010; observed end slate additionally labels July27,2010. Slate date is a source assertion, not independent capture-time proof."
+    },
+    {
+      "id": "usgs-mlk-20050502-original-agency-download",
+      "path": "eval/media/camera-origins/3760819946ae49f55d8e50ce.mp4",
+      "sha256": "3760819946ae49f55d8e50ce9535caedfac66c16e670ed1b1dc6fd7b14604043",
+      "bytes": 16199189,
+      "sourceUrl": "https://usgs-ocapsv2-public-input-media.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/video/multimediaFile-256.mp4",
+      "durationSeconds": 12.1,
+      "width": 1600,
+      "height": 1200,
+      "fps": "10/1",
+      "frames": 121,
+      "cadenceSeconds": {
+        "minimum": 0.09999999999999964,
+        "median": 0.09999999999999976,
+        "maximum": 0.10000000000000142,
+        "nonpositiveIntervals": 0
+      },
+      "nativeRgbUniqueFrames": 121,
+      "adjacentExactDuplicates": 0,
+      "contactSheets": [
+        {
+          "path": "eval/runs/camera-control-inspection/usgs-mlk-20050502-original-agency-download/contact-1.png",
+          "sha256": "178957b80d12060a558ebd7b967d7553902ee0218f754da3b23fefd09ee8f1f6"
+        }
+      ],
+      "cameraImageryIntervalsSeconds": [
+        [
+          0,
+          12.1
+        ]
+      ],
+      "conservativeShortIntervalSeconds": [
+        0,
+        8
+      ],
+      "overlayFreeIntervalsSeconds": [],
+      "observedOverlays": [
+        "Persistent top-left capture date/time",
+        "Persistent bottom-left USGS mark"
+      ],
+      "audio": "No audio stream",
+      "timeManipulation": "Primary record:1photograph/minute, playback10fps, about600x real-time acceleration;121native frames",
+      "cuts": "Fixed camera view throughout contact-sheet review; abrupt steam/lighting changes reflect separated captures, not smooth continuous real-time motion",
+      "sourceDate": "Primary USGS record2005-05-02 05:30:04\u201307:30:02; sampled embedded timestamps agree"
+    }
+  ]
+}

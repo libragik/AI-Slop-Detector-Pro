@@ -1,0 +1,1602 @@
+{
+  "schemaVersion": 1,
+  "frozen": true,
+  "createdAt": "2026-09-05T03:12:33.974275+00:00",
+  "study": "fresh-origin-shot-study",
+  "parentGroupCount": 9,
+  "connectedAncestryGroups": 1,
+  "groupingNote": "Every edit retains all parents. Do not treat the 105 files or nine parents as independent statistical observations.",
+  "parents": {
+    "NASA": {
+      "path": "eval/media/camera-origins/bdb30be02d028f903c820f44.mp4",
+      "sha256": "bdb30be02d028f903c820f4424eddf36036a504d90671ff4151e442940788960",
+      "originReceiptPath": "eval/sources/camera-origin-acquisition.json",
+      "originReceiptSha256": "521e1d4474fbddfd947bb9e4502b0c0c7e5f943c3e68ba72f5f6ca603f7029ec",
+      "label": "camera",
+      "trimStartSeconds": 1,
+      "trimDurationSeconds": 5,
+      "timelapse": true,
+      "pristineMaster": false
+    },
+    "NOAA": {
+      "path": "eval/media/camera-origins/32bdae2f731bf4190c796a6f.mp4",
+      "sha256": "32bdae2f731bf4190c796a6fbef6a6e9bed601b5ee3de1ca43739625b940c45a",
+      "originReceiptPath": "eval/sources/camera-origin-acquisition.json",
+      "originReceiptSha256": "521e1d4474fbddfd947bb9e4502b0c0c7e5f943c3e68ba72f5f6ca603f7029ec",
+      "label": "camera",
+      "trimStartSeconds": 20,
+      "trimDurationSeconds": 5,
+      "timelapse": false,
+      "pristineMaster": false
+    },
+    "USGS": {
+      "path": "eval/media/camera-origins/3760819946ae49f55d8e50ce.mp4",
+      "sha256": "3760819946ae49f55d8e50ce9535caedfac66c16e670ed1b1dc6fd7b14604043",
+      "originReceiptPath": "eval/sources/camera-origin-acquisition.json",
+      "originReceiptSha256": "521e1d4474fbddfd947bb9e4502b0c0c7e5f943c3e68ba72f5f6ca603f7029ec",
+      "label": "camera",
+      "trimStartSeconds": 0,
+      "trimDurationSeconds": 5,
+      "timelapse": true,
+      "pristineMaster": false
+    },
+    "pendulum": {
+      "path": "eval/media/fresh-cgi/attempt-01/pendulum-v1/parent.mp4",
+      "sha256": "5be143d5551c4434f800610e337285901c83f71f6cd5814251c95db4ba9ac7e6",
+      "originReceiptPath": "eval/sources/fresh-cgi-render-receipt.json",
+      "originReceiptSha256": "5b50f4ad0edb53d80d95c1fe57109430b8a2c76390751c3ddc50fc50a42394fc",
+      "label": "cgi",
+      "trimStartSeconds": 0,
+      "trimDurationSeconds": 5,
+      "assistantAuthoredSceneCode": true,
+      "generativePixelModel": false,
+      "timelapse": false
+    },
+    "rolling": {
+      "path": "eval/media/fresh-cgi/attempt-01/rolling-track-v1/parent.mp4",
+      "sha256": "81a4c33980160d1f67d7e3670fc5e9e73aa0b359be6662c5bb21ab61dee35a32",
+      "originReceiptPath": "eval/sources/fresh-cgi-render-receipt.json",
+      "originReceiptSha256": "5b50f4ad0edb53d80d95c1fe57109430b8a2c76390751c3ddc50fc50a42394fc",
+      "label": "cgi",
+      "trimStartSeconds": 0,
+      "trimDurationSeconds": 5,
+      "assistantAuthoredSceneCode": true,
+      "generativePixelModel": false,
+      "timelapse": false
+    },
+    "V1": {
+      "generationSlot": "V1",
+      "label": "ai",
+      "trimStartSeconds": 0,
+      "trimDurationSeconds": 5,
+      "mustMatchFrozenGenerationPlan": true
+    },
+    "V2": {
+      "generationSlot": "V2",
+      "label": "ai",
+      "trimStartSeconds": 0,
+      "trimDurationSeconds": 5,
+      "mustMatchFrozenGenerationPlan": true
+    },
+    "W1": {
+      "generationSlot": "W1",
+      "label": "ai",
+      "trimStartSeconds": 0,
+      "trimDurationSeconds": 5,
+      "mustMatchFrozenGenerationPlan": true
+    },
+    "W2": {
+      "generationSlot": "W2",
+      "label": "ai",
+      "trimStartSeconds": 0,
+      "trimDurationSeconds": 5,
+      "mustMatchFrozenGenerationPlan": true
+    }
+  },
+  "stages": {
+    "negative-45": {
+      "caseIds": [
+        "NASA/base/master",
+        "NASA/base/mild",
+        "NASA/base/severe",
+        "NASA/hardcut/master",
+        "NASA/hardcut/mild",
+        "NASA/hardcut/severe",
+        "NASA/blend/master",
+        "NASA/blend/mild",
+        "NASA/blend/severe",
+        "NOAA/base/master",
+        "NOAA/base/mild",
+        "NOAA/base/severe",
+        "NOAA/hardcut/master",
+        "NOAA/hardcut/mild",
+        "NOAA/hardcut/severe",
+        "NOAA/blend/master",
+        "NOAA/blend/mild",
+        "NOAA/blend/severe",
+        "USGS/base/master",
+        "USGS/base/mild",
+        "USGS/base/severe",
+        "USGS/hardcut/master",
+        "USGS/hardcut/mild",
+        "USGS/hardcut/severe",
+        "USGS/blend/master",
+        "USGS/blend/mild",
+        "USGS/blend/severe",
+        "pendulum/base/master",
+        "pendulum/base/mild",
+        "pendulum/base/severe",
+        "pendulum/hardcut/master",
+        "pendulum/hardcut/mild",
+        "pendulum/hardcut/severe",
+        "pendulum/blend/master",
+        "pendulum/blend/mild",
+        "pendulum/blend/severe",
+        "rolling/base/master",
+        "rolling/base/mild",
+        "rolling/base/severe",
+        "rolling/hardcut/master",
+        "rolling/hardcut/mild",
+        "rolling/hardcut/severe",
+        "rolling/blend/master",
+        "rolling/blend/mild",
+        "rolling/blend/severe"
+      ]
+    },
+    "veo-30": {
+      "caseIds": [
+        "V1/whole/master",
+        "V1/whole/mild",
+        "V1/whole/severe",
+        "V1/NASA/hardcut/master",
+        "V1/NASA/hardcut/mild",
+        "V1/NASA/hardcut/severe",
+        "V1/NASA/blend/master",
+        "V1/NASA/blend/mild",
+        "V1/NASA/blend/severe",
+        "V1/pendulum/hardcut/master",
+        "V1/pendulum/hardcut/mild",
+        "V1/pendulum/hardcut/severe",
+        "V1/pendulum/blend/master",
+        "V1/pendulum/blend/mild",
+        "V1/pendulum/blend/severe",
+        "V2/whole/master",
+        "V2/whole/mild",
+        "V2/whole/severe",
+        "V2/NOAA/hardcut/master",
+        "V2/NOAA/hardcut/mild",
+        "V2/NOAA/hardcut/severe",
+        "V2/NOAA/blend/master",
+        "V2/NOAA/blend/mild",
+        "V2/NOAA/blend/severe",
+        "V2/rolling/hardcut/master",
+        "V2/rolling/hardcut/mild",
+        "V2/rolling/hardcut/severe",
+        "V2/rolling/blend/master",
+        "V2/rolling/blend/mild",
+        "V2/rolling/blend/severe"
+      ]
+    },
+    "wan-30": {
+      "caseIds": [
+        "W1/whole/master",
+        "W1/whole/mild",
+        "W1/whole/severe",
+        "W1/NASA/hardcut/master",
+        "W1/NASA/hardcut/mild",
+        "W1/NASA/hardcut/severe",
+        "W1/NASA/blend/master",
+        "W1/NASA/blend/mild",
+        "W1/NASA/blend/severe",
+        "W1/rolling/hardcut/master",
+        "W1/rolling/hardcut/mild",
+        "W1/rolling/hardcut/severe",
+        "W1/rolling/blend/master",
+        "W1/rolling/blend/mild",
+        "W1/rolling/blend/severe",
+        "W2/whole/master",
+        "W2/whole/mild",
+        "W2/whole/severe",
+        "W2/NOAA/hardcut/master",
+        "W2/NOAA/hardcut/mild",
+        "W2/NOAA/hardcut/severe",
+        "W2/NOAA/blend/master",
+        "W2/NOAA/blend/mild",
+        "W2/NOAA/blend/severe",
+        "W2/pendulum/hardcut/master",
+        "W2/pendulum/hardcut/mild",
+        "W2/pendulum/hardcut/severe",
+        "W2/pendulum/blend/master",
+        "W2/pendulum/blend/mild",
+        "W2/pendulum/blend/severe"
+      ]
+    }
+  },
+  "cases": {
+    "NASA/base/master": {
+      "label": "camera",
+      "parentId": "NASA",
+      "hostId": "NASA",
+      "donorId": null,
+      "composition": "base",
+      "quality": "master",
+      "stage": "negative-45",
+      "ancestors": [
+        "NASA"
+      ]
+    },
+    "NASA/base/mild": {
+      "label": "camera",
+      "parentId": "NASA",
+      "hostId": "NASA",
+      "donorId": null,
+      "composition": "base",
+      "quality": "mild",
+      "stage": "negative-45",
+      "ancestors": [
+        "NASA"
+      ]
+    },
+    "NASA/base/severe": {
+      "label": "camera",
+      "parentId": "NASA",
+      "hostId": "NASA",
+      "donorId": null,
+      "composition": "base",
+      "quality": "severe",
+      "stage": "negative-45",
+      "ancestors": [
+        "NASA"
+      ]
+    },
+    "NASA/hardcut/master": {
+      "label": "nongenerative_mixed",
+      "parentId": "NASA",
+      "hostId": "NASA",
+      "donorId": "NOAA",
+      "composition": "hardcut",
+      "quality": "master",
+      "stage": "negative-45",
+      "ancestors": [
+        "NASA",
+        "NOAA"
+      ]
+    },
+    "NASA/hardcut/mild": {
+      "label": "nongenerative_mixed",
+      "parentId": "NASA",
+      "hostId": "NASA",
+      "donorId": "NOAA",
+      "composition": "hardcut",
+      "quality": "mild",
+      "stage": "negative-45",
+      "ancestors": [
+        "NASA",
+        "NOAA"
+      ]
+    },
+    "NASA/hardcut/severe": {
+      "label": "nongenerative_mixed",
+      "parentId": "NASA",
+      "hostId": "NASA",
+      "donorId": "NOAA",
+      "composition": "hardcut",
+      "quality": "severe",
+      "stage": "negative-45",
+      "ancestors": [
+        "NASA",
+        "NOAA"
+      ]
+    },
+    "NASA/blend/master": {
+      "label": "nongenerative_mixed",
+      "parentId": "NASA",
+      "hostId": "NASA",
+      "donorId": "NOAA",
+      "composition": "blend",
+      "quality": "master",
+      "stage": "negative-45",
+      "ancestors": [
+        "NASA",
+        "NOAA"
+      ]
+    },
+    "NASA/blend/mild": {
+      "label": "nongenerative_mixed",
+      "parentId": "NASA",
+      "hostId": "NASA",
+      "donorId": "NOAA",
+      "composition": "blend",
+      "quality": "mild",
+      "stage": "negative-45",
+      "ancestors": [
+        "NASA",
+        "NOAA"
+      ]
+    },
+    "NASA/blend/severe": {
+      "label": "nongenerative_mixed",
+      "parentId": "NASA",
+      "hostId": "NASA",
+      "donorId": "NOAA",
+      "composition": "blend",
+      "quality": "severe",
+      "stage": "negative-45",
+      "ancestors": [
+        "NASA",
+        "NOAA"
+      ]
+    },
+    "NOAA/base/master": {
+      "label": "camera",
+      "parentId": "NOAA",
+      "hostId": "NOAA",
+      "donorId": null,
+      "composition": "base",
+      "quality": "master",
+      "stage": "negative-45",
+      "ancestors": [
+        "NOAA"
+      ]
+    },
+    "NOAA/base/mild": {
+      "label": "camera",
+      "parentId": "NOAA",
+      "hostId": "NOAA",
+      "donorId": null,
+      "composition": "base",
+      "quality": "mild",
+      "stage": "negative-45",
+      "ancestors": [
+        "NOAA"
+      ]
+    },
+    "NOAA/base/severe": {
+      "label": "camera",
+      "parentId": "NOAA",
+      "hostId": "NOAA",
+      "donorId": null,
+      "composition": "base",
+      "quality": "severe",
+      "stage": "negative-45",
+      "ancestors": [
+        "NOAA"
+      ]
+    },
+    "NOAA/hardcut/master": {
+      "label": "nongenerative_mixed",
+      "parentId": "NOAA",
+      "hostId": "NOAA",
+      "donorId": "USGS",
+      "composition": "hardcut",
+      "quality": "master",
+      "stage": "negative-45",
+      "ancestors": [
+        "NOAA",
+        "USGS"
+      ]
+    },
+    "NOAA/hardcut/mild": {
+      "label": "nongenerative_mixed",
+      "parentId": "NOAA",
+      "hostId": "NOAA",
+      "donorId": "USGS",
+      "composition": "hardcut",
+      "quality": "mild",
+      "stage": "negative-45",
+      "ancestors": [
+        "NOAA",
+        "USGS"
+      ]
+    },
+    "NOAA/hardcut/severe": {
+      "label": "nongenerative_mixed",
+      "parentId": "NOAA",
+      "hostId": "NOAA",
+      "donorId": "USGS",
+      "composition": "hardcut",
+      "quality": "severe",
+      "stage": "negative-45",
+      "ancestors": [
+        "NOAA",
+        "USGS"
+      ]
+    },
+    "NOAA/blend/master": {
+      "label": "nongenerative_mixed",
+      "parentId": "NOAA",
+      "hostId": "NOAA",
+      "donorId": "USGS",
+      "composition": "blend",
+      "quality": "master",
+      "stage": "negative-45",
+      "ancestors": [
+        "NOAA",
+        "USGS"
+      ]
+    },
+    "NOAA/blend/mild": {
+      "label": "nongenerative_mixed",
+      "parentId": "NOAA",
+      "hostId": "NOAA",
+      "donorId": "USGS",
+      "composition": "blend",
+      "quality": "mild",
+      "stage": "negative-45",
+      "ancestors": [
+        "NOAA",
+        "USGS"
+      ]
+    },
+    "NOAA/blend/severe": {
+      "label": "nongenerative_mixed",
+      "parentId": "NOAA",
+      "hostId": "NOAA",
+      "donorId": "USGS",
+      "composition": "blend",
+      "quality": "severe",
+      "stage": "negative-45",
+      "ancestors": [
+        "NOAA",
+        "USGS"
+      ]
+    },
+    "USGS/base/master": {
+      "label": "camera",
+      "parentId": "USGS",
+      "hostId": "USGS",
+      "donorId": null,
+      "composition": "base",
+      "quality": "master",
+      "stage": "negative-45",
+      "ancestors": [
+        "USGS"
+      ]
+    },
+    "USGS/base/mild": {
+      "label": "camera",
+      "parentId": "USGS",
+      "hostId": "USGS",
+      "donorId": null,
+      "composition": "base",
+      "quality": "mild",
+      "stage": "negative-45",
+      "ancestors": [
+        "USGS"
+      ]
+    },
+    "USGS/base/severe": {
+      "label": "camera",
+      "parentId": "USGS",
+      "hostId": "USGS",
+      "donorId": null,
+      "composition": "base",
+      "quality": "severe",
+      "stage": "negative-45",
+      "ancestors": [
+        "USGS"
+      ]
+    },
+    "USGS/hardcut/master": {
+      "label": "nongenerative_mixed",
+      "parentId": "USGS",
+      "hostId": "USGS",
+      "donorId": "pendulum",
+      "composition": "hardcut",
+      "quality": "master",
+      "stage": "negative-45",
+      "ancestors": [
+        "USGS",
+        "pendulum"
+      ]
+    },
+    "USGS/hardcut/mild": {
+      "label": "nongenerative_mixed",
+      "parentId": "USGS",
+      "hostId": "USGS",
+      "donorId": "pendulum",
+      "composition": "hardcut",
+      "quality": "mild",
+      "stage": "negative-45",
+      "ancestors": [
+        "USGS",
+        "pendulum"
+      ]
+    },
+    "USGS/hardcut/severe": {
+      "label": "nongenerative_mixed",
+      "parentId": "USGS",
+      "hostId": "USGS",
+      "donorId": "pendulum",
+      "composition": "hardcut",
+      "quality": "severe",
+      "stage": "negative-45",
+      "ancestors": [
+        "USGS",
+        "pendulum"
+      ]
+    },
+    "USGS/blend/master": {
+      "label": "nongenerative_mixed",
+      "parentId": "USGS",
+      "hostId": "USGS",
+      "donorId": "pendulum",
+      "composition": "blend",
+      "quality": "master",
+      "stage": "negative-45",
+      "ancestors": [
+        "USGS",
+        "pendulum"
+      ]
+    },
+    "USGS/blend/mild": {
+      "label": "nongenerative_mixed",
+      "parentId": "USGS",
+      "hostId": "USGS",
+      "donorId": "pendulum",
+      "composition": "blend",
+      "quality": "mild",
+      "stage": "negative-45",
+      "ancestors": [
+        "USGS",
+        "pendulum"
+      ]
+    },
+    "USGS/blend/severe": {
+      "label": "nongenerative_mixed",
+      "parentId": "USGS",
+      "hostId": "USGS",
+      "donorId": "pendulum",
+      "composition": "blend",
+      "quality": "severe",
+      "stage": "negative-45",
+      "ancestors": [
+        "USGS",
+        "pendulum"
+      ]
+    },
+    "pendulum/base/master": {
+      "label": "cgi",
+      "parentId": "pendulum",
+      "hostId": "pendulum",
+      "donorId": null,
+      "composition": "base",
+      "quality": "master",
+      "stage": "negative-45",
+      "ancestors": [
+        "pendulum"
+      ]
+    },
+    "pendulum/base/mild": {
+      "label": "cgi",
+      "parentId": "pendulum",
+      "hostId": "pendulum",
+      "donorId": null,
+      "composition": "base",
+      "quality": "mild",
+      "stage": "negative-45",
+      "ancestors": [
+        "pendulum"
+      ]
+    },
+    "pendulum/base/severe": {
+      "label": "cgi",
+      "parentId": "pendulum",
+      "hostId": "pendulum",
+      "donorId": null,
+      "composition": "base",
+      "quality": "severe",
+      "stage": "negative-45",
+      "ancestors": [
+        "pendulum"
+      ]
+    },
+    "pendulum/hardcut/master": {
+      "label": "nongenerative_mixed",
+      "parentId": "pendulum",
+      "hostId": "pendulum",
+      "donorId": "rolling",
+      "composition": "hardcut",
+      "quality": "master",
+      "stage": "negative-45",
+      "ancestors": [
+        "pendulum",
+        "rolling"
+      ]
+    },
+    "pendulum/hardcut/mild": {
+      "label": "nongenerative_mixed",
+      "parentId": "pendulum",
+      "hostId": "pendulum",
+      "donorId": "rolling",
+      "composition": "hardcut",
+      "quality": "mild",
+      "stage": "negative-45",
+      "ancestors": [
+        "pendulum",
+        "rolling"
+      ]
+    },
+    "pendulum/hardcut/severe": {
+      "label": "nongenerative_mixed",
+      "parentId": "pendulum",
+      "hostId": "pendulum",
+      "donorId": "rolling",
+      "composition": "hardcut",
+      "quality": "severe",
+      "stage": "negative-45",
+      "ancestors": [
+        "pendulum",
+        "rolling"
+      ]
+    },
+    "pendulum/blend/master": {
+      "label": "nongenerative_mixed",
+      "parentId": "pendulum",
+      "hostId": "pendulum",
+      "donorId": "rolling",
+      "composition": "blend",
+      "quality": "master",
+      "stage": "negative-45",
+      "ancestors": [
+        "pendulum",
+        "rolling"
+      ]
+    },
+    "pendulum/blend/mild": {
+      "label": "nongenerative_mixed",
+      "parentId": "pendulum",
+      "hostId": "pendulum",
+      "donorId": "rolling",
+      "composition": "blend",
+      "quality": "mild",
+      "stage": "negative-45",
+      "ancestors": [
+        "pendulum",
+        "rolling"
+      ]
+    },
+    "pendulum/blend/severe": {
+      "label": "nongenerative_mixed",
+      "parentId": "pendulum",
+      "hostId": "pendulum",
+      "donorId": "rolling",
+      "composition": "blend",
+      "quality": "severe",
+      "stage": "negative-45",
+      "ancestors": [
+        "pendulum",
+        "rolling"
+      ]
+    },
+    "rolling/base/master": {
+      "label": "cgi",
+      "parentId": "rolling",
+      "hostId": "rolling",
+      "donorId": null,
+      "composition": "base",
+      "quality": "master",
+      "stage": "negative-45",
+      "ancestors": [
+        "rolling"
+      ]
+    },
+    "rolling/base/mild": {
+      "label": "cgi",
+      "parentId": "rolling",
+      "hostId": "rolling",
+      "donorId": null,
+      "composition": "base",
+      "quality": "mild",
+      "stage": "negative-45",
+      "ancestors": [
+        "rolling"
+      ]
+    },
+    "rolling/base/severe": {
+      "label": "cgi",
+      "parentId": "rolling",
+      "hostId": "rolling",
+      "donorId": null,
+      "composition": "base",
+      "quality": "severe",
+      "stage": "negative-45",
+      "ancestors": [
+        "rolling"
+      ]
+    },
+    "rolling/hardcut/master": {
+      "label": "nongenerative_mixed",
+      "parentId": "rolling",
+      "hostId": "rolling",
+      "donorId": "NASA",
+      "composition": "hardcut",
+      "quality": "master",
+      "stage": "negative-45",
+      "ancestors": [
+        "NASA",
+        "rolling"
+      ]
+    },
+    "rolling/hardcut/mild": {
+      "label": "nongenerative_mixed",
+      "parentId": "rolling",
+      "hostId": "rolling",
+      "donorId": "NASA",
+      "composition": "hardcut",
+      "quality": "mild",
+      "stage": "negative-45",
+      "ancestors": [
+        "NASA",
+        "rolling"
+      ]
+    },
+    "rolling/hardcut/severe": {
+      "label": "nongenerative_mixed",
+      "parentId": "rolling",
+      "hostId": "rolling",
+      "donorId": "NASA",
+      "composition": "hardcut",
+      "quality": "severe",
+      "stage": "negative-45",
+      "ancestors": [
+        "NASA",
+        "rolling"
+      ]
+    },
+    "rolling/blend/master": {
+      "label": "nongenerative_mixed",
+      "parentId": "rolling",
+      "hostId": "rolling",
+      "donorId": "NASA",
+      "composition": "blend",
+      "quality": "master",
+      "stage": "negative-45",
+      "ancestors": [
+        "NASA",
+        "rolling"
+      ]
+    },
+    "rolling/blend/mild": {
+      "label": "nongenerative_mixed",
+      "parentId": "rolling",
+      "hostId": "rolling",
+      "donorId": "NASA",
+      "composition": "blend",
+      "quality": "mild",
+      "stage": "negative-45",
+      "ancestors": [
+        "NASA",
+        "rolling"
+      ]
+    },
+    "rolling/blend/severe": {
+      "label": "nongenerative_mixed",
+      "parentId": "rolling",
+      "hostId": "rolling",
+      "donorId": "NASA",
+      "composition": "blend",
+      "quality": "severe",
+      "stage": "negative-45",
+      "ancestors": [
+        "NASA",
+        "rolling"
+      ]
+    },
+    "V1/whole/master": {
+      "label": "ai",
+      "parentId": "V1",
+      "hostId": "V1",
+      "donorId": null,
+      "composition": "base",
+      "quality": "master",
+      "stage": "veo-30",
+      "ancestors": [
+        "V1"
+      ]
+    },
+    "V1/whole/mild": {
+      "label": "ai",
+      "parentId": "V1",
+      "hostId": "V1",
+      "donorId": null,
+      "composition": "base",
+      "quality": "mild",
+      "stage": "veo-30",
+      "ancestors": [
+        "V1"
+      ]
+    },
+    "V1/whole/severe": {
+      "label": "ai",
+      "parentId": "V1",
+      "hostId": "V1",
+      "donorId": null,
+      "composition": "base",
+      "quality": "severe",
+      "stage": "veo-30",
+      "ancestors": [
+        "V1"
+      ]
+    },
+    "V1/NASA/hardcut/master": {
+      "label": "mixed",
+      "parentId": "V1",
+      "hostId": "NASA",
+      "donorId": "V1",
+      "composition": "hardcut",
+      "quality": "master",
+      "stage": "veo-30",
+      "ancestors": [
+        "NASA",
+        "V1"
+      ]
+    },
+    "V1/NASA/hardcut/mild": {
+      "label": "mixed",
+      "parentId": "V1",
+      "hostId": "NASA",
+      "donorId": "V1",
+      "composition": "hardcut",
+      "quality": "mild",
+      "stage": "veo-30",
+      "ancestors": [
+        "NASA",
+        "V1"
+      ]
+    },
+    "V1/NASA/hardcut/severe": {
+      "label": "mixed",
+      "parentId": "V1",
+      "hostId": "NASA",
+      "donorId": "V1",
+      "composition": "hardcut",
+      "quality": "severe",
+      "stage": "veo-30",
+      "ancestors": [
+        "NASA",
+        "V1"
+      ]
+    },
+    "V1/NASA/blend/master": {
+      "label": "mixed",
+      "parentId": "V1",
+      "hostId": "NASA",
+      "donorId": "V1",
+      "composition": "blend",
+      "quality": "master",
+      "stage": "veo-30",
+      "ancestors": [
+        "NASA",
+        "V1"
+      ]
+    },
+    "V1/NASA/blend/mild": {
+      "label": "mixed",
+      "parentId": "V1",
+      "hostId": "NASA",
+      "donorId": "V1",
+      "composition": "blend",
+      "quality": "mild",
+      "stage": "veo-30",
+      "ancestors": [
+        "NASA",
+        "V1"
+      ]
+    },
+    "V1/NASA/blend/severe": {
+      "label": "mixed",
+      "parentId": "V1",
+      "hostId": "NASA",
+      "donorId": "V1",
+      "composition": "blend",
+      "quality": "severe",
+      "stage": "veo-30",
+      "ancestors": [
+        "NASA",
+        "V1"
+      ]
+    },
+    "V1/pendulum/hardcut/master": {
+      "label": "mixed",
+      "parentId": "V1",
+      "hostId": "pendulum",
+      "donorId": "V1",
+      "composition": "hardcut",
+      "quality": "master",
+      "stage": "veo-30",
+      "ancestors": [
+        "V1",
+        "pendulum"
+      ]
+    },
+    "V1/pendulum/hardcut/mild": {
+      "label": "mixed",
+      "parentId": "V1",
+      "hostId": "pendulum",
+      "donorId": "V1",
+      "composition": "hardcut",
+      "quality": "mild",
+      "stage": "veo-30",
+      "ancestors": [
+        "V1",
+        "pendulum"
+      ]
+    },
+    "V1/pendulum/hardcut/severe": {
+      "label": "mixed",
+      "parentId": "V1",
+      "hostId": "pendulum",
+      "donorId": "V1",
+      "composition": "hardcut",
+      "quality": "severe",
+      "stage": "veo-30",
+      "ancestors": [
+        "V1",
+        "pendulum"
+      ]
+    },
+    "V1/pendulum/blend/master": {
+      "label": "mixed",
+      "parentId": "V1",
+      "hostId": "pendulum",
+      "donorId": "V1",
+      "composition": "blend",
+      "quality": "master",
+      "stage": "veo-30",
+      "ancestors": [
+        "V1",
+        "pendulum"
+      ]
+    },
+    "V1/pendulum/blend/mild": {
+      "label": "mixed",
+      "parentId": "V1",
+      "hostId": "pendulum",
+      "donorId": "V1",
+      "composition": "blend",
+      "quality": "mild",
+      "stage": "veo-30",
+      "ancestors": [
+        "V1",
+        "pendulum"
+      ]
+    },
+    "V1/pendulum/blend/severe": {
+      "label": "mixed",
+      "parentId": "V1",
+      "hostId": "pendulum",
+      "donorId": "V1",
+      "composition": "blend",
+      "quality": "severe",
+      "stage": "veo-30",
+      "ancestors": [
+        "V1",
+        "pendulum"
+      ]
+    },
+    "V2/whole/master": {
+      "label": "ai",
+      "parentId": "V2",
+      "hostId": "V2",
+      "donorId": null,
+      "composition": "base",
+      "quality": "master",
+      "stage": "veo-30",
+      "ancestors": [
+        "V2"
+      ]
+    },
+    "V2/whole/mild": {
+      "label": "ai",
+      "parentId": "V2",
+      "hostId": "V2",
+      "donorId": null,
+      "composition": "base",
+      "quality": "mild",
+      "stage": "veo-30",
+      "ancestors": [
+        "V2"
+      ]
+    },
+    "V2/whole/severe": {
+      "label": "ai",
+      "parentId": "V2",
+      "hostId": "V2",
+      "donorId": null,
+      "composition": "base",
+      "quality": "severe",
+      "stage": "veo-30",
+      "ancestors": [
+        "V2"
+      ]
+    },
+    "V2/NOAA/hardcut/master": {
+      "label": "mixed",
+      "parentId": "V2",
+      "hostId": "NOAA",
+      "donorId": "V2",
+      "composition": "hardcut",
+      "quality": "master",
+      "stage": "veo-30",
+      "ancestors": [
+        "NOAA",
+        "V2"
+      ]
+    },
+    "V2/NOAA/hardcut/mild": {
+      "label": "mixed",
+      "parentId": "V2",
+      "hostId": "NOAA",
+      "donorId": "V2",
+      "composition": "hardcut",
+      "quality": "mild",
+      "stage": "veo-30",
+      "ancestors": [
+        "NOAA",
+        "V2"
+      ]
+    },
+    "V2/NOAA/hardcut/severe": {
+      "label": "mixed",
+      "parentId": "V2",
+      "hostId": "NOAA",
+      "donorId": "V2",
+      "composition": "hardcut",
+      "quality": "severe",
+      "stage": "veo-30",
+      "ancestors": [
+        "NOAA",
+        "V2"
+      ]
+    },
+    "V2/NOAA/blend/master": {
+      "label": "mixed",
+      "parentId": "V2",
+      "hostId": "NOAA",
+      "donorId": "V2",
+      "composition": "blend",
+      "quality": "master",
+      "stage": "veo-30",
+      "ancestors": [
+        "NOAA",
+        "V2"
+      ]
+    },
+    "V2/NOAA/blend/mild": {
+      "label": "mixed",
+      "parentId": "V2",
+      "hostId": "NOAA",
+      "donorId": "V2",
+      "composition": "blend",
+      "quality": "mild",
+      "stage": "veo-30",
+      "ancestors": [
+        "NOAA",
+        "V2"
+      ]
+    },
+    "V2/NOAA/blend/severe": {
+      "label": "mixed",
+      "parentId": "V2",
+      "hostId": "NOAA",
+      "donorId": "V2",
+      "composition": "blend",
+      "quality": "severe",
+      "stage": "veo-30",
+      "ancestors": [
+        "NOAA",
+        "V2"
+      ]
+    },
+    "V2/rolling/hardcut/master": {
+      "label": "mixed",
+      "parentId": "V2",
+      "hostId": "rolling",
+      "donorId": "V2",
+      "composition": "hardcut",
+      "quality": "master",
+      "stage": "veo-30",
+      "ancestors": [
+        "V2",
+        "rolling"
+      ]
+    },
+    "V2/rolling/hardcut/mild": {
+      "label": "mixed",
+      "parentId": "V2",
+      "hostId": "rolling",
+      "donorId": "V2",
+      "composition": "hardcut",
+      "quality": "mild",
+      "stage": "veo-30",
+      "ancestors": [
+        "V2",
+        "rolling"
+      ]
+    },
+    "V2/rolling/hardcut/severe": {
+      "label": "mixed",
+      "parentId": "V2",
+      "hostId": "rolling",
+      "donorId": "V2",
+      "composition": "hardcut",
+      "quality": "severe",
+      "stage": "veo-30",
+      "ancestors": [
+        "V2",
+        "rolling"
+      ]
+    },
+    "V2/rolling/blend/master": {
+      "label": "mixed",
+      "parentId": "V2",
+      "hostId": "rolling",
+      "donorId": "V2",
+      "composition": "blend",
+      "quality": "master",
+      "stage": "veo-30",
+      "ancestors": [
+        "V2",
+        "rolling"
+      ]
+    },
+    "V2/rolling/blend/mild": {
+      "label": "mixed",
+      "parentId": "V2",
+      "hostId": "rolling",
+      "donorId": "V2",
+      "composition": "blend",
+      "quality": "mild",
+      "stage": "veo-30",
+      "ancestors": [
+        "V2",
+        "rolling"
+      ]
+    },
+    "V2/rolling/blend/severe": {
+      "label": "mixed",
+      "parentId": "V2",
+      "hostId": "rolling",
+      "donorId": "V2",
+      "composition": "blend",
+      "quality": "severe",
+      "stage": "veo-30",
+      "ancestors": [
+        "V2",
+        "rolling"
+      ]
+    },
+    "W1/whole/master": {
+      "label": "ai",
+      "parentId": "W1",
+      "hostId": "W1",
+      "donorId": null,
+      "composition": "base",
+      "quality": "master",
+      "stage": "wan-30",
+      "ancestors": [
+        "W1"
+      ]
+    },
+    "W1/whole/mild": {
+      "label": "ai",
+      "parentId": "W1",
+      "hostId": "W1",
+      "donorId": null,
+      "composition": "base",
+      "quality": "mild",
+      "stage": "wan-30",
+      "ancestors": [
+        "W1"
+      ]
+    },
+    "W1/whole/severe": {
+      "label": "ai",
+      "parentId": "W1",
+      "hostId": "W1",
+      "donorId": null,
+      "composition": "base",
+      "quality": "severe",
+      "stage": "wan-30",
+      "ancestors": [
+        "W1"
+      ]
+    },
+    "W1/NASA/hardcut/master": {
+      "label": "mixed",
+      "parentId": "W1",
+      "hostId": "NASA",
+      "donorId": "W1",
+      "composition": "hardcut",
+      "quality": "master",
+      "stage": "wan-30",
+      "ancestors": [
+        "NASA",
+        "W1"
+      ]
+    },
+    "W1/NASA/hardcut/mild": {
+      "label": "mixed",
+      "parentId": "W1",
+      "hostId": "NASA",
+      "donorId": "W1",
+      "composition": "hardcut",
+      "quality": "mild",
+      "stage": "wan-30",
+      "ancestors": [
+        "NASA",
+        "W1"
+      ]
+    },
+    "W1/NASA/hardcut/severe": {
+      "label": "mixed",
+      "parentId": "W1",
+      "hostId": "NASA",
+      "donorId": "W1",
+      "composition": "hardcut",
+      "quality": "severe",
+      "stage": "wan-30",
+      "ancestors": [
+        "NASA",
+        "W1"
+      ]
+    },
+    "W1/NASA/blend/master": {
+      "label": "mixed",
+      "parentId": "W1",
+      "hostId": "NASA",
+      "donorId": "W1",
+      "composition": "blend",
+      "quality": "master",
+      "stage": "wan-30",
+      "ancestors": [
+        "NASA",
+        "W1"
+      ]
+    },
+    "W1/NASA/blend/mild": {
+      "label": "mixed",
+      "parentId": "W1",
+      "hostId": "NASA",
+      "donorId": "W1",
+      "composition": "blend",
+      "quality": "mild",
+      "stage": "wan-30",
+      "ancestors": [
+        "NASA",
+        "W1"
+      ]
+    },
+    "W1/NASA/blend/severe": {
+      "label": "mixed",
+      "parentId": "W1",
+      "hostId": "NASA",
+      "donorId": "W1",
+      "composition": "blend",
+      "quality": "severe",
+      "stage": "wan-30",
+      "ancestors": [
+        "NASA",
+        "W1"
+      ]
+    },
+    "W1/rolling/hardcut/master": {
+      "label": "mixed",
+      "parentId": "W1",
+      "hostId": "rolling",
+      "donorId": "W1",
+      "composition": "hardcut",
+      "quality": "master",
+      "stage": "wan-30",
+      "ancestors": [
+        "W1",
+        "rolling"
+      ]
+    },
+    "W1/rolling/hardcut/mild": {
+      "label": "mixed",
+      "parentId": "W1",
+      "hostId": "rolling",
+      "donorId": "W1",
+      "composition": "hardcut",
+      "quality": "mild",
+      "stage": "wan-30",
+      "ancestors": [
+        "W1",
+        "rolling"
+      ]
+    },
+    "W1/rolling/hardcut/severe": {
+      "label": "mixed",
+      "parentId": "W1",
+      "hostId": "rolling",
+      "donorId": "W1",
+      "composition": "hardcut",
+      "quality": "severe",
+      "stage": "wan-30",
+      "ancestors": [
+        "W1",
+        "rolling"
+      ]
+    },
+    "W1/rolling/blend/master": {
+      "label": "mixed",
+      "parentId": "W1",
+      "hostId": "rolling",
+      "donorId": "W1",
+      "composition": "blend",
+      "quality": "master",
+      "stage": "wan-30",
+      "ancestors": [
+        "W1",
+        "rolling"
+      ]
+    },
+    "W1/rolling/blend/mild": {
+      "label": "mixed",
+      "parentId": "W1",
+      "hostId": "rolling",
+      "donorId": "W1",
+      "composition": "blend",
+      "quality": "mild",
+      "stage": "wan-30",
+      "ancestors": [
+        "W1",
+        "rolling"
+      ]
+    },
+    "W1/rolling/blend/severe": {
+      "label": "mixed",
+      "parentId": "W1",
+      "hostId": "rolling",
+      "donorId": "W1",
+      "composition": "blend",
+      "quality": "severe",
+      "stage": "wan-30",
+      "ancestors": [
+        "W1",
+        "rolling"
+      ]
+    },
+    "W2/whole/master": {
+      "label": "ai",
+      "parentId": "W2",
+      "hostId": "W2",
+      "donorId": null,
+      "composition": "base",
+      "quality": "master",
+      "stage": "wan-30",
+      "ancestors": [
+        "W2"
+      ]
+    },
+    "W2/whole/mild": {
+      "label": "ai",
+      "parentId": "W2",
+      "hostId": "W2",
+      "donorId": null,
+      "composition": "base",
+      "quality": "mild",
+      "stage": "wan-30",
+      "ancestors": [
+        "W2"
+      ]
+    },
+    "W2/whole/severe": {
+      "label": "ai",
+      "parentId": "W2",
+      "hostId": "W2",
+      "donorId": null,
+      "composition": "base",
+      "quality": "severe",
+      "stage": "wan-30",
+      "ancestors": [
+        "W2"
+      ]
+    },
+    "W2/NOAA/hardcut/master": {
+      "label": "mixed",
+      "parentId": "W2",
+      "hostId": "NOAA",
+      "donorId": "W2",
+      "composition": "hardcut",
+      "quality": "master",
+      "stage": "wan-30",
+      "ancestors": [
+        "NOAA",
+        "W2"
+      ]
+    },
+    "W2/NOAA/hardcut/mild": {
+      "label": "mixed",
+      "parentId": "W2",
+      "hostId": "NOAA",
+      "donorId": "W2",
+      "composition": "hardcut",
+      "quality": "mild",
+      "stage": "wan-30",
+      "ancestors": [
+        "NOAA",
+        "W2"
+      ]
+    },
+    "W2/NOAA/hardcut/severe": {
+      "label": "mixed",
+      "parentId": "W2",
+      "hostId": "NOAA",
+      "donorId": "W2",
+      "composition": "hardcut",
+      "quality": "severe",
+      "stage": "wan-30",
+      "ancestors": [
+        "NOAA",
+        "W2"
+      ]
+    },
+    "W2/NOAA/blend/master": {
+      "label": "mixed",
+      "parentId": "W2",
+      "hostId": "NOAA",
+      "donorId": "W2",
+      "composition": "blend",
+      "quality": "master",
+      "stage": "wan-30",
+      "ancestors": [
+        "NOAA",
+        "W2"
+      ]
+    },
+    "W2/NOAA/blend/mild": {
+      "label": "mixed",
+      "parentId": "W2",
+      "hostId": "NOAA",
+      "donorId": "W2",
+      "composition": "blend",
+      "quality": "mild",
+      "stage": "wan-30",
+      "ancestors": [
+        "NOAA",
+        "W2"
+      ]
+    },
+    "W2/NOAA/blend/severe": {
+      "label": "mixed",
+      "parentId": "W2",
+      "hostId": "NOAA",
+      "donorId": "W2",
+      "composition": "blend",
+      "quality": "severe",
+      "stage": "wan-30",
+      "ancestors": [
+        "NOAA",
+        "W2"
+      ]
+    },
+    "W2/pendulum/hardcut/master": {
+      "label": "mixed",
+      "parentId": "W2",
+      "hostId": "pendulum",
+      "donorId": "W2",
+      "composition": "hardcut",
+      "quality": "master",
+      "stage": "wan-30",
+      "ancestors": [
+        "W2",
+        "pendulum"
+      ]
+    },
+    "W2/pendulum/hardcut/mild": {
+      "label": "mixed",
+      "parentId": "W2",
+      "hostId": "pendulum",
+      "donorId": "W2",
+      "composition": "hardcut",
+      "quality": "mild",
+      "stage": "wan-30",
+      "ancestors": [
+        "W2",
+        "pendulum"
+      ]
+    },
+    "W2/pendulum/hardcut/severe": {
+      "label": "mixed",
+      "parentId": "W2",
+      "hostId": "pendulum",
+      "donorId": "W2",
+      "composition": "hardcut",
+      "quality": "severe",
+      "stage": "wan-30",
+      "ancestors": [
+        "W2",
+        "pendulum"
+      ]
+    },
+    "W2/pendulum/blend/master": {
+      "label": "mixed",
+      "parentId": "W2",
+      "hostId": "pendulum",
+      "donorId": "W2",
+      "composition": "blend",
+      "quality": "master",
+      "stage": "wan-30",
+      "ancestors": [
+        "W2",
+        "pendulum"
+      ]
+    },
+    "W2/pendulum/blend/mild": {
+      "label": "mixed",
+      "parentId": "W2",
+      "hostId": "pendulum",
+      "donorId": "W2",
+      "composition": "blend",
+      "quality": "mild",
+      "stage": "wan-30",
+      "ancestors": [
+        "W2",
+        "pendulum"
+      ]
+    },
+    "W2/pendulum/blend/severe": {
+      "label": "mixed",
+      "parentId": "W2",
+      "hostId": "pendulum",
+      "donorId": "W2",
+      "composition": "blend",
+      "quality": "severe",
+      "stage": "wan-30",
+      "ancestors": [
+        "W2",
+        "pendulum"
+      ]
+    }
+  },
+  "canonical": {
+    "width": 640,
+    "height": 360,
+    "fps": 24,
+    "frames": 120,
+    "durationSeconds": 5,
+    "interpolation": "cv2.INTER_CUBIC",
+    "aspectGeometry": "ceil-evenfillrespectingSAR;integercenter-crop",
+    "frameSelection": "sourceframeintervalcontainsoutputframecenter",
+    "encode": "libx264-medium-crf20-threads2-yuv420p",
+    "passesBeforeInferenceMaster": 2
+  },
+  "composition": {
+    "donorIntervalSeconds": [
+      1.5,
+      3.5
+    ],
+    "donorSourceIntervalSeconds": [
+      1.5,
+      3.5
+    ],
+    "alphaRampSeconds": 0.25,
+    "alphaAt": "output-frame-center",
+    "blendDtype": "float64",
+    "rounding": "np.rint ties-even",
+    "colorSpace": "encodedRGB",
+    "donorGeometry": "full-frame"
+  },
+  "qualities": {
+    "master": {
+      "fps": 24,
+      "frames": 120
+    },
+    "mild": {
+      "fps": 24,
+      "frames": 120,
+      "crf": 28,
+      "filter": "scale='min(720,iw)':-2,fps=24"
+    },
+    "severe": {
+      "fps": 12,
+      "frames": 60,
+      "crf": 36,
+      "filter": "crop=trunc(iw*0.85/2)*2:trunc(ih*0.85/2)*2,scale='min(360,iw)':-2,fps=12,drawbox=x=0:y=0:w=iw:h=ih*0.08:color=black@0.8:t=fill"
+    }
+  },
+  "frozenAt": "2026-09-05T03:53:07.323310+00:00"
+}

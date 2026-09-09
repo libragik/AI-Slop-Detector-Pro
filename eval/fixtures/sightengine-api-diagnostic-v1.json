@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 1,
+  "id": "sightengine-api-diagnostic-v1",
+  "frozen": true,
+  "sourceFixture": {
+    "path": "eval/fixtures/sightengine-demo-diagnostic-v1.json",
+    "sha256": "2b2934eb888db109df9def867bd7e13e9f5d01083e1d7a9021c7644ee9ae5825"
+  },
+  "purpose": "Prospective five-control API development diagnostic. No current API calls, credentials, paid account, or product validation. Separate from the refused browser demo.",
+  "api": {
+    "endpoint": "https://api.sightengine.com/1.0/video/check-sync.json",
+    "models": "genai",
+    "intervalSeconds": 0.5,
+    "threshold": 0.5,
+    "positionUnit": "milliseconds"
+  },
+  "limits": {
+    "requests": 5,
+    "operations": 500,
+    "responseBytes": 1048576,
+    "requestSeconds": 180,
+    "minimumStartIntervalSeconds": 1
+  },
+  "coverage": {
+    "firstFrameMaxSeconds": 0.1,
+    "maxGapSeconds": 0.6,
+    "tailGapSeconds": 0.6
+  },
+  "decisionPolicy": {
+    "scoreRule": "ai when maximum valid returned per-frame ai_generated score >=0.5; otherwise not_ai only with complete declared sampled-timeline coverage. Scores are uncalibrated.",
+    "coverageQualification": "Returned timestamps establish reported sample coverage, not proof of original-frame decoding or inspection of every original frame.",
+    "mixedLocalizationGate": "At least one positive reported sample in [3,5) and zero positive reported samples outside [3,5). Boundary-exact timestamps are interpreted literally. Preserve all positions/scores.",
+    "studyPass": "All five complete interpretable video decisions match expectedPrimaryDecision and mixed localization gate passes. Any error, unsupported coverage, missing operation accounting, or unattempted case fails advancement.",
+    "afterFailure": "Complete all five despite classification failures if access/accounting/technical conditions permit. No threshold, source, retry, or aggregation rescue.",
+    "independence": "All five are consumed development controls with connected source ancestry. A pass only permits considering a separate fresh-source evaluation, never integration or an accuracy claim.",
+    "noRemoteAuthorizationByPreparation": true,
+    "positionUnitBasis": "Fixed normalization position/1000 from the official synchronous guide showing its second frame at position2000 within a less-than-60-second endpoint and the documented two-second default sampling. Preserve raw positions; do not infer or switch units from classifier outcomes. Coverage mismatch stops the run."
+  },
+  "cases": [
+    {
+      "order": 1,
+      "id": "dff4042041e63458ae52bc1f",
+      "description": "Receipt-backed whole generated Veo video",
+      "path": "eval/media/controls/dff4042041e63458ae52bc1f.mp4",
+      "sha256": "e575e1447fe39f97dd9e3bda98d76ea091fc730fc7c33fb7320f9cd879d087bc",
+      "sourceLabel": "ai",
+      "expectedGenerativeVisualContribution": true,
+      "expectedPrimaryDecision": "ai",
+      "sourceManifest": {
+        "path": "eval/generated-origin-manifest.jsonl",
+        "sha256": "122b79147249eab01d06e0fbd0b33955fc86eb9479d8df1697fd123c480b8b55"
+      },
+      "registeredGroupId": "known-origin-development-family",
+      "parentGroups": [
+        "generated-operation:models/veo-3.1-generate-preview/operations/local-generation-redacted"
+      ],
+      "media": {
+        "bytes": 3205223,
+        "durationSeconds": 8,
+        "width": 1280,
+        "height": 720,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "generativeVisualIntervalSeconds": [
+        0,
+        8
+      ],
+      "truthBasis": "Direct text-only Google generation operation, original SHA-256, deterministic silent derivative.",
+      "sourceUrl": "https://ai.google.dev/gemini-api/docs/veo",
+      "limitations": "One generated source and one 2010 conventional CGI source. No camera-origin population estimate."
+    },
+    {
+      "order": 2,
+      "id": "10a7c358371f29ddd7acb538",
+      "description": "Sintel CGI with a two-second Veo insert",
+      "path": "eval/media/controls/10a7c358371f29ddd7acb538.mp4",
+      "sha256": "3f90460f31c82699d239abedfdf1fae1f5b476d9a369755778b16e877c6df2b7",
+      "sourceLabel": "mixed",
+      "expectedGenerativeVisualContribution": true,
+      "expectedPrimaryDecision": "ai",
+      "sourceManifest": {
+        "path": "eval/generated-origin-manifest.jsonl",
+        "sha256": "122b79147249eab01d06e0fbd0b33955fc86eb9479d8df1697fd123c480b8b55"
+      },
+      "registeredGroupId": "known-origin-development-family",
+      "parentGroups": [
+        "sintel-2010",
+        "generated-operation:models/veo-3.1-generate-preview/operations/local-generation-redacted"
+      ],
+      "media": {
+        "bytes": 2162987,
+        "durationSeconds": 8,
+        "width": 1280,
+        "height": 720,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "generativeVisualIntervalSeconds": [
+        3,
+        5
+      ],
+      "truthBasis": "Deterministic edit of documented2010 CGI and the text-only generation output; exact parent and operation hashes retained.",
+      "sourceUrl": "https://ai.google.dev/gemini-api/docs/veo",
+      "limitations": "One generated source and one 2010 conventional CGI source. No camera-origin population estimate."
+    },
+    {
+      "order": 3,
+      "id": "0d90f27f1d7915a793493ee4",
+      "description": "Normalized conventional Sintel CGI",
+      "path": "eval/media/controls/0d90f27f1d7915a793493ee4.mp4",
+      "sha256": "b203b07011f3ee6711460da6081401772cf5b69359fd0f1db2347f191b8daacd",
+      "sourceLabel": "cgi",
+      "expectedGenerativeVisualContribution": false,
+      "expectedPrimaryDecision": "not_ai",
+      "sourceManifest": {
+        "path": "eval/generated-origin-manifest.jsonl",
+        "sha256": "122b79147249eab01d06e0fbd0b33955fc86eb9479d8df1697fd123c480b8b55"
+      },
+      "registeredGroupId": "known-origin-development-family",
+      "parentGroups": [
+        "sintel-2010"
+      ],
+      "media": {
+        "bytes": 1580536,
+        "durationSeconds": 8,
+        "width": 1280,
+        "height": 720,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "generativeVisualIntervalSeconds": [],
+      "truthBasis": "Blender Foundation Sintel2010 conventional CGI, source seconds12-20, CC BY3.0.",
+      "sourceUrl": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+      "limitations": "One generated source and one 2010 conventional CGI source. No camera-origin population estimate."
+    },
+    {
+      "order": 4,
+      "id": "fresh-cgi-pendulum-v1-parent",
+      "description": "Original procedural pendulum render, all eight seconds",
+      "path": "eval/media/fresh-cgi/attempt-01/pendulum-v1/parent.mp4",
+      "sha256": "5be143d5551c4434f800610e337285901c83f71f6cd5814251c95db4ba9ac7e6",
+      "sourceLabel": "cgi",
+      "expectedGenerativeVisualContribution": false,
+      "expectedPrimaryDecision": "not_ai",
+      "sourceManifest": {
+        "path": "eval/fixtures/shot-study-source-plan.json",
+        "sha256": "4a1a354bdd31b466d571c33ac96403982045b4cb829d738dbd47997d6ae1e852"
+      },
+      "sourceManifestParentId": "pendulum",
+      "originReceipt": {
+        "path": "eval/sources/fresh-cgi-render-receipt.json",
+        "sha256": "5b50f4ad0edb53d80d95c1fe57109430b8a2c76390751c3ddc50fc50a42394fc"
+      },
+      "registeredGroupId": "fresh-shot-study-linked-family",
+      "parentGroups": [
+        "fresh-cgi-pendulum-v1"
+      ],
+      "media": {
+        "bytes": 361751,
+        "durationSeconds": 8,
+        "width": 640,
+        "height": 360,
+        "frameRate": "24/1",
+        "frames": 192,
+        "hasAudio": false
+      },
+      "generativeVisualIntervalSeconds": [],
+      "truthBasis": "Conventional Blender Cycles render from the preserved assistant-authored scene code; no generative pixel model. Original eight-second rendered MP4, not the five-second study derivative.",
+      "limitations": "One procedural CGI scene with retained path-tracing grain. Assistant-authored scene code is disclosed; this is negative only for generative visual contribution, not for any AI assistance in production. Its source family is already consumed development evidence."
+    },
+    {
+      "order": 5,
+      "id": "69f4467b368b62d21149195b",
+      "description": "Frozen NOAA camera trim, source seconds20\u201325",
+      "path": "eval/runs/aegis-shots-v1-negative-build/media/69f4467b368b62d21149195b.mp4",
+      "sha256": "33cd1073d4f6ef5cd8eb427d4953182d8329981ed64cce5cc0282bfdc2b14927",
+      "sourceLabel": "camera",
+      "expectedGenerativeVisualContribution": false,
+      "expectedPrimaryDecision": "not_ai",
+      "sourceManifest": {
+        "path": "eval/runs/aegis-shots-v1-negative-build/manifest.jsonl",
+        "sha256": "87c02fc0b447bb0a5cc9f39ca18bda788c773db6f8e145b88bd863b54eb4dc4f"
+      },
+      "sourceCaseId": "NOAA/base/master",
+      "registeredGroupId": "fresh-shot-study-linked-family",
+      "parentGroups": [
+        "NOAA"
+      ],
+      "media": {
+        "bytes": 761421,
+        "durationSeconds": 5,
+        "fps": 24,
+        "frames": 120,
+        "hasAudio": false,
+        "height": 360,
+        "width": 640
+      },
+      "generativeVisualIntervalSeconds": [],
+      "truthBasis": "Documented NOAA archive camera source, fixed source interval20\u201325seconds, canonicalized without a donor. The existing frozen identity master is used byte-for-byte.",
+      "originReceipt": {
+        "path": "eval/sources/camera-origin-acquisition.json",
+        "sha256": "521e1d4474fbddfd947bb9e4502b0c0c7e5f943c3e68ba72f5f6ca603f7029ec"
+      },
+      "constructionReceipt": {
+        "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/69f4467b368b62d21149195b/construction.json",
+        "sha256": "32cc30d1fe8ce24d5bab88f39663b2a123d21b558a07702dccfbff689e547f7b"
+      },
+      "frameLineage": {
+        "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/69f4467b368b62d21149195b/frame-lineage.json",
+        "sha256": "e5c2aeebe5102f0c1e537b35988d6a558e536753948ea173c712cf01522fd471"
+      },
+      "limitations": "Processed agency archive footage, not a pristine capture master or independently signed camera file. Five-second normalized two-encode-pass identity trim; it is not the full NOAA original and has no mixed insert. Already used in the negative development screen."
+    }
+  ],
+  "frozenAt": "2026-09-05T07:54:04.814473+00:00",
+  "runnerSha256": "b953a1dd11f3f2b5bf81f3c9d7819466fed1d98c7defeb234e0439c82ca852be",
+  "preparationEvidence": [
+    {
+      "path": "scripts/eval-sightengine-api.py",
+      "sha256": "b953a1dd11f3f2b5bf81f3c9d7819466fed1d98c7defeb234e0439c82ca852be"
+    },
+    {
+      "path": "scripts/test-sightengine-api.py",
+      "sha256": "7ad5d45770e8a18b3958aabc5edb16f2a0961da663dff8e1d18936e60b9068ff"
+    },
+    {
+      "path": "eval/runs/sightengine-api-diagnostic-v1-offline-contract-v2/receipt.json",
+      "sha256": "ecfd763bee0604496508d5b0bdd28a68f426f8983d38cfd7de98b52257e08efb"
+    },
+    {
+      "path": "eval/runs/sightengine-api-diagnostic-v1-preparation-v2/preparation.json",
+      "sha256": "a9defb4de7158273559796ad271f647fe619a36941e5bcc488841df475eadec6"
+    },
+    {
+      "path": "eval/sources/sightengine-api-v1/receipt.json",
+      "sha256": "a5a5d409ea99aac0764efb001efe8f425335c6f725126b46e3b45034ea3b6223"
+    },
+    {
+      "path": "eval/sources/sightengine-api-v1/ai-generated-video-detection.html",
+      "sha256": "de4581359b8142d4d1eb633e2a79586d83e1bd23d73f807e4480fd595ea2e27c"
+    },
+    {
+      "path": "eval/sources/sightengine-api-v1/stored-video-moderation-guide.html",
+      "sha256": "e318a788395af4b1b11a14564e4866357a48a563960153588094da60ea41f84f"
+    },
+    {
+      "path": "eval/sources/sightengine-api-v1/pricing.html",
+      "sha256": "5dbc9234aa6c1e5e93ec6ccac6d244f57b1b3a9f5851508c1c741d0701051a76"
+    },
+    {
+      "path": "eval/sources/sightengine-api-v1/operations.html",
+      "sha256": "d2319158d5d12be1c2b7ecdcf6391ddef88e513e321bd1ab3d3b9af3c66b422c"
+    },
+    {
+      "path": "eval/sources/sightengine-api-v1/timestamp-unit-evidence.json",
+      "sha256": "8b75573ecc16eae3a05b8d3a995e80843c91ae6c7476491e357aa29a38d8a0c6"
+    },
+    {
+      "path": "eval/sources/sightengine-api-v1/moderate-stored-video.html",
+      "sha256": "87e815e8df4c49574f1b579099704ce094aecb09c275f2189a9d36569c404567"
+    }
+  ]
+}

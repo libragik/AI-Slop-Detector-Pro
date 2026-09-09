@@ -1,0 +1,15 @@
+allowBuilds:
+  '@contentauth/c2pa-node': true
+  '@google/genai': true
+  esbuild: true
+  protobufjs: true
+  unrs-resolver: true
+minimumReleaseAgeExclude:
+  - '@contentauth/c2pa-node@0.9.3'
+  - '@google/genai@2.21.0'
+  - '@supabase/auth-js@2.114.0'
+  - '@supabase/functions-js@2.114.0'
+  - '@supabase/postgrest-js@2.114.0'
+  - '@supabase/realtime-js@2.114.0'
+  - '@supabase/storage-js@2.114.0'
+  - '@supabase/supabase-js@2.114.0'

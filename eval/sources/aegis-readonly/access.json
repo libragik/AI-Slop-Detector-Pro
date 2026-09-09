@@ -1,0 +1,114 @@
+{
+  "gitRevision": "d86a774fd971954a023e1cd00ed7ff5b2575e0d1",
+  "hfRevision": "95b71346cec650165e6ad3fb20ed9e80f4b6702a",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 23515,
+      "sha256": "ee2bd6c7c921b3184a02bd213649ed92ff55cbba9bb7f642f92d78b2a7820b14",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/README.md"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1071,
+      "sha256": "dd5b94a9a7da625f5a0d1f9d855b7dbf96c92663af555b7ff8f3c34017fa0824",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/LICENSE"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 430,
+      "sha256": "745e6087a1ab3fd426430d0e62c0658ef7029194891cfc3be157eaf68bbd50ce",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/requirements.txt"
+    },
+    {
+      "path": "src/branches/inference.py",
+      "bytes": 8679,
+      "sha256": "36b2013cdafef2aa3479c7702223012e83ae163fd2c72f872aa0d726df54efc4",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/src/branches/inference.py"
+    },
+    {
+      "path": "src/branches/detector_model.py",
+      "bytes": 19013,
+      "sha256": "bdfcfddba6dfe305f462d0a094b28314ea208b2f4b7fa119978fd226d88f05a6",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/src/branches/detector_model.py"
+    },
+    {
+      "path": "src/branches/pixel_branch.py",
+      "bytes": 13167,
+      "sha256": "e8d6d188729662187fcd04653d54337101bd8287820d3a87f2a4cf09e8bca26a",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/src/branches/pixel_branch.py"
+    },
+    {
+      "path": "src/branches/motion_branch.py",
+      "bytes": 17365,
+      "sha256": "5d809994c1597bcfc2a7c7cdf59faa1da15ba87b0701df1ab580ce138a3d7c34",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/src/branches/motion_branch.py"
+    },
+    {
+      "path": "src/branches/consistency_branch.py",
+      "bytes": 14238,
+      "sha256": "bc0687fdc835037e18bafe28a80511e23fdc4f8c0603171a3c4897057b5c434b",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/src/branches/consistency_branch.py"
+    },
+    {
+      "path": "src/utils/video_io.py",
+      "bytes": 16010,
+      "sha256": "bab6ba4b8b1c07ff9bc392cf40487be8e8d31fdd248a4494563057e812a043dc",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/src/utils/video_io.py"
+    },
+    {
+      "path": "src/branches/dataset_loader.py",
+      "bytes": 10698,
+      "sha256": "f53a87aef7f229bd7894eef5bb6dd5c77677f512dd24fd74e462d86519ab898a",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/src/branches/dataset_loader.py"
+    },
+    {
+      "path": "src/branches/preprocess_final.py",
+      "bytes": 6407,
+      "sha256": "84463a484f46d6b81a484a7d89f55d465f961231b3599b52c6aa0dad47a6d884",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/src/branches/preprocess_final.py"
+    },
+    {
+      "path": "src/branches/build_final_dataset.py",
+      "bytes": 8337,
+      "sha256": "ba965a75e4b26a741e4e6880dcdb3bef165d2aab35809fa8e116eb565ecf6a5c",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/src/branches/build_final_dataset.py"
+    },
+    {
+      "path": "src/branches/train.py",
+      "bytes": 19097,
+      "sha256": "8e1d1b4b22aed7c137c9307ddfce3050c533a25a228cdfb55e37e17a9a6c91bc",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/src/branches/train.py"
+    },
+    {
+      "path": "src/branches/calibrate.py",
+      "bytes": 9302,
+      "sha256": "0df321a40ca7da0109e6812ee1a322f9b57878b143208d27073545ce6781b913",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/src/branches/calibrate.py"
+    },
+    {
+      "path": "src/branches/build_calibration_set.py",
+      "bytes": 7563,
+      "sha256": "f416af1da7c26f9ade7db146184f0306006b0bc4007632d4124103d31725d146",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/src/branches/build_calibration_set.py"
+    },
+    {
+      "path": "results/phase2/full_comparison.md",
+      "bytes": 2518,
+      "sha256": "b29b65d2a76dcff401f8f2f2b43c1e13f2b25422d4730bcc728da3d2bae7cc25",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/results/phase2/full_comparison.md"
+    },
+    {
+      "path": "results/phase2/ablation_genbuster.json",
+      "bytes": 2445,
+      "sha256": "2bd06afa36a182775db98a800a0b42a4df63c6d57ce71ee41bd950790ba2ef40",
+      "url": "https://raw.githubusercontent.com/MusapYildiz/ai_video_detection_benchmark/d86a774fd971954a023e1cd00ed7ff5b2575e0d1/results/phase2/ablation_genbuster.json"
+    }
+  ],
+  "weightAnonymousHead": {
+    "status": 200,
+    "contentLength": "453829089",
+    "contentType": "application/octet-stream",
+    "finalHost": "us.aws.cdn.hf.co"
+  }
+}

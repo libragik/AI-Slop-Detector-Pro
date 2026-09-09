@@ -1,0 +1,32 @@
+{
+  "startedAt": "2026-09-05T01:40:37.913635+00:00",
+  "model": "Grag2021_latent",
+  "runnerSha256": "fdab31c66a595b58838c94a27c6819ff25148ed5a344fceb780c8395167f1db4",
+  "device": "mps",
+  "threshold": 0,
+  "thresholdFitting": false,
+  "newSourcesIndependentHoldout": false,
+  "scope": "Existing35 development sources at mild and severe transformations plus six existing constructed development controls",
+  "qualityBatches": {
+    "mild": {
+      "manifest": "eval/corvi-social-mild-manifest.jsonl",
+      "sha256": "f32fdf19d517693848026a3127387c87497ddb79b718540b758f725972ce99cf",
+      "rows": 35,
+      "sourceGroups": 35
+    },
+    "severe": {
+      "manifest": "eval/corvi-social-severe-manifest.jsonl",
+      "sha256": "29633b9305296ec8bbc25244c9d211276bae79996116edbb6708bc94a0a5fcf5",
+      "rows": 35,
+      "sourceGroups": 35
+    }
+  },
+  "controls": {
+    "manifest": "eval/control-manifest.jsonl",
+    "sha256": "cc5c3a2907a9fb8252aaf962ddf1136a708f2f66373dddc81081005804903349",
+    "rows": 6
+  },
+  "pairedOriginalPredictions": "eval/runs/corvi-development-v1.jsonl",
+  "pairedOriginalPredictionSha256": "560e7cb7eb367cc480e1a225271ec943eb758dee97290ef88e93496b238deb3b",
+  "analysisPlan": "Report published-default decisions, raw-score AUROC within each quality, class score distributions, all exact scores, and paired score shifts. Controls reported individually and by label. No model or threshold adaptation."
+}

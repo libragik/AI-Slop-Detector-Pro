@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-09-05T04:28:27.479998+00:00",
+  "datasetRevision": "58af00f022d8272f42de3be912e9a905bf6087d2",
+  "archiveBytes": 5458325142,
+  "archiveLfsSha256": "332a012eac1c0207378714d639391f991a9a200108d9c3c8f9f493a1e4c81c20",
+  "wholeArchiveHashVerified": false,
+  "rangeBytesReceived": 1665437,
+  "rangeByteLimit": 2097152,
+  "centralDirectoryBytes": 1665339,
+  "centralDirectorySha256": "8ec46b65298ca386992636a88784a4224fc6db9868d4ca62457dd94774b47d71",
+  "zipEntryCount": 9807,
+  "videoCount": 9800,
+  "directoryCount": 7,
+  "metadataSidecarCount": 0,
+  "folderCounts": {
+    "train/fake/cogvideox": 1507,
+    "train/fake/easyanimate": 1954,
+    "train/fake/hunyuanvideo": 502,
+    "train/fake/ltxvideo": 1037,
+    "train/real": 4800
+  },
+  "uncompressedMediaBytes": 5477893994,
+  "compressedMediaBytes": 5455482682,
+  "duplicateBasenameCount": 0,
+  "duplicateCRCSizeGroups": 0,
+  "independentParserCheck": "Python stdlib ZipFile parsed same central directory using synthetic zero-offset EOCD; every filename,size,compression size,CRC32,local offset matched manual parser. No member was opened.",
+  "benchmarkComparison": {
+    "indexPath": "eval/sources/genbuster-bench-zip-index.json",
+    "indexSha256": "6f5d936510c946502e2cd5bcf1bd1c95d0e6f37cc4e2342261e333b7c250db22",
+    "indexSourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench/resolve/68e41ab55726013f1c7455980180114302196c23/GenBuster-Bench.zip",
+    "videos": 3150,
+    "basenameMatches": [],
+    "crc32AndSizeMatches": [],
+    "interpretation": "Names and CRC/size are metadata screening only; absence does not establish scene/source independence or exclude recompressed duplicates."
+  },
+  "registered230Comparison": {
+    "manifestSha256": "cb49a2ea8e403656c67ce6741e61abe1e06207918a5cbecb963309d61e598f67",
+    "rows": 230,
+    "basenameMatches": [],
+    "predictionsRead": false
+  },
+  "earlierTrainingIndexComparison": {
+    "path": "eval/sources/genbuster-zip-index.json",
+    "sha256": "4d744131f920fa3fd796a550c23c5eecd0e2ea37a43ed268c61817abfcc5e238",
+    "mediaEntries": 9800,
+    "samePathSet": true,
+    "sharedPaths": 9800,
+    "interpretation": "Existing index did not itself pin the present archive revision or preserve range receipts; new audit supplies those records."
+  },
+  "scope": {
+    "mediaPayloadBytesDownloaded": 0,
+    "mediaDecoded": false,
+    "modelsRun": 0,
+    "trainingSteps": 0,
+    "accountsOrTerms": false
+  }
+}

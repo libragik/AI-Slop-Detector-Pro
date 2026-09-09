@@ -1,0 +1,94 @@
+{
+  "checkedAt": "2026-09-05T04:33:50.027344+00:00",
+  "model": "facebook/dinov2-small",
+  "modelRevision": "ed25f3a31f01632728cabb09d1542f84ab7b0056",
+  "codeRevision": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+  "records": [
+    {
+      "url": "https://huggingface.co/api/models/facebook/dinov2-small",
+      "status": 200,
+      "bytes": 3488,
+      "sha256": "a42c49e6f644fbdee6b3a8e8076980af850ee809c26b16ca53873b3b14277d8c",
+      "path": "eval/sources/dinov2-training-backbone/hf-model-info.json"
+    },
+    {
+      "url": "https://huggingface.co/api/models/facebook/dinov2-small/tree/ed25f3a31f01632728cabb09d1542f84ab7b0056?recursive=true&expand=false",
+      "status": 200,
+      "bytes": 1005,
+      "sha256": "ff44df83459b2b68341b4ea2f29b3e575cea796e9270af151df2496a604ed7ba",
+      "path": "eval/sources/dinov2-training-backbone/hf-tree.json"
+    },
+    {
+      "url": "https://api.github.com/repos/facebookresearch/dinov2/commits/main",
+      "status": 200,
+      "bytes": 15483,
+      "sha256": "8d514590738b315c8e13a194e5e3527039f8ed13a81ae7a7263d5db97460aa95",
+      "path": "eval/sources/dinov2-training-backbone/github-commit.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/facebookresearch/dinov2/7764ea0f912e53c92e82eb78a2a1631e92725fc8/LICENSE",
+      "status": 200,
+      "bytes": 11359,
+      "sha256": "600cc67cc4cb2f5ea317dcfc687ad1c74dc4bec8782bbe9db0afd83513b935b7",
+      "path": "eval/sources/dinov2-training-backbone/meta-LICENSE"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/facebookresearch/dinov2/7764ea0f912e53c92e82eb78a2a1631e92725fc8/README.md",
+      "status": 200,
+      "bytes": 32799,
+      "sha256": "d1bc2e9686522bbd66ed6123dc81eb36b3a98e8ea9a2ca97778f54a1c641c9e1",
+      "path": "eval/sources/dinov2-training-backbone/meta-README.md"
+    },
+    {
+      "url": "https://huggingface.co/facebook/dinov2-small/resolve/ed25f3a31f01632728cabb09d1542f84ab7b0056/preprocessor_config.json",
+      "status": 200,
+      "bytes": 436,
+      "sha256": "14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828",
+      "path": "eval/sources/dinov2-training-backbone/hf-preprocessor_config.json"
+    },
+    {
+      "url": "https://huggingface.co/facebook/dinov2-small/resolve/ed25f3a31f01632728cabb09d1542f84ab7b0056/config.json",
+      "status": 200,
+      "bytes": 547,
+      "sha256": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d",
+      "path": "eval/sources/dinov2-training-backbone/hf-config.json"
+    },
+    {
+      "url": "https://huggingface.co/facebook/dinov2-small/resolve/ed25f3a31f01632728cabb09d1542f84ab7b0056/README.md",
+      "status": 200,
+      "bytes": 3033,
+      "sha256": "4c20dca454a8e5c670e8de5c7e6040f512aeca5438516f7623eedc4e3b00599c",
+      "path": "eval/sources/dinov2-training-backbone/hf-README.md"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/facebookresearch/dinov2/7764ea0f912e53c92e82eb78a2a1631e92725fc8/dinov2/hub/backbones.py",
+      "status": 200,
+      "bytes": 5586,
+      "sha256": "871fca671b12a9ff02e810654baf509e97ccf461bf8196ce5ddeefff2fd87d3e",
+      "path": "eval/sources/dinov2-training-backbone/meta-dinov2__hub__backbones.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/facebookresearch/dinov2/7764ea0f912e53c92e82eb78a2a1631e92725fc8/MODEL_CARD.md",
+      "status": 200,
+      "bytes": 9152,
+      "sha256": "70ca59606bee0a5fbb1baec80e7e29a93cd7cfbe26ca1910c52a852c4aab09d0",
+      "path": "eval/sources/dinov2-training-backbone/meta-MODEL_CARD.md"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/facebookresearch/dinov2/7764ea0f912e53c92e82eb78a2a1631e92725fc8/dinov2/layers/attention.py",
+      "status": 200,
+      "bytes": 3298,
+      "sha256": "79c7be7a452b3aad96698ec38d5d5150b9f4d8ac084fa93324510dc9f624775d",
+      "path": "eval/sources/dinov2-training-backbone/meta-dinov2__layers__attention.py"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/facebookresearch/dinov2/7764ea0f912e53c92e82eb78a2a1631e92725fc8/dinov2/data/transforms.py",
+      "status": 200,
+      "bytes": 3056,
+      "sha256": "725823be317c6a549810740c6566a2a448ba1eba85eea87769c10b986dda2e5b",
+      "path": "eval/sources/dinov2-training-backbone/meta-dinov2__data__transforms.py"
+    }
+  ],
+  "weightBodiesReceived": 0,
+  "modelCalls": 0
+}

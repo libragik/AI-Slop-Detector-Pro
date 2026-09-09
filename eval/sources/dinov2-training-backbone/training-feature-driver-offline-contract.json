@@ -1,0 +1,24 @@
+{
+  "benchmarkInputs": 0,
+  "checks": [
+    "24/12fps synthetic derivatives reuse one original-parent window; protocol whitelist precedes input; display geometry metadata and default autorotation recorded",
+    "cache array and model identity changes rejected",
+    "owned worker and independently sessioned grandchild terminated on cumulative time; unrelated sentinel survives; exhausted budget prevents launch; RSS guard stops child",
+    "process tree RSS census works"
+  ],
+  "command": "eval/.venv/bin/python scripts/test-dinov2-training-features.py",
+  "limitations": [
+    "Synthetic decoder and process contracts only; no model or target media calls.",
+    "Nonzero rotation is rejected by the unchanged feature module; stored-pixel crop does not normalize SAR.",
+    "The parent must preserve and inspect nonzero watchdog/cleanup receipts; a process census failure is explicit failure."
+  ],
+  "passed": true,
+  "pretrainedModelCalls": 0,
+  "sourceHashes": {
+    "scripts/build-dinov2-training-features.py": "750a2230bd0af10724303c2fd153f230fff93390e17b5224092d7ab208fa2245",
+    "scripts/dinov2-temporal-features.py": "28e520039e48cc9a91daccccb9fb74b0d90a8fd5192148ccbcc99327621105f9",
+    "scripts/test-dinov2-training-features.py": "8eac2942ba2785f13f9fae354d0ece3e1ddfd42ab7d82529150e4dc09c6bf44d"
+  },
+  "testsRun": 4,
+  "verifiedAt": "2026-09-05T05:04:44.014140+00:00"
+}

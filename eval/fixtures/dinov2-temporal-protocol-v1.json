@@ -1,0 +1,224 @@
+{
+  "acquisition": {
+    "completionPath": "eval/runs/genbuster-training-subset-v1-acquisition/completion.json",
+    "completionSha256": "2b8999a03cf8bbb1c5074c05d522e25ad8f956664dc12e5c048680f601d5b948",
+    "fixturePath": "eval/fixtures/dinov2-training-subset-v1.json",
+    "fixtureSha256": "4fc4c7edc054c2184c0abef2b9f8618288a569913661750298f2a1493eec3621",
+    "manifestPath": "eval/runs/genbuster-training-subset-v1-acquisition/manifest.jsonl",
+    "manifestSha256": "c3ef8c466e3db704023ec9e2c4978adcac1292f2c443cdbc538d6d055b1c8180"
+  },
+  "backbone": {
+    "contractPath": "eval/runs/dinov2-backbone-contract-v1/contract.json",
+    "contractSha256": "c916a1fea7352abd854121d4f4978f1ea522ad96b18d8e1880afefe401786374",
+    "modelDirectory": "eval/models/dinov2-small",
+    "weightsSha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1"
+  },
+  "diagnostics": {
+    "allFilesAttemptedRegardlessOfClassification": true,
+    "currentCalibrationFilesExcluded": 30,
+    "expectedFiles": 153,
+    "gates": {
+      "aiDetectedEachQuality": 19,
+      "aiEachQualityDenominator": 23,
+      "authorRealNegativeCorrect": 36,
+      "cameraCgiNegativeCorrect": 45,
+      "complete": 153,
+      "knownOriginCorrect": 3,
+      "outsideFolderAiDetectedEachQuality": 16,
+      "outsideFolderEachQualityDenominator": 19
+    },
+    "knownNegatives": 82,
+    "manifests": [
+      {
+        "cohort": "negative45",
+        "count": 45,
+        "path": "eval/runs/aegis-shots-v1-negative-build/manifest.jsonl",
+        "sha256": "87c02fc0b447bb0a5cc9f39ca18bda788c773db6f8e145b88bd863b54eb4dc4f"
+      },
+      {
+        "cohort": "known3",
+        "count": 3,
+        "path": "eval/generated-origin-manifest.jsonl",
+        "sha256": "122b79147249eab01d06e0fbd0b33955fc86eb9479d8df1697fd123c480b8b55"
+      },
+      {
+        "cohort": "benchmark105",
+        "count": 105,
+        "path": "eval/aegis-development-manifest.jsonl",
+        "sha256": "b2bf057723c542e38a7f796785292300a00b52ba9d0ae02ffe98eb87a3d80dfa"
+      }
+    ],
+    "noCandidateSwapFromReferenceResults": true,
+    "noThresholdRescue": true,
+    "sourceIndependentValidation": false,
+    "thresholdLogit": 0.0
+  },
+  "draftedAt": "2026-09-05T05:04:08.317873+00:00",
+  "featureDevice": "mps",
+  "featureDriverPath": "scripts/build-dinov2-training-features.py",
+  "featureIdentity": {
+    "assets": {
+      "config.json": {
+        "bytes": 547,
+        "sha256": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d"
+      },
+      "model.safetensors": {
+        "bytes": 88249960,
+        "sha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1"
+      },
+      "preprocessor_config.json": {
+        "bytes": 436,
+        "sha256": "14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828"
+      }
+    },
+    "mediaTools": {
+      "ffmpeg": {
+        "path": "ffmpeg",
+        "sha256": "326895b16940f238d76e902fc71150f10c388c281985756f9850ff800a2f1499"
+      },
+      "ffprobe": {
+        "path": "ffprobe",
+        "sha256": "a7bd5c0b4b01f40bc7c0cdee825ef9c848ab991f6fae8403cc59ec59d1e579b5"
+      }
+    },
+    "model": "facebook/dinov2-small",
+    "policy": {
+      "agreementMaxAbsolute": 0.003,
+      "agreementRelativeL2": 0.001,
+      "attention": "eager",
+      "embedding": "final-layernorm CLS pooler_output,384,FP32",
+      "evaluationStrideSeconds": 1.0,
+      "framesPerWindow": 8,
+      "limits": {
+        "decodeSeconds": 180,
+        "durationSeconds": 120,
+        "modelBatchFrames": 2,
+        "nativeFrames": 30000,
+        "nativePixels": 16000000,
+        "probeBytes": 8388608,
+        "probeSeconds": 45,
+        "sourceBytes": 50000000,
+        "stderrBytes": 2097152,
+        "windows": 128
+      },
+      "minimumSeconds": 0.5,
+      "preprocess": "pinned slow BitImageProcessor: RGB,bicubic short256,center224,ImageNet",
+      "sampling": "floor-linspace-native-index-inclusive",
+      "torchInteropThreads": 1,
+      "torchThreads": 4,
+      "version": "dinov2-temporal-features-v1",
+      "windowMembership": "start <= normalized frame PTS < end",
+      "windowSeconds": 2.0
+    },
+    "python": "3.12.9",
+    "revision": "ed25f3a31f01632728cabb09d1542f84ab7b0056",
+    "sourceSha256": "28e520039e48cc9a91daccccb9fb74b0d90a8fd5192148ccbcc99327621105f9",
+    "transformersSourceHashes": {
+      "models/bit/image_processing_bit.py": "4375facc5a89b1ed31aaefc74181f516a07d9cd292e7c7e26798ff17e728a96d",
+      "models/dinov2/configuration_dinov2.py": "d36d05e792619389f06e9cf17c3c738bbecfa1efb93a9b8667e7fe9b11036058",
+      "models/dinov2/modeling_dinov2.py": "e1376e0decc4cf3fd60042a17464a4118f1802a4e1ca2af4496c211fabb6d34b"
+    },
+    "versions": {
+      "Pillow": "12.3.0",
+      "numpy": "2.2.6",
+      "safetensors": "0.8.0",
+      "torch": "2.8.0",
+      "torchvision": "0.23.0",
+      "transformers": "4.57.6"
+    }
+  },
+  "featureModulePath": "scripts/dinov2-temporal-features.py",
+  "frozen": true,
+  "frozenAt": "2026-09-05T05:25:09.790712+00:00",
+  "heads": {
+    "activation": "GELU",
+    "appearanceControlInput": "cls-and-zero-difference-same-shape-and-initialization",
+    "embeddingDimensions": 384,
+    "frames": 8,
+    "hiddenDimensions": 128,
+    "normalization": "LayerNorm-per-frame",
+    "pooling": "maximum-frame-logit",
+    "scoreIsProbability": false,
+    "temporalInput": "cls-and-absolute-next-difference-final-zero",
+    "thresholdLogit": 0.0
+  },
+  "preparationEvidence": {
+    "eval/DINOV2_TRAINING_PROTOCOL_REVIEW.md": "de637f1b14b51a8fa4beec9ff3eba4cd3a47ff6001c11b564780f569cf545f13",
+    "eval/models/dinov2-small/acquisition.json": "db41b8d120444386a5e05dfa32657156b31dd24f6a0f7ab0dcbce4d36f0b7bf3",
+    "eval/runs/dinov2-backbone-contract-v1/contract.json": "c916a1fea7352abd854121d4f4978f1ea522ad96b18d8e1880afefe401786374",
+    "eval/runs/dinov2-diagnostic-contract-v3/receipt.json": "906759fe10542d962301a31e23dcd71ea34155abcf946251370d9d68a10af921",
+    "eval/runs/dinov2-synthetic-throughput-v1/receipt.json": "1c61ed8fdc61e8628c95c62802517a174429d288e2a811b421e8435b4b3ab1fb",
+    "eval/runs/genbuster-training-subset-contract/receipt.json": "f0233d8428963cc22b41ce54cc8375780230c846befb032e74540a04f92af263",
+    "eval/runs/genbuster-training-subset-v1-acquisition/independent-readback.json": "cc38860d961afa419fc1307c192a1e2be26f6ffcfa10e8c4829de039d455cd68",
+    "eval/runs/genbuster-training-subset-v1-freeze/receipt.json": "c7042657f91362da2c458211ce1bed2c017407fe8f2f26550645a3a243568f3f",
+    "eval/sources/dinov2-training-backbone/feature-offline-contract-receipt.json": "795569458846469f94637d5d0929d0cbd56f975f8303c7ed980b117a77e62e49",
+    "eval/sources/dinov2-training-backbone/training-feature-driver-offline-contract.json": "130b66ae56f72acf5767c25d75ce284ebdaea8ee24aa7c33385570efb056ade3",
+    "eval/sources/dinov2-training-head-offline-contract.json": "461cba16ae0944cf8fd23a78a61e90aa1884ec3df4f90d35911f511141fd7a68"
+  },
+  "purpose": "One bounded weak-label training experiment followed by 153 consumed-development diagnostics. No product validation or integration authorization from an experiment pass.",
+  "qualityRecipes": {
+    "mild": {
+      "crf": "28",
+      "filter": "scale='min(720,iw)':-2,fps=24"
+    },
+    "severe": {
+      "crf": "36",
+      "filter": "crop=trunc(iw*0.85/2)*2:trunc(ih*0.85/2)*2,scale='min(360,iw)':-2,fps=12,drawbox=x=0:y=0:w=iw:h=ih*0.08:color=black@0.8:t=fill"
+    }
+  },
+  "remainingBeforeFreeze": [],
+  "requiredSourceFiles": [
+    "scripts/acquire-genbuster-training-subset.py",
+    "scripts/dinov2-temporal-features.py",
+    "scripts/build-dinov2-training-features.py",
+    "scripts/train-dinov2-temporal.py",
+    "scripts/eval-dinov2-temporal.py",
+    "scripts/run-dinov2-temporal-experiment.py"
+  ],
+  "resourceLimits": {
+    "diagnosticSeconds": 3600,
+    "diagnosticTreeRssBytes": 8589934592,
+    "featureExtractionCumulativeSeconds": 7200,
+    "featureExtractionTreeRssBytes": 8589934592,
+    "headTrainingSeconds": 1800,
+    "headTrainingTreeRssBytes": 8589934592
+  },
+  "schemaVersion": 1,
+  "sourceHashes": {
+    "scripts/acquire-genbuster-training-subset.py": "b9ce9e6624402e584de3c1965d1a3abbbe19517dd3cc2ba359df0e0c1147321c",
+    "scripts/build-dinov2-training-features.py": "750a2230bd0af10724303c2fd153f230fff93390e17b5224092d7ab208fa2245",
+    "scripts/dinov2-temporal-features.py": "28e520039e48cc9a91daccccb9fb74b0d90a8fd5192148ccbcc99327621105f9",
+    "scripts/eval-dinov2-temporal.py": "c119fe95bb95335653c621fc8e720c7197f98562d00322e619652316ab9c43c5",
+    "scripts/run-dinov2-temporal-experiment.py": "071ff5b811aacc268c8c96e0e08231cd8c0fa955ed8bce97e594896515219b41",
+    "scripts/train-dinov2-temporal.py": "36b405e3b255cbbad6c1a97a1ecee2ebfea453eb57d0aaa7baeb837b5394fbba"
+  },
+  "studyId": "dinov2-temporal-v1",
+  "training": {
+    "batchSize": 64,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "checkpointSelection": "fixed-final-epoch-only",
+    "device": "cpu",
+    "dtype": "float32",
+    "earlyStopping": false,
+    "epochs": 20,
+    "epsilon": 1e-08,
+    "learningRate": 0.001,
+    "optimizer": "AdamW",
+    "qualities": [
+      "original",
+      "mild",
+      "severe"
+    ],
+    "realAiFeatureSplicesPerEpoch": 3072,
+    "realRealFeatureSplicesPerEpoch": 3072,
+    "seed": 2026090503,
+    "spliceFrames": 2,
+    "threads": 4,
+    "weightDecay": 0.0001,
+    "wholeAiPerEpoch": 3072,
+    "wholeRealPerEpoch": 3072
+  }
+}

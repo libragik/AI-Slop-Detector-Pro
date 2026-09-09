@@ -1,0 +1,1666 @@
+{
+  "schemaVersion": 1,
+  "id": "sightengine-temporal-screen-v2",
+  "frozen": true,
+  "frozenAt": "2026-09-08T19:16:24.956551+00:00",
+  "purpose": "Prospective narrow rejection screen for a new temporal rule. All media preexists; no model result used for selection. No product integration or validation claim.",
+  "candidate": {
+    "path": "eval/fixtures/sightengine-temporal-policy-v2.json",
+    "sha256": "e312121b5efbdfe21f75bde8b42a4f017d606f97e6668f4a0cdd404938a77a32"
+  },
+  "sourceFailedStudy": {
+    "path": "eval/fixtures/sightengine-api-diagnostic-v1.json",
+    "sha256": "4067a7bb937f9b7d351a19dde5766c161a62c32c04dc42537d0775380b6251f2"
+  },
+  "exclusions": {
+    "submittedFiveSha256s": [
+      "e575e1447fe39f97dd9e3bda98d76ea091fc730fc7c33fb7320f9cd879d087bc",
+      "3f90460f31c82699d239abedfdf1fae1f5b476d9a369755778b16e877c6df2b7",
+      "b203b07011f3ee6711460da6081401772cf5b69359fd0f1db2347f191b8daacd",
+      "5be143d5551c4434f800610e337285901c83f71f6cd5814251c95db4ba9ac7e6",
+      "33cd1073d4f6ef5cd8eb427d4953182d8329981ed64cce5cc0282bfdc2b14927"
+    ],
+    "userReelSha256": "57be227b22cb166521cf698611886f6380c7f658a41217d03842395c63d270db",
+    "userReelPath": "eval/media/user-reel-Da7nZ5hs6H7/57be227b22cb166521cf698611886f6380c7f658a41217d03842395c63d270db.mp4",
+    "comparison": "Exact bytes excluded; shared parent ancestry explicitly disclosed."
+  },
+  "selection": {
+    "generators": [
+      "luma",
+      "vidu",
+      "pika",
+      "gen4.5",
+      "hailuo2.3",
+      "pixverse_v5",
+      "jimeng",
+      "kling2.5_turbo",
+      "seedance2.0",
+      "sora2",
+      "veo3.1",
+      "wan2.6"
+    ],
+    "positiveQualityAssignment": "Sort original parents by SHA256(sightengine-temporal-v1-quality|originalSHA), cycle original/mild/severe, four per quality.",
+    "negativeCaseIds": [
+      "NASA/base/master",
+      "NASA/base/severe",
+      "NOAA/base/mild",
+      "NOAA/base/severe",
+      "USGS/base/master",
+      "USGS/base/severe",
+      "pendulum/base/master",
+      "pendulum/base/severe",
+      "rolling/base/master",
+      "rolling/base/severe",
+      "conventional-cgi-30",
+      "conventional-cgi-42"
+    ],
+    "selectionUsedModelScores": false,
+    "sameParentCheck": "Raw original receipted Veo; scored separately."
+  },
+  "limits": {
+    "requests": 25,
+    "operations": 3000,
+    "reservedOperations": 1485,
+    "responseBytes": 1048576,
+    "requestSeconds": 180,
+    "minimumStartIntervalSeconds": 1,
+    "concurrency": 1,
+    "mediaBytesPerFile": 50000000,
+    "maxReservedOperations": 3000,
+    "maxRequests": 25
+  },
+  "advancementCriteria": {
+    "technical": "All25 cases complete with valid schema, coverage, accounting and exact outgoing bytes; any error, unattempted case or operational stop fails advancement.",
+    "documentedNegative": "Zero AI alerts among12 files and six parent groups; at least10/12 files and5/6 parents must be no_clear_indicators rather than Inconclusive.",
+    "publisherAssignedAi": "At least10/12 AI alerts overall and at least3/4 in each assigned quality. Inconclusive/no_clear_indicators/error count as non-detections; publisher-assigned recall is reported separately.",
+    "receiptBackedSameParent": "Raw Veo must be AI; report1/1 or0/1 separately with shared-parent qualification.",
+    "scope": "A pass only supports considering narrow experimental integration or a separately frozen next test; no calibrated/population/independent or subsecond/mixed-positive validation claim.",
+    "classificationFailure": "Finish remaining frozen cases if operational safeguards remain valid. Preserve failure; no score-aware replacement, threshold rescue or rerun."
+  },
+  "reporting": {
+    "parentRule": "Within each parentId: any technical failure fails the parent; otherwise any persistent_ai_indicators => alert; else any inconclusive => inconclusive; otherwise all no_clear_indicators => clear. Preserve isolated alerts and reviewRequired even in a persistent-positive case.",
+    "required": [
+      "Per-file and per-parent outcomes",
+      "Publisher-assigned recall overall and by quality, including abstentions as non-detections",
+      "Documented-negative false alerts and usable coverage by file and parent",
+      "Receipt-backed same-parent consistency check separately",
+      "All isolated alerts and persistent sample runs with raw timestamps and scores",
+      "All technical errors, unattempted cases, actual operations and latency",
+      "No population confidence or independence claim from curated dependent sources"
+    ],
+    "parentCounts": {
+      "publisherAssignedAi": 12,
+      "documentedNegative": 6,
+      "receiptBackedSameParent": 1
+    },
+    "missingCoverage": [
+      "No eligible verified new mixed-positive clip after exact-byte exclusions.",
+      "Only one receipt-backed generated parent, already consumed in another encoding.",
+      "No actual Instagram round trip or user-Reel call in this study."
+    ]
+  },
+  "cases": [
+    {
+      "id": "6a072e50471d7830efaa77f0",
+      "path": "eval/media/6a072e50471d7830efaa77f0.mp4",
+      "sha256": "9a37d69557dd629e3391685774b8b6555c65932f673eaaf322bf604a0b7a7b5a",
+      "cohort": "publisher_assigned_ai",
+      "sourceLabel": "ai",
+      "expectedPrimaryDecision": "persistent_ai_indicators",
+      "labelEvidenceStrength": "publisher-assigned-benchmark",
+      "generator": "vidu",
+      "quality": "severe",
+      "parentGroups": [
+        "genbuster:764ce52d7a07e4537959b1c46d062f5990df32e46cf29372eabe12a2e64a1079"
+      ],
+      "primaryParentId": "genbuster:764ce52d7a07e4537959b1c46d062f5990df32e46cf29372eabe12a2e64a1079",
+      "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+      "license": "MIT (dataset card)",
+      "groundTruth": {
+        "basis": "dataset-author-label",
+        "evidenceUrl": "https://github.com/l8cv/BusterX",
+        "labelPath": "GenBuster-Bench/ood/fake/vidu/764ce52d7a07e4537959b1c46d062f5990df32e46cf29372eabe12a2e64a1079.mp4",
+        "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+      },
+      "originalParentSha256": "764ce52d7a07e4537959b1c46d062f5990df32e46cf29372eabe12a2e64a1079",
+      "sourceManifest": {
+        "path": "eval/transformed-manifest.jsonl",
+        "sha256": "a9a7b07a9e8513b753fb879e9e41154454d789a34c9fcf6edb7755e615db7fa1"
+      },
+      "sourceSelectionManifest": {
+        "path": "eval/smoke-manifest.jsonl",
+        "sha256": "a73696821312e5e286d9b96906331129a36ed912f281389e0eae43cfb2c8909f"
+      },
+      "media": {
+        "bytes": 32656,
+        "durationSeconds": 5.083333,
+        "width": 360,
+        "height": 360,
+        "frameRate": "12/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": false,
+      "limitations": "Publisher-assigned origin; no per-clip generation job or authenticated origin. Previously consumed development source. Proprietary vendor training overlap and semantic cross-source overlap unknown.",
+      "mediaProbeSha256": "c8682fbe70b631db264eea825a2decb9f2e70a31f332d2dea5325be2d82de42f",
+      "reservedOperations": 60,
+      "order": 1,
+      "label": "ai",
+      "parentId": "genbuster:764ce52d7a07e4537959b1c46d062f5990df32e46cf29372eabe12a2e64a1079",
+      "expectedGenerativeVisualContribution": true
+    },
+    {
+      "id": "181084c8f843d0e8e5ff71d7",
+      "sourceCaseId": "pendulum/base/master",
+      "path": "eval/runs/aegis-shots-v1-negative-build/media/181084c8f843d0e8e5ff71d7.mp4",
+      "sha256": "06351199a9cfa16bd96a8e19bc24961ca86c9b61f2145db135bdf03db1fdfd57",
+      "cohort": "documented_negative",
+      "sourceLabel": "cgi",
+      "expectedPrimaryDecision": "no_clear_indicators",
+      "labelEvidenceStrength": "conventional-render-receipt",
+      "generator": "none",
+      "quality": "master",
+      "parentGroups": [
+        "pendulum"
+      ],
+      "primaryParentId": "pendulum",
+      "sourceUrl": "https://www.blender.org/",
+      "sourceManifest": {
+        "path": "eval/runs/aegis-shots-v1-negative-build/manifest.jsonl",
+        "sha256": "87c02fc0b447bb0a5cc9f39ca18bda788c773db6f8e145b88bd863b54eb4dc4f"
+      },
+      "groundTruth": {
+        "basis": "Conventional Blender render from preserved code and render receipt; no generative pixel model. Assistant-authored scene code is disclosed and is outside the generative-visual label.",
+        "sourceParent": {
+          "path": "eval/media/fresh-cgi/attempt-01/pendulum-v1/parent.mp4",
+          "sha256": "5be143d5551c4434f800610e337285901c83f71f6cd5814251c95db4ba9ac7e6",
+          "originReceiptPath": "eval/sources/fresh-cgi-render-receipt.json",
+          "originReceiptSha256": "5b50f4ad0edb53d80d95c1fe57109430b8a2c76390751c3ddc50fc50a42394fc",
+          "label": "cgi",
+          "trimStartSeconds": 0,
+          "trimDurationSeconds": 5,
+          "assistantAuthoredSceneCode": true,
+          "generativePixelModel": false,
+          "timelapse": false
+        }
+      },
+      "evidence": [
+        {
+          "path": "eval/fixtures/shot-study-source-plan.json",
+          "sha256": "4a1a354bdd31b466d571c33ac96403982045b4cb829d738dbd47997d6ae1e852"
+        },
+        {
+          "path": "eval/sources/fresh-cgi-render-receipt.json",
+          "sha256": "5b50f4ad0edb53d80d95c1fe57109430b8a2c76390751c3ddc50fc50a42394fc"
+        },
+        {
+          "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/181084c8f843d0e8e5ff71d7/construction.json",
+          "sha256": "3ed139d5ec3a66722a866770c59adb808b08bc41cbb4d904989bd0728ef6ba7b"
+        },
+        {
+          "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/181084c8f843d0e8e5ff71d7/frame-lineage.json",
+          "sha256": "e501085fa4cbf0cf147e0ab16d0b98bc2a598a15d51a3decc272181a450469af"
+        }
+      ],
+      "media": {
+        "bytes": 179094,
+        "durationSeconds": 5.0,
+        "width": 640,
+        "height": 360,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": true,
+      "limitations": "Previously consumed development family, not independent validation. Agency footage is not an authenticated pristine master; NASA and USGS are timelapses. Trims and qualities remain grouped.",
+      "mediaProbeSha256": "caaf25f471531737a47a5cf4eca2cd91913a83321beee49832e97c1af70616b3",
+      "reservedOperations": 55,
+      "order": 2,
+      "label": "cgi",
+      "parentId": "pendulum",
+      "expectedGenerativeVisualContribution": false
+    },
+    {
+      "id": "3c82085d49c6f5ee9e0ca3c3",
+      "path": "eval/media/3c82085d49c6f5ee9e0ca3c3.mp4",
+      "sha256": "04a87aa8b7bdf4417d1c09f4ca9a7abe3cac94af65249d7eee2a9428ddd8168b",
+      "cohort": "publisher_assigned_ai",
+      "sourceLabel": "ai",
+      "expectedPrimaryDecision": "persistent_ai_indicators",
+      "labelEvidenceStrength": "publisher-assigned-benchmark",
+      "generator": "seedance2.0",
+      "quality": "mild",
+      "parentGroups": [
+        "genbuster:e8a5d553d0475b24617211011459e09e99de8ce2b5fc4b389c06a9b57ef86e2d"
+      ],
+      "primaryParentId": "genbuster:e8a5d553d0475b24617211011459e09e99de8ce2b5fc4b389c06a9b57ef86e2d",
+      "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+      "license": "MIT (dataset card)",
+      "groundTruth": {
+        "basis": "dataset-author-label",
+        "evidenceUrl": "https://github.com/l8cv/BusterX",
+        "labelPath": "GenBuster-Bench/wild/fake/seedance2.0/e8a5d553d0475b24617211011459e09e99de8ce2b5fc4b389c06a9b57ef86e2d.mp4",
+        "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+      },
+      "originalParentSha256": "e8a5d553d0475b24617211011459e09e99de8ce2b5fc4b389c06a9b57ef86e2d",
+      "sourceManifest": {
+        "path": "eval/transformed-manifest.jsonl",
+        "sha256": "a9a7b07a9e8513b753fb879e9e41154454d789a34c9fcf6edb7755e615db7fa1"
+      },
+      "sourceSelectionManifest": {
+        "path": "eval/smoke-manifest.jsonl",
+        "sha256": "a73696821312e5e286d9b96906331129a36ed912f281389e0eae43cfb2c8909f"
+      },
+      "media": {
+        "bytes": 125539,
+        "durationSeconds": 5.041667,
+        "width": 720,
+        "height": 720,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": false,
+      "limitations": "Publisher-assigned origin; no per-clip generation job or authenticated origin. Previously consumed development source. Proprietary vendor training overlap and semantic cross-source overlap unknown.",
+      "mediaProbeSha256": "2c3f6b20e5178a23fe888a8876c6a0bd5abe01047799902cc7e51ccf0c2c7aec",
+      "reservedOperations": 60,
+      "order": 3,
+      "label": "ai",
+      "parentId": "genbuster:e8a5d553d0475b24617211011459e09e99de8ce2b5fc4b389c06a9b57ef86e2d",
+      "expectedGenerativeVisualContribution": true
+    },
+    {
+      "id": "9d01860ad2c4dfa73fe779b0",
+      "path": "eval/media/controls/9d01860ad2c4dfa73fe779b0.mp4",
+      "sha256": "fc5edfd6ec80f5ca4d879a5d408f3cfffccdadcbe2edbc8c2d1c2669108d4847",
+      "cohort": "documented_negative",
+      "sourceLabel": "cgi",
+      "expectedPrimaryDecision": "no_clear_indicators",
+      "labelEvidenceStrength": "documented-pre-generative-cgi-production",
+      "generator": "none",
+      "quality": "master",
+      "parentGroups": [
+        "sintel-2010"
+      ],
+      "primaryParentId": "sintel-2010",
+      "sourceUrl": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+      "license": "CC BY 3.0",
+      "groundTruth": {
+        "basis": "Excerpt from Blender Foundation's 2010 conventionally animated Sintel trailer; https://durian.blender.org/sharing/ documents CC BY license and https://studio.blender.org/films/ documents 2010 production. No generative AI rendering.",
+        "sourceIntervalSeconds": [
+          30,
+          36
+        ]
+      },
+      "sourceManifest": {
+        "path": "eval/control-manifest.jsonl",
+        "sha256": "cc5c3a2907a9fb8252aaf962ddf1136a708f2f66373dddc81081005804903349"
+      },
+      "evidence": [
+        {
+          "path": "scripts/build-controls.py",
+          "sha256": "319ef5dfb982bab1fe7ee72ab47f6746b8c1d805409656297a4c0306c95fc65e"
+        },
+        {
+          "path": "eval/fixtures/generated-control-build-receipt.json",
+          "sha256": "61bc00627af81b795ba29aa300d68ef17f42a2365557706f42a674e40d1be94d"
+        }
+      ],
+      "media": {
+        "bytes": 818824,
+        "durationSeconds": 6.0,
+        "width": 854,
+        "height": 480,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": true,
+      "limitations": "Two new byte/interval checks from the same Sintel production previously tested. Not two independent CGI productions. Existing build script/manifest and acquired source hash are retained.",
+      "mediaProbeSha256": "fc4bdeff79fc14197a1487764f300043c46af61cc30a4c76e2666f75782fda01",
+      "reservedOperations": 65,
+      "order": 4,
+      "label": "cgi",
+      "parentId": "sintel-2010",
+      "expectedGenerativeVisualContribution": false
+    },
+    {
+      "id": "056c0a6ab03ea042ef9969b7",
+      "path": "eval/media/056c0a6ab03ea042ef9969b7.mp4",
+      "sha256": "bad0696a5952c39cc5cbb6f6c5841050b7908e554d7bec95151dd06249b49615",
+      "cohort": "publisher_assigned_ai",
+      "sourceLabel": "ai",
+      "expectedPrimaryDecision": "persistent_ai_indicators",
+      "labelEvidenceStrength": "publisher-assigned-benchmark",
+      "generator": "luma",
+      "quality": "original",
+      "parentGroups": [
+        "genbuster:bad0696a5952c39cc5cbb6f6c5841050b7908e554d7bec95151dd06249b49615"
+      ],
+      "primaryParentId": "genbuster:bad0696a5952c39cc5cbb6f6c5841050b7908e554d7bec95151dd06249b49615",
+      "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+      "license": "MIT (dataset card)",
+      "groundTruth": {
+        "basis": "dataset-author-label",
+        "evidenceUrl": "https://github.com/l8cv/BusterX",
+        "labelPath": "GenBuster-Bench/ood/fake/luma/bad0696a5952c39cc5cbb6f6c5841050b7908e554d7bec95151dd06249b49615.mp4",
+        "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+      },
+      "originalParentSha256": "bad0696a5952c39cc5cbb6f6c5841050b7908e554d7bec95151dd06249b49615",
+      "sourceManifest": {
+        "path": "eval/transformed-manifest.jsonl",
+        "sha256": "a9a7b07a9e8513b753fb879e9e41154454d789a34c9fcf6edb7755e615db7fa1"
+      },
+      "sourceSelectionManifest": {
+        "path": "eval/smoke-manifest.jsonl",
+        "sha256": "a73696821312e5e286d9b96906331129a36ed912f281389e0eae43cfb2c8909f"
+      },
+      "media": {
+        "bytes": 426734,
+        "durationSeconds": 5.041667,
+        "width": 1024,
+        "height": 1024,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": false,
+      "limitations": "Publisher-assigned origin; no per-clip generation job or authenticated origin. Previously consumed development source. Proprietary vendor training overlap and semantic cross-source overlap unknown.",
+      "mediaProbeSha256": "722d0585355457f5e2ff18f20871e611bb6c62930c489647c0b6ba369dc487bd",
+      "reservedOperations": 60,
+      "order": 5,
+      "label": "ai",
+      "parentId": "genbuster:bad0696a5952c39cc5cbb6f6c5841050b7908e554d7bec95151dd06249b49615",
+      "expectedGenerativeVisualContribution": true
+    },
+    {
+      "id": "9849f2f46828f26857b55621",
+      "sourceCaseId": "rolling/base/master",
+      "path": "eval/runs/aegis-shots-v1-negative-build/media/9849f2f46828f26857b55621.mp4",
+      "sha256": "2b1bfbb6dc928c4c651a3e5904ca04f9c962402a6f7fe2837945d1f85fe0fd30",
+      "cohort": "documented_negative",
+      "sourceLabel": "cgi",
+      "expectedPrimaryDecision": "no_clear_indicators",
+      "labelEvidenceStrength": "conventional-render-receipt",
+      "generator": "none",
+      "quality": "master",
+      "parentGroups": [
+        "rolling"
+      ],
+      "primaryParentId": "rolling",
+      "sourceUrl": "https://www.blender.org/",
+      "sourceManifest": {
+        "path": "eval/runs/aegis-shots-v1-negative-build/manifest.jsonl",
+        "sha256": "87c02fc0b447bb0a5cc9f39ca18bda788c773db6f8e145b88bd863b54eb4dc4f"
+      },
+      "groundTruth": {
+        "basis": "Conventional Blender render from preserved code and render receipt; no generative pixel model. Assistant-authored scene code is disclosed and is outside the generative-visual label.",
+        "sourceParent": {
+          "path": "eval/media/fresh-cgi/attempt-01/rolling-track-v1/parent.mp4",
+          "sha256": "81a4c33980160d1f67d7e3670fc5e9e73aa0b359be6662c5bb21ab61dee35a32",
+          "originReceiptPath": "eval/sources/fresh-cgi-render-receipt.json",
+          "originReceiptSha256": "5b50f4ad0edb53d80d95c1fe57109430b8a2c76390751c3ddc50fc50a42394fc",
+          "label": "cgi",
+          "trimStartSeconds": 0,
+          "trimDurationSeconds": 5,
+          "assistantAuthoredSceneCode": true,
+          "generativePixelModel": false,
+          "timelapse": false
+        }
+      },
+      "evidence": [
+        {
+          "path": "eval/fixtures/shot-study-source-plan.json",
+          "sha256": "4a1a354bdd31b466d571c33ac96403982045b4cb829d738dbd47997d6ae1e852"
+        },
+        {
+          "path": "eval/sources/fresh-cgi-render-receipt.json",
+          "sha256": "5b50f4ad0edb53d80d95c1fe57109430b8a2c76390751c3ddc50fc50a42394fc"
+        },
+        {
+          "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/9849f2f46828f26857b55621/construction.json",
+          "sha256": "c2e1b3684269dd9ed3893bcb90202047d9690738293df8358b8052d15e003936"
+        },
+        {
+          "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/9849f2f46828f26857b55621/frame-lineage.json",
+          "sha256": "6476acd04070e720e129552b0d69af81d4b2e15a3dbf5af4592e511c6b97f320"
+        }
+      ],
+      "media": {
+        "bytes": 164826,
+        "durationSeconds": 5.0,
+        "width": 640,
+        "height": 360,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": false,
+      "limitations": "Previously consumed development family, not independent validation. Agency footage is not an authenticated pristine master; NASA and USGS are timelapses. Trims and qualities remain grouped.",
+      "mediaProbeSha256": "7988f32cacb1ea945fd9f6f5d28c87789ca688a343c9943e504c39725db495dc",
+      "reservedOperations": 55,
+      "order": 6,
+      "label": "cgi",
+      "parentId": "rolling",
+      "expectedGenerativeVisualContribution": false
+    },
+    {
+      "id": "a8d754226ed275ebdc840b15",
+      "path": "eval/media/a8d754226ed275ebdc840b15.mp4",
+      "sha256": "7a20e1bb2d5d085f86849e56eb8cc78ec5bcc751a8c5b69aecf5d360f143f6ce",
+      "cohort": "publisher_assigned_ai",
+      "sourceLabel": "ai",
+      "expectedPrimaryDecision": "persistent_ai_indicators",
+      "labelEvidenceStrength": "publisher-assigned-benchmark",
+      "generator": "hailuo2.3",
+      "quality": "severe",
+      "parentGroups": [
+        "genbuster:3dcbd8e1721d6532cb8293ceeb796adc5a84133e44c8d1de10287b6d28ed92bb"
+      ],
+      "primaryParentId": "genbuster:3dcbd8e1721d6532cb8293ceeb796adc5a84133e44c8d1de10287b6d28ed92bb",
+      "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+      "license": "MIT (dataset card)",
+      "groundTruth": {
+        "basis": "dataset-author-label",
+        "evidenceUrl": "https://github.com/l8cv/BusterX",
+        "labelPath": "GenBuster-Bench/wild/fake/hailuo2.3/3dcbd8e1721d6532cb8293ceeb796adc5a84133e44c8d1de10287b6d28ed92bb.mp4",
+        "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+      },
+      "originalParentSha256": "3dcbd8e1721d6532cb8293ceeb796adc5a84133e44c8d1de10287b6d28ed92bb",
+      "sourceManifest": {
+        "path": "eval/transformed-manifest.jsonl",
+        "sha256": "a9a7b07a9e8513b753fb879e9e41154454d789a34c9fcf6edb7755e615db7fa1"
+      },
+      "sourceSelectionManifest": {
+        "path": "eval/smoke-manifest.jsonl",
+        "sha256": "a73696821312e5e286d9b96906331129a36ed912f281389e0eae43cfb2c8909f"
+      },
+      "media": {
+        "bytes": 44855,
+        "durationSeconds": 5.083333,
+        "width": 360,
+        "height": 360,
+        "frameRate": "12/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": false,
+      "limitations": "Publisher-assigned origin; no per-clip generation job or authenticated origin. Previously consumed development source. Proprietary vendor training overlap and semantic cross-source overlap unknown.",
+      "mediaProbeSha256": "6e4c558e8bf25d745151a8ec03c2f2bfefbcdd75358442ea81b1ff4ba9db56be",
+      "reservedOperations": 60,
+      "order": 7,
+      "label": "ai",
+      "parentId": "genbuster:3dcbd8e1721d6532cb8293ceeb796adc5a84133e44c8d1de10287b6d28ed92bb",
+      "expectedGenerativeVisualContribution": true
+    },
+    {
+      "id": "14b4ba66fa34440f9c90b5c5",
+      "path": "eval/media/14b4ba66fa34440f9c90b5c5.mp4",
+      "sha256": "126e1b7384bf72f3f80c9d3280f83d0e29996bb792b7c550833c82d2a4d4d67c",
+      "cohort": "publisher_assigned_ai",
+      "sourceLabel": "ai",
+      "expectedPrimaryDecision": "persistent_ai_indicators",
+      "labelEvidenceStrength": "publisher-assigned-benchmark",
+      "generator": "pixverse_v5",
+      "quality": "original",
+      "parentGroups": [
+        "genbuster:126e1b7384bf72f3f80c9d3280f83d0e29996bb792b7c550833c82d2a4d4d67c"
+      ],
+      "primaryParentId": "genbuster:126e1b7384bf72f3f80c9d3280f83d0e29996bb792b7c550833c82d2a4d4d67c",
+      "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+      "license": "MIT (dataset card)",
+      "groundTruth": {
+        "basis": "dataset-author-label",
+        "evidenceUrl": "https://github.com/l8cv/BusterX",
+        "labelPath": "GenBuster-Bench/wild/fake/pixverse_v5/126e1b7384bf72f3f80c9d3280f83d0e29996bb792b7c550833c82d2a4d4d67c.mp4",
+        "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+      },
+      "originalParentSha256": "126e1b7384bf72f3f80c9d3280f83d0e29996bb792b7c550833c82d2a4d4d67c",
+      "sourceManifest": {
+        "path": "eval/transformed-manifest.jsonl",
+        "sha256": "a9a7b07a9e8513b753fb879e9e41154454d789a34c9fcf6edb7755e615db7fa1"
+      },
+      "sourceSelectionManifest": {
+        "path": "eval/smoke-manifest.jsonl",
+        "sha256": "a73696821312e5e286d9b96906331129a36ed912f281389e0eae43cfb2c8909f"
+      },
+      "media": {
+        "bytes": 1059709,
+        "durationSeconds": 5.041667,
+        "width": 1024,
+        "height": 1024,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": false,
+      "limitations": "Publisher-assigned origin; no per-clip generation job or authenticated origin. Previously consumed development source. Proprietary vendor training overlap and semantic cross-source overlap unknown.",
+      "mediaProbeSha256": "5ddd70a1c3d269a408d61589d10f72844a566f4f477b803341f256a442d82c54",
+      "reservedOperations": 60,
+      "order": 8,
+      "label": "ai",
+      "parentId": "genbuster:126e1b7384bf72f3f80c9d3280f83d0e29996bb792b7c550833c82d2a4d4d67c",
+      "expectedGenerativeVisualContribution": true
+    },
+    {
+      "id": "97f5f1626faf3501fa4e2489",
+      "sourceCaseId": "USGS/base/master",
+      "path": "eval/runs/aegis-shots-v1-negative-build/media/97f5f1626faf3501fa4e2489.mp4",
+      "sha256": "baa786de8b92641321d4417c711399100e456e75a364a9637a6102cd1a2c24e3",
+      "cohort": "documented_negative",
+      "sourceLabel": "camera",
+      "expectedPrimaryDecision": "no_clear_indicators",
+      "labelEvidenceStrength": "documented-camera-source",
+      "generator": "none",
+      "quality": "master",
+      "parentGroups": [
+        "USGS"
+      ],
+      "primaryParentId": "USGS",
+      "sourceUrl": "https://usgs-ocapsv2-public-input-media.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/video/multimediaFile-256.mp4",
+      "sourceManifest": {
+        "path": "eval/runs/aegis-shots-v1-negative-build/manifest.jsonl",
+        "sha256": "87c02fc0b447bb0a5cc9f39ca18bda788c773db6f8e145b88bd863b54eb4dc4f"
+      },
+      "groundTruth": {
+        "basis": "Agency-documented dated camera event, locally inspected selected interval, source hash and deterministic derivative/frame lineage retained. Camera-origin imagery includes conventional processing.",
+        "sourceParent": {
+          "path": "eval/media/camera-origins/3760819946ae49f55d8e50ce.mp4",
+          "sha256": "3760819946ae49f55d8e50ce9535caedfac66c16e670ed1b1dc6fd7b14604043",
+          "originReceiptPath": "eval/sources/camera-origin-acquisition.json",
+          "originReceiptSha256": "521e1d4474fbddfd947bb9e4502b0c0c7e5f943c3e68ba72f5f6ca603f7029ec",
+          "label": "camera",
+          "trimStartSeconds": 0,
+          "trimDurationSeconds": 5,
+          "timelapse": true,
+          "pristineMaster": false
+        }
+      },
+      "evidence": [
+        {
+          "path": "eval/fixtures/shot-study-source-plan.json",
+          "sha256": "4a1a354bdd31b466d571c33ac96403982045b4cb829d738dbd47997d6ae1e852"
+        },
+        {
+          "path": "eval/sources/camera-origin-acquisition.json",
+          "sha256": "521e1d4474fbddfd947bb9e4502b0c0c7e5f943c3e68ba72f5f6ca603f7029ec"
+        },
+        {
+          "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/97f5f1626faf3501fa4e2489/construction.json",
+          "sha256": "dff62eae6e6c3502103c0b2368b308a775a6b7416bace364f25f2d25008e1eae"
+        },
+        {
+          "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/97f5f1626faf3501fa4e2489/frame-lineage.json",
+          "sha256": "5293b06c1068a6f23a68bf96e98c90f0fd99e809bff6e8ca1a3a50a9ed587f1e"
+        },
+        {
+          "path": "eval/sources/camera-control-inspection.json",
+          "sha256": "c1c1db64718c7e2d9720766380b7b87850166695ec85d7f02d46a801c426d537"
+        },
+        {
+          "path": "eval/CAMERA_CONTROL_INSPECTION.md",
+          "sha256": "d1bfae339a12eb0293a22e02a20f0f873f090901b6f432ec67638449fc280f03"
+        }
+      ],
+      "media": {
+        "bytes": 819636,
+        "durationSeconds": 5.0,
+        "width": 640,
+        "height": 360,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": false,
+      "limitations": "Previously consumed development family, not independent validation. Agency footage is not an authenticated pristine master; NASA and USGS are timelapses. Trims and qualities remain grouped.",
+      "mediaProbeSha256": "a894d6fab08e680daec9d3a9f53853bbf086e21f628778638e527663e5c1f344",
+      "reservedOperations": 55,
+      "order": 9,
+      "label": "camera",
+      "parentId": "USGS",
+      "expectedGenerativeVisualContribution": false
+    },
+    {
+      "id": "2129c615634c154928e05d23",
+      "path": "eval/media/2129c615634c154928e05d23.mp4",
+      "sha256": "729465f025efa399b37022cf61aa15bcec7aed112b7ec50cbfe3ab88c5b6877c",
+      "cohort": "publisher_assigned_ai",
+      "sourceLabel": "ai",
+      "expectedPrimaryDecision": "persistent_ai_indicators",
+      "labelEvidenceStrength": "publisher-assigned-benchmark",
+      "generator": "wan2.6",
+      "quality": "original",
+      "parentGroups": [
+        "genbuster:729465f025efa399b37022cf61aa15bcec7aed112b7ec50cbfe3ab88c5b6877c"
+      ],
+      "primaryParentId": "genbuster:729465f025efa399b37022cf61aa15bcec7aed112b7ec50cbfe3ab88c5b6877c",
+      "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+      "license": "MIT (dataset card)",
+      "groundTruth": {
+        "basis": "dataset-author-label",
+        "evidenceUrl": "https://github.com/l8cv/BusterX",
+        "labelPath": "GenBuster-Bench/wild/fake/wan2.6/729465f025efa399b37022cf61aa15bcec7aed112b7ec50cbfe3ab88c5b6877c.mp4",
+        "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+      },
+      "originalParentSha256": "729465f025efa399b37022cf61aa15bcec7aed112b7ec50cbfe3ab88c5b6877c",
+      "sourceManifest": {
+        "path": "eval/transformed-manifest.jsonl",
+        "sha256": "a9a7b07a9e8513b753fb879e9e41154454d789a34c9fcf6edb7755e615db7fa1"
+      },
+      "sourceSelectionManifest": {
+        "path": "eval/smoke-manifest.jsonl",
+        "sha256": "a73696821312e5e286d9b96906331129a36ed912f281389e0eae43cfb2c8909f"
+      },
+      "media": {
+        "bytes": 566379,
+        "durationSeconds": 5.041667,
+        "width": 1024,
+        "height": 1024,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": false,
+      "limitations": "Publisher-assigned origin; no per-clip generation job or authenticated origin. Previously consumed development source. Proprietary vendor training overlap and semantic cross-source overlap unknown.",
+      "mediaProbeSha256": "bede1ce815fbfa9dc56d821ff30cff6fdc698d4245cce9e5ba3b6ee93ee2b4d0",
+      "reservedOperations": 60,
+      "order": 10,
+      "label": "ai",
+      "parentId": "genbuster:729465f025efa399b37022cf61aa15bcec7aed112b7ec50cbfe3ab88c5b6877c",
+      "expectedGenerativeVisualContribution": true
+    },
+    {
+      "id": "db54b2138297309270c57e0b",
+      "sourceCaseId": "rolling/base/severe",
+      "path": "eval/runs/aegis-shots-v1-negative-build/media/db54b2138297309270c57e0b.mp4",
+      "sha256": "dff3727914a2f98f631d4bd896609ebf6abe5048f0e00692d22889e8a6e671b9",
+      "cohort": "documented_negative",
+      "sourceLabel": "cgi",
+      "expectedPrimaryDecision": "no_clear_indicators",
+      "labelEvidenceStrength": "conventional-render-receipt",
+      "generator": "none",
+      "quality": "severe",
+      "parentGroups": [
+        "rolling"
+      ],
+      "primaryParentId": "rolling",
+      "sourceUrl": "https://www.blender.org/",
+      "sourceManifest": {
+        "path": "eval/runs/aegis-shots-v1-negative-build/manifest.jsonl",
+        "sha256": "87c02fc0b447bb0a5cc9f39ca18bda788c773db6f8e145b88bd863b54eb4dc4f"
+      },
+      "groundTruth": {
+        "basis": "Conventional Blender render from preserved code and render receipt; no generative pixel model. Assistant-authored scene code is disclosed and is outside the generative-visual label.",
+        "sourceParent": {
+          "path": "eval/media/fresh-cgi/attempt-01/rolling-track-v1/parent.mp4",
+          "sha256": "81a4c33980160d1f67d7e3670fc5e9e73aa0b359be6662c5bb21ab61dee35a32",
+          "originReceiptPath": "eval/sources/fresh-cgi-render-receipt.json",
+          "originReceiptSha256": "5b50f4ad0edb53d80d95c1fe57109430b8a2c76390751c3ddc50fc50a42394fc",
+          "label": "cgi",
+          "trimStartSeconds": 0,
+          "trimDurationSeconds": 5,
+          "assistantAuthoredSceneCode": true,
+          "generativePixelModel": false,
+          "timelapse": false
+        }
+      },
+      "evidence": [
+        {
+          "path": "eval/fixtures/shot-study-source-plan.json",
+          "sha256": "4a1a354bdd31b466d571c33ac96403982045b4cb829d738dbd47997d6ae1e852"
+        },
+        {
+          "path": "eval/sources/fresh-cgi-render-receipt.json",
+          "sha256": "5b50f4ad0edb53d80d95c1fe57109430b8a2c76390751c3ddc50fc50a42394fc"
+        },
+        {
+          "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/db54b2138297309270c57e0b/construction.json",
+          "sha256": "085979485de3a54372a476f15ab65a0d4ae33928e4cc4817c61e7e1689d4e430"
+        },
+        {
+          "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/db54b2138297309270c57e0b/frame-lineage.json",
+          "sha256": "231fc3d576880bae3db9cf5d42fed8be5dd6742f688f4a588606361e2a04a7f4"
+        }
+      ],
+      "media": {
+        "bytes": 7885,
+        "durationSeconds": 5.0,
+        "width": 360,
+        "height": 202,
+        "frameRate": "12/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": false,
+      "limitations": "Previously consumed development family, not independent validation. Agency footage is not an authenticated pristine master; NASA and USGS are timelapses. Trims and qualities remain grouped.",
+      "mediaProbeSha256": "3a4e500da19d2ac7728f6f0ded0a07770d417ca84bc9d6b79c50d6fd55b9d357",
+      "reservedOperations": 55,
+      "order": 11,
+      "label": "cgi",
+      "parentId": "rolling",
+      "expectedGenerativeVisualContribution": false
+    },
+    {
+      "id": "fc45bccf51b8b03a5aad0542",
+      "path": "eval/media/controls/fc45bccf51b8b03a5aad0542.mp4",
+      "sha256": "1081b2f05a09a67995c87ab3bcc169e148193e6119d973349b9486f8b19384b5",
+      "cohort": "documented_negative",
+      "sourceLabel": "cgi",
+      "expectedPrimaryDecision": "no_clear_indicators",
+      "labelEvidenceStrength": "documented-pre-generative-cgi-production",
+      "generator": "none",
+      "quality": "master",
+      "parentGroups": [
+        "sintel-2010"
+      ],
+      "primaryParentId": "sintel-2010",
+      "sourceUrl": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+      "license": "CC BY 3.0",
+      "groundTruth": {
+        "basis": "Excerpt from Blender Foundation's 2010 conventionally animated Sintel trailer; https://durian.blender.org/sharing/ documents CC BY license and https://studio.blender.org/films/ documents 2010 production. No generative AI rendering.",
+        "sourceIntervalSeconds": [
+          42,
+          48
+        ]
+      },
+      "sourceManifest": {
+        "path": "eval/control-manifest.jsonl",
+        "sha256": "cc5c3a2907a9fb8252aaf962ddf1136a708f2f66373dddc81081005804903349"
+      },
+      "evidence": [
+        {
+          "path": "scripts/build-controls.py",
+          "sha256": "319ef5dfb982bab1fe7ee72ab47f6746b8c1d805409656297a4c0306c95fc65e"
+        },
+        {
+          "path": "eval/fixtures/generated-control-build-receipt.json",
+          "sha256": "61bc00627af81b795ba29aa300d68ef17f42a2365557706f42a674e40d1be94d"
+        }
+      ],
+      "media": {
+        "bytes": 79735,
+        "durationSeconds": 6.0,
+        "width": 854,
+        "height": 480,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": true,
+      "limitations": "Two new byte/interval checks from the same Sintel production previously tested. Not two independent CGI productions. Existing build script/manifest and acquired source hash are retained.",
+      "mediaProbeSha256": "08dde98e716ad837af5b0b678e2dab18a1e4c40ee64dadc10b01381b6b7459b8",
+      "reservedOperations": 65,
+      "order": 12,
+      "label": "cgi",
+      "parentId": "sintel-2010",
+      "expectedGenerativeVisualContribution": false
+    },
+    {
+      "id": "0d18be0b4b426e248b052a63",
+      "sourceCaseId": "USGS/base/severe",
+      "path": "eval/runs/aegis-shots-v1-negative-build/media/0d18be0b4b426e248b052a63.mp4",
+      "sha256": "bd500bae3258312ac29322a1e0a10c987d8d73cbd0ca8c6783833763663d5cf4",
+      "cohort": "documented_negative",
+      "sourceLabel": "camera",
+      "expectedPrimaryDecision": "no_clear_indicators",
+      "labelEvidenceStrength": "documented-camera-source",
+      "generator": "none",
+      "quality": "severe",
+      "parentGroups": [
+        "USGS"
+      ],
+      "primaryParentId": "USGS",
+      "sourceUrl": "https://usgs-ocapsv2-public-input-media.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/video/multimediaFile-256.mp4",
+      "sourceManifest": {
+        "path": "eval/runs/aegis-shots-v1-negative-build/manifest.jsonl",
+        "sha256": "87c02fc0b447bb0a5cc9f39ca18bda788c773db6f8e145b88bd863b54eb4dc4f"
+      },
+      "groundTruth": {
+        "basis": "Agency-documented dated camera event, locally inspected selected interval, source hash and deterministic derivative/frame lineage retained. Camera-origin imagery includes conventional processing.",
+        "sourceParent": {
+          "path": "eval/media/camera-origins/3760819946ae49f55d8e50ce.mp4",
+          "sha256": "3760819946ae49f55d8e50ce9535caedfac66c16e670ed1b1dc6fd7b14604043",
+          "originReceiptPath": "eval/sources/camera-origin-acquisition.json",
+          "originReceiptSha256": "521e1d4474fbddfd947bb9e4502b0c0c7e5f943c3e68ba72f5f6ca603f7029ec",
+          "label": "camera",
+          "trimStartSeconds": 0,
+          "trimDurationSeconds": 5,
+          "timelapse": true,
+          "pristineMaster": false
+        }
+      },
+      "evidence": [
+        {
+          "path": "eval/fixtures/shot-study-source-plan.json",
+          "sha256": "4a1a354bdd31b466d571c33ac96403982045b4cb829d738dbd47997d6ae1e852"
+        },
+        {
+          "path": "eval/sources/camera-origin-acquisition.json",
+          "sha256": "521e1d4474fbddfd947bb9e4502b0c0c7e5f943c3e68ba72f5f6ca603f7029ec"
+        },
+        {
+          "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/0d18be0b4b426e248b052a63/construction.json",
+          "sha256": "94f757079e79def1c5408b74403d15a99ef0ef7544ad3101cf0b4b30c6265804"
+        },
+        {
+          "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/0d18be0b4b426e248b052a63/frame-lineage.json",
+          "sha256": "2b927a03493d75252d95cf6c968604b69df1b73c48cb05710cc59dbf4c016ba7"
+        },
+        {
+          "path": "eval/sources/camera-control-inspection.json",
+          "sha256": "c1c1db64718c7e2d9720766380b7b87850166695ec85d7f02d46a801c426d537"
+        },
+        {
+          "path": "eval/CAMERA_CONTROL_INSPECTION.md",
+          "sha256": "d1bfae339a12eb0293a22e02a20f0f873f090901b6f432ec67638449fc280f03"
+        }
+      ],
+      "media": {
+        "bytes": 33618,
+        "durationSeconds": 5.0,
+        "width": 360,
+        "height": 202,
+        "frameRate": "12/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": false,
+      "limitations": "Previously consumed development family, not independent validation. Agency footage is not an authenticated pristine master; NASA and USGS are timelapses. Trims and qualities remain grouped.",
+      "mediaProbeSha256": "11b583d9daaeae88d98f4ccd00dc8e713a734e6c4b8dc7b1d95cc69deeb2a8b1",
+      "reservedOperations": 55,
+      "order": 13,
+      "label": "camera",
+      "parentId": "USGS",
+      "expectedGenerativeVisualContribution": false
+    },
+    {
+      "id": "b3ca93a3fd4d871394078d3e",
+      "path": "eval/media/b3ca93a3fd4d871394078d3e.mp4",
+      "sha256": "4f761c6b877a73283c8fede71f05c281660f3978b7d3ccf33bfa4348090b63f8",
+      "cohort": "publisher_assigned_ai",
+      "sourceLabel": "ai",
+      "expectedPrimaryDecision": "persistent_ai_indicators",
+      "labelEvidenceStrength": "publisher-assigned-benchmark",
+      "generator": "jimeng",
+      "quality": "original",
+      "parentGroups": [
+        "genbuster:4f761c6b877a73283c8fede71f05c281660f3978b7d3ccf33bfa4348090b63f8"
+      ],
+      "primaryParentId": "genbuster:4f761c6b877a73283c8fede71f05c281660f3978b7d3ccf33bfa4348090b63f8",
+      "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+      "license": "MIT (dataset card)",
+      "groundTruth": {
+        "basis": "dataset-author-label",
+        "evidenceUrl": "https://github.com/l8cv/BusterX",
+        "labelPath": "GenBuster-Bench/ood/fake/jimeng/4f761c6b877a73283c8fede71f05c281660f3978b7d3ccf33bfa4348090b63f8.mp4",
+        "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+      },
+      "originalParentSha256": "4f761c6b877a73283c8fede71f05c281660f3978b7d3ccf33bfa4348090b63f8",
+      "sourceManifest": {
+        "path": "eval/transformed-manifest.jsonl",
+        "sha256": "a9a7b07a9e8513b753fb879e9e41154454d789a34c9fcf6edb7755e615db7fa1"
+      },
+      "sourceSelectionManifest": {
+        "path": "eval/smoke-manifest.jsonl",
+        "sha256": "a73696821312e5e286d9b96906331129a36ed912f281389e0eae43cfb2c8909f"
+      },
+      "media": {
+        "bytes": 592955,
+        "durationSeconds": 5.041667,
+        "width": 1024,
+        "height": 1024,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": false,
+      "limitations": "Publisher-assigned origin; no per-clip generation job or authenticated origin. Previously consumed development source. Proprietary vendor training overlap and semantic cross-source overlap unknown.",
+      "mediaProbeSha256": "aabc0216baec3b724f84adba7fab38e0b8943ae9bff76a0603a6286ab0627bae",
+      "reservedOperations": 60,
+      "order": 14,
+      "label": "ai",
+      "parentId": "genbuster:4f761c6b877a73283c8fede71f05c281660f3978b7d3ccf33bfa4348090b63f8",
+      "expectedGenerativeVisualContribution": true
+    },
+    {
+      "id": "ec9ad2584be77999cc3f0693",
+      "sourceCaseId": "NOAA/base/severe",
+      "path": "eval/runs/aegis-shots-v1-negative-build/media/ec9ad2584be77999cc3f0693.mp4",
+      "sha256": "c797aa2afa8484947093e7b40e3211f0bd4282c0b6b4989fc6721e3492569325",
+      "cohort": "documented_negative",
+      "sourceLabel": "camera",
+      "expectedPrimaryDecision": "no_clear_indicators",
+      "labelEvidenceStrength": "documented-camera-source",
+      "generator": "none",
+      "quality": "severe",
+      "parentGroups": [
+        "NOAA"
+      ],
+      "primaryParentId": "NOAA",
+      "sourceUrl": "https://oceanexplorer.noaa.gov/wp-content/uploads/2021/02/10index-seacuke-swims.mp4",
+      "sourceManifest": {
+        "path": "eval/runs/aegis-shots-v1-negative-build/manifest.jsonl",
+        "sha256": "87c02fc0b447bb0a5cc9f39ca18bda788c773db6f8e145b88bd863b54eb4dc4f"
+      },
+      "groundTruth": {
+        "basis": "Agency-documented dated camera event, locally inspected selected interval, source hash and deterministic derivative/frame lineage retained. Camera-origin imagery includes conventional processing.",
+        "sourceParent": {
+          "path": "eval/media/camera-origins/32bdae2f731bf4190c796a6f.mp4",
+          "sha256": "32bdae2f731bf4190c796a6fbef6a6e9bed601b5ee3de1ca43739625b940c45a",
+          "originReceiptPath": "eval/sources/camera-origin-acquisition.json",
+          "originReceiptSha256": "521e1d4474fbddfd947bb9e4502b0c0c7e5f943c3e68ba72f5f6ca603f7029ec",
+          "label": "camera",
+          "trimStartSeconds": 20,
+          "trimDurationSeconds": 5,
+          "timelapse": false,
+          "pristineMaster": false
+        }
+      },
+      "evidence": [
+        {
+          "path": "eval/fixtures/shot-study-source-plan.json",
+          "sha256": "4a1a354bdd31b466d571c33ac96403982045b4cb829d738dbd47997d6ae1e852"
+        },
+        {
+          "path": "eval/sources/camera-origin-acquisition.json",
+          "sha256": "521e1d4474fbddfd947bb9e4502b0c0c7e5f943c3e68ba72f5f6ca603f7029ec"
+        },
+        {
+          "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/ec9ad2584be77999cc3f0693/construction.json",
+          "sha256": "7a7f6973f88bbe0c50ef070c621766ac6a87cda5131a9f21b5a2c93b0bfbf0bb"
+        },
+        {
+          "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/ec9ad2584be77999cc3f0693/frame-lineage.json",
+          "sha256": "6ac96c45eece54d856c96ae0dcfc3d4a52098662b315c0cc1804a362c8af4f85"
+        },
+        {
+          "path": "eval/sources/camera-control-inspection.json",
+          "sha256": "c1c1db64718c7e2d9720766380b7b87850166695ec85d7f02d46a801c426d537"
+        },
+        {
+          "path": "eval/CAMERA_CONTROL_INSPECTION.md",
+          "sha256": "d1bfae339a12eb0293a22e02a20f0f873f090901b6f432ec67638449fc280f03"
+        }
+      ],
+      "media": {
+        "bytes": 15898,
+        "durationSeconds": 5.0,
+        "width": 360,
+        "height": 202,
+        "frameRate": "12/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": true,
+      "limitations": "Previously consumed development family, not independent validation. Agency footage is not an authenticated pristine master; NASA and USGS are timelapses. Trims and qualities remain grouped.",
+      "mediaProbeSha256": "a01f9fa3b92bf70d8965a345d8dfc1d2e0097b4ce436404ff54bff091f9ae487",
+      "reservedOperations": 55,
+      "order": 15,
+      "label": "camera",
+      "parentId": "NOAA",
+      "expectedGenerativeVisualContribution": false
+    },
+    {
+      "id": "9a4938a20ee0c244e3bbcea5",
+      "path": "eval/media/9a4938a20ee0c244e3bbcea5.mp4",
+      "sha256": "f25c5cd45d14221d22bdb58cdd88f92a85fbeb2d53f5703896242c6e9140e7bd",
+      "cohort": "publisher_assigned_ai",
+      "sourceLabel": "ai",
+      "expectedPrimaryDecision": "persistent_ai_indicators",
+      "labelEvidenceStrength": "publisher-assigned-benchmark",
+      "generator": "pika",
+      "quality": "severe",
+      "parentGroups": [
+        "genbuster:b7a22f47e8b8166ff8661b248067e4a62eade1978bd88b1bb363d1735597775e"
+      ],
+      "primaryParentId": "genbuster:b7a22f47e8b8166ff8661b248067e4a62eade1978bd88b1bb363d1735597775e",
+      "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+      "license": "MIT (dataset card)",
+      "groundTruth": {
+        "basis": "dataset-author-label",
+        "evidenceUrl": "https://github.com/l8cv/BusterX",
+        "labelPath": "GenBuster-Bench/ood/fake/pika/b7a22f47e8b8166ff8661b248067e4a62eade1978bd88b1bb363d1735597775e.mp4",
+        "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+      },
+      "originalParentSha256": "b7a22f47e8b8166ff8661b248067e4a62eade1978bd88b1bb363d1735597775e",
+      "sourceManifest": {
+        "path": "eval/transformed-manifest.jsonl",
+        "sha256": "a9a7b07a9e8513b753fb879e9e41154454d789a34c9fcf6edb7755e615db7fa1"
+      },
+      "sourceSelectionManifest": {
+        "path": "eval/smoke-manifest.jsonl",
+        "sha256": "a73696821312e5e286d9b96906331129a36ed912f281389e0eae43cfb2c8909f"
+      },
+      "media": {
+        "bytes": 23010,
+        "durationSeconds": 5.083333,
+        "width": 360,
+        "height": 360,
+        "frameRate": "12/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": false,
+      "limitations": "Publisher-assigned origin; no per-clip generation job or authenticated origin. Previously consumed development source. Proprietary vendor training overlap and semantic cross-source overlap unknown.",
+      "mediaProbeSha256": "db9a8a291fa73d8ab600cc1aee55421870d063b6516d6c07def2bebd3d6c7758",
+      "reservedOperations": 60,
+      "order": 16,
+      "label": "ai",
+      "parentId": "genbuster:b7a22f47e8b8166ff8661b248067e4a62eade1978bd88b1bb363d1735597775e",
+      "expectedGenerativeVisualContribution": true
+    },
+    {
+      "id": "33a114be349b478b6c15e7ac",
+      "sourceCaseId": "NASA/base/severe",
+      "path": "eval/runs/aegis-shots-v1-negative-build/media/33a114be349b478b6c15e7ac.mp4",
+      "sha256": "7055348323cefa9388f5e61e78a01cc705449c27fb25665f15043a9a0a5a4ca3",
+      "cohort": "documented_negative",
+      "sourceLabel": "camera",
+      "expectedPrimaryDecision": "no_clear_indicators",
+      "labelEvidenceStrength": "documented-camera-source",
+      "generator": "none",
+      "quality": "severe",
+      "parentGroups": [
+        "NASA"
+      ],
+      "primaryParentId": "NASA",
+      "sourceUrl": "https://svs.gsfc.nasa.gov/vis/a030000/a030100/a030179/iss029_aurora_20110917_720p.mp4",
+      "sourceManifest": {
+        "path": "eval/runs/aegis-shots-v1-negative-build/manifest.jsonl",
+        "sha256": "87c02fc0b447bb0a5cc9f39ca18bda788c773db6f8e145b88bd863b54eb4dc4f"
+      },
+      "groundTruth": {
+        "basis": "Agency-documented dated camera event, locally inspected selected interval, source hash and deterministic derivative/frame lineage retained. Camera-origin imagery includes conventional processing.",
+        "sourceParent": {
+          "path": "eval/media/camera-origins/bdb30be02d028f903c820f44.mp4",
+          "sha256": "bdb30be02d028f903c820f4424eddf36036a504d90671ff4151e442940788960",
+          "originReceiptPath": "eval/sources/camera-origin-acquisition.json",
+          "originReceiptSha256": "521e1d4474fbddfd947bb9e4502b0c0c7e5f943c3e68ba72f5f6ca603f7029ec",
+          "label": "camera",
+          "trimStartSeconds": 1,
+          "trimDurationSeconds": 5,
+          "timelapse": true,
+          "pristineMaster": false
+        }
+      },
+      "evidence": [
+        {
+          "path": "eval/fixtures/shot-study-source-plan.json",
+          "sha256": "4a1a354bdd31b466d571c33ac96403982045b4cb829d738dbd47997d6ae1e852"
+        },
+        {
+          "path": "eval/sources/camera-origin-acquisition.json",
+          "sha256": "521e1d4474fbddfd947bb9e4502b0c0c7e5f943c3e68ba72f5f6ca603f7029ec"
+        },
+        {
+          "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/33a114be349b478b6c15e7ac/construction.json",
+          "sha256": "1cd6fea3036d50fb4a10eaab9e0d518f2d3590c11b11ffc9d64d98eb592c7ebc"
+        },
+        {
+          "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/33a114be349b478b6c15e7ac/frame-lineage.json",
+          "sha256": "506ba4df0919b46c28278f12da2282cd82d6bbe08773b77a1687e2ff99c2b1e8"
+        },
+        {
+          "path": "eval/sources/camera-control-inspection.json",
+          "sha256": "c1c1db64718c7e2d9720766380b7b87850166695ec85d7f02d46a801c426d537"
+        },
+        {
+          "path": "eval/CAMERA_CONTROL_INSPECTION.md",
+          "sha256": "d1bfae339a12eb0293a22e02a20f0f873f090901b6f432ec67638449fc280f03"
+        }
+      ],
+      "media": {
+        "bytes": 9395,
+        "durationSeconds": 5.0,
+        "width": 360,
+        "height": 202,
+        "frameRate": "12/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": false,
+      "limitations": "Previously consumed development family, not independent validation. Agency footage is not an authenticated pristine master; NASA and USGS are timelapses. Trims and qualities remain grouped.",
+      "mediaProbeSha256": "ec094190a67f3b09aa85a80aa1e355ad526a8313433355e6dbb3402376c089fd",
+      "reservedOperations": 55,
+      "order": 17,
+      "label": "camera",
+      "parentId": "NASA",
+      "expectedGenerativeVisualContribution": false
+    },
+    {
+      "id": "6fb9b2bff63818fd1e64ad9d",
+      "path": "eval/media/6fb9b2bff63818fd1e64ad9d.mp4",
+      "sha256": "1092385ed406550371903ef1a368ca25bc661db85d83874f7c7340cc02535f7e",
+      "cohort": "publisher_assigned_ai",
+      "sourceLabel": "ai",
+      "expectedPrimaryDecision": "persistent_ai_indicators",
+      "labelEvidenceStrength": "publisher-assigned-benchmark",
+      "generator": "sora2",
+      "quality": "mild",
+      "parentGroups": [
+        "genbuster:595b4c96ff61451aab87a6f91535d2886db308e6219aed7efb8f6d46698a5e02"
+      ],
+      "primaryParentId": "genbuster:595b4c96ff61451aab87a6f91535d2886db308e6219aed7efb8f6d46698a5e02",
+      "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+      "license": "MIT (dataset card)",
+      "groundTruth": {
+        "basis": "dataset-author-label",
+        "evidenceUrl": "https://github.com/l8cv/BusterX",
+        "labelPath": "GenBuster-Bench/wild/fake/sora2/595b4c96ff61451aab87a6f91535d2886db308e6219aed7efb8f6d46698a5e02.mp4",
+        "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+      },
+      "originalParentSha256": "595b4c96ff61451aab87a6f91535d2886db308e6219aed7efb8f6d46698a5e02",
+      "sourceManifest": {
+        "path": "eval/transformed-manifest.jsonl",
+        "sha256": "a9a7b07a9e8513b753fb879e9e41154454d789a34c9fcf6edb7755e615db7fa1"
+      },
+      "sourceSelectionManifest": {
+        "path": "eval/smoke-manifest.jsonl",
+        "sha256": "a73696821312e5e286d9b96906331129a36ed912f281389e0eae43cfb2c8909f"
+      },
+      "media": {
+        "bytes": 732644,
+        "durationSeconds": 5.041667,
+        "width": 720,
+        "height": 720,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": false,
+      "limitations": "Publisher-assigned origin; no per-clip generation job or authenticated origin. Previously consumed development source. Proprietary vendor training overlap and semantic cross-source overlap unknown.",
+      "mediaProbeSha256": "4cc82abb4336eec9a986f908880b95a6882e15c0141573133102819f6a49bc16",
+      "reservedOperations": 60,
+      "order": 18,
+      "label": "ai",
+      "parentId": "genbuster:595b4c96ff61451aab87a6f91535d2886db308e6219aed7efb8f6d46698a5e02",
+      "expectedGenerativeVisualContribution": true
+    },
+    {
+      "id": "199e171c8640ad2f1ae132d1",
+      "sourceCaseId": "pendulum/base/severe",
+      "path": "eval/runs/aegis-shots-v1-negative-build/media/199e171c8640ad2f1ae132d1.mp4",
+      "sha256": "c8189c6fca479c08e08810a9175069428c71d8fdc5d844b8beed573b578fa192",
+      "cohort": "documented_negative",
+      "sourceLabel": "cgi",
+      "expectedPrimaryDecision": "no_clear_indicators",
+      "labelEvidenceStrength": "conventional-render-receipt",
+      "generator": "none",
+      "quality": "severe",
+      "parentGroups": [
+        "pendulum"
+      ],
+      "primaryParentId": "pendulum",
+      "sourceUrl": "https://www.blender.org/",
+      "sourceManifest": {
+        "path": "eval/runs/aegis-shots-v1-negative-build/manifest.jsonl",
+        "sha256": "87c02fc0b447bb0a5cc9f39ca18bda788c773db6f8e145b88bd863b54eb4dc4f"
+      },
+      "groundTruth": {
+        "basis": "Conventional Blender render from preserved code and render receipt; no generative pixel model. Assistant-authored scene code is disclosed and is outside the generative-visual label.",
+        "sourceParent": {
+          "path": "eval/media/fresh-cgi/attempt-01/pendulum-v1/parent.mp4",
+          "sha256": "5be143d5551c4434f800610e337285901c83f71f6cd5814251c95db4ba9ac7e6",
+          "originReceiptPath": "eval/sources/fresh-cgi-render-receipt.json",
+          "originReceiptSha256": "5b50f4ad0edb53d80d95c1fe57109430b8a2c76390751c3ddc50fc50a42394fc",
+          "label": "cgi",
+          "trimStartSeconds": 0,
+          "trimDurationSeconds": 5,
+          "assistantAuthoredSceneCode": true,
+          "generativePixelModel": false,
+          "timelapse": false
+        }
+      },
+      "evidence": [
+        {
+          "path": "eval/fixtures/shot-study-source-plan.json",
+          "sha256": "4a1a354bdd31b466d571c33ac96403982045b4cb829d738dbd47997d6ae1e852"
+        },
+        {
+          "path": "eval/sources/fresh-cgi-render-receipt.json",
+          "sha256": "5b50f4ad0edb53d80d95c1fe57109430b8a2c76390751c3ddc50fc50a42394fc"
+        },
+        {
+          "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/199e171c8640ad2f1ae132d1/construction.json",
+          "sha256": "5d3c8ac915d8fc571c34f8fb935b01dcbaa7b5ca77d394c8f515a8f1501cc595"
+        },
+        {
+          "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/199e171c8640ad2f1ae132d1/frame-lineage.json",
+          "sha256": "0d7ccbb478c3308e2bb95293bcf8c8a7eb730f940b96e70f4b353fdfaabf0a91"
+        }
+      ],
+      "media": {
+        "bytes": 7414,
+        "durationSeconds": 5.0,
+        "width": 360,
+        "height": 202,
+        "frameRate": "12/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": true,
+      "limitations": "Previously consumed development family, not independent validation. Agency footage is not an authenticated pristine master; NASA and USGS are timelapses. Trims and qualities remain grouped.",
+      "mediaProbeSha256": "043d6145c0e1e89833d29aea8e2b4c517610e19da7114cecc8134dc064d1804e",
+      "reservedOperations": 55,
+      "order": 19,
+      "label": "cgi",
+      "parentId": "pendulum",
+      "expectedGenerativeVisualContribution": false
+    },
+    {
+      "id": "ede414b319b5c17003f4208f",
+      "path": "eval/media/ede414b319b5c17003f4208f.mp4",
+      "sha256": "4a4e64af11f903d254d1b33a0a42d8c43f16a8b76775937f188596628f79f0ba",
+      "cohort": "publisher_assigned_ai",
+      "sourceLabel": "ai",
+      "expectedPrimaryDecision": "persistent_ai_indicators",
+      "labelEvidenceStrength": "publisher-assigned-benchmark",
+      "generator": "kling2.5_turbo",
+      "quality": "mild",
+      "parentGroups": [
+        "genbuster:baccf4b9b2963412930a62302754377ec6cc3561c7ab1a1daf6f7850b0490878"
+      ],
+      "primaryParentId": "genbuster:baccf4b9b2963412930a62302754377ec6cc3561c7ab1a1daf6f7850b0490878",
+      "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+      "license": "MIT (dataset card)",
+      "groundTruth": {
+        "basis": "dataset-author-label",
+        "evidenceUrl": "https://github.com/l8cv/BusterX",
+        "labelPath": "GenBuster-Bench/wild/fake/kling2.5_turbo/baccf4b9b2963412930a62302754377ec6cc3561c7ab1a1daf6f7850b0490878.mp4",
+        "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+      },
+      "originalParentSha256": "baccf4b9b2963412930a62302754377ec6cc3561c7ab1a1daf6f7850b0490878",
+      "sourceManifest": {
+        "path": "eval/transformed-manifest.jsonl",
+        "sha256": "a9a7b07a9e8513b753fb879e9e41154454d789a34c9fcf6edb7755e615db7fa1"
+      },
+      "sourceSelectionManifest": {
+        "path": "eval/smoke-manifest.jsonl",
+        "sha256": "a73696821312e5e286d9b96906331129a36ed912f281389e0eae43cfb2c8909f"
+      },
+      "media": {
+        "bytes": 305354,
+        "durationSeconds": 5.041667,
+        "width": 720,
+        "height": 720,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": false,
+      "limitations": "Publisher-assigned origin; no per-clip generation job or authenticated origin. Previously consumed development source. Proprietary vendor training overlap and semantic cross-source overlap unknown.",
+      "mediaProbeSha256": "239f8ed8902b5803f4def2c07a741b8dbe003960fe942cd2e1696a562be9c673",
+      "reservedOperations": 60,
+      "order": 20,
+      "label": "ai",
+      "parentId": "genbuster:baccf4b9b2963412930a62302754377ec6cc3561c7ab1a1daf6f7850b0490878",
+      "expectedGenerativeVisualContribution": true
+    },
+    {
+      "id": "e3559c5de44c980c6a0484e4",
+      "path": "eval/media/e3559c5de44c980c6a0484e4.mp4",
+      "sha256": "57567b8f3ad584277a8ebf17332073a6bb3895ab40900c71f6a9188a114ab49f",
+      "cohort": "publisher_assigned_ai",
+      "sourceLabel": "ai",
+      "expectedPrimaryDecision": "persistent_ai_indicators",
+      "labelEvidenceStrength": "publisher-assigned-benchmark",
+      "generator": "veo3.1",
+      "quality": "severe",
+      "parentGroups": [
+        "genbuster:0c0d15b1521d959f8860adebc49387f58bad07adc8a451ea45a84b8b14af6e8d"
+      ],
+      "primaryParentId": "genbuster:0c0d15b1521d959f8860adebc49387f58bad07adc8a451ea45a84b8b14af6e8d",
+      "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+      "license": "MIT (dataset card)",
+      "groundTruth": {
+        "basis": "dataset-author-label",
+        "evidenceUrl": "https://github.com/l8cv/BusterX",
+        "labelPath": "GenBuster-Bench/wild/fake/veo3.1/0c0d15b1521d959f8860adebc49387f58bad07adc8a451ea45a84b8b14af6e8d.mp4",
+        "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+      },
+      "originalParentSha256": "0c0d15b1521d959f8860adebc49387f58bad07adc8a451ea45a84b8b14af6e8d",
+      "sourceManifest": {
+        "path": "eval/transformed-manifest.jsonl",
+        "sha256": "a9a7b07a9e8513b753fb879e9e41154454d789a34c9fcf6edb7755e615db7fa1"
+      },
+      "sourceSelectionManifest": {
+        "path": "eval/smoke-manifest.jsonl",
+        "sha256": "a73696821312e5e286d9b96906331129a36ed912f281389e0eae43cfb2c8909f"
+      },
+      "media": {
+        "bytes": 28301,
+        "durationSeconds": 5.083333,
+        "width": 360,
+        "height": 360,
+        "frameRate": "12/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": false,
+      "limitations": "Publisher-assigned origin; no per-clip generation job or authenticated origin. Previously consumed development source. Proprietary vendor training overlap and semantic cross-source overlap unknown.",
+      "mediaProbeSha256": "50ae5c8c931e4e2fc642e50c5b05fd84a391075ec09d332bfd754f5d89238a9d",
+      "reservedOperations": 60,
+      "order": 21,
+      "label": "ai",
+      "parentId": "genbuster:0c0d15b1521d959f8860adebc49387f58bad07adc8a451ea45a84b8b14af6e8d",
+      "expectedGenerativeVisualContribution": true
+    },
+    {
+      "id": "a7339df6ca5417d96043e7f2",
+      "sourceCaseId": "NOAA/base/mild",
+      "path": "eval/runs/aegis-shots-v1-negative-build/media/a7339df6ca5417d96043e7f2.mp4",
+      "sha256": "116a3a02be63ff248be6efa80420d4f6e53aaff72f41c1a8bcd63ef8207c5506",
+      "cohort": "documented_negative",
+      "sourceLabel": "camera",
+      "expectedPrimaryDecision": "no_clear_indicators",
+      "labelEvidenceStrength": "documented-camera-source",
+      "generator": "none",
+      "quality": "mild",
+      "parentGroups": [
+        "NOAA"
+      ],
+      "primaryParentId": "NOAA",
+      "sourceUrl": "https://oceanexplorer.noaa.gov/wp-content/uploads/2021/02/10index-seacuke-swims.mp4",
+      "sourceManifest": {
+        "path": "eval/runs/aegis-shots-v1-negative-build/manifest.jsonl",
+        "sha256": "87c02fc0b447bb0a5cc9f39ca18bda788c773db6f8e145b88bd863b54eb4dc4f"
+      },
+      "groundTruth": {
+        "basis": "Agency-documented dated camera event, locally inspected selected interval, source hash and deterministic derivative/frame lineage retained. Camera-origin imagery includes conventional processing.",
+        "sourceParent": {
+          "path": "eval/media/camera-origins/32bdae2f731bf4190c796a6f.mp4",
+          "sha256": "32bdae2f731bf4190c796a6fbef6a6e9bed601b5ee3de1ca43739625b940c45a",
+          "originReceiptPath": "eval/sources/camera-origin-acquisition.json",
+          "originReceiptSha256": "521e1d4474fbddfd947bb9e4502b0c0c7e5f943c3e68ba72f5f6ca603f7029ec",
+          "label": "camera",
+          "trimStartSeconds": 20,
+          "trimDurationSeconds": 5,
+          "timelapse": false,
+          "pristineMaster": false
+        }
+      },
+      "evidence": [
+        {
+          "path": "eval/fixtures/shot-study-source-plan.json",
+          "sha256": "4a1a354bdd31b466d571c33ac96403982045b4cb829d738dbd47997d6ae1e852"
+        },
+        {
+          "path": "eval/sources/camera-origin-acquisition.json",
+          "sha256": "521e1d4474fbddfd947bb9e4502b0c0c7e5f943c3e68ba72f5f6ca603f7029ec"
+        },
+        {
+          "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/a7339df6ca5417d96043e7f2/construction.json",
+          "sha256": "510ffc8779a3f5737e91ccfd1ee58932740ad60d9ce040d22e7702c1c108d273"
+        },
+        {
+          "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/a7339df6ca5417d96043e7f2/frame-lineage.json",
+          "sha256": "e5c2aeebe5102f0c1e537b35988d6a558e536753948ea173c712cf01522fd471"
+        },
+        {
+          "path": "eval/sources/camera-control-inspection.json",
+          "sha256": "c1c1db64718c7e2d9720766380b7b87850166695ec85d7f02d46a801c426d537"
+        },
+        {
+          "path": "eval/CAMERA_CONTROL_INSPECTION.md",
+          "sha256": "d1bfae339a12eb0293a22e02a20f0f873f090901b6f432ec67638449fc280f03"
+        }
+      ],
+      "media": {
+        "bytes": 201406,
+        "durationSeconds": 5.0,
+        "width": 640,
+        "height": 360,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": true,
+      "limitations": "Previously consumed development family, not independent validation. Agency footage is not an authenticated pristine master; NASA and USGS are timelapses. Trims and qualities remain grouped.",
+      "mediaProbeSha256": "cd350bd1a9ea764eee8c4fc83a0d4d0ff12cf8e930e2849b4505365ae95d5efc",
+      "reservedOperations": 55,
+      "order": 22,
+      "label": "camera",
+      "parentId": "NOAA",
+      "expectedGenerativeVisualContribution": false
+    },
+    {
+      "id": "95dcd6add1664f7d96d45c99",
+      "sourceCaseId": "NASA/base/master",
+      "path": "eval/runs/aegis-shots-v1-negative-build/media/95dcd6add1664f7d96d45c99.mp4",
+      "sha256": "3cb6e915a065cbc19f7311a8ab8e39cd4d7697c981d7b94999f14a88c6a29339",
+      "cohort": "documented_negative",
+      "sourceLabel": "camera",
+      "expectedPrimaryDecision": "no_clear_indicators",
+      "labelEvidenceStrength": "documented-camera-source",
+      "generator": "none",
+      "quality": "master",
+      "parentGroups": [
+        "NASA"
+      ],
+      "primaryParentId": "NASA",
+      "sourceUrl": "https://svs.gsfc.nasa.gov/vis/a030000/a030100/a030179/iss029_aurora_20110917_720p.mp4",
+      "sourceManifest": {
+        "path": "eval/runs/aegis-shots-v1-negative-build/manifest.jsonl",
+        "sha256": "87c02fc0b447bb0a5cc9f39ca18bda788c773db6f8e145b88bd863b54eb4dc4f"
+      },
+      "groundTruth": {
+        "basis": "Agency-documented dated camera event, locally inspected selected interval, source hash and deterministic derivative/frame lineage retained. Camera-origin imagery includes conventional processing.",
+        "sourceParent": {
+          "path": "eval/media/camera-origins/bdb30be02d028f903c820f44.mp4",
+          "sha256": "bdb30be02d028f903c820f4424eddf36036a504d90671ff4151e442940788960",
+          "originReceiptPath": "eval/sources/camera-origin-acquisition.json",
+          "originReceiptSha256": "521e1d4474fbddfd947bb9e4502b0c0c7e5f943c3e68ba72f5f6ca603f7029ec",
+          "label": "camera",
+          "trimStartSeconds": 1,
+          "trimDurationSeconds": 5,
+          "timelapse": true,
+          "pristineMaster": false
+        }
+      },
+      "evidence": [
+        {
+          "path": "eval/fixtures/shot-study-source-plan.json",
+          "sha256": "4a1a354bdd31b466d571c33ac96403982045b4cb829d738dbd47997d6ae1e852"
+        },
+        {
+          "path": "eval/sources/camera-origin-acquisition.json",
+          "sha256": "521e1d4474fbddfd947bb9e4502b0c0c7e5f943c3e68ba72f5f6ca603f7029ec"
+        },
+        {
+          "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/95dcd6add1664f7d96d45c99/construction.json",
+          "sha256": "9500cdae69a25097f509b39ca8a7998d2b2de3ef16bbaab6e329ddd0aa69abda"
+        },
+        {
+          "path": "eval/runs/aegis-shots-v1-negative-build/artifacts/95dcd6add1664f7d96d45c99/frame-lineage.json",
+          "sha256": "294121be89030f29e9ac03b0ffc40a02bfa7c24358a10b79d6b3366cfd20bf91"
+        },
+        {
+          "path": "eval/sources/camera-control-inspection.json",
+          "sha256": "c1c1db64718c7e2d9720766380b7b87850166695ec85d7f02d46a801c426d537"
+        },
+        {
+          "path": "eval/CAMERA_CONTROL_INSPECTION.md",
+          "sha256": "d1bfae339a12eb0293a22e02a20f0f873f090901b6f432ec67638449fc280f03"
+        }
+      ],
+      "media": {
+        "bytes": 361537,
+        "durationSeconds": 5.0,
+        "width": 640,
+        "height": 360,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": false,
+      "limitations": "Previously consumed development family, not independent validation. Agency footage is not an authenticated pristine master; NASA and USGS are timelapses. Trims and qualities remain grouped.",
+      "mediaProbeSha256": "4c8c86bb6b1bb9877949396f96122b5e7f8a0c650c8ab1b67693fb40ed989b73",
+      "reservedOperations": 55,
+      "order": 23,
+      "label": "camera",
+      "parentId": "NASA",
+      "expectedGenerativeVisualContribution": false
+    },
+    {
+      "id": "85252c1ebf73386b2db8459e",
+      "path": "eval/media/85252c1ebf73386b2db8459e.mp4",
+      "sha256": "9f908a3cc49ccab84b10c4ed92da434d84cdbedba9bf683a478aed4882a6cac1",
+      "cohort": "publisher_assigned_ai",
+      "sourceLabel": "ai",
+      "expectedPrimaryDecision": "persistent_ai_indicators",
+      "labelEvidenceStrength": "publisher-assigned-benchmark",
+      "generator": "gen4.5",
+      "quality": "mild",
+      "parentGroups": [
+        "genbuster:a65fce825b91e4d06820b15ffc45b0ab1ca434a76e5d714992b18efc3317c9c4"
+      ],
+      "primaryParentId": "genbuster:a65fce825b91e4d06820b15ffc45b0ab1ca434a76e5d714992b18efc3317c9c4",
+      "sourceUrl": "https://huggingface.co/datasets/l8cv/GenBuster-Bench",
+      "license": "MIT (dataset card)",
+      "groundTruth": {
+        "basis": "dataset-author-label",
+        "evidenceUrl": "https://github.com/l8cv/BusterX",
+        "labelPath": "GenBuster-Bench/wild/fake/gen4.5/a65fce825b91e4d06820b15ffc45b0ab1ca434a76e5d714992b18efc3317c9c4.mp4",
+        "limitation": "Public benchmark label; original camera source and creator IDs are not supplied per clip. Not independently authenticated."
+      },
+      "originalParentSha256": "a65fce825b91e4d06820b15ffc45b0ab1ca434a76e5d714992b18efc3317c9c4",
+      "sourceManifest": {
+        "path": "eval/transformed-manifest.jsonl",
+        "sha256": "a9a7b07a9e8513b753fb879e9e41154454d789a34c9fcf6edb7755e615db7fa1"
+      },
+      "sourceSelectionManifest": {
+        "path": "eval/smoke-manifest.jsonl",
+        "sha256": "a73696821312e5e286d9b96906331129a36ed912f281389e0eae43cfb2c8909f"
+      },
+      "media": {
+        "bytes": 154245,
+        "durationSeconds": 5.041667,
+        "width": 720,
+        "height": 720,
+        "frameRate": "24/1",
+        "hasAudio": false
+      },
+      "registeredAncestryOverlapWithFiveControls": false,
+      "limitations": "Publisher-assigned origin; no per-clip generation job or authenticated origin. Previously consumed development source. Proprietary vendor training overlap and semantic cross-source overlap unknown.",
+      "mediaProbeSha256": "6112190c7f6404655b81c277fba16831e754ba260bafb3214968e76c75b7d6af",
+      "reservedOperations": 60,
+      "order": 24,
+      "label": "ai",
+      "parentId": "genbuster:a65fce825b91e4d06820b15ffc45b0ab1ca434a76e5d714992b18efc3317c9c4",
+      "expectedGenerativeVisualContribution": true
+    },
+    {
+      "id": "veo-receipted-raw-same-parent",
+      "path": "eval/media/controls/25a522abf8139a4f6f21c919.mp4",
+      "sha256": "25a522abf8139a4f6f21c9194dbac20115411c1721dd49a8b65ee56fdc7238e6",
+      "cohort": "receipt_backed_same_parent_check",
+      "sourceLabel": "ai",
+      "expectedPrimaryDecision": "persistent_ai_indicators",
+      "labelEvidenceStrength": "direct-generation-receipt",
+      "generator": "veo-3.1-generate-preview",
+      "quality": "original_with_audio",
+      "parentGroups": [
+        "generated-operation:models/veo-3.1-generate-preview/operations/local-generation-redacted"
+      ],
+      "primaryParentId": "generated-operation:models/veo-3.1-generate-preview/operations/local-generation-redacted",
+      "sourceUrl": "https://ai.google.dev/gemini-api/docs/veo",
+      "groundTruth": {
+        "basis": "One direct text-only provider generation operation; no reference media supplied.",
+        "inputMedia": [],
+        "operationName": "models/veo-3.1-generate-preview/operations/local-generation-redacted",
+        "aiIntervalSeconds": [
+          0,
+          8
+        ]
+      },
+      "evidence": [
+        {
+          "path": "eval/fixtures/video-generation-receipt.json",
+          "sha256": "125533f5c7d3dcf0b13cf7f61ee555312a75b4214cd50ace4756ac8da57d1498"
+        },
+        {
+          "path": "eval/GENERATED_ORIGIN_CONTROL.md",
+          "sha256": "37d420406dc90f341a047e8844b225068fd0729020c3be4f4a16736b0058bb0d"
+        }
+      ],
+      "registeredAncestryOverlapWithFiveControls": true,
+      "limitations": "Same generated visual parent as the consumed silent five-control clip; raw output includes audio. Visual-only genai request supplies no source claims or audio labels. This is a same-parent consistency check, not unseen generation.",
+      "media": {
+        "bytes": 3352004,
+        "durationSeconds": 8.0,
+        "width": 1280,
+        "height": 720,
+        "frameRate": "24/1",
+        "hasAudio": true
+      },
+      "mediaProbeSha256": "2ed396f361fc187e58666b37518bd1d2b7ab93065e32c2dc74936be77c9b73e2",
+      "reservedOperations": 85,
+      "order": 25,
+      "label": "ai",
+      "parentId": "generated-operation:models/veo-3.1-generate-preview/operations/local-generation-redacted",
+      "expectedGenerativeVisualContribution": true
+    }
+  ],
+  "preparationAmendment": {
+    "priorManifest": {
+      "path": "eval/fixtures/sightengine-temporal-screen-v1.json",
+      "sha256": "d2d6a0195e4d277214e2ebe02556817bac81068161fc0840f4c8fea24cb5c16f"
+    },
+    "reason": "Pre-inference schema binding to the separately reviewed fixed aggregator. No case selection, media, score threshold, sample cadence, consecutive rule or acceptance threshold changed. V1 remains preserved and unexecuted."
+  },
+  "policy": {
+    "schemaVersion": 1,
+    "id": "sightengine-temporal-bound-policy-v2",
+    "frozen": true,
+    "frozenAt": "2026-09-08T19:16:24.956551+00:00",
+    "aggregatorPath": "scripts/sightengine-temporal-evidence.py",
+    "aggregatorSha256": "527b15281583255c975c60b7f8f3b44981c2a6744a6ab4af514bc61b667a7453",
+    "policyFingerprint": "6544a9d76ce994fecfc2c736b4f3af79b744f1cafa11a1e66145e849e30aea89",
+    "configuration": {
+      "adjacentSamplesAreIndependent": false,
+      "coverage": {
+        "firstFrameMaxSeconds": 0.1,
+        "maximumGapSeconds": 0.6,
+        "tailGapSeconds": 0.6
+      },
+      "declaredIntervalSeconds": 0.5,
+      "insufficientForSubsecondExclusion": true,
+      "maximumPositiveGapSeconds": 0.6,
+      "minimumPersistentSamples": 2,
+      "policyVersion": "sightengine-temporal-evidence-v1",
+      "positionUnit": "seconds",
+      "scoreThreshold": 0.5,
+      "scoresAreCalibratedProbabilities": false,
+      "sequenceOrder": "received-order-no-sort-or-deduplication",
+      "temporalInterpolation": false
+    },
+    "api": {
+      "endpoint": "https://api.sightengine.com/1.0/video/check-sync.json",
+      "models": "genai",
+      "intervalSeconds": 0.5,
+      "positionUnit": "milliseconds",
+      "normalization": "Divide raw info.position by1000 to supply positionSeconds; preserve original values and received order."
+    },
+    "decisionMeaning": {
+      "persistent_ai_indicators": "A valid persistent run exists; any additional isolated alerts stay unresolved and reviewRequired remains true.",
+      "inconclusive": "Isolated positives without a persistent run, or technical/coverage failure. Technical failure must be reported separately and fails advancement.",
+      "no_clear_indicators": "No positive samples with complete coverage. Not proof of real origin or exclusion of AI between samples."
+    },
+    "excludedOverrides": [
+      "No Gemini/style/provenance decision override",
+      "No threshold or run-length tuning",
+      "No source/label metadata in request"
+    ],
+    "scope": "Narrow uncalibrated development rejection screen. No subsecond, new mixed-positive, population or independent validation claim."
+  },
+  "acceptance": {
+    "allCasesTechnicallyComplete": true,
+    "documentedNegative": {
+      "files": 12,
+      "parents": 6,
+      "maxPersistentAlerts": 0,
+      "minimumClearFiles": 10,
+      "minimumClearParents": 5
+    },
+    "publisherAssignedAi": {
+      "parents": 12,
+      "minimumPersistentAlerts": 10,
+      "perQuality": {
+        "original": {
+          "total": 4,
+          "minimumPersistentAlerts": 3
+        },
+        "mild": {
+          "total": 4,
+          "minimumPersistentAlerts": 3
+        },
+        "severe": {
+          "total": 4,
+          "minimumPersistentAlerts": 3
+        }
+      }
+    },
+    "receiptBackedSameParent": {
+      "total": 1,
+      "minimumPersistentAlerts": 1
+    },
+    "scopeAllowsAccuracyClaim": false
+  }
+}

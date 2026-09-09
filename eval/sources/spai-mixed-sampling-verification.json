@@ -1,0 +1,59 @@
+{
+  "scope": "Read-only native-SPAI decoding verification; no model loaded or classifier rerun. The exact frozen decoder command matched all 24 RGB frame hashes from independently traced Corvi sampling.",
+  "spaiFrozenSourceSha256": "eb9c68c5e9e3d0cff417ca473afa1b7d1a9e1b9d44f181592b557a1ec4348a80",
+  "spaiRawResultsSha256": "ccd5c25238ebc3f10da23627ab92dfef2ab1cd6cd039b79110c013e888c2044e",
+  "corviFrameMappingSha256": "cf2d8ca83533a1339a9c99eb374dc91178214310307f8daf16b126ed03919f7c",
+  "rows": [
+    {
+      "id": "0038f7ed04ca0c22d90586dd",
+      "mediaSha256": "cc030eef867bcc30f9c6b36f115f614c6553396b7062ce9d40d3850a94c94e5a",
+      "durationSeconds": 10.48,
+      "nativeSpaiDecodedHashes": [
+        "4c0cfa1cdb3e2c71c1b5a02fdab42702be87654ddae7aad440b47359a60cb66f",
+        "1ce44953e741aed226f3771f9fc9680520701c6566ec07f2cbc36413cbb5a67e",
+        "b791415be351b50b0a91e0e5c3d879b127010fd07037e6ac99ddf3e818728619",
+        "d8f8a9c8d6f00a28f92cffb5dfcd765f63edfc799d300e214afaf8b15e7a732e",
+        "8f629336b8db02961937279c1ed3f96d2543fa6e903d7ba106b5ceb27fa81cf1",
+        "f844b4b2226a937a862539f7f82ab33e5afe08de446e2878f8f801cb26044a43",
+        "ad3ead6b831f5d936292afc8c094a275a09cc6e59870885ae580e86c6b3014ec",
+        "1caf7342e4fd321725a668e29365b39ceeb723afff356af3a3148feb0e80ae6c"
+      ],
+      "allMatchIndependentCorviFrameMapping": true,
+      "sampledFramesInsideNominalInsert": 0
+    },
+    {
+      "id": "528a540f40e0e96af72933a3",
+      "mediaSha256": "b9348c9b43511242a0831dc0189f5aa41cffbdd995a90978923c4d90f6700c66",
+      "durationSeconds": 10.96,
+      "nativeSpaiDecodedHashes": [
+        "8d64bdbaa690ef9dadd148fa81ffdd708879d48c1e60bf416288a54e62186368",
+        "f3beb1f4d22b47462b7887eb8988bfbb2907de9c4175a712207a3f172c23dbcf",
+        "13df409c15a12a8bec092d35a172b7b68fb785659bdb4b209ec65cda41160797",
+        "640e270eb9332719d2245d2bd4c604ed19347d083a5816e7e867b89f7a3db7d6",
+        "303d11a9ff02daa751a219591c7178f5bd5e555acfea6cd5c2e175be25f82d66",
+        "c3a1c86860d281687f79d614ff21641e0720c6ee8264b2c799b07c2423113956",
+        "30119c01059d8f023f1c994a312075f43c7410c07f867396f02411e0d1ebd243",
+        "22cc238bff585fa9fed3bcdfd355fe20d9d68583cc301794169543e3ab1b3c8b"
+      ],
+      "allMatchIndependentCorviFrameMapping": true,
+      "sampledFramesInsideNominalInsert": 0
+    },
+    {
+      "id": "b75decf7062254d2fa31ce9f",
+      "mediaSha256": "b76afb27040a1fe39423718a590af342dddfda3cf675d1a06a9def39c351c3dc",
+      "durationSeconds": 11.96,
+      "nativeSpaiDecodedHashes": [
+        "b842cb7abfd291232ab7193b8bdf0625d1a5fcb1f88666cc74e14fa302816171",
+        "32913c7861643d5687e4192147c085aae811f8854305b4a83f5bd2de3c796ddb",
+        "dcf4b5dc3df7261a7cf193f6e6e805ca79799a4ba2c36f9ab455a0e4c718e360",
+        "19b720928e1801a509f29e7833a3d0e0a9d1e2e319740d6d4f08a7ab5ae6e86a",
+        "1fefd16f89c87ed277f57e1691d5dbaa0e1cc8d5845161f74965b6371494ef16",
+        "d4a5f2c02857c9530064cca41609d5867c00ae3ef96c3d222ae018d4025d761a",
+        "46e7c49e0f31d6a3116f815421564e2da6c140b79e68f83ab394d88a5e581745",
+        "e390ace3400b9cc4462537cbb3a70defe21736a239f2d86e4e9718ece3a0e87e"
+      ],
+      "allMatchIndependentCorviFrameMapping": true,
+      "sampledFramesInsideNominalInsert": 2
+    }
+  ]
+}

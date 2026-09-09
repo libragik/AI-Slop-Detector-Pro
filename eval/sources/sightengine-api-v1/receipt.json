@@ -1,0 +1,40 @@
+{
+  "retrievedAt": "2026-09-05T07:39:10.757471+00:00",
+  "purpose": "Public API documentation and access preparation only",
+  "apiInferenceCalls": 0,
+  "mediaUploads": 0,
+  "documents": [
+    {
+      "url": "https://sightengine.com/docs/ai-generated-video-detection",
+      "resolvedUrl": "https://sightengine.com/docs/ai-generated-video-detection",
+      "status": 200,
+      "path": "eval/sources/sightengine-api-v1/ai-generated-video-detection.html",
+      "bytes": 116239,
+      "sha256": "de4581359b8142d4d1eb633e2a79586d83e1bd23d73f807e4480fd595ea2e27c"
+    },
+    {
+      "url": "https://sightengine.com/docs/stored-video-moderation-guide",
+      "resolvedUrl": "https://sightengine.com/docs/stored-video-moderation-guide",
+      "status": 200,
+      "path": "eval/sources/sightengine-api-v1/stored-video-moderation-guide.html",
+      "bytes": 81932,
+      "sha256": "e318a788395af4b1b11a14564e4866357a48a563960153588094da60ea41f84f"
+    },
+    {
+      "url": "https://sightengine.com/pricing",
+      "resolvedUrl": "https://sightengine.com/pricing",
+      "status": 200,
+      "path": "eval/sources/sightengine-api-v1/pricing.html",
+      "bytes": 65404,
+      "sha256": "5dbc9234aa6c1e5e93ec6ccac6d244f57b1b3a9f5851508c1c741d0701051a76"
+    },
+    {
+      "url": "https://sightengine.com/faq/what-is-an-operation",
+      "resolvedUrl": "https://sightengine.com/faq/what-is-an-operation",
+      "status": 200,
+      "path": "eval/sources/sightengine-api-v1/operations.html",
+      "bytes": 85208,
+      "sha256": "d2319158d5d12be1c2b7ecdcf6391ddef88e513e321bd1ab3d3b9af3c66b422c"
+    }
+  ]
+}

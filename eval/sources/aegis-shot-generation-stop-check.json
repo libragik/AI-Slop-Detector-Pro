@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "purpose": "Verify failed negative gate cannot authorize even network-free Veo readiness check",
+  "checkedAtUnix": 1788581266.80689,
+  "command": [
+    "node",
+    "scripts/eval-generate-veo-study.mjs",
+    "check",
+    "V1",
+    "--plan-sha256",
+    "8ebf57bcb7aa4c760719e64a3e48e5570bdbaa04f00807d185871206ab80ed85",
+    "--protocol-sha256",
+    "6a9d4e3f4788392093adb90ba300a76739eec1c736aa92f16044efdb7a32e3d4",
+    "--negative-gate",
+    "eval/runs/aegis-shots-negative-v1.receipt.json",
+    "--gate-sha256",
+    "126bdf3d6c53805771599dd3c09e7fbb2e74708809a8cb6a6b980e572db73c01"
+  ],
+  "exitCode": 1,
+  "stdout": "",
+  "stderr": "{\"status\":\"failed\",\"errorType\":\"Error\",\"message\":\"The fixed negative gate must pass first.\"}\n",
+  "networkCalls": 0,
+  "modelCalls": 0,
+  "generationSubmissions": 0,
+  "outputDirectoriesAbsent": true
+}

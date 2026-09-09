@@ -1,0 +1,10 @@
+{
+  "rows": 125,
+  "ai": 61,
+  "real": 64,
+  "auroc": 0.4451844262295082,
+  "developmentThreshold": -0.6248095035552969,
+  "recallAtApprox5PercentFpr": 0.09836065573770492,
+  "fpr": 0.046875,
+  "medianElapsedMs": 186
+}
