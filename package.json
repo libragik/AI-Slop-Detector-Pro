@@ -16,7 +16,8 @@
     "test": "vitest run",
     "setup:media": "bash scripts/setup-media.sh",
     "eval:validate": "tsx scripts/eval-run.mjs",
-    "eval:run": "tsx scripts/eval-run.mjs --run"
+    "eval:run": "tsx scripts/eval-run.mjs --run",
+    "push": "git add . && git commit -m \"update: sync latest changes\" && git push"
   },
   "dependencies": {
     "@contentauth/c2pa-node": "0.9.3",
