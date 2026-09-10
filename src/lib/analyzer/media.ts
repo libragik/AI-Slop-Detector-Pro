@@ -74,9 +74,10 @@ function run(
 ): Promise<string> {
   return new Promise((resolve, reject) => {
     const detached = process.platform !== "win32";
+    const isWindowsCmd = process.platform === "win32" && /\.(cmd|bat)$/i.test(command);
     const child = spawn(command, args, {
       detached,
-      shell: false,
+      shell: isWindowsCmd,
       windowsHide: true,
       stdio: ["ignore", "pipe", "pipe"],
     });
@@ -260,10 +261,14 @@ async function readMediaMetadata(
   ];
 
   try {
+    const metadataTimeout =
+      source.platform === "tiktok"
+        ? Math.min(env.ytDlpTimeoutMs, 30_000)
+        : Math.min(env.ytDlpTimeoutMs, 15_000);
     return await commandRunner(
       env.ytDlpPath,
       args,
-      Math.min(env.ytDlpTimeoutMs, 15_000),
+      metadataTimeout,
       source.platform,
     );
   } catch (error) {
@@ -484,7 +489,7 @@ async function downloadVerifiedMedia(
     "--extractor-retries", "1",
     "--max-filesize", String(env.maxMediaBytes),
     "--match-filter", `!is_live & duration<=?${env.maxDurationSeconds}`,
-    "--format", "bv*+ba/b",
+    "--format", source.platform === "instagram" ? "b/bv*+ba" : "bv*+ba/b",
     "--merge-output-format", "mp4",
     "--no-write-info-json",
     "--no-write-playlist-metafiles",

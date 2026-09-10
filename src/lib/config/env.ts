@@ -22,18 +22,18 @@ function booleanEnv(name: string, fallback: boolean): boolean {
  */
 export const env = {
   geminiApiKey: process.env.GEMINI_API_KEY ?? process.env.GOOGLE_API_KEY,
-  geminiModel: process.env.GEMINI_MODEL?.trim() || "gemini-3.7-flash",
+  geminiModel: process.env.GEMINI_MODEL?.trim() || "gemini-3.5-flash-lite",
   geminiVideoProcessing:
-    process.env.GEMINI_VIDEO_PROCESSING?.trim() === "static"
-      ? ("static" as const)
-      : ("agentic" as const),
+    process.env.GEMINI_VIDEO_PROCESSING?.trim() === "agentic"
+      ? ("agentic" as const)
+      : ("static" as const),
   geminiFilePollMs: integerEnv("GEMINI_FILE_POLL_MS", 2_000, 250),
   geminiFileTimeoutMs: integerEnv("GEMINI_FILE_TIMEOUT_MS", 45_000, 5_000),
-  geminiHttpTimeoutMs: integerEnv("GEMINI_HTTP_TIMEOUT_MS", 60_000, 5_000),
+  geminiHttpTimeoutMs: integerEnv("GEMINI_HTTP_TIMEOUT_MS", 180_000, 5_000),
   geminiRetryMax: integerEnv("GEMINI_RETRY_MAX", 2, 0),
   geminiSweepFps: Math.min(integerEnv("GEMINI_SWEEP_FPS", 2), 8),
-  geminiReviewModel: process.env.GEMINI_REVIEW_MODEL?.trim() || process.env.GEMINI_MODEL?.trim() || "gemini-3.7-flash",
-  geminiReviewFps: Math.min(integerEnv("GEMINI_REVIEW_FPS", 6), 12),
+  geminiReviewModel: process.env.GEMINI_REVIEW_MODEL?.trim() || process.env.GEMINI_MODEL?.trim() || "gemini-3.5-flash-lite",
+  geminiReviewFps: Math.min(integerEnv("GEMINI_REVIEW_FPS", 4), 12),
 
   youtubeApiKey: process.env.YOUTUBE_API_KEY,
   youtubeCommentLimit: Math.min(integerEnv("YOUTUBE_COMMENT_LIMIT", 100), 100),
@@ -43,7 +43,7 @@ export const env = {
     process.env.SUPABASE_SECRET_KEY ?? process.env.SUPABASE_SERVICE_ROLE_KEY,
   cacheEnabled: booleanEnv("CACHE_ENABLED", true),
   cacheTtlHours: integerEnv("CACHE_TTL_HOURS", 30 * 24),
-  analyzerVersion: process.env.ANALYZER_VERSION?.trim() || "evidence-2",
+  analyzerVersion: process.env.ANALYZER_VERSION?.trim() || "evidence-3",
 
   ytDlpPath: process.env.YT_DLP_PATH?.trim() || "yt-dlp",
   ffprobePath: process.env.FFPROBE_PATH?.trim() || "ffprobe",

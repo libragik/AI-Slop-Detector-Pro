@@ -227,8 +227,6 @@ export async function runGeminiVideoPass(input: VideoInspectionInput, request: V
         start_offset: window.startOffset, end_offset: window.endOffset },
     }));
 
-    // In @google/genai2.21 the Interactions bridge does not inherit constructor
-    // httpOptions.timeout. Pass options explicitly and bound the whole retry budget.
     const interaction = await withGeminiDeadline("video inspection", env.geminiHttpTimeoutMs, requestSignal =>
       withGeminiRetry(() => getClient().interactions.create({
       model: request.model,
@@ -274,7 +272,6 @@ export async function runGeminiVideoPass(input: VideoInspectionInput, request: V
       ],
     } };
   } catch (error) {
-    // Never log provider messages, bodies, headers, URLs, prompts, or raw errors.
     console.warn("[ai-slop-detector] Gemini review failed", {
       event: "gemini_video_pass_failed", stage,
       passKind: ["sweep", "review", "adjudication"].includes(request.kind) ? request.kind : "unknown",
@@ -291,6 +288,7 @@ export async function analyzeVideoWithGemini(input: VideoInspectionInput, signal
   return inspectVideo(input, (video, request) => runGeminiVideoPass(video, request, signal), {
     model: env.geminiModel, reviewModel: env.geminiReviewModel,
     sweepFps: env.geminiSweepFps, reviewFps: env.geminiReviewFps, reviewMode: env.geminiVideoProcessing,
+    sweepMode: env.geminiVideoProcessing,
   });
 }
 

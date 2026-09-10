@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { createHash } from "node:crypto";
 import { readFile, writeFile, appendFile, mkdir, readdir } from "node:fs/promises";
-import { resolve, dirname, relative } from "node:path";
+import { resolve, dirname, relative, isAbsolute } from "node:path";
 import { pathToFileURL } from "node:url";
 import { parseArgs } from "node:util";
 import { createRequire } from "node:module";
@@ -31,7 +31,8 @@ async function freezeAdapter(output, source) {
     const bytes = await readFile(resolve(root, entry.path));
     if (hash(bytes) !== entry.sha256) throw new Error("Detector changed while snapshotting; retry before making model calls");
     const target = resolve(snapshotRoot, relative(root, resolve(root, entry.path)));
-    if (!target.startsWith(snapshotRoot + "/")) throw new Error("Adapter must be inside the repository");
+    const rel = relative(snapshotRoot, target);
+    if (rel.startsWith("..") || isAbsolute(rel)) throw new Error("Adapter must be inside the repository");
     await mkdir(dirname(target), { recursive: true });
     await writeFile(target, bytes);
   }

@@ -117,6 +117,33 @@ export function Detector() {
   const fileInput = useRef<HTMLInputElement>(null);
   const reportWrap = useRef<HTMLDivElement>(null);
   const activeRequest = useRef<AbortController | null>(null);
+  const [progressPercent, setProgressPercent] = useState(15);
+  const [progressStep, setProgressStep] = useState(0);
+
+  const PROGRESS_PHASES = [
+    "Ingesting stream & validating media transport…",
+    "Decoding video & executing high-FPS temporal sweep…",
+    "Inspecting fluid dynamics, physics & diffusion artifacts…",
+    "Corroborating cross-pass evidence & synthesizing report…",
+  ];
+
+  useEffect(() => {
+    if (view !== "processing") {
+      setProgressPercent(15);
+      setProgressStep(0);
+      return;
+    }
+    const interval = setInterval(() => {
+      setProgressPercent((prev) => {
+        if (prev >= 92) return 92;
+        const next = prev + Math.floor(Math.random() * 4 + 2);
+        const step = next > 75 ? 3 : next > 50 ? 2 : next > 25 ? 1 : 0;
+        setProgressStep(step);
+        return next;
+      });
+    }, 1200);
+    return () => clearInterval(interval);
+  }, [view]);
 
   const hasInput = mode === "url" ? url.trim().length > 8 : Boolean(file);
   const serviceAvailable = serviceState === "ready" || serviceState === "limited";
@@ -279,13 +306,43 @@ export function Detector() {
   return (
     <main className="app-shell" id="top">
       <header className="site-header">
-        <a className="brand" href="#top">AI Slop Detector</a>
+        <div className="brand-wrapper">
+          <img
+            src="/logo.png"
+            alt="AI Slop Detector Emblem"
+            className="brand-logo-img"
+            width="44"
+            height="44"
+          />
+          <div className="brand-text-col">
+            <a className="brand" href="#top">
+              <span className="brand-text__main">AI Slop</span>
+              <span className="brand-text__detector">Detector</span>
+            </a>
+            <span className="brand-tagline">REAL CONTENT. VERIFIED.</span>
+          </div>
+        </div>
+        <span className="brand-badge">Forensics v3</span>
       </header>
+
+      <div className="hero-banner-wrap">
+        <img
+          src="/banner.png"
+          alt="AI Slop Detector - Real Content. Verified."
+          className="hero-banner-img"
+          width="1200"
+          height="400"
+        />
+      </div>
 
       <section className="scanner" aria-labelledby="scanner-title">
         <div className="scanner__intro">
-          <h1 id="scanner-title">Check a video for AI.</h1>
-          <p>Paste a link or upload a clip. See what the evidence says.</p>
+          <div className="scanner-badge">
+            <span className="scanner-badge__pulse" aria-hidden="true" />
+            <span>Agentic Deepfake & AI Video Intelligence</span>
+          </div>
+          <h1 id="scanner-title">Verify video authenticity.</h1>
+          <p>Unmask generative diffusion models and concept deepfakes across YouTube, TikTok, Instagram, and X with multi-pass forensic verification.</p>
         </div>
 
         <form className="scanner__form" onSubmit={(event) => void runAnalysis(event)} aria-busy={view === "processing"}>
@@ -298,14 +355,19 @@ export function Detector() {
             {mode === "url" ? (
               <label className="url-field">
                 <span className="sr-only">Video URL</span>
+                <svg className="url-field__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                </svg>
                 <input
+                  suppressHydrationWarning
                   disabled={view === "processing"}
                   type="text"
                   inputMode="url"
                   autoCapitalize="none"
                   autoCorrect="off"
                   spellCheck={false}
-                  placeholder="Paste a video link…"
+                  placeholder="Paste a YouTube, TikTok, Instagram, or X link…"
                   value={url}
                   aria-describedby="input-hint"
                   onChange={(event) => {
@@ -317,20 +379,33 @@ export function Detector() {
               </label>
             ) : (
               <div className="file-field">
-                <input ref={fileInput} type="file" accept="video/mp4,video/quicktime,video/webm,video/x-msvideo" onChange={handleFile} hidden />
+                <input ref={fileInput} suppressHydrationWarning type="file" accept="video/mp4,video/quicktime,video/webm,video/x-msvideo" onChange={handleFile} hidden />
                 <button className="file-picker" type="button" disabled={view === "processing"} onClick={() => fileInput.current?.click()}>
-                  <span className="file-picker__name">{file ? file.name : "Choose a video file"}</span>
-                  <span className="file-picker__meta">{file ? `${(file.size / 1_000_000).toFixed(1)} MB · Change file` : "MP4, MOV, WebM or AVI"}</span>
+                  <span className="file-picker__name">{file ? file.name : "Choose a video file to inspect"}</span>
+                  <span className="file-picker__meta">{file ? `${(file.size / 1_000_000).toFixed(1)} MB · Click to change file` : "MP4, MOV, WebM or AVI"}</span>
                 </button>
               </div>
             )}
             <button className="scan-button" type="submit" disabled={!isReady || view === "processing"}>
-              {view === "processing" ? "Scanning…" : "Scan video"}
+              {view === "processing" ? (
+                <>
+                  <span className="processing__spinner" style={{ width: 16, height: 16, marginTop: 0 }} aria-hidden="true" />
+                  <span>Scanning…</span>
+                </>
+              ) : (
+                <>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  </svg>
+                  <span>Scan video</span>
+                </>
+              )}
             </button>
           </div>
 
           <div className="input-hint" id="input-hint">
-            <span>{mode === "url" ? platformHint : `Up to ${MAX_UPLOAD_MB} MB`}</span>
+            <span className="platform-pill">{mode === "url" ? platformHint : `Up to ${MAX_UPLOAD_MB} MB`}</span>
             <span>Up to {MAX_VIDEO_SECONDS / 60} minutes</span>
           </div>
 
@@ -341,12 +416,35 @@ export function Detector() {
 
           {serviceState === "unavailable" && <p className="setup-notice" role="status">The scanner is unavailable. Check the server connection and API configuration.</p>}
           {serviceState === "checking" && <p className="service-check" role="status">Connecting to the scanner…</p>}
-          {serviceAvailable && serviceProviders && !serviceProviders.sightengine && <p className="setup-notice" role="status">Sightengine is unavailable. This scan will use Gemini only.</p>}
+          {serviceAvailable && serviceProviders && !serviceProviders.sightengine && <p className="setup-notice" role="status">Sightengine is unavailable. This scan will use AI Tech only.</p>}
 
-          {view === "processing" && <div className="processing" role="status">
-            <span className="processing__spinner" aria-hidden="true" />
-            <div><strong>Analyzing your video</strong><p>This can take a few minutes. Your result will appear here.</p></div>
-          </div>}
+          {view === "processing" && (
+            <>
+              <div className="forensic-progress" role="status" aria-label="Analysis progress">
+                <div className="forensic-progress__header">
+                  <div className="forensic-progress__phase">
+                    <span className="forensic-progress__radar" aria-hidden="true" />
+                    <span>{PROGRESS_PHASES[progressStep]}</span>
+                  </div>
+                  <span className="forensic-progress__percent">{progressPercent}%</span>
+                </div>
+                <div className="forensic-progress__track" aria-hidden="true">
+                  <div className="forensic-progress__bar" style={{ width: `${progressPercent}%` }} />
+                </div>
+                <div className="forensic-progress__steps" aria-hidden="true">
+                  <span className={progressStep >= 0 ? "forensic-progress__step--active" : ""}>1. Transport</span>
+                  <span className={progressStep >= 1 ? "forensic-progress__step--active" : ""}>2. Temporal</span>
+                  <span className={progressStep >= 2 ? "forensic-progress__step--active" : ""}>3. Artifacts</span>
+                  <span className={progressStep >= 3 ? "forensic-progress__step--active" : ""}>4. Synthesis</span>
+                </div>
+              </div>
+
+              <div className="processing sr-only" role="status">
+                <span className="processing__spinner" aria-hidden="true" />
+                <div><strong>Analyzing your video</strong><p>This can take a few minutes. Your result will appear here.</p></div>
+              </div>
+            </>
+          )}
 
           {view === "error" && <div className="error-card" role="alert">
             <strong>{error?.code === "UNSUPPORTED_VIDEO_URL" ? "That link isn’t a supported video post."

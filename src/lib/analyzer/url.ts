@@ -14,6 +14,7 @@ const TIKTOK_ID = /^\d{8,24}$/;
 const TIKTOK_SHORT_CODE = /^[A-Za-z0-9_-]{4,64}$/;
 const INSTAGRAM_CODE = /^[A-Za-z0-9_-]{5,32}$/;
 const INSTAGRAM_SHARE_TOKEN = /^[A-Za-z0-9_-]{5,64}$/;
+const INSTAGRAM_HANDLE = /^@?[A-Za-z0-9._]{1,30}$/;
 const X_STATUS_ID = /^[1-9]\d{0,19}$/;
 const X_HANDLE = /^[A-Za-z0-9_]{1,15}$/;
 
@@ -153,11 +154,24 @@ function instagram(url: URL, inputUrl: string): NormalizedVideoUrl | null {
     };
   }
 
-  if (parts.length !== 2 || !["reel", "reels", "p", "tv"].includes(parts[0] ?? "")) {
+  const mediaKinds = ["reel", "reels", "p", "tv"];
+  let kind: string | undefined;
+  let code: string | undefined;
+
+  if (parts.length === 2 && mediaKinds.includes(parts[0] ?? "")) {
+    kind = parts[0];
+    code = parts[1];
+  } else if (
+    parts.length === 3 &&
+    INSTAGRAM_HANDLE.test(parts[0] ?? "") &&
+    mediaKinds.includes(parts[1] ?? "")
+  ) {
+    kind = parts[1];
+    code = parts[2];
+  } else {
     throw new UnsupportedVideoUrlError("Use an Instagram Reel or video post URL.");
   }
 
-  const code = parts[1];
   if (!code || !INSTAGRAM_CODE.test(code)) {
     throw new UnsupportedVideoUrlError("The Instagram post code is invalid.");
   }
@@ -166,7 +180,7 @@ function instagram(url: URL, inputUrl: string): NormalizedVideoUrl | null {
     platform: "instagram",
     platformVideoId: code,
     canonicalKey: `instagram:${code}`,
-    canonicalUrl: `https://www.instagram.com/${parts[0] === "p" ? "p" : "reel"}/${code}/`,
+    canonicalUrl: `https://www.instagram.com/${kind === "p" ? "p" : "reel"}/${code}/`,
     inputUrl,
   };
 }

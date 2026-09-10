@@ -39,7 +39,7 @@ describe("detector cache fingerprint", () => {
     vi.stubEnv("GEMINI_API_KEY", "test-private-key");
     const fingerprint = await import("@/lib/analyzer/fingerprint");
     const version = fingerprint.analyzerCacheVersion();
-    expect(version).toMatch(/^evidence-2\.[0-9]+:[a-f0-9]{24}$/);
+    expect(version).toMatch(/^evidence-(?:2\.[0-9]+|3\.0-agentic):[a-f0-9]{24}$/);
     expect(version).not.toContain("test-private-key");
     const first = fingerprint.detectorFingerprint();
     vi.stubEnv("GEMINI_API_KEY", "another-test-key"); vi.resetModules();

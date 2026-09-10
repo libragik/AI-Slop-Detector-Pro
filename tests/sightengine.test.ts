@@ -85,7 +85,10 @@ describe("Sightengine fixed temporal evidence", () => {
       { scores: [1, 1, 0], positions: [0.5, 0, 0.8], duration: 1 },
       { scores: [], positions: [], duration: 4 },
     ];
-    const python = existsSync(join(process.cwd(), "eval/.venv/bin/python")) ? join(process.cwd(), "eval/.venv/bin/python") : "python3";
+    const venvPython = process.platform === "win32"
+      ? join(process.cwd(), "eval/.venv/Scripts/python.exe")
+      : join(process.cwd(), "eval/.venv/bin/python");
+    const python = process.env.PYTHON || (existsSync(venvPython) ? venvPython : process.platform === "win32" ? "python" : "python3");
     const program = [
       "import importlib.util,json,sys",
       "s=importlib.util.spec_from_file_location('policy','scripts/sightengine-temporal-evidence.py')",

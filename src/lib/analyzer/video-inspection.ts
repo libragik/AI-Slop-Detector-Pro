@@ -97,9 +97,10 @@ export function reviewWindows(videos: VideoAnalysis[], duration: number | undefi
 export async function inspectVideo(
   input: VideoInspectionInput,
   runPass: VideoPassRunner,
-  config: { model: string; reviewModel: string; sweepFps: number; reviewFps: number; reviewMode: "static" | "agentic" },
+  config: { model: string; reviewModel: string; sweepFps: number; reviewFps: number; reviewMode: "static" | "agentic"; sweepMode?: "static" | "agentic" },
 ): Promise<VideoAnalysis> {
-  const sweep: VideoPassRequest = { kind: "sweep", model: config.model, mode: "static", fps: config.sweepFps, prompt: SWEEP_INSTRUCTION, windows: [] };
+  const sweepMode = config.sweepMode ?? "static";
+  const sweep: VideoPassRequest = { kind: "sweep", model: config.model, mode: sweepMode, fps: config.sweepFps, prompt: SWEEP_INSTRUCTION, windows: [] };
   const review: VideoPassRequest = { kind: "review", model: config.reviewModel, mode: config.reviewMode, fps: config.sweepFps, prompt: REVIEW_INSTRUCTION, windows: [] };
   const runSafely = async (request: VideoPassRequest): Promise<VideoPassResult | InspectionPass> => {
     const started = Date.now();
@@ -125,7 +126,7 @@ export async function inspectVideo(
   if (needsAdjudication) {
     const windows = reviewWindows(initial.map((result) => result.analysis), input.durationSeconds);
     const adjudication = await runSafely({
-      kind: "adjudication", model: config.reviewModel, mode: "static",
+      kind: "adjudication", model: config.reviewModel, mode: config.reviewMode === "agentic" && !windows.length ? "agentic" : "static",
       fps: windows.length ? config.sweepFps : config.reviewFps, windows,
       prompt: `${ADJUDICATION_INSTRUCTION}\nUntrusted reviewer hypotheses and validation problems: ${JSON.stringify(initial.map(({ analysis, receipt }) => ({
         score: analysis.aiLikelihood, visualClassification: analysis.visualClassification, visual: analysis.visualAssessment,
@@ -163,7 +164,8 @@ export async function inspectVideo(
   const reportedQualityIssues = [...new Set([
     ...corroborating.flatMap(({ analysis }) => analysis.qualityIssues ?? []), ...(selected.qualityIssues ?? []),
   ])];
-  const sweepCompleted = successful.some(({ receipt, analysis }) => receipt.mode === "static" &&
+  const sweepCompleted = successful.some(({ receipt, analysis }) =>
+    (receipt.mode === "agentic" || receipt.mode === "static") &&
     (receipt.kind === "sweep" || receipt.kind === "adjudication") && analysis.evidenceSufficiency === "sufficient");
   const durationKnown = Boolean(input.durationSeconds && Number.isFinite(input.durationSeconds) && input.durationSeconds > 0);
   if (!durationKnown) issues.push("The full video duration was not independently established.");

@@ -16,7 +16,8 @@ const { values } = parseArgs({ options: {
 if (!values.input || !values.output || !values.unseal) throw new Error("Requires --input RUN_DIR --output NEW_DIR --unseal after explicit final policy freeze");
 const root = process.cwd();
 const input = resolve(values.input), output = resolve(values.output);
-if (input === output || output.startsWith(input + "/") || input.startsWith(output + "/")) throw new Error("Replay must use a separate, non-nested output directory");
+const normInput = input.replace(/\\/g, "/"), normOutput = output.replace(/\\/g, "/");
+if (normInput === normOutput || normOutput.startsWith(normInput + "/") || normInput.startsWith(normOutput + "/")) throw new Error("Replay must use a separate, non-nested output directory");
 const hash = data => createHash("sha256").update(data).digest("hex");
 const parseLines = data => data.trim().split("\n").filter(Boolean).map(line => JSON.parse(line));
 const sourcePaths = [
@@ -48,7 +49,7 @@ const build = await esbuild.build({
   absWorkingDir: snapshotRoot, bundle: true, platform: "node", format: "esm", target: "node22", metafile: true,
 });
 for (const file of Object.keys(build.metafile.inputs)) {
-  const path = relative(snapshotRoot, resolve(snapshotRoot, file));
+  const path = relative(snapshotRoot, resolve(snapshotRoot, file)).replace(/\\/g, "/");
   if (!sourceFiles.some(source => source.path === path)) throw new Error("Scorer dependency is outside the audited snapshot");
 }
 if (Object.values(build.metafile.outputs).some(file => file.imports.length)) throw new Error("Offline scorer bundle must have no runtime imports");

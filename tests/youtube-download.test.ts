@@ -56,7 +56,7 @@ describe("YouTube byte retrieval boundary", () => {
     expect(invocations[1].args).toContain(`!is_live & duration<=?${env.maxDurationSeconds}`);
     expect(invocations[1].args).toContain("--no-continue");
     expect(invocations[1].args).toContain("--no-overwrites");
-    expect(invocations[1].args[invocations[1].args.indexOf("--output") + 1]).toMatch(/\/video\.\%\(ext\)s$/);
+    expect(invocations[1].args[invocations[1].args.indexOf("--output") + 1]).toMatch(/[/\\]video\.\%\(ext\)s$/);
   });
 
   it.each([

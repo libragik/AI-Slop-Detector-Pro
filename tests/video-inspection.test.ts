@@ -201,6 +201,15 @@ describe("deliberate video inspection", () => {
     expect(video.inspection?.issues.join(" ")).toContain("invalid timestamp");
     expect(aggregateScore({ video })).toMatchObject({ verdict: "No clear AI indicators", assessmentStatus: "complete", confidence: "Not calibrated" });
   });
+
+  it("allows agentic mode for sweep and recognizes agentic sweep as adequate temporal coverage", async () => {
+    const agenticConfig = { ...config, sweepMode: "agentic" as const };
+    const requests: VideoPassRequest[] = [];
+    const video = await inspectVideo(input, async (_, request) => { requests.push(request); return result(negative(), request); }, agenticConfig);
+    expect(requests).toHaveLength(2);
+    expect(requests[0]).toMatchObject({ kind: "sweep", mode: "agentic" });
+    expect(video.inspection).toMatchObject({ reviewAgreement: "agree", temporalCoverage: "adequate" });
+  });
 });
 
 describe("evidence timestamp windows", () => {

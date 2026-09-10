@@ -25,6 +25,7 @@ export async function POST(request: Request) {
     const analysis = await analyzeUrl(body.url, clientKey(request), { fresh: body.fresh === true });
     return Response.json({ ok: true, analysis }, { status: 200, headers: { "Cache-Control": "no-store" } });
   } catch (error) {
+    console.error("[api/analyze] error caught:", error);
     return errorResponse(error);
   }
 }

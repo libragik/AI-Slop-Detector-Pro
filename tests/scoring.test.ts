@@ -127,6 +127,12 @@ describe("evidence-driven assessment", () => {
     }))).toMatchObject({ verdict: "AI indicators detected", assessmentStatus: "complete" });
   });
 
+  it("grounds positive verdict on diffusion fluid physics anomalies", () => {
+    expect(score(generated({
+      suspiciousMoments: [{ timestamp: "00:03.20", category: "physics", severity: "high", observation: "The pouring liquid stream violates volume conservation and surface tension." }],
+    }))).toMatchObject({ verdict: "AI indicators detected", assessmentStatus: "complete", evidenceLabel: "AI indicators observed" });
+  });
+
   it("retains supported audio-only observations without using them alone to decide AI origin", () => {
     const result = score(video({
       aiLikelihood: 75,

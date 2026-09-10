@@ -48,6 +48,11 @@ describe("normalizeVideoUrl", () => {
   it.each([
     ["https://instagram.com/reel/C9_aBcD12/?igsh=tracking", "instagram:C9_aBcD12", "https://www.instagram.com/reel/C9_aBcD12/"],
     ["https://www.instagram.com/p/C9_aBcD12/", "instagram:C9_aBcD12", "https://www.instagram.com/p/C9_aBcD12/"],
+    ["https://www.instagram.com/askcatgpt/reel/DcIRCXIiDhf", "instagram:DcIRCXIiDhf", "https://www.instagram.com/reel/DcIRCXIiDhf/"],
+    ["https://www.instagram.com/askcatgpt/reel/DcIRCXIiDhf/?igsh=tracking", "instagram:DcIRCXIiDhf", "https://www.instagram.com/reel/DcIRCXIiDhf/"],
+    ["https://www.instagram.com/@askcatgpt/reel/DcIRCXIiDhf", "instagram:DcIRCXIiDhf", "https://www.instagram.com/reel/DcIRCXIiDhf/"],
+    ["https://instagram.com/creator.name/p/DcIRCXIiDhf/", "instagram:DcIRCXIiDhf", "https://www.instagram.com/p/DcIRCXIiDhf/"],
+    ["https://www.instagram.com/creator_123/reels/DcIRCXIiDhf", "instagram:DcIRCXIiDhf", "https://www.instagram.com/reel/DcIRCXIiDhf/"],
   ])("normalizes Instagram media: %s", (url, key, canonicalUrl) => {
     expect(normalizeVideoUrl(url)).toMatchObject({ platform: "instagram", canonicalKey: key, canonicalUrl });
   });

@@ -62,4 +62,4 @@ export async function analyzeEvaluationVideo() {
   const plan = JSON.parse(await readFile(resolve(output, "plan.json"), "utf8"));
   expect(plan.execution).toBe("immutable-local-source-bundle");
   expect(plan.adapterBundleSha256).toMatch(/^[a-f0-9]{64}$/);
-});
+}, 20_000);

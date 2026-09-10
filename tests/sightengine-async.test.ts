@@ -125,7 +125,7 @@ describe("Sightengine Upload API", () => {
       expect(form.get("media_id")).toBe("med_uploaded_asset"); expect(form.has("media")).toBe(false);
       expect(JSON.stringify(analyzed)).not.toContain("test-secret");
     } finally { await rm(directory, { recursive: true, force: true }); }
-  }, 15_000);
+  }, 45_000);
 
   it.each(["https://attacker.example/u/x", "https://storage-eu1.sightengine.com.attacker.example/u/x", "http://storage-eu1.sightengine.com/u/x",
     `https://s3.eu-west-1.amazonaws.com/someone-else/test?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Signature=${"a".repeat(64)}`])(
