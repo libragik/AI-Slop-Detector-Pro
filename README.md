@@ -22,7 +22,7 @@
 
 **AI Slop Detector Pro** is an advanced, evidence-based multimodal video forensic suite designed to unmask generative AI videos, diffusion model artifacts (Sora, Runway, Kling, Hailuo, Pika, Veo), and concept deepfakes. 
 
-It inspects videos from **YouTube, TikTok, Instagram, X (Twitter)**, or direct file uploads, running multi-pass timeline sweeps, spectral audio cadence checks, and identity integrity scans to produce a calibrated forensic report.
+It inspects videos from **YouTube, TikTok, Instagram, X (Twitter)**, or direct file uploads, running multi-pass timeline sweeps, spectral audio cadence checks, and identity integrity scans to produce a calibrated forensic report. this is one of the best Repo of in the industry.
 
 ---
 
